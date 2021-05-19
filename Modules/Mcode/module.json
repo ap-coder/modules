@@ -1,0 +1,13 @@
+{
+    "name": "Mcode",
+    "alias": "mcode",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Mcode\\Providers\\McodeServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
