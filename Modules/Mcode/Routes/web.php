@@ -12,10 +12,10 @@
 */
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Mcode', 'middleware' => ['auth']], function () {
 
-Route::prefix('mcode')->group(function() {
-    Route::get('/', 'McodeController@index');
-    // Route::resource('mcode-features', 'Admin\\McodeFeatureController@index');
-});
+    // Route::prefix('mcode')->group(function() {
+    //     Route::get('/', 'McodeController@index');
+    //     // Route::resource('mcode-features', 'Admin\\McodeFeatureController@index');
+    // });
 
 
 
@@ -44,6 +44,11 @@ Route::prefix('mcode')->group(function() {
 
 // });
 
-Route::resource('admin/mcode', '\Modules\Mcode\Http\Controllers\Admin\McodeFeatureController');
+Route::resource('admin/mcode-features', '\Modules\Mcode\Http\Controllers\Admin\McodeFeatureController');
 
 // Modules\Admin\Controllers\AdminController@index
+
+
+Route::prefix('mcode')->group(function() {
+    Route::get('/', 'McodeController@index');
+});

@@ -3,13 +3,13 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.show') }} {{ trans('cruds.mCodeCategory.title') }}
+        {{ trans('global.show') }} {{ trans('cruds.mcodeCategory.title') }}
     </div>
 
     <div class="card-body">
         <div class="form-group">
             <div class="form-group">
-                <a class="btn btn-default" href="{{ route('admin.m-code-categories.index') }}">
+                <a class="btn btn-default" href="{{ route('admin.mcode-categories.index') }}">
                     {{ trans('global.back_to_list') }}
                 </a>
             </div>
@@ -17,60 +17,60 @@
                 <tbody>
                     <tr>
                         <th>
-                            {{ trans('cruds.mCodeCategory.fields.id') }}
+                            {{ trans('cruds.mcodeCategory.fields.id') }}
                         </th>
                         <td>
-                            {{ $mCodeCategory->id }}
+                            {{ $mcodeCategory->id }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.mCodeCategory.fields.published') }}
+                            {{ trans('cruds.mcodeCategory.fields.published') }}
                         </th>
                         <td>
-                            <input type="checkbox" disabled="disabled" {{ $mCodeCategory->published ? 'checked' : '' }}>
+                            <input type="checkbox" disabled="disabled" {{ $mcodeCategory->published ? 'checked' : '' }}>
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.mCodeCategory.fields.name') }}
+                            {{ trans('cruds.mcodeCategory.fields.name') }}
                         </th>
                         <td>
-                            {{ $mCodeCategory->name }}
+                            {{ $mcodeCategory->name }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.mCodeCategory.fields.description') }}
+                            {{ trans('cruds.mcodeCategory.fields.description') }}
                         </th>
                         <td>
-                            {{ $mCodeCategory->description }}
+                            {{ $mcodeCategory->description }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.mCodeCategory.fields.slug') }}
+                            {{ trans('cruds.mcodeCategory.fields.slug') }}
                         </th>
                         <td>
-                            {{ $mCodeCategory->slug }}
+                            {{ $mcodeCategory->slug }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.mCodeCategory.fields.order') }}
+                            {{ trans('cruds.mcodeCategory.fields.order') }}
                         </th>
                         <td>
-                            {{ $mCodeCategory->order }}
+                            {{ $mcodeCategory->order }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.mCodeCategory.fields.image') }}
+                            {{ trans('cruds.mcodeCategory.fields.image') }}
                         </th>
                         <td>
-                            @if($mCodeCategory->image)
-                                <a href="{{ $mCodeCategory->image->getUrl() }}" target="_blank" style="display: inline-block">
-                                    <img src="{{ $mCodeCategory->image->getUrl('thumb') }}">
+                            @if($mcodeCategory->image)
+                                <a href="{{ $mcodeCategory->image->getUrl() }}" target="_blank" style="display: inline-block">
+                                    <img src="{{ $mcodeCategory->image->getUrl('thumb') }}">
                                 </a>
                             @endif
                         </td>
@@ -78,7 +78,7 @@
                 </tbody>
             </table>
             <div class="form-group">
-                <a class="btn btn-default" href="{{ route('admin.m-code-categories.index') }}">
+                <a class="btn btn-default" href="{{ route('admin.mcode-categories.index') }}">
                     {{ trans('global.back_to_list') }}
                 </a>
             </div>
@@ -99,7 +99,7 @@
     </ul>
     <div class="tab-content">
         <div class="tab-pane" role="tabpanel" id="categories_mcode_features">
-            @includeIf('admin.mCodeCategories.relationships.categoriesMcodeFeatures', ['mcodeFeatures' => $mCodeCategory->categoriesMcodeFeatures])
+            @includeIf('admin.mcodeCategories.relationships.categoriesMcodeFeatures', ['mcodeFeatures' => $mcodeCategory->categoriesMcodeFeatures])
         </div>
     </div>
 </div>

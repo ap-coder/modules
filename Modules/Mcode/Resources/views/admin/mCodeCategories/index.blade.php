@@ -1,40 +1,40 @@
 @extends('layouts.admin')
 @section('content')
-@can('m_code_category_create')
+@can('mcode_category_create')
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
-            <a class="btn btn-success" href="{{ route('admin.m-code-categories.create') }}">
-                {{ trans('global.add') }} {{ trans('cruds.mCodeCategory.title_singular') }}
+            <a class="btn btn-success" href="{{ route('admin.mcode-categories.create') }}">
+                {{ trans('global.add') }} {{ trans('cruds.mcodeCategory.title_singular') }}
             </a>
         </div>
     </div>
 @endcan
 <div class="card">
     <div class="card-header">
-        {{ trans('cruds.mCodeCategory.title_singular') }} {{ trans('global.list') }}
+        {{ trans('cruds.mcodeCategory.title_singular') }} {{ trans('global.list') }}
     </div>
 
     <div class="card-body">
-        <table class=" table table-bordered table-striped table-hover ajaxTable datatable datatable-MCodeCategory">
+        <table class=" table table-bordered table-striped table-hover ajaxTable datatable datatable-McodeCategory">
             <thead>
                 <tr>
                     <th width="10">
 
                     </th>
                     <th>
-                        {{ trans('cruds.mCodeCategory.fields.id') }}
+                        {{ trans('cruds.mcodeCategory.fields.id') }}
                     </th>
                     <th>
-                        {{ trans('cruds.mCodeCategory.fields.published') }}
+                        {{ trans('cruds.mcodeCategory.fields.published') }}
                     </th>
                     <th>
-                        {{ trans('cruds.mCodeCategory.fields.name') }}
+                        {{ trans('cruds.mcodeCategory.fields.name') }}
                     </th>
                     <th>
-                        {{ trans('cruds.mCodeCategory.fields.order') }}
+                        {{ trans('cruds.mcodeCategory.fields.order') }}
                     </th>
                     <th>
-                        {{ trans('cruds.mCodeCategory.fields.image') }}
+                        {{ trans('cruds.mcodeCategory.fields.image') }}
                     </th>
                     <th>
                         &nbsp;
@@ -53,11 +53,11 @@
 <script>
     $(function () {
   let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
-@can('m_code_category_delete')
+@can('mcode_category_delete')
   let deleteButtonTrans = '{{ trans('global.datatables.delete') }}';
   let deleteButton = {
     text: deleteButtonTrans,
-    url: "{{ route('admin.m-code-categories.massDestroy') }}",
+    url: "{{ route('admin.mcode-categories.massDestroy') }}",
     className: 'btn-danger',
     action: function (e, dt, node, config) {
       var ids = $.map(dt.rows({ selected: true }).data(), function (entry) {
@@ -89,7 +89,7 @@
     serverSide: true,
     retrieve: true,
     aaSorting: [],
-    ajax: "{{ route('admin.m-code-categories.index') }}",
+    ajax: "{{ route('admin.mcode-categories.index') }}",
     columns: [
       { data: 'placeholder', name: 'placeholder' },
 { data: 'id', name: 'id' },
@@ -103,7 +103,7 @@
     order: [[ 1, 'desc' ]],
     pageLength: 100,
   };
-  let table = $('.datatable-MCodeCategory').DataTable(dtOverrideGlobals);
+  let table = $('.datatable-McodeCategory').DataTable(dtOverrideGlobals);
   $('a[data-toggle="tab"]').on('shown.bs.tab click', function(e){
       $($.fn.dataTable.tables(true)).DataTable()
           .columns.adjust();

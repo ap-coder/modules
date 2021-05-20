@@ -1,73 +1,73 @@
 <?php
 
-namespace App\Http\Controllers\Api\V1\Admin;
+namespace Modules\Mcode\Http\Controllers\Api\V1\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
-use App\Http\Requests\StoreMCodeCategoryRequest;
-use App\Http\Requests\UpdateMCodeCategoryRequest;
-use App\Http\Resources\Admin\MCodeCategoryResource;
-use App\Models\MCodeCategory;
+use Modules\Mcode\Http\Requests\StoreMcodeCategoryRequest;
+use Modules\Mcode\Http\Requests\UpdateMcodeCategoryRequest;
+use Modules\Mcode\Http\Resources\Admin\McodeCategoryResource;
+use Modules\Mcode\Entities\McodeCategory;
 use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class MCodeCategoryApiController extends Controller
+class McodeCategoryApiController extends Controller
 {
     use MediaUploadingTrait;
 
     public function index()
     {
-        abort_if(Gate::denies('m_code_category_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        abort_if(Gate::denies('mcode_category_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return new MCodeCategoryResource(MCodeCategory::all());
+        return new McodeCategoryResource(McodeCategory::all());
     }
 
-    public function store(StoreMCodeCategoryRequest $request)
+    public function store(StoreMcodeCategoryRequest $request)
     {
-        $mCodeCategory = MCodeCategory::create($request->all());
+        $mcodeCategory = McodeCategory::create($request->all());
 
         if ($request->input('image', false)) {
-            $mCodeCategory->addMedia(storage_path('tmp/uploads/' . basename($request->input('image'))))->toMediaCollection('image');
+            $mcodeCategory->addMedia(storage_path('tmp/uploads/' . basename($request->input('image'))))->toMediaCollection('image');
         }
 
-        return (new MCodeCategoryResource($mCodeCategory))
+        return (new McodeCategoryResource($mcodeCategory))
             ->response()
             ->setStatusCode(Response::HTTP_CREATED);
     }
 
-    public function show(MCodeCategory $mCodeCategory)
+    public function show(McodeCategory $mcodeCategory)
     {
-        abort_if(Gate::denies('m_code_category_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        abort_if(Gate::denies('mcode_category_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return new MCodeCategoryResource($mCodeCategory);
+        return new McodeCategoryResource($mcodeCategory);
     }
 
-    public function update(UpdateMCodeCategoryRequest $request, MCodeCategory $mCodeCategory)
+    public function update(UpdateMcodeCategoryRequest $request, McodeCategory $mcodeCategory)
     {
-        $mCodeCategory->update($request->all());
+        $mcodeCategory->update($request->all());
 
         if ($request->input('image', false)) {
-            if (!$mCodeCategory->image || $request->input('image') !== $mCodeCategory->image->file_name) {
-                if ($mCodeCategory->image) {
-                    $mCodeCategory->image->delete();
+            if (!$mcodeCategory->image || $request->input('image') !== $mcodeCategory->image->file_name) {
+                if ($mcodeCategory->image) {
+                    $mcodeCategory->image->delete();
                 }
-                $mCodeCategory->addMedia(storage_path('tmp/uploads/' . basename($request->input('image'))))->toMediaCollection('image');
+                $mcodeCategory->addMedia(storage_path('tmp/uploads/' . basename($request->input('image'))))->toMediaCollection('image');
             }
-        } elseif ($mCodeCategory->image) {
-            $mCodeCategory->image->delete();
+        } elseif ($mcodeCategory->image) {
+            $mcodeCategory->image->delete();
         }
 
-        return (new MCodeCategoryResource($mCodeCategory))
+        return (new McodeCategoryResource($mcodeCategory))
             ->response()
             ->setStatusCode(Response::HTTP_ACCEPTED);
     }
 
-    public function destroy(MCodeCategory $mCodeCategory)
+    public function destroy(McodeCategory $mcodeCategory)
     {
-        abort_if(Gate::denies('m_code_category_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        abort_if(Gate::denies('mcode_category_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $mCodeCategory->delete();
+        $mcodeCategory->delete();
 
         return response(null, Response::HTTP_NO_CONTENT);
     }

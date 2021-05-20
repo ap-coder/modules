@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace Modules\Mcode\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\MassDestroyMcodeFeatureRequest;
-use App\Http\Requests\StoreMcodeFeatureRequest;
-use App\Http\Requests\UpdateMcodeFeatureRequest;
-use App\Models\MCodeCategory;
-use App\Models\McodeFeature;
+use Modules\Mcode\Http\Requests\MassDestroyMcodeFeatureRequest;
+use Modules\Mcode\Http\Requests\StoreMcodeFeatureRequest;
+use Modules\Mcode\Http\Requests\UpdateMcodeFeatureRequest;
+use Modules\Mcode\Entities\McodeCategory;
+use Modules\Mcode\Entities\McodeFeature;
 use App\Models\ProductModel;
 use Gate;
 use Illuminate\Http\Request;
@@ -30,7 +30,7 @@ class McodeFeatureController extends Controller
 
         $product_models = ProductModel::all()->pluck('name', 'id');
 
-        $categories = MCodeCategory::all()->pluck('name', 'id');
+        $categories = McodeCategory::all()->pluck('name', 'id');
 
         return view('admin.mcodeFeatures.create', compact('product_models', 'categories'));
     }
@@ -50,7 +50,7 @@ class McodeFeatureController extends Controller
 
         $product_models = ProductModel::all()->pluck('name', 'id');
 
-        $categories = MCodeCategory::all()->pluck('name', 'id');
+        $categories = McodeCategory::all()->pluck('name', 'id');
 
         $mcodeFeature->load('product_models', 'categories');
 

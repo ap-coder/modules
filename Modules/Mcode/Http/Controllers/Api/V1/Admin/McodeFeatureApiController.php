@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Api\V1\Admin;
+namespace Modules\Mcode\Http\Controllers\Api\V1\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreMcodeFeatureRequest;
-use App\Http\Requests\UpdateMcodeFeatureRequest;
-use App\Http\Resources\Admin\McodeFeatureResource;
-use App\Models\McodeFeature;
+use Modules\Mcode\Http\Requests\StoreMcodeFeatureRequest;
+use Modules\Mcode\Http\Requests\UpdateMcodeFeatureRequest;
+use Modules\Mcode\Http\\Resources\Admin\McodeFeatureResource;
+use Modules\Mcode\Entities\McodeFeature;
 use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;

@@ -4,36 +4,36 @@ namespace Modules\Mcode\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
-use App\Http\Requests\MassDestroyMCodeCategoryRequest;
-use App\Http\Requests\StoreMCodeCategoryRequest;
-use App\Http\Requests\UpdateMCodeCategoryRequest;
-use App\Models\MCodeCategory;
+use Modules\Mcode\Http\Requests\MassDestroyMcodeCategoryRequest;
+use Modules\Mcode\Http\Requests\StoreMcodeCategoryRequest;
+use Modules\Mcode\Http\Requests\UpdateMcodeCategoryRequest;
+use Modules\Mcode\Entities\McodeCategory;
 use Gate;
 use Illuminate\Http\Request;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Symfony\Component\HttpFoundation\Response;
 use Yajra\DataTables\Facades\DataTables;
 
-class MCodeCategoryController extends Controller
+class McodeCategoryController extends Controller
 {
     use MediaUploadingTrait;
 
     public function index(Request $request)
     {
-        abort_if(Gate::denies('m_code_category_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        abort_if(Gate::denies('mcode_category_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         if ($request->ajax()) {
-            $query = MCodeCategory::query()->select(sprintf('%s.*', (new MCodeCategory())->table));
+            $query = McodeCategory::query()->select(sprintf('%s.*', (new McodeCategory())->table));
             $table = Datatables::of($query);
 
             $table->addColumn('placeholder', '&nbsp;');
             $table->addColumn('actions', '&nbsp;');
 
             $table->editColumn('actions', function ($row) {
-                $viewGate = 'm_code_category_show';
-                $editGate = 'm_code_category_edit';
-                $deleteGate = 'm_code_category_delete';
-                $crudRoutePart = 'm-code-categories';
+                $viewGate = 'mcode_category_show';
+                $editGate = 'mcode_category_edit';
+                $deleteGate = 'mcode_category_delete';
+                $crudRoutePart = 'mcode-categories';
 
                 return view('partials.datatablesActions', compact(
                 'viewGate',
@@ -73,86 +73,86 @@ class MCodeCategoryController extends Controller
             return $table->make(true);
         }
 
-        return view('admin.mCodeCategories.index');
+        return view('admin.mcodeCategories.index');
     }
 
     public function create()
     {
-        abort_if(Gate::denies('m_code_category_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        abort_if(Gate::denies('mcode_category_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('admin.mCodeCategories.create');
+        return view('admin.mcodeCategories.create');
     }
 
-    public function store(StoreMCodeCategoryRequest $request)
+    public function store(StoreMcodeCategoryRequest $request)
     {
-        $mCodeCategory = MCodeCategory::create($request->all());
+        $mcodeCategory = McodeCategory::create($request->all());
 
         if ($request->input('image', false)) {
-            $mCodeCategory->addMedia(storage_path('tmp/uploads/' . basename($request->input('image'))))->toMediaCollection('image');
+            $mcodeCategory->addMedia(storage_path('tmp/uploads/' . basename($request->input('image'))))->toMediaCollection('image');
         }
 
         if ($media = $request->input('ck-media', false)) {
-            Media::whereIn('id', $media)->update(['model_id' => $mCodeCategory->id]);
+            Media::whereIn('id', $media)->update(['model_id' => $mcodeCategory->id]);
         }
 
-        return redirect()->route('admin.m-code-categories.index');
+        return redirect()->route('admin.mcode-categories.index');
     }
 
-    public function edit(MCodeCategory $mCodeCategory)
+    public function edit(McodeCategory $mcodeCategory)
     {
-        abort_if(Gate::denies('m_code_category_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        abort_if(Gate::denies('mcode_category_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('admin.mCodeCategories.edit', compact('mCodeCategory'));
+        return view('admin.mcodeCategories.edit', compact('mcodeCategory'));
     }
 
-    public function update(UpdateMCodeCategoryRequest $request, MCodeCategory $mCodeCategory)
+    public function update(UpdateMcodeCategoryRequest $request, McodeCategory $mcodeCategory)
     {
-        $mCodeCategory->update($request->all());
+        $mcodeCategory->update($request->all());
 
         if ($request->input('image', false)) {
-            if (!$mCodeCategory->image || $request->input('image') !== $mCodeCategory->image->file_name) {
-                if ($mCodeCategory->image) {
-                    $mCodeCategory->image->delete();
+            if (!$mcodeCategory->image || $request->input('image') !== $mcodeCategory->image->file_name) {
+                if ($mcodeCategory->image) {
+                    $mcodeCategory->image->delete();
                 }
-                $mCodeCategory->addMedia(storage_path('tmp/uploads/' . basename($request->input('image'))))->toMediaCollection('image');
+                $mcodeCategory->addMedia(storage_path('tmp/uploads/' . basename($request->input('image'))))->toMediaCollection('image');
             }
-        } elseif ($mCodeCategory->image) {
-            $mCodeCategory->image->delete();
+        } elseif ($mcodeCategory->image) {
+            $mcodeCategory->image->delete();
         }
 
-        return redirect()->route('admin.m-code-categories.index');
+        return redirect()->route('admin.mcode-categories.index');
     }
 
-    public function show(MCodeCategory $mCodeCategory)
+    public function show(McodeCategory $mcodeCategory)
     {
-        abort_if(Gate::denies('m_code_category_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        abort_if(Gate::denies('mcode_category_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $mCodeCategory->load('categoriesMcodeFeatures');
+        $mcodeCategory->load('categoriesMcodeFeatures');
 
-        return view('admin.mCodeCategories.show', compact('mCodeCategory'));
+        return view('admin.mcodeCategories.show', compact('mcodeCategory'));
     }
 
-    public function destroy(MCodeCategory $mCodeCategory)
+    public function destroy(McodeCategory $mcodeCategory)
     {
-        abort_if(Gate::denies('m_code_category_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        abort_if(Gate::denies('mcode_category_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $mCodeCategory->delete();
+        $mcodeCategory->delete();
 
         return back();
     }
 
-    public function massDestroy(MassDestroyMCodeCategoryRequest $request)
+    public function massDestroy(MassDestroyMcodeCategoryRequest $request)
     {
-        MCodeCategory::whereIn('id', request('ids'))->delete();
+        McodeCategory::whereIn('id', request('ids'))->delete();
 
         return response(null, Response::HTTP_NO_CONTENT);
     }
 
     public function storeCKEditorImages(Request $request)
     {
-        abort_if(Gate::denies('m_code_category_create') && Gate::denies('m_code_category_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        abort_if(Gate::denies('mcode_category_create') && Gate::denies('mcode_category_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $model         = new MCodeCategory();
+        $model         = new McodeCategory();
         $model->id     = $request->input('crud_id', 0);
         $model->exists = true;
         $media         = $model->addMediaFromRequest('upload')->toMediaCollection('ck-media');
