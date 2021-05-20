@@ -24,25 +24,13 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Mcode', 'mi
     // Route::resource('admin.mcode-features', 'McodeFeatureController');
 
     // M Code Category
-    // Route::delete('mcode-categories/destroy', 'Admin\MCodeCategoryController@massDestroy')->name('m-code-categories.massDestroy');
-    // Route::post('mcode-categories/media', 'Admin\MCodeCategoryController@storeMedia')->name('m-code-categories.storeMedia');
-    // Route::post('mcode-categories/ckmedia', 'Admin\MCodeCategoryController@storeCKEditorImages')->name('m-code-categories.storeCKEditorImages');
+    // Route::delete('mcode-categories/destroy', 'Admin\McodeCategoryController@massDestroy')->name('mcode-categories.massDestroy');
+    // Route::post('mcode-categories/media', 'Admin\McodeCategoryController@storeMedia')->name('mcode-categories.storeMedia');
+    // Route::post('mcode-categories/ckmedia', 'Admin\MCodeCategoryController@storeCKEditorImages')->name('mcode-categories.storeCKEditorImages');
     // Route::resource('m-code-categories', 'Admin\MCodeCategoryController');
 
 });
 
-
-
-
-// Route::group(array(
-//     'prefix' => 'admin',
-//     'module' => 'mcode',
-//     'middleware' => ['web'],
-//     'namespace' => 'Modules\Admin\Controllers'), function() {
-
-//     Route::resource('admin', 'AdminController');
-
-// });
 
 Route::resource('admin/mcode-features', '\Modules\Mcode\Http\Controllers\Admin\McodeFeatureController');
 
