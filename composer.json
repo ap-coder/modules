@@ -17,7 +17,9 @@
         "laravel/ui": "^3.2",
         "nwidart/laravel-modules": "^8.2",
         "wulfheart/pretty_routes": "^0.3.0",
-        "yajra/laravel-datatables-oracle": "^9.11"
+        "yajra/laravel-datatables-oracle": "^9.11",
+        "spatie/laravel-medialibrary": "v8.x-dev"
+
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -60,7 +62,12 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "platform": {
+            "php": "7.4",
+            "ext-pcntl": "7.3",
+            "ext-posix": "7.3"
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
