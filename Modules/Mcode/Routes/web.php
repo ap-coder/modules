@@ -12,6 +12,13 @@
 */
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Mcode', 'middleware' => ['auth']], function () {
 
+Route::prefix('mcode')->group(function() {
+    Route::get('/', 'McodeController@index');
+    // Route::resource('mcode-features', 'Admin\\McodeFeatureController@index');
+});
+
+
+
     // Mcode Feature
     // Route::delete('mcode-features/destroy', 'McodeFeatureController@massDestroy')->name('admin.mcode-features.massDestroy');
     // Route::resource('admin.mcode-features', 'McodeFeatureController');
@@ -27,8 +34,16 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Mcode', 'mi
 
 
 
+// Route::group(array(
+//     'prefix' => 'admin',
+//     'module' => 'mcode',
+//     'middleware' => ['web'],
+//     'namespace' => 'Modules\Admin\Controllers'), function() {
 
-Route::prefix('admin/mcode')->group(function() {
-    Route::get('/', 'McodeController@index');
-    Route::resource('mcode-features', 'Admin\\McodeFeatureController@index');
-});
+//     Route::resource('admin', 'AdminController');
+
+// });
+
+Route::resource('admin/mcode', '\Modules\Mcode\Http\Controllers\Admin\McodeFeatureController');
+
+// Modules\Admin\Controllers\AdminController@index
