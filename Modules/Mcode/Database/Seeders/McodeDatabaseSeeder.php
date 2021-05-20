@@ -16,6 +16,6 @@ class McodeDatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        // $this->call("OthersTableSeeder");
+        // $this->call(McodePermissionsTableSeeder::class);
     }
 }

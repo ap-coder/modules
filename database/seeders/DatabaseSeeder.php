@@ -8,12 +8,13 @@ class DatabaseSeeder extends Seeder
 {
     public function run()
     {
-        $this->call([
-            PermissionsTableSeeder::class,
-            RolesTableSeeder::class,
-            PermissionRoleTableSeeder::class,
-            UsersTableSeeder::class,
-            RoleUserTableSeeder::class,
-        ]);
+
+        $this->call(PermissionsTableSeeder::class);
+        $this->call(\Modules\Mcode\Database\Seeders\McodePermissionsTableSeeder::class);
+        $this->call(RolesTableSeeder::class);
+        $this->call(PermissionRoleTableSeeder::class);
+        $this->call(UsersTableSeeder::class);
+        $this->call(RoleUserTableSeeder::class);
+
     }
 }
