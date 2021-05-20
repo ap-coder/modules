@@ -4,16 +4,20 @@ namespace Modules\Mcode\Entities;
 
 use \DateTimeInterface;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
+// use Spatie\MediaLibrary\HasMedia;
+// use Spatie\MediaLibrary\InteractsWithMedia;
+// use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-
+use Eloquent;
+/**
+ * Class McodeCategory
+ * @package Modules\Mcode\Entities
+ */
 class McodeCategory extends Model
 {
     use SoftDeletes;
-    use InteractsWithMedia;
+    // use InteractsWithMedia;
     use HasFactory;
 
     public $table = 'mcode_categories';
