@@ -21,7 +21,7 @@ class McodeFeatureController extends Controller
 
         $mcodeFeatures = McodeFeature::with(['product_models', 'categories'])->get();
 
-        return view('admin.mcodeFeatures.index', compact('mcodeFeatures'));
+        return view('mcode::admin.mcodeFeatures.index', compact('mcodeFeatures'));
     }
 
     public function create()
@@ -32,7 +32,7 @@ class McodeFeatureController extends Controller
 
         $categories = McodeCategory::all()->pluck('name', 'id');
 
-        return view('admin.mcodeFeatures.create', compact('product_models', 'categories'));
+        return view('mcode::admin.mcodeFeatures.create', compact('product_models', 'categories'));
     }
 
     public function store(StoreMcodeFeatureRequest $request)
@@ -54,7 +54,7 @@ class McodeFeatureController extends Controller
 
         $mcodeFeature->load('product_models', 'categories');
 
-        return view('admin.mcodeFeatures.edit', compact('product_models', 'categories', 'mcodeFeature'));
+        return view('mcode::admin.mcodeFeatures.edit', compact('product_models', 'categories', 'mcodeFeature'));
     }
 
     public function update(UpdateMcodeFeatureRequest $request, McodeFeature $mcodeFeature)
@@ -72,7 +72,7 @@ class McodeFeatureController extends Controller
 
         $mcodeFeature->load('product_models', 'categories');
 
-        return view('admin.mcodeFeatures.show', compact('mcodeFeature'));
+        return view('mcode::admin.mcodeFeatures.show', compact('mcodeFeature'));
     }
 
     public function destroy(McodeFeature $mcodeFeature)

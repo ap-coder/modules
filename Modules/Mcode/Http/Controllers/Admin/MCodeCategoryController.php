@@ -73,14 +73,15 @@ class McodeCategoryController extends Controller
             return $table->make(true);
         }
 
-        return view('admin.mcodeCategories.index');
+        return view('mcode::admin.mcodeCategories.index');
+        // return view('mcode::index', compact('features', 'categories'));
     }
 
     public function create()
     {
         abort_if(Gate::denies('mcode_category_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('admin.mcodeCategories.create');
+        return view('mcode::admin.mcodeCategories.create');
     }
 
     public function store(StoreMcodeCategoryRequest $request)
@@ -102,7 +103,7 @@ class McodeCategoryController extends Controller
     {
         abort_if(Gate::denies('mcode_category_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('admin.mcodeCategories.edit', compact('mcodeCategory'));
+        return view('mcode::admin.mcodeCategories.edit', compact('mcodeCategory'));
     }
 
     public function update(UpdateMcodeCategoryRequest $request, McodeCategory $mcodeCategory)
@@ -129,7 +130,7 @@ class McodeCategoryController extends Controller
 
         $mcodeCategory->load('categoriesMcodeFeatures');
 
-        return view('admin.mcodeCategories.show', compact('mcodeCategory'));
+        return view('mcode::admin.mcodeCategories.show', compact('mcodeCategory'));
     }
 
     public function destroy(McodeCategory $mcodeCategory)
