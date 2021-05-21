@@ -20,15 +20,29 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url("admin/mcode/index") }}">
-                        <i class="fas fa-fw fa-tachometer-alt nav-icon">
-                        </i>
-                        <p>
-                            MCode Manager
-                        </p>
-                    </a>
-                </li>
+
+
+
+
+{{-- base_path('Modules.Mcode.Resources.views.partials.menu') --}}
+
+
+
+  @include(
+    base_path('modules.mcode.resources.views.partials.menu')
+  )
+
+
+
+
+
+
+
+
+
+
+
+
                 @can('user_management_access')
                     <li class="nav-item has-treeview {{ request()->is("admin/permissions*") ? "menu-open" : "" }} {{ request()->is("admin/roles*") ? "menu-open" : "" }} {{ request()->is("admin/users*") ? "menu-open" : "" }}">
                         <a class="nav-link nav-dropdown-toggle" href="#">
