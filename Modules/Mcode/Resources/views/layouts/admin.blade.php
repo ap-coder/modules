@@ -80,7 +80,7 @@
             <div class="float-right d-none d-sm-block">
                 <b>Version</b> 3.0.0-alpha
             </div>
-            <strong> &copy;</strong> {{ trans('global.allRightsReserved') }}
+            <strong> &copy;</strong> {{ trans('mcode::global.allRightsReserved') }}
         </footer>
         <form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;">
             {{ csrf_field() }}
@@ -108,14 +108,14 @@
     <script src="{{ asset('js/main.js') }}"></script>
     <script>
         $(function() {
-  let copyButtonTrans = '{{ trans('global.datatables.copy') }}'
-  let csvButtonTrans = '{{ trans('global.datatables.csv') }}'
-  let excelButtonTrans = '{{ trans('global.datatables.excel') }}'
-  let pdfButtonTrans = '{{ trans('global.datatables.pdf') }}'
-  let printButtonTrans = '{{ trans('global.datatables.print') }}'
-  let colvisButtonTrans = '{{ trans('global.datatables.colvis') }}'
-  let selectAllButtonTrans = '{{ trans('global.select_all') }}'
-  let selectNoneButtonTrans = '{{ trans('global.deselect_all') }}'
+  let copyButtonTrans = '{{ trans('mcode::global.datatables.copy') }}'
+  let csvButtonTrans = '{{ trans('mcode::global.datatables.csv') }}'
+  let excelButtonTrans = '{{ trans('mcode::global.datatables.excel') }}'
+  let pdfButtonTrans = '{{ trans('mcode::global.datatables.pdf') }}'
+  let printButtonTrans = '{{ trans('mcode::global.datatables.print') }}'
+  let colvisButtonTrans = '{{ trans('mcode::global.datatables.colvis') }}'
+  let selectAllButtonTrans = '{{ trans('mcode::global.select_all') }}'
+  let selectNoneButtonTrans = '{{ trans('mcode::global.deselect_all') }}'
 
   let languages = {
     'en': 'https://cdn.datatables.net/plug-ins/1.10.19/i18n/English.json'
