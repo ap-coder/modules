@@ -28,11 +28,11 @@
 
 
 
-  @include(
+  {{--  @include(
     base_path('modules.mcode.resources.views.partials.menu')
-  )
+  )  --}}
 
-
+  @include('mcode::partials.menu')
 
 
 
