@@ -9,6 +9,9 @@ use Illuminate\Routing\Controller;
 use Modules\Mcode\Entities\McodeCategory;
 use Modules\Mcode\Entities\McodeFeature;
 
+use App\Models\ProductModel;
+use App\Models\User;
+
 class McodeController extends Controller
 {
     /**
@@ -17,6 +20,13 @@ class McodeController extends Controller
      */
     public function index()
     {
+        $model = 'App\Models\\' . \Str::studly(\Str::singular('ProductModel'));
+        if (is_subclass_of($model, 'Illuminate\Database\Eloquent\Model')) {
+            //parent model run here
+        }else{
+            //mcode model run here
+        }
+        
         $categories = McodeCategory::with('mcode_features')->get();
         $features = McodeFeature::all();
 

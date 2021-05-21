@@ -20,8 +20,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Mcode', 'mi
 
 
     // Mcode Feature
-    // Route::delete('mcode-features/destroy', 'McodeFeatureController@massDestroy')->name('admin.mcode-features.massDestroy');
-    // Route::resource('admin.mcode-features', 'McodeFeatureController');
+    Route::delete('mcode-features/destroy', '\Modules\Mcode\Http\Controllers\Admin\McodeFeatureController@massDestroy')->name('mcode-features.massDestroy');
+    Route::resource('mcode-features', '\Modules\Mcode\Http\Controllers\Admin\McodeFeatureController');
 
     // M Code Category
     // Route::delete('mcode-categories/destroy', 'Admin\McodeCategoryController@massDestroy')->name('mcode-categories.massDestroy');
@@ -32,7 +32,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Mcode', 'mi
 });
 
 
-Route::resource('admin/mcode-features', '\Modules\Mcode\Http\Controllers\Admin\McodeFeatureController');
+// Route::resource('admin/mcode-features', '\Modules\Mcode\Http\Controllers\Admin\McodeFeatureController');
 
 // Modules\Admin\Controllers\AdminController@index
 
