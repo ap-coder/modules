@@ -22,16 +22,6 @@
                 </li>
 
 
-
-
-{{-- base_path('Modules.Mcode.Resources.views.partials.menu') --}}
-
-
-
-  {{--  @include(
-    base_path('modules.mcode.resources.views.partials.menu')
-  )  --}}
-
   @include('mcode::partials.menu')
 
 
