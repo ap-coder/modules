@@ -16,7 +16,7 @@
                         <i class="fas fa-fw fa-tachometer-alt nav-icon">
                         </i>
                         <p>
-                            {{ trans('global.dashboard') }}
+                            {{ trans('mcode::global.dashboard') }}
                         </p>
                     </a>
                 </li>
@@ -27,7 +27,7 @@
 
                             </i>
                             <p>
-                                {{ trans('cruds.mcodeManager.title') }}
+                                {{ trans('mcode::cruds.mcodeManager.title') }}
                                 <i class="right fa fa-fw fa-angle-left nav-icon"></i>
                             </p>
                         </a>
@@ -39,7 +39,7 @@
 
                                         </i>
                                         <p>
-                                            {{ trans('cruds.mcodeFeature.title') }}
+                                            {{ trans('mcode::cruds.mcodeFeature.title') }}
                                         </p>
                                     </a>
                                 </li>
@@ -51,7 +51,7 @@
 
                                         </i>
                                         <p>
-                                            {{ trans('cruds.mCodeCategory.title') }}
+                                            {{ trans('mcode::cruds.mCodeCategory.title') }}
                                         </p>
                                     </a>
                                 </li>
@@ -66,7 +66,7 @@
 
                             </i>
                             <p>
-                                {{ trans('cruds.userManagement.title') }}
+                                {{ trans('mcode::cruds.userManagement.title') }}
                                 <i class="right fa fa-fw fa-angle-left nav-icon"></i>
                             </p>
                         </a>
@@ -78,7 +78,7 @@
 
                                         </i>
                                         <p>
-                                            {{ trans('cruds.permission.title') }}
+                                            {{ trans('mcode::cruds.permission.title') }}
                                         </p>
                                     </a>
                                 </li>
@@ -90,7 +90,7 @@
 
                                         </i>
                                         <p>
-                                            {{ trans('cruds.role.title') }}
+                                            {{ trans('mcode::cruds.role.title') }}
                                         </p>
                                     </a>
                                 </li>
@@ -102,7 +102,7 @@
 
                                         </i>
                                         <p>
-                                            {{ trans('cruds.user.title') }}
+                                            {{ trans('mcode::cruds.user.title') }}
                                         </p>
                                     </a>
                                 </li>
@@ -114,7 +114,7 @@
 
                                         </i>
                                         <p>
-                                            {{ trans('cruds.auditLog.title') }}
+                                            {{ trans('mcode::cruds.auditLog.title') }}
                                         </p>
                                     </a>
                                 </li>
@@ -126,7 +126,7 @@
 
                                         </i>
                                         <p>
-                                            {{ trans('cruds.team.title') }}
+                                            {{ trans('mcode::cruds.team.title') }}
                                         </p>
                                     </a>
                                 </li>
@@ -141,7 +141,7 @@
 
                             </i>
                             <p>
-                                {{ trans('cruds.productModel.title') }}
+                                {{ trans('mcode::cruds.productModel.title') }}
                             </p>
                         </a>
                     </li>
@@ -152,7 +152,7 @@
                             <i class="fa-fw fa fa-users nav-icon">
                             </i>
                             <p>
-                                {{ trans("global.team-members") }}
+                                {{ trans("mcode::global.team-members") }}
                             </p>
                         </a>
                     </li>
@@ -164,7 +164,7 @@
                                 <i class="fa-fw fas fa-key nav-icon">
                                 </i>
                                 <p>
-                                    {{ trans('global.change_password') }}
+                                    {{ trans('mcode::global.change_password') }}
                                 </p>
                             </a>
                         </li>
@@ -176,7 +176,7 @@
                             <i class="fas fa-fw fa-sign-out-alt nav-icon">
 
                             </i>
-                            <p>{{ trans('global.logout') }}</p>
+                            <p>{{ trans('mcode::global.logout') }}</p>
                         </p>
                     </a>
                 </li>
