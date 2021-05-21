@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class McodeCategoryApiController extends Controller
 {
-    use MediaUploadingTrait;
+    // use MediaUploadingTrait;
 
     public function index()
     {

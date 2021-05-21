@@ -4,16 +4,12 @@ namespace Modules\Mcode\Entities;
 
 use \DateTimeInterface;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class McodeFeature extends Model
 {
     use SoftDeletes;
-    use InteractsWithMedia;
     use HasFactory;
 
     public $table = 'mcode_features';
