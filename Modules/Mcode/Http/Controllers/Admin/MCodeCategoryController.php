@@ -9,6 +9,7 @@ use Modules\Mcode\Http\Requests\StoreMcodeCategoryRequest;
 use Modules\Mcode\Http\Requests\UpdateMcodeCategoryRequest;
 use Modules\Mcode\Entities\McodeCategory;
 use Gate;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Symfony\Component\HttpFoundation\Response;
