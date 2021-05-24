@@ -11,6 +11,7 @@ use Modules\Mcode\Entities\McodeCategory;
 use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Str;
 
 class McodeCategoryApiController extends Controller
 {

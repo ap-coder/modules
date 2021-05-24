@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Traits;
+namespace Modules\Mcode\Traits;
 
 use App\Models\AuditLog;
 use Illuminate\Database\Eloquent\Model;

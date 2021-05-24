@@ -37,6 +37,15 @@ class McodeFeature extends Model
         'deleted_at',
     ];
 
+    protected static function boot()
+    {
+        parent::boot();
+
+        // static::saving(function ($model) {
+        //     $model->slug = str_slug($model->name);
+        // });
+    }
+
     public static function last()
     {
         return static::all()->last();
