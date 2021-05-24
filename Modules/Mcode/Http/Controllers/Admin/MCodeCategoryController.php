@@ -3,7 +3,7 @@
 namespace Modules\Mcode\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\Traits\MediaUploadingTrait;
+use Modules\Mcode\Traits\MediaUploadingTrait;
 use Modules\Mcode\Http\Requests\MassDestroyMcodeCategoryRequest;
 use Modules\Mcode\Http\Requests\StoreMcodeCategoryRequest;
 use Modules\Mcode\Http\Requests\UpdateMcodeCategoryRequest;

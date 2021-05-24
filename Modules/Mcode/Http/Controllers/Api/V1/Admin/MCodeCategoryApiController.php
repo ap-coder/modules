@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
 use Modules\Mcode\Http\Requests\StoreMcodeCategoryRequest;
 use Modules\Mcode\Http\Requests\UpdateMcodeCategoryRequest;
-use Modules\Mcode\Http\Resources\Admin\McodeCategoryResource;
+use Modules\Mcode\Transformers\Admin\McodeCategoryResource;
 use Modules\Mcode\Entities\McodeCategory;
 use Gate;
 use Illuminate\Http\Request;

@@ -32,6 +32,30 @@
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
+                            @can('mcode_access')
+                                <li class="nav-item">
+                                    <a href="{{ route("admin.mcodes.index") }}" class="nav-link {{ request()->is("admin/mcodes") || request()->is("admin/mcodes/*") ? "active" : "" }}">
+                                        <i class="fa-fw nav-icon fas fa-qrcode">
+
+                                        </i>
+                                        <p>
+                                            {{ trans('cruds.mcode.title') }}
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('mcode_category_access')
+                                <li class="nav-item">
+                                    <a href="{{ route("admin.mcode-categories.index") }}" class="nav-link {{ request()->is("admin/mcode-categories") || request()->is("admin/mcode-categories/*") ? "active" : "" }}">
+                                        <i class="fa-fw nav-icon fas fa-qrcode">
+
+                                        </i>
+                                        <p>
+                                            {{ trans('cruds.mcodeCategory.title') }}
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
                             @can('mcode_feature_access')
                                 <li class="nav-item">
                                     <a href="{{ route("admin.mcode-features.index") }}" class="nav-link {{ request()->is("admin/mcode-features") || request()->is("admin/mcode-features/*") ? "active" : "" }}">
@@ -39,19 +63,7 @@
 
                                         </i>
                                         <p>
-                                            {{ trans('mcode::cruds.mcodeFeature.title') }}
-                                        </p>
-                                    </a>
-                                </li>
-                            @endcan
-                            @can('m_code_category_access')
-                                <li class="nav-item">
-                                    <a href="{{ route("admin.m-code-categories.index") }}" class="nav-link {{ request()->is("admin/m-code-categories") || request()->is("admin/m-code-categories/*") ? "active" : "" }}">
-                                        <i class="fa-fw nav-icon fas fa-cogs">
-
-                                        </i>
-                                        <p>
-                                            {{ trans('mcode::cruds.mCodeCategory.title') }}
+                                            {{ trans('cruds.mcodeFeature.title') }}
                                         </p>
                                     </a>
                                 </li>
