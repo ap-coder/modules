@@ -4,14 +4,17 @@ namespace Modules\Mcode\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Modules\Mcode\Traits\MediaUploadingTrait;
-use Modules\Mcode\Entities\MassDestroyMcodeRequest;
-use Modules\Mcode\Entities\StoreMcodeRequest;
-use Modules\Mcode\Entities\UpdateMcodeRequest;
+use Modules\Mcode\Http\Requests\MassDestroyMcodeRequest;
+use Modules\Mcode\Http\Requests\StoreMcodeRequest;
+use Modules\Mcode\Http\Requests\UpdateMcodeRequest;
 use Modules\Mcode\Entities\Mcode;
 use Gate;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use Spatie\MediaLibrary\HasMedia\HasMedia;
+use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
+
 use Symfony\Component\HttpFoundation\Response;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -54,10 +57,10 @@ class McodeController extends Controller
             $table->editColumn('photo', function ($row) {
                 if ($photo = $row->photo) {
                     return sprintf(
-        '<a href="%s" target="_blank"><img src="%s" width="50px" height="50px"></a>',
-        $photo->url,
-        $photo->thumbnail
-    );
+                        '<a href="%s" target="_blank"><img src="%s" width="50px" height="50px"></a>',
+                        $photo->url,
+                        $photo->thumbnail
+                    );
                 }
 
                 return '';
