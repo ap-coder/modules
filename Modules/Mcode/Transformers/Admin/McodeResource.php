@@ -1,10 +1,10 @@
 <?php
 
-namespace Modules\Mcode\Http\Resources\Admin;
+namespace Modules\Mcode\Transformers\Admin;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class McodeCategoryResource extends JsonResource
+class McodeResource extends JsonResource
 {
     public function toArray($request)
     {

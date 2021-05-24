@@ -5,7 +5,7 @@ namespace Modules\Mcode\Http\Controllers\Api\V1\Admin;
 use App\Http\Controllers\Controller;
 use Modules\Mcode\Http\Requests\StoreMcodeFeatureRequest;
 use Modules\Mcode\Http\Requests\UpdateMcodeFeatureRequest;
-use Modules\Mcode\Http\\Resources\Admin\McodeFeatureResource;
+use Modules\Mcode\Transformers\Admin\McodeFeatureResource;
 use Modules\Mcode\Entities\McodeFeature;
 use Gate;
 use Illuminate\Http\Request;

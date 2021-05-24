@@ -18,6 +18,11 @@ class McodePermissionsTableSeeder extends Seeder
         $permissions = [
 
             [ 'title' => 'mcode_manager_access', ],
+            [ 'title' => 'mcode_create', ],
+            [ 'title' => 'mcode_edit', ],
+            [ 'title' => 'mcode_show', ],
+            [ 'title' => 'mcode_delete', ],
+            [ 'title' => 'mcode_access', ],
             [ 'title' => 'mcode_feature_create', ],
             [ 'title' => 'mcode_feature_edit', ],
             [ 'title' => 'mcode_feature_show', ],
