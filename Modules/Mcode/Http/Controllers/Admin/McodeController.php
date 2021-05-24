@@ -9,6 +9,7 @@ use Modules\Mcode\Entities\StoreMcodeRequest;
 use Modules\Mcode\Entities\UpdateMcodeRequest;
 use Modules\Mcode\Entities\Mcode;
 use Gate;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Symfony\Component\HttpFoundation\Response;
@@ -70,14 +71,14 @@ class McodeController extends Controller
             return $table->make(true);
         }
 
-        return view('admin.mcodes.index');
+        return view('mcode::admin.mcodes.index');
     }
 
     public function create()
     {
         abort_if(Gate::denies('mcode_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('admin.mcodes.create');
+        return view('mcode::admin.mcodes.create');
     }
 
     public function store(StoreMcodeRequest $request)
@@ -92,14 +93,14 @@ class McodeController extends Controller
             Media::whereIn('id', $media)->update(['model_id' => $mcode->id]);
         }
 
-        return redirect()->route('admin.mcodes.index');
+        return redirect()->route('mcode::admin.mcodes.index');
     }
 
     public function edit(Mcode $mcode)
     {
         abort_if(Gate::denies('mcode_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('admin.mcodes.edit', compact('mcode'));
+        return view('mcode::admin.mcodes.edit', compact('mcode'));
     }
 
     public function update(UpdateMcodeRequest $request, Mcode $mcode)
@@ -117,14 +118,14 @@ class McodeController extends Controller
             $mcode->photo->delete();
         }
 
-        return redirect()->route('admin.mcodes.index');
+        return redirect()->route('mcode::admin.mcodes.index');
     }
 
     public function show(Mcode $mcode)
     {
         abort_if(Gate::denies('mcode_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('admin.mcodes.show', compact('mcode'));
+        return view('mcode::admin.mcodes.show', compact('mcode'));
     }
 
     public function destroy(Mcode $mcode)

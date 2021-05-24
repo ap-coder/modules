@@ -18,6 +18,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Mcode', 'mi
     // });
 
 
+    // Mcode
+    Route::delete('mcodes/destroy', '\Modules\Mcode\Http\Controllers\Admin\McodeController@massDestroy')->name('mcodes.massDestroy');
+    Route::post('mcodes/media', '\Modules\Mcode\Http\Controllers\Admin\McodeController@storeMedia')->name('mcodes.storeMedia');
+    Route::post('mcodes/ckmedia', '\Modules\Mcode\Http\Controllers\Admin\McodeController@storeCKEditorImages')->name('mcodes.storeCKEditorImages');
+    Route::resource('mcodes', '\Modules\Mcode\Http\Controllers\Admin\McodeController');
+
 
     // Mcode Feature
     Route::delete('mcode-features/destroy', '\Modules\Mcode\Http\Controllers\Admin\McodeFeatureController@massDestroy')->name('mcode-features.massDestroy');

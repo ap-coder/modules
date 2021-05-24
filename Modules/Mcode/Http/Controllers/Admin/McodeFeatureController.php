@@ -10,6 +10,7 @@ use Modules\Mcode\Entities\McodeCategory;
 use Modules\Mcode\Entities\McodeFeature;
 use App\Models\ProductModel;
 use Gate;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
