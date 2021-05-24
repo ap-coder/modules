@@ -23,6 +23,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Mcode', 'mi
     Route::delete('mcode-features/destroy', '\Modules\Mcode\Http\Controllers\Admin\McodeFeatureController@massDestroy')->name('mcode-features.massDestroy');
     Route::resource('mcode-features', '\Modules\Mcode\Http\Controllers\Admin\McodeFeatureController');
 
+
+    Route::delete('mcode-categories/destroy', '\Modules\Mcode\Http\Controllers\Admin\McodeCategoryController@massDestroy')->name('mcode-categories.massDestroy');
+    Route::resource('mcode-categories', '\Modules\Mcode\Http\Controllers\Admin\McodeCategoryController');
     // M Code Category
     // Route::delete('mcode-categories/destroy', 'Admin\McodeCategoryController@massDestroy')->name('mcode-categories.massDestroy');
     // Route::post('mcode-categories/media', 'Admin\McodeCategoryController@storeMedia')->name('mcode-categories.storeMedia');
