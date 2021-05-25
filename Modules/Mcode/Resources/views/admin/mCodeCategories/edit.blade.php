@@ -7,7 +7,7 @@
     </div>
 
     <div class="card-body">
-        <form method="POST" action="{{ route("admin.mcode-categories.update", [$mcodeCategory->id]) }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route("mcode:admin.mcode-categories.update", [$mcodeCategory->id]) }}" enctype="multipart/form-data">
             @method('PUT')
             @csrf
             <div class="form-group">
@@ -78,7 +78,7 @@
 @section('scripts')
 <script>
     Dropzone.options.imageDropzone = {
-    url: '{{ route('admin.mcode-categories.storeMedia') }}',
+    url: '{{ route('mcode:admin.mcode-categories.storeMedia') }}',
     maxFilesize: 5, // MB
     acceptedFiles: '.jpeg,.jpg,.png,.gif',
     maxFiles: 1,

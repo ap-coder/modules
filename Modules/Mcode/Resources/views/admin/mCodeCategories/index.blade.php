@@ -3,7 +3,7 @@
 @can('mcode_category_create')
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
-            <a class="btn btn-success" href="{{ route('admin.mcode-categories.create') }}">
+            <a class="btn btn-success" href="{{ route('mcode:admin.mcode-categories.create') }}">
                 {{ trans('global.add') }} {{ trans('cruds.mcodeCategory.title_singular') }}
             </a>
         </div>
@@ -57,7 +57,7 @@
   let deleteButtonTrans = '{{ trans('global.datatables.delete') }}';
   let deleteButton = {
     text: deleteButtonTrans,
-    url: "{{ route('admin.mcode-categories.massDestroy') }}",
+    url: "{{ route('mcode:admin.mcode-categories.massDestroy') }}",
     className: 'btn-danger',
     action: function (e, dt, node, config) {
       var ids = $.map(dt.rows({ selected: true }).data(), function (entry) {
@@ -89,7 +89,7 @@
     serverSide: true,
     retrieve: true,
     aaSorting: [],
-    ajax: "{{ route('admin.mcode-categories.index') }}",
+    ajax: "{{ route('mcode:admin.mcode-categories.index') }}",
     columns: [
       { data: 'placeholder', name: 'placeholder' },
 { data: 'id', name: 'id' },
@@ -108,7 +108,7 @@
       $($.fn.dataTable.tables(true)).DataTable()
           .columns.adjust();
   });
-  
+
 });
 
 </script>

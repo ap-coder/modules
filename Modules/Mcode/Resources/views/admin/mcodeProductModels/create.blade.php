@@ -7,7 +7,7 @@
     </div>
 
     <div class="card-body">
-        <form method="POST" action="{{ route("admin.mcode-product-models.store") }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route("mcode:admin.mcode-product-models.store") }}" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="model">{{ trans('cruds.mcodeProductModel.fields.model') }}</label>
@@ -69,7 +69,7 @@
               return new Promise(function(resolve, reject) {
                 // Init request
                 var xhr = new XMLHttpRequest();
-                xhr.open('POST', '{{ route('admin.mcode-product-models.storeCKEditorImages') }}', true);
+                xhr.open('POST', '{{ route('mcode:admin.mcode-product-models.storeCKEditorImages') }}', true);
                 xhr.setRequestHeader('x-csrf-token', window._token);
                 xhr.setRequestHeader('Accept', 'application/json');
                 xhr.responseType = 'json';

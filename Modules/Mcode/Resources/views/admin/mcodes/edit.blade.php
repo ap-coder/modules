@@ -7,7 +7,7 @@
     </div>
 
     <div class="card-body">
-        <form method="POST" action="{{ route("admin.mcodes.update", [$mcode->id]) }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route("mcode:admin.mcodes.update", [$mcode->id]) }}" enctype="multipart/form-data">
             @method('PUT')
             @csrf
             <div class="form-group">
@@ -86,7 +86,7 @@
 @section('scripts')
 <script>
     Dropzone.options.photoDropzone = {
-    url: '{{ route('admin.mcodes.storeMedia') }}',
+    url: '{{ route('mcode:admin.mcodes.storeMedia') }}',
     maxFilesize: 10, // MB
     acceptedFiles: '.jpeg,.jpg,.png,.gif',
     maxFiles: 1,
@@ -149,7 +149,7 @@
               return new Promise(function(resolve, reject) {
                 // Init request
                 var xhr = new XMLHttpRequest();
-                xhr.open('POST', '{{ route('admin.mcodes.storeCKEditorImages') }}', true);
+                xhr.open('POST', '{{ route('mcode:admin.mcodes.storeCKEditorImages') }}', true);
                 xhr.setRequestHeader('x-csrf-token', window._token);
                 xhr.setRequestHeader('Accept', 'application/json');
                 xhr.responseType = 'json';
