@@ -3,11 +3,12 @@
 namespace Modules\Mcode\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use Modules\Mcode\Entities\Mcode;
 use Modules\Mcode\Traits\MediaUploadingTrait;
 use Modules\Mcode\Http\Requests\MassDestroyMcodeRequest;
 use Modules\Mcode\Http\Requests\StoreMcodeRequest;
 use Modules\Mcode\Http\Requests\UpdateMcodeRequest;
-use Modules\Mcode\Entities\Mcode;
+
 use Gate;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -34,26 +35,28 @@ class McodeController extends Controller
             $table->addColumn('actions', '&nbsp;');
 
             $table->editColumn('actions', function ($row) {
-                $viewGate = 'mcode_show';
-                $editGate = 'mcode_edit';
-                $deleteGate = 'mcode_delete';
-                $crudRoutePart = 'mcodes';
+                    $viewGate = 'mcode_show';
+                    $editGate = 'mcode_edit';
+                    $deleteGate = 'mcode_delete';
+                    $crudRoutePart = 'mcodes';
 
-                return view('partials.datatablesActions', compact(
-                'viewGate',
-                'editGate',
-                'deleteGate',
-                'crudRoutePart',
-                'row'
-            ));
+                    return view('partials.datatablesActions', compact(
+                    'viewGate',
+                    'editGate',
+                    'deleteGate',
+                    'crudRoutePart',
+                    'row'
+                ));
             });
 
             $table->editColumn('id', function ($row) {
                 return $row->id ? $row->id : '';
             });
+
             $table->editColumn('name', function ($row) {
                 return $row->name ? $row->name : '';
             });
+
             $table->editColumn('photo', function ($row) {
                 if ($photo = $row->photo) {
                     return sprintf(
@@ -65,6 +68,7 @@ class McodeController extends Controller
 
                 return '';
             });
+
             $table->editColumn('product', function ($row) {
                 return $row->product ? $row->product : '';
             });

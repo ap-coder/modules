@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 // use Spatie\MediaLibrary\InteractsWithMedia;
 // use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Eloquent;
 /**
@@ -49,7 +50,7 @@ class McodeCategory extends Model
         parent::boot();
 
         static::saving(function ($model) {
-            $model->slug = str_slug($model->name);
+            $model->slug = Str::slug($model->name);
         });
     }
 

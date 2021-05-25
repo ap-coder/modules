@@ -20,6 +20,7 @@ class McodeController extends Controller
     public function index()
     {
         $model = 'App\Models\\' . \Str::studly(\Str::singular('ProductModel'));
+
         if (is_subclass_of($model, 'Illuminate\Database\Eloquent\Model')) {
             //parent model run here
         }else{

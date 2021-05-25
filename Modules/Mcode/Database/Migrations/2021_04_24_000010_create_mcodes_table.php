@@ -12,6 +12,7 @@ class CreateMcodesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name')->nullable();
             $table->string('product')->nullable();
+            $table->string('slug')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
