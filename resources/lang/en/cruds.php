@@ -1,5 +1,4 @@
 <?php
-
 return [
     'userManagement' => [
         'title'          => 'User management',
@@ -201,6 +200,7 @@ return [
             'deleted_at_helper'  => ' ',
         ],
     ],
+
     'mcode' => [
         'title'          => 'Mcodes',
         'title_singular' => 'Mcode',

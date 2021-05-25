@@ -1,7 +1,7 @@
-@extends('mcode:site.layouts.mcodes')
+@extends('site.layouts.mcode')
 
 @section('slider')
-    @include('mcode:site.mcodes.partials.masthead')
+    @include('mcode::site.mcodes.partials.masthead')
 @endsection
 
 @section('content')
@@ -24,7 +24,8 @@
 			<div class="sort-destination-loader sort-destination-loader-showing mt-4 pt-2">
 				<div class="row team-list sort-destination" data-sort-id="configs">
 
-				@foreach($products as $product)
+					@if (isset($products))
+					@foreach($products as $product)
 					@foreach($product->associatedProductsDocs as $doc)
 						@foreach ($doc->doctypes as $type)
 							{{-- @if($type->slug == 'm-code') --}}
@@ -62,6 +63,8 @@
 						@endforeach
 					@endforeach
 				@endforeach
+					@endif
+
 
 
 

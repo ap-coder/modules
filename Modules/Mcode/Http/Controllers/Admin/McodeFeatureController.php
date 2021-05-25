@@ -29,7 +29,14 @@ class McodeFeatureController extends Controller
     {
         abort_if(Gate::denies('mcode_feature_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $product_models = ProductModel::all()->pluck('name', 'id');
+        $model = 'App\Models\\' . \Str::studly(\Str::singular('ProductModel'));
+        if (is_subclass_of($model, 'Illuminate\Database\Eloquent\Model')) {
+            $product_models = ProductModel::all()->pluck('name', 'id');
+        }else{
+            $product_models=array();
+        }
+
+        
 
         $categories = McodeCategory::all()->pluck('name', 'id');
 
