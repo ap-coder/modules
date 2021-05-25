@@ -1,9 +1,9 @@
-@extends('layouts.admin')
+@extends('mcode:layouts.admin')
 @section('content')
 @can('mcode_feature_create')
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
-            <a class="btn btn-success" href="{{ route('admin.mcode-features.create') }}">
+            <a class="btn btn-success" href="{{ route('mcode:admin.mcode-features.create') }}">
                 {{ trans('global.add') }} {{ trans('cruds.mcodeFeature.title_singular') }}
             </a>
         </div>
@@ -63,7 +63,7 @@
   let deleteButtonTrans = '{{ trans('global.datatables.delete') }}';
   let deleteButton = {
     text: deleteButtonTrans,
-    url: "{{ route('admin.mcode-features.massDestroy') }}",
+    url: "{{ route('mcode:admin.mcode-features.massDestroy') }}",
     className: 'btn-danger',
     action: function (e, dt, node, config) {
       var ids = $.map(dt.rows({ selected: true }).data(), function (entry) {
@@ -95,17 +95,17 @@
     serverSide: true,
     retrieve: true,
     aaSorting: [],
-    ajax: "{{ route('admin.mcode-features.index') }}",
+    ajax: "{{ route('mcode:admin.mcode-features.index') }}",
     columns: [
-      { data: 'placeholder', name: 'placeholder' },
-{ data: 'id', name: 'id' },
-{ data: 'published', name: 'published' },
-{ data: 'mcode', name: 'mcode' },
-{ data: 'name', name: 'name' },
-{ data: 'defaults', name: 'defaults' },
-{ data: 'categories', name: 'categories.name' },
-{ data: 'models', name: 'models.model' },
-{ data: 'actions', name: '{{ trans('global.actions') }}' }
+        { data: 'placeholder', name: 'placeholder' },
+        { data: 'id', name: 'id' },
+        { data: 'published', name: 'published' },
+        { data: 'mcode', name: 'mcode' },
+        { data: 'name', name: 'name' },
+        { data: 'defaults', name: 'defaults' },
+        { data: 'categories', name: 'categories.name' },
+        { data: 'models', name: 'models.model' },
+        { data: 'actions', name: '{{ trans('global.actions') }}' }
     ],
     orderCellsTop: true,
     order: [[ 1, 'desc' ]],
@@ -116,7 +116,7 @@
       $($.fn.dataTable.tables(true)).DataTable()
           .columns.adjust();
   });
-  
+
 });
 
 </script>

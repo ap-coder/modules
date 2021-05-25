@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('mcode:layouts.admin')
 @section('content')
 
 <div class="card">
@@ -7,7 +7,7 @@
     </div>
 
     <div class="card-body">
-        <form method="POST" action="{{ route("admin.mcode-features.store") }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route("mcode:admin.mcode-features.store") }}" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <div class="form-check {{ $errors->has('published') ? 'is-invalid' : '' }}">

@@ -8,7 +8,7 @@ use Modules\Mcode\Http\Requests\StoreMcodeFeatureRequest;
 use Modules\Mcode\Http\Requests\UpdateMcodeFeatureRequest;
 use Modules\Mcode\Entities\McodeCategory;
 use Modules\Mcode\Entities\McodeFeature;
-use App\Models\ProductModel;
+use Modules\Mcode\Entities\McodeProductModel;
 use Gate;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -16,38 +16,88 @@ use Symfony\Component\HttpFoundation\Response;
 
 class McodeFeatureController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         abort_if(Gate::denies('mcode_feature_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $mcodeFeatures = McodeFeature::with(['product_models', 'categories'])->get();
+        if ($request->ajax()) {
+            $query = McodeFeature::with(['categories', 'models'])->select(sprintf('%s.*', (new McodeFeature())->table));
+            $table = Datatables::of($query);
 
-        return view('mcode::admin.mcodeFeatures.index', compact('mcodeFeatures'));
+            $table->addColumn('placeholder', '&nbsp;');
+            $table->addColumn('actions', '&nbsp;');
+
+            $table->editColumn('actions', function ($row) {
+                $viewGate = 'mcode_feature_show';
+                $editGate = 'mcode_feature_edit';
+                $deleteGate = 'mcode_feature_delete';
+                $crudRoutePart = 'mcode-features';
+
+                return view('mcode:partials.datatablesActions', compact(
+                'viewGate',
+                'editGate',
+                'deleteGate',
+                'crudRoutePart',
+                'row'
+            ));
+            });
+
+            $table->editColumn('id', function ($row) {
+                return $row->id ? $row->id : '';
+            });
+            $table->editColumn('published', function ($row) {
+                return '<input type="checkbox" disabled ' . ($row->published ? 'checked' : null) . '>';
+            });
+            $table->editColumn('mcode', function ($row) {
+                return $row->mcode ? $row->mcode : '';
+            });
+            $table->editColumn('name', function ($row) {
+                return $row->name ? $row->name : '';
+            });
+            $table->editColumn('defaults', function ($row) {
+                return $row->defaults ? $row->defaults : '';
+            });
+            $table->editColumn('categories', function ($row) {
+                $labels = [];
+                foreach ($row->categories as $category) {
+                    $labels[] = sprintf('<span class="label label-info label-many">%s</span>', $category->name);
+                }
+
+                return implode(' ', $labels);
+            });
+            $table->editColumn('models', function ($row) {
+                $labels = [];
+                foreach ($row->models as $model) {
+                    $labels[] = sprintf('<span class="label label-info label-many">%s</span>', $model->model);
+                }
+
+                return implode(' ', $labels);
+            });
+
+            $table->rawColumns(['actions', 'placeholder', 'published', 'categories', 'models']);
+
+            return $table->make(true);
+        }
+
+        return view('mcode:admin.mcodeFeatures.index');
     }
 
     public function create()
     {
         abort_if(Gate::denies('mcode_feature_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $model = 'App\Models\\' . \Str::studly(\Str::singular('ProductModel'));
-        if (is_subclass_of($model, 'Illuminate\Database\Eloquent\Model')) {
-            $product_models = ProductModel::all()->pluck('name', 'id');
-        }else{
-            $product_models=array();
-        }
-
-        
-
         $categories = McodeCategory::all()->pluck('name', 'id');
 
-        return view('mcode::admin.mcodeFeatures.create', compact('product_models', 'categories'));
+        $models = McodeProductModel::all()->pluck('model', 'id');
+
+        return view('mcode:admin.mcodeFeatures.create', compact('categories', 'models'));
     }
 
     public function store(StoreMcodeFeatureRequest $request)
     {
         $mcodeFeature = McodeFeature::create($request->all());
-        $mcodeFeature->product_models()->sync($request->input('product_models', []));
         $mcodeFeature->categories()->sync($request->input('categories', []));
+        $mcodeFeature->models()->sync($request->input('models', []));
 
         return redirect()->route('admin.mcode-features.index');
     }
@@ -56,20 +106,20 @@ class McodeFeatureController extends Controller
     {
         abort_if(Gate::denies('mcode_feature_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $product_models = ProductModel::all()->pluck('name', 'id');
-
         $categories = McodeCategory::all()->pluck('name', 'id');
 
-        $mcodeFeature->load('product_models', 'categories');
+        $models = McodeProductModel::all()->pluck('model', 'id');
 
-        return view('mcode::admin.mcodeFeatures.edit', compact('product_models', 'categories', 'mcodeFeature'));
+        $mcodeFeature->load('categories', 'models');
+
+        return view('mcode:admin.mcodeFeatures.edit', compact('categories', 'models', 'mcodeFeature'));
     }
 
     public function update(UpdateMcodeFeatureRequest $request, McodeFeature $mcodeFeature)
     {
         $mcodeFeature->update($request->all());
-        $mcodeFeature->product_models()->sync($request->input('product_models', []));
         $mcodeFeature->categories()->sync($request->input('categories', []));
+        $mcodeFeature->models()->sync($request->input('models', []));
 
         return redirect()->route('admin.mcode-features.index');
     }
@@ -78,9 +128,9 @@ class McodeFeatureController extends Controller
     {
         abort_if(Gate::denies('mcode_feature_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $mcodeFeature->load('product_models', 'categories');
+        $mcodeFeature->load('categories', 'models');
 
-        return view('mcode::admin.mcodeFeatures.show', compact('mcodeFeature'));
+        return view('mcode:admin.mcodeFeatures.show', compact('mcodeFeature'));
     }
 
     public function destroy(McodeFeature $mcodeFeature)
