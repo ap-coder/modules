@@ -1,6 +1,6 @@
 
                 @can('mcode_manager_access')
-                    <li class="nav-item has-treeview {{ request()->is("admin/mcode-features*") ? "menu-open" : "" }} {{ request()->is("admin/m-code-categories*") ? "menu-open" : "" }}">
+                    <li class="nav-item has-treeview {{ request()->is("admin/mcodes*") ? "menu-open" : "" }} {{ request()->is("admin/mcode-categories*") ? "menu-open" : "" }} {{ request()->is("admin/mcode-features*") ? "menu-open" : "" }}">
                         <a class="nav-link nav-dropdown-toggle" href="#">
                             <i class="fa-fw nav-icon fas fa-qrcode">
 
