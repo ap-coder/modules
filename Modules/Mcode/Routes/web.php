@@ -34,11 +34,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Mcode', 'mi
     Route::post('mcode-categories/media', '\Modules\Mcode\Http\Controllers\Admin\McodeCategoryController@storeMedia')->name('mcode-categories.storeMedia');
     Route::post('mcode-categories/ckmedia', '\Modules\Mcode\Http\Controllers\Admin\MCodeCategoryController@storeCKEditorImages')->name('mcode-categories.storeCKEditorImages');
     Route::resource('mcode-categories', '\Modules\Mcode\Http\Controllers\Admin\McodeCategoryController');
-    // M Code Category
-    // Route::delete('mcode-categories/destroy', 'Admin\McodeCategoryController@massDestroy')->name('mcode-categories.massDestroy');
-    // Route::post('mcode-categories/media', 'Admin\McodeCategoryController@storeMedia')->name('mcode-categories.storeMedia');
-    // Route::post('mcode-categories/ckmedia', 'Admin\MCodeCategoryController@storeCKEditorImages')->name('mcode-categories.storeCKEditorImages');
-    // Route::resource('m-code-categories', 'Admin\MCodeCategoryController');
+
+    // Mcode Product Model
+    Route::delete('mcode-product-models/destroy', '\Modules\Mcode\Http\Controllers\Admin\McodeProductModelController@massDestroy')->name('mcode-product-models.massDestroy');
+    Route::post('mcode-product-models/media', '\Modules\Mcode\Http\Controllers\Admin\McodeProductModelController@storeMedia')->name('mcode-product-models.storeMedia');
+    Route::post('mcode-product-models/ckmedia', '\Modules\Mcode\Http\Controllers\Admin\McodeProductModelController@storeCKEditorImages')->name('mcode-product-models.storeCKEditorImages');
+    Route::resource('mcode-product-models', '\Modules\Mcode\Http\Controllers\Admin\McodeProductModelController');
 
 });
 

@@ -1,12 +1,11 @@
-
                 @can('mcode_manager_access')
-                    <li class="nav-item has-treeview {{ request()->is("admin/mcodes*") ? "menu-open" : "" }} {{ request()->is("admin/mcode-categories*") ? "menu-open" : "" }} {{ request()->is("admin/mcode-features*") ? "menu-open" : "" }}">
+                    <li class="nav-item has-treeview {{ request()->is("admin/mcodes*") ? "menu-open" : "" }} {{ request()->is("admin/mcode-categories*") ? "menu-open" : "" }} {{ request()->is("admin/mcode-features*") ? "menu-open" : "" }} {{ request()->is("admin/mcode-product-models*") ? "menu-open" : "" }}">
                         <a class="nav-link nav-dropdown-toggle" href="#">
                             <i class="fa-fw nav-icon fas fa-qrcode">
 
                             </i>
                             <p>
-                                {{ trans('mcode::cruds.mcodeManager.title') }}
+                                {{ trans('cruds.mcodeManager.title') }}
                                 <i class="right fa fa-fw fa-angle-left nav-icon"></i>
                             </p>
                         </a>
@@ -43,6 +42,18 @@
                                         </i>
                                         <p>
                                             {{ trans('cruds.mcodeFeature.title') }}
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('mcode_product_model_access')
+                                <li class="nav-item">
+                                    <a href="{{ route("admin.mcode-product-models.index") }}" class="nav-link {{ request()->is("admin/mcode-product-models") || request()->is("admin/mcode-product-models/*") ? "active" : "" }}">
+                                        <i class="fa-fw nav-icon fas fa-keyboard">
+
+                                        </i>
+                                        <p>
+                                            {{ trans('cruds.mcodeProductModel.title') }}
                                         </p>
                                     </a>
                                 </li>

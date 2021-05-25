@@ -1,13 +1,13 @@
 <?php
 
-namespace Modules\Mcode\Http\Controllers\Api\V1\Admin;
+namespace App\Http\Controllers\Api\V1\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
-use Modules\Mcode\Http\Requests\StoreMcodeRequest;
-use Modules\Mcode\Http\Requests\UpdateMcodeRequest;
-use Modules\Mcode\Transformers\Admin\McodeResource;
-use Modules\Mcode\Entities\Mcode;
+use App\Http\Requests\StoreMcodeRequest;
+use App\Http\Requests\UpdateMcodeRequest;
+use App\Http\Resources\Admin\McodeResource;
+use App\Models\Mcode;
 use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,13 +20,13 @@ class McodeApiController extends Controller
     {
         abort_if(Gate::denies('mcode_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return new McodeResource(Mcode::all());
+        return new McodeResource(Mcode::with(['models'])->get());
     }
 
     public function store(StoreMcodeRequest $request)
     {
         $mcode = Mcode::create($request->all());
-
+        $mcode->models()->sync($request->input('models', []));
         if ($request->input('photo', false)) {
             $mcode->addMedia(storage_path('tmp/uploads/' . basename($request->input('photo'))))->toMediaCollection('photo');
         }
@@ -40,13 +40,13 @@ class McodeApiController extends Controller
     {
         abort_if(Gate::denies('mcode_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return new McodeResource($mcode);
+        return new McodeResource($mcode->load(['models']));
     }
 
     public function update(UpdateMcodeRequest $request, Mcode $mcode)
     {
         $mcode->update($request->all());
-
+        $mcode->models()->sync($request->input('models', []));
         if ($request->input('photo', false)) {
             if (!$mcode->photo || $request->input('photo') !== $mcode->photo->file_name) {
                 if ($mcode->photo) {

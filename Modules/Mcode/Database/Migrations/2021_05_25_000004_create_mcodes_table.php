@@ -10,9 +10,10 @@ class CreateMcodesTable extends Migration
     {
         Schema::create('mcodes', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->boolean('published')->default(0)->nullable();
             $table->string('name')->nullable();
-            $table->string('product')->nullable();
             $table->string('slug')->nullable();
+            $table->longText('desc')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

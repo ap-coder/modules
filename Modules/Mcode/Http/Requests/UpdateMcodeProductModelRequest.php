@@ -2,30 +2,24 @@
 
 namespace Modules\Mcode\Http\Requests;
 
-use Modules\Mcode\Entities\Mcode;
+use Modules\Mcode\Entities\McodeProductModel;
 use Gate;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Response;
 
-class StoreMcodeRequest extends FormRequest
+class UpdateMcodeProductModelRequest extends FormRequest
 {
     public function authorize()
     {
-        return Gate::allows('mcode_create');
+        return Gate::allows('mcode_product_model_edit');
     }
 
     public function rules()
     {
- return [
-            'name' => [
+        return [
+            'model' => [
                 'string',
                 'nullable',
-            ],
-            'models.*' => [
-                'integer',
-            ],
-            'models' => [
-                'array',
             ],
             'slug' => [
                 'string',

@@ -16,15 +16,22 @@ class UpdateMcodeRequest extends FormRequest
 
     public function rules()
     {
-        return [
+ return [
             'name' => [
                 'string',
                 'nullable',
             ],
-            'product' => [
+            'models.*' => [
+                'integer',
+            ],
+            'models' => [
+                'array',
+            ],
+            'slug' => [
                 'string',
                 'nullable',
             ],
+        ];
         ];
     }
 }

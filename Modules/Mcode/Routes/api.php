@@ -14,5 +14,27 @@ use Illuminate\Http\Request;
 */
 
 Route::middleware('auth:api')->get('/mcode', function (Request $request) {
+
+
+
+
     return $request->user();
 });
+
+// Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', 'middleware' => ['auth:sanctum']], function () {
+
+//     // Mcode Feature
+//     Route::apiResource('mcode-features', 'McodeFeatureApiController');
+
+//     // Mcode Category
+//     Route::post('mcode-categories/media', 'McodeCategoryApiController@storeMedia')->name('mcode-categories.storeMedia');
+//     Route::apiResource('mcode-categories', 'McodeCategoryApiController');
+
+//     // Mcode
+//     Route::post('mcodes/media', 'McodeApiController@storeMedia')->name('mcodes.storeMedia');
+//     Route::apiResource('mcodes', 'McodeApiController');
+
+//     // Mcode Product Model
+//     Route::post('mcode-product-models/media', 'McodeProductModelApiController@storeMedia')->name('mcode-product-models.storeMedia');
+//     Route::apiResource('mcode-product-models', 'McodeProductModelApiController');
+// });

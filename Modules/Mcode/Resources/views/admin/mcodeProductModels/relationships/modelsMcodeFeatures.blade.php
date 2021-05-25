@@ -15,7 +15,7 @@
 
         <div class="card-body">
             <div class="table-responsive">
-                <table class=" table table-bordered table-striped table-hover datatable datatable-categoriesMcodeFeatures">
+                <table class=" table table-bordered table-striped table-hover datatable datatable-modelsMcodeFeatures">
                     <thead>
                         <tr>
                             <th width="10">
@@ -34,13 +34,13 @@
                                 {{ trans('cruds.mcodeFeature.fields.name') }}
                             </th>
                             <th>
-                                {{ trans('cruds.mcodeFeature.fields.product_models') }}
+                                {{ trans('cruds.mcodeFeature.fields.defaults') }}
                             </th>
                             <th>
                                 {{ trans('cruds.mcodeFeature.fields.categories') }}
                             </th>
                             <th>
-                                {{ trans('cruds.mcodeFeature.fields.defaults') }}
+                                {{ trans('cruds.mcodeFeature.fields.models') }}
                             </th>
                             <th>
                                 &nbsp;
@@ -67,9 +67,7 @@
                                     {{ $mcodeFeature->name ?? '' }}
                                 </td>
                                 <td>
-                                    @foreach($mcodeFeature->product_models as $key => $item)
-                                        <span class="badge badge-info">{{ $item->name }}</span>
-                                    @endforeach
+                                    {{ $mcodeFeature->defaults ?? '' }}
                                 </td>
                                 <td>
                                     @foreach($mcodeFeature->categories as $key => $item)
@@ -77,7 +75,9 @@
                                     @endforeach
                                 </td>
                                 <td>
-                                    {{ $mcodeFeature->defaults ?? '' }}
+                                    @foreach($mcodeFeature->models as $key => $item)
+                                        <span class="badge badge-info">{{ $item->model }}</span>
+                                    @endforeach
                                 </td>
                                 <td>
                                     @can('mcode_feature_show')
@@ -150,14 +150,11 @@
     order: [[ 1, 'desc' ]],
     pageLength: 100,
   });
-  let table = $('.datatable-categoriesMcodeFeatures:not(.ajaxTable)').DataTable({ buttons: dtButtons })
+  let table = $('.datatable-modelsMcodeFeatures:not(.ajaxTable)').DataTable({ buttons: dtButtons })
   $('a[data-toggle="tab"]').on('shown.bs.tab click', function(e){
       $($.fn.dataTable.tables(true)).DataTable()
           .columns.adjust();
   });
-  $('div#sidebar').on('transitionend', function(e) {
-    $($.fn.dataTable.tables(true)).DataTable().columns.adjust();
-  })
   
 })
 

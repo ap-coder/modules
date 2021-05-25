@@ -25,6 +25,14 @@
                     </tr>
                     <tr>
                         <th>
+                            {{ trans('cruds.mcode.fields.published') }}
+                        </th>
+                        <td>
+                            <input type="checkbox" disabled="disabled" {{ $mcode->published ? 'checked' : '' }}>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                             {{ trans('cruds.mcode.fields.name') }}
                         </th>
                         <td>
@@ -45,10 +53,28 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.mcode.fields.product') }}
+                            {{ trans('cruds.mcode.fields.models') }}
                         </th>
                         <td>
-                            {{ $mcode->product }}
+                            @foreach($mcode->models as $key => $models)
+                                <span class="label label-info">{{ $models->model }}</span>
+                            @endforeach
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.mcode.fields.slug') }}
+                        </th>
+                        <td>
+                            {{ $mcode->slug }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.mcode.fields.desc') }}
+                        </th>
+                        <td>
+                            {!! $mcode->desc !!}
                         </td>
                     </tr>
                 </tbody>

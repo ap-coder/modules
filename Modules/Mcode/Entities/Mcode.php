@@ -17,7 +17,7 @@ class Mcode extends Model implements HasMedia
     use InteractsWithMedia;
     use HasFactory;
 
-	
+
 	public $table = 'mcodes';
 
 
@@ -25,17 +25,19 @@ class Mcode extends Model implements HasMedia
         'photo',
     ];
 
-	
+
 	protected $dates = [
         'created_at',
         'updated_at',
         'deleted_at',
     ];
 
-	
-	protected $fillable = [
+
+    protected $fillable = [
+        'published',
         'name',
-        'product',
+        'slug',
+        'desc',
         'created_at',
         'updated_at',
         'deleted_at',
@@ -50,14 +52,15 @@ class Mcode extends Model implements HasMedia
         });
     }
 
-	
+
 	public function registerMediaConversions(Media $media = null): void
     {
         $this->addMediaConversion('thumb')->fit('crop', 50, 50);
         $this->addMediaConversion('preview')->fit('crop', 120, 120);
+        $this->addMediaConversion('product')->fit('crop', 600, 600);
     }
 
-	
+
 	public function getPhotoAttribute()
     {
         $file = $this->getMedia('photo')->last();
@@ -65,6 +68,7 @@ class Mcode extends Model implements HasMedia
             $file->url       = $file->getUrl();
             $file->thumbnail = $file->getUrl('thumb');
             $file->preview   = $file->getUrl('preview');
+            $file->preview   = $file->getUrl('product');
         }
 
         return $file;

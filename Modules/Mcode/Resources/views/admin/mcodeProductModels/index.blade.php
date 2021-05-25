@@ -1,40 +1,37 @@
 @extends('layouts.admin')
 @section('content')
-@can('mcode_create')
+@can('mcode_product_model_create')
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
-            <a class="btn btn-success" href="{{ route('admin.mcodes.create') }}">
-                {{ trans('global.add') }} {{ trans('cruds.mcode.title_singular') }}
+            <a class="btn btn-success" href="{{ route('admin.mcode-product-models.create') }}">
+                {{ trans('global.add') }} {{ trans('cruds.mcodeProductModel.title_singular') }}
             </a>
         </div>
     </div>
 @endcan
 <div class="card">
     <div class="card-header">
-        {{ trans('cruds.mcode.title_singular') }} {{ trans('global.list') }}
+        {{ trans('cruds.mcodeProductModel.title_singular') }} {{ trans('global.list') }}
     </div>
 
     <div class="card-body">
-        <table class=" table table-bordered table-striped table-hover ajaxTable datatable datatable-Mcode">
+        <table class=" table table-bordered table-striped table-hover ajaxTable datatable datatable-McodeProductModel">
             <thead>
                 <tr>
                     <th width="10">
 
                     </th>
                     <th>
-                        {{ trans('cruds.mcode.fields.id') }}
+                        {{ trans('cruds.mcodeProductModel.fields.id') }}
                     </th>
                     <th>
-                        {{ trans('cruds.mcode.fields.published') }}
+                        {{ trans('cruds.mcodeProductModel.fields.model') }}
                     </th>
                     <th>
-                        {{ trans('cruds.mcode.fields.name') }}
+                        {{ trans('cruds.mcodeProductModel.fields.published') }}
                     </th>
                     <th>
-                        {{ trans('cruds.mcode.fields.photo') }}
-                    </th>
-                    <th>
-                        {{ trans('cruds.mcode.fields.models') }}
+                        {{ trans('cruds.mcodeProductModel.fields.slug') }}
                     </th>
                     <th>
                         &nbsp;
@@ -53,11 +50,11 @@
 <script>
     $(function () {
   let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
-@can('mcode_delete')
+@can('mcode_product_model_delete')
   let deleteButtonTrans = '{{ trans('global.datatables.delete') }}';
   let deleteButton = {
     text: deleteButtonTrans,
-    url: "{{ route('admin.mcodes.massDestroy') }}",
+    url: "{{ route('admin.mcode-product-models.massDestroy') }}",
     className: 'btn-danger',
     action: function (e, dt, node, config) {
       var ids = $.map(dt.rows({ selected: true }).data(), function (entry) {
@@ -89,21 +86,20 @@
     serverSide: true,
     retrieve: true,
     aaSorting: [],
-    ajax: "{{ route('admin.mcodes.index') }}",
+    ajax: "{{ route('admin.mcode-product-models.index') }}",
     columns: [
       { data: 'placeholder', name: 'placeholder' },
 { data: 'id', name: 'id' },
+{ data: 'model', name: 'model' },
 { data: 'published', name: 'published' },
-{ data: 'name', name: 'name' },
-{ data: 'photo', name: 'photo', sortable: false, searchable: false },
-{ data: 'models', name: 'models.model' },
+{ data: 'slug', name: 'slug' },
 { data: 'actions', name: '{{ trans('global.actions') }}' }
     ],
     orderCellsTop: true,
     order: [[ 1, 'desc' ]],
     pageLength: 100,
   };
-  let table = $('.datatable-Mcode').DataTable(dtOverrideGlobals);
+  let table = $('.datatable-McodeProductModel').DataTable(dtOverrideGlobals);
   $('a[data-toggle="tab"]').on('shown.bs.tab click', function(e){
       $($.fn.dataTable.tables(true)).DataTable()
           .columns.adjust();

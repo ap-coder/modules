@@ -30,6 +30,7 @@ class McodeFeature extends Model
         'client_name',
         'client_description',
         'state',
+        'slug',
         'template',
         'defaults',
         'created_at',
@@ -56,9 +57,9 @@ class McodeFeature extends Model
         return $query->where('published', 1);
     }
 
-    public function product_models()
+    public function models()
     {
-        return $this->belongsToMany(ProductModel::class);
+        return $this->belongsToMany(McodeProductModel::class);
     }
 
     public function categories()
