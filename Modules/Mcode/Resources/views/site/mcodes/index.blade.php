@@ -1,7 +1,7 @@
-@extends('site.layouts.app')
+@extends('mcode:site.layouts.mcodes')
 
 @section('slider')
-    @include('site.config-catalog.partials.masthead')
+    @include('mcode:site.mcodes.partials.masthead')
 @endsection
 
 @section('content')
