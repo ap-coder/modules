@@ -24,10 +24,10 @@
 			<div class="sort-destination-loader sort-destination-loader-showing mt-4 pt-2">
 				<div class="row team-list sort-destination" data-sort-id="configs">
 
-					@if (isset($products))
-					@foreach($products as $product)
-					@foreach($product->associatedProductsDocs as $doc)
-						@foreach ($doc->doctypes as $type)
+					@if (isset($mcodes))
+					@foreach($mcodes as $product)
+					{{-- @foreach($product->associatedProductsDocs as $doc) --}}
+						{{-- @foreach ($doc->doctypes as $type) --}}
 							{{-- @if($type->slug == 'm-code') --}}
 
 
@@ -37,31 +37,31 @@
 
 
 
-											@foreach($doc->files as $key => $media)
-											<a href="{{ $media->getUrl() }}" target="_blank">
+											{{-- @foreach($doc->files as $key => $media) --}}
+											<a href=" " target="_blank">
 
-											@if($env == 'local')
+											{{-- @if($env == 'local') --}}
 												<img itemprop="url contentUrl" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" src="https://dummyimage.com/400x400/000/fff.jpg">
-											@elseif($doc->m_code_image)
+											{{-- @elseif($doc->m_code_image)
 												<img src="{{ $doc->m_code_image->getUrl('mcode') }}" class="img-fluid" alt="">
 		 									@elseif($product->config_catalog_image)
 					                          	<img src="{{ $product->config_catalog_image->getUrl('shop') }}" class="img-fluid" alt="">
 					                        @else
 					                            	<img itemprop="url contentUrl" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" src="https://dummyimage.com/400x400/000/fff.jpg">
-					                        @endif
+					                        @endif --}}
 
 											<span class="thumb-info-title lightbackground">
-												<span class="thumb-info-inner">{{ $product->name }}</span>
-												<span class="thumb-info-type bg-secondary"> {{ App\Models\Doc::CONFIG_CATALOG_FILTER_SELECT[$doc->config_catalog_filter] ?? '' }}</span>
+												<span class="thumb-info-inner">  $product->name  </span>
+												<span class="thumb-info-type bg-secondary">   App\Models\Doc::CONFIG_CATALOG_FILTER_SELECT[$doc->config_catalog_filter] </span>
 											</span>
 										</a>
-										@endforeach
+										{{-- @endforeach --}}
 									</span>
 								</span>
 							</div>
 							{{-- @endif --}}
-						@endforeach
-					@endforeach
+						{{-- @endforeach --}}
+					{{-- @endforeach --}}
 				@endforeach
 					@endif
 
