@@ -43,6 +43,9 @@
                         {{ trans('mcode::cruds.mcodeFeature.fields.models') }}
                     </th>
                     <th>
+                        {{ trans('mcode::cruds.mcode.fields.order') }}
+                    </th>
+                    <th>
                         &nbsp;
                     </th>
                 </tr>
@@ -105,6 +108,7 @@
         { data: 'defaults', name: 'defaults' },
         { data: 'categories', name: 'categories.name' },
         { data: 'models', name: 'models.model' },
+        { data: 'order', name: 'order' },
         { data: 'actions', name: '{{ trans('mcode::global.actions') }}' }
     ],
     orderCellsTop: true,

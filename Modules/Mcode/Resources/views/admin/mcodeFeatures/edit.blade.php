@@ -134,6 +134,14 @@
                 <span class="help-block">{{ trans('mcode::cruds.mcodeFeature.fields.models_helper') }}</span>
             </div>
             <div class="form-group">
+                <label for="order">{{ trans('mcode::cruds.mcodeFeature.fields.order') }}</label>
+                <input class="form-control {{ $errors->has('order') ? 'is-invalid' : '' }}" type="number" name="order" id="order" value="{{ old('order', $mcodeFeature->order) }}" step="1">
+                @if($errors->has('order'))
+                    <span class="text-danger">{{ $errors->first('order') }}</span>
+                @endif
+                <span class="help-block">{{ trans('mcode::cruds.mcodeFeature.fields.order_helper') }}</span>
+            </div>
+            <div class="form-group">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('mcode::global.save') }}
                 </button>

@@ -74,6 +74,9 @@ class McodeFeatureController extends Controller
 
                 return implode(' ', $labels);
             });
+            $table->editColumn('order', function ($row) {
+                return $row->order ? $row->order : '';
+            });
 
             $table->rawColumns(['actions', 'placeholder', 'published', 'categories', 'models']);
 
