@@ -4,12 +4,6 @@
     @include('mcode::site.mcodes.partials.masthead')
 @endsection
 
-@section('styles') 
-<style>
-.thumb-info .thumb-info-title {background: rgba(59, 69, 80, 0.4); max-width: 100%; width: 100%; overflow: visible; bottom: 2%; }
-</style>
-@endsection
-
 @section('content')
 
 	<section class="page-header page-header-modern page-header-background page-header-background-pattern page-header-background-sm overlay overlay-color-dark overlay-show overlay-op-5" style="background-image: url({{ asset('site/img/patterns/wild_oliva.png') }});">
@@ -42,22 +36,20 @@
 			<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
 				<span class="thumb-info-wrapper">
 					<a href="about-me.html">
-						@if(\App::environment() === 'local')
-							<img itemprop="url contentUrl" class="img-fluid" src="https://dummyimage.com/400x400/000/fff.jpg">
-						@elseif($product->photo)
-							{{-- <img itemprop="url contentUrl" class="img-fluid" src="https://dummyimage.com/400x400/000/fff.jpg"> --}}
-							{{ $product->getFirstMediaUrl('photo') }}
-						@else
-							<img itemprop="url contentUrl" class="img-fluid" src="https://dummyimage.com/400x400/000/fff.jpg">
-						@endif
-
+						<img src="img/team/team-1.jpg" class="img-fluid" alt="">
 						<span class="thumb-info-title">
-							<span class="thumb-info-inner">{{ $product->name ?? '' }}</span>
-							{{-- <span class="thumb-info-type"></span> --}}
+							<span class="thumb-info-inner">John Doe</span>
+							<span class="thumb-info-type">CEO</span>
 						</span>
 					</a>
 				</span>
-				 
+				<span class="thumb-info-caption">
+					<span class="thumb-info-caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac ligula mi, non suscipitaccumsan.</span>
+					<span class="thumb-info-social-icons mb-4">
+						<a target="_blank" href="http://www.facebook.com"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
+						<a href="http://www.linkedin.com"><i class="fab fa-linkedin-in"></i><span>Linkedin</span></a>
+					</span>
+				</span>
 			</span>
 		</div>
 		@endforeach
