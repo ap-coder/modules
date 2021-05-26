@@ -35,7 +35,7 @@ class McodeProductModelController extends Controller
                 $deleteGate = 'mcode_product_model_delete';
                 $crudRoutePart = 'mcode-product-models';
 
-                return view('partials.datatablesActions', compact(
+                return view('mcode::partials.datatablesActions', compact(
                 'viewGate',
                 'editGate',
                 'deleteGate',
@@ -62,14 +62,14 @@ class McodeProductModelController extends Controller
             return $table->make(true);
         }
 
-        return view('admin.mcodeProductModels.index');
+        return view('mcode::admin.mcodeProductModels.index');
     }
 
     public function create()
     {
         abort_if(Gate::denies('mcode_product_model_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('admin.mcodeProductModels.create');
+        return view('mcode::admin.mcodeProductModels.create');
     }
 
     public function store(StoreMcodeProductModelRequest $request)
@@ -87,7 +87,7 @@ class McodeProductModelController extends Controller
     {
         abort_if(Gate::denies('mcode_product_model_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('admin.mcodeProductModels.edit', compact('mcodeProductModel'));
+        return view('mcode::admin.mcodeProductModels.edit', compact('mcodeProductModel'));
     }
 
     public function update(UpdateMcodeProductModelRequest $request, McodeProductModel $mcodeProductModel)
@@ -103,7 +103,7 @@ class McodeProductModelController extends Controller
 
         $mcodeProductModel->load('modelsMcodeFeatures', 'modelsMcodes');
 
-        return view('admin.mcodeProductModels.show', compact('mcodeProductModel'));
+        return view('mcode::admin.mcodeProductModels.show', compact('mcodeProductModel'));
     }
 
     public function destroy(McodeProductModel $mcodeProductModel)

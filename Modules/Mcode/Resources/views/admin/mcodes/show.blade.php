@@ -3,21 +3,21 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.show') }} {{ trans('cruds.mcode.title') }}
+        {{ trans('mcode::global.show') }} {{ trans('mcode::cruds.mcode.title') }}
     </div>
 
     <div class="card-body">
         <div class="form-group">
             <div class="form-group">
-                <a class="btn btn-default" href="{{ route('mcode:admin.mcodes.index') }}">
-                    {{ trans('global.back_to_list') }}
+                <a class="btn btn-default" href="{{ route('admin.mcodes.index') }}">
+                    {{ trans('mcode::global.back_to_list') }}
                 </a>
             </div>
             <table class="table table-bordered table-striped">
                 <tbody>
                     <tr>
                         <th>
-                            {{ trans('cruds.mcode.fields.id') }}
+                            {{ trans('mcode::cruds.mcode.fields.id') }}
                         </th>
                         <td>
                             {{ $mcode->id }}
@@ -25,7 +25,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.mcode.fields.published') }}
+                            {{ trans('mcode::cruds.mcode.fields.published') }}
                         </th>
                         <td>
                             <input type="checkbox" disabled="disabled" {{ $mcode->published ? 'checked' : '' }}>
@@ -33,7 +33,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.mcode.fields.name') }}
+                            {{ trans('mcode::cruds.mcode.fields.name') }}
                         </th>
                         <td>
                             {{ $mcode->name }}
@@ -41,7 +41,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.mcode.fields.photo') }}
+                            {{ trans('mcode::cruds.mcode.fields.photo') }}
                         </th>
                         <td>
                             @if($mcode->photo)
@@ -53,7 +53,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.mcode.fields.models') }}
+                            {{ trans('mcode::cruds.mcode.fields.models') }}
                         </th>
                         <td>
                             @foreach($mcode->models as $key => $models)
@@ -63,7 +63,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.mcode.fields.slug') }}
+                            {{ trans('mcode::cruds.mcode.fields.slug') }}
                         </th>
                         <td>
                             {{ $mcode->slug }}
@@ -71,7 +71,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.mcode.fields.desc') }}
+                            {{ trans('mcode::cruds.mcode.fields.desc') }}
                         </th>
                         <td>
                             {!! $mcode->desc !!}
@@ -80,8 +80,8 @@
                 </tbody>
             </table>
             <div class="form-group">
-                <a class="btn btn-default" href="{{ route('mcode:admin.mcodes.index') }}">
-                    {{ trans('global.back_to_list') }}
+                <a class="btn btn-default" href="{{ route('admin.mcodes.index') }}">
+                    {{ trans('mcode::global.back_to_list') }}
                 </a>
             </div>
         </div>

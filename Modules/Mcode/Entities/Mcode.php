@@ -60,7 +60,6 @@ class Mcode extends Model implements HasMedia
         $this->addMediaConversion('product')->fit('crop', 600, 600);
     }
 
-
 	public function getPhotoAttribute()
     {
         $file = $this->getMedia('photo')->last();
@@ -77,5 +76,10 @@ class Mcode extends Model implements HasMedia
 	protected function serializeDate(DateTimeInterface $date)
     {
         return $date->format('Y-m-d H:i:s');
+    }
+
+    public function models()
+    {
+        return $this->belongsToMany(McodeProductModel::class);
     }
 }

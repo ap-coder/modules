@@ -4,7 +4,10 @@ namespace Modules\Mcode\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Modules\Mcode\Entities\Mcode;
+use Modules\Mcode\Entities\McodeProductModel;
+
 use Modules\Mcode\Traits\MediaUploadingTrait;
+
 use Modules\Mcode\Http\Requests\MassDestroyMcodeRequest;
 use Modules\Mcode\Http\Requests\StoreMcodeRequest;
 use Modules\Mcode\Http\Requests\UpdateMcodeRequest;
@@ -40,7 +43,7 @@ class McodeController extends Controller
                     $deleteGate = 'mcode_delete';
                     $crudRoutePart = 'mcodes';
 
-                    return view('partials.datatablesActions', compact(
+                    return view('mcode::partials.datatablesActions', compact(
                     'viewGate',
                     'editGate',
                     'deleteGate',
@@ -69,11 +72,16 @@ class McodeController extends Controller
                 return '';
             });
 
-            $table->editColumn('product', function ($row) {
-                return $row->product ? $row->product : '';
+            $table->editColumn('models', function ($row) {
+                $labels = [];
+                foreach ($row->models as $model) {
+                    $labels[] = sprintf('<span class="label label-info label-many">%s</span>', $model->model);
+                }
+
+                return implode(' ', $labels);
             });
 
-            $table->rawColumns(['actions', 'placeholder', 'photo']);
+            $table->rawColumns(['actions', 'placeholder', 'photo','models']);
 
             return $table->make(true);
         }
@@ -85,12 +93,14 @@ class McodeController extends Controller
     {
         abort_if(Gate::denies('mcode_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('mcode::admin.mcodes.create');
+        $models=McodeProductModel::get()->pluck('model', 'id');
+        return view('mcode::admin.mcodes.create',compact('models'));
     }
 
     public function store(StoreMcodeRequest $request)
     {
         $mcode = Mcode::create($request->all());
+        $mcode->models()->sync($request->input('models', []));
 
         if ($request->input('photo', false)) {
             $mcode->addMedia(storage_path('tmp/uploads/' . basename($request->input('photo'))))->toMediaCollection('photo');
@@ -100,19 +110,22 @@ class McodeController extends Controller
             Media::whereIn('id', $media)->update(['model_id' => $mcode->id]);
         }
 
-        return redirect()->route('mcode::admin.mcodes.index');
+        return redirect()->route('admin.mcodes.index');
     }
 
     public function edit(Mcode $mcode)
     {
         abort_if(Gate::denies('mcode_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('mcode::admin.mcodes.edit', compact('mcode'));
+        $models=McodeProductModel::get()->pluck('model', 'id');
+
+        return view('mcode::admin.mcodes.edit', compact('mcode','models'));
     }
 
     public function update(UpdateMcodeRequest $request, Mcode $mcode)
     {
         $mcode->update($request->all());
+        $mcode->models()->sync($request->input('models', []));
 
         if ($request->input('photo', false)) {
             if (!$mcode->photo || $request->input('photo') !== $mcode->photo->file_name) {
@@ -125,7 +138,7 @@ class McodeController extends Controller
             $mcode->photo->delete();
         }
 
-        return redirect()->route('mcode::admin.mcodes.index');
+        return redirect()->route('admin.mcodes.index');
     }
 
     public function show(Mcode $mcode)

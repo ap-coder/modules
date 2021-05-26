@@ -3,21 +3,21 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.show') }} {{ trans('cruds.mcodeCategory.title') }}
+        {{ trans('mcode::global.show') }} {{ trans('mcode::cruds.mcodeCategory.title') }}
     </div>
 
     <div class="card-body">
         <div class="form-group">
             <div class="form-group">
-                <a class="btn btn-default" href="{{ route('mcode:admin.mcode-categories.index') }}">
-                    {{ trans('global.back_to_list') }}
+                <a class="btn btn-default" href="{{ route('admin.mcode-categories.index') }}">
+                    {{ trans('mcode::global.back_to_list') }}
                 </a>
             </div>
             <table class="table table-bordered table-striped">
                 <tbody>
                     <tr>
                         <th>
-                            {{ trans('cruds.mcodeCategory.fields.id') }}
+                            {{ trans('mcode::cruds.mcodeCategory.fields.id') }}
                         </th>
                         <td>
                             {{ $mcodeCategory->id }}
@@ -25,7 +25,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.mcodeCategory.fields.published') }}
+                            {{ trans('mcode::cruds.mcodeCategory.fields.published') }}
                         </th>
                         <td>
                             <input type="checkbox" disabled="disabled" {{ $mcodeCategory->published ? 'checked' : '' }}>
@@ -33,7 +33,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.mcodeCategory.fields.name') }}
+                            {{ trans('mcode::cruds.mcodeCategory.fields.name') }}
                         </th>
                         <td>
                             {{ $mcodeCategory->name }}
@@ -41,7 +41,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.mcodeCategory.fields.description') }}
+                            {{ trans('mcode::cruds.mcodeCategory.fields.description') }}
                         </th>
                         <td>
                             {{ $mcodeCategory->description }}
@@ -49,7 +49,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.mcodeCategory.fields.slug') }}
+                            {{ trans('mcode::cruds.mcodeCategory.fields.slug') }}
                         </th>
                         <td>
                             {{ $mcodeCategory->slug }}
@@ -57,7 +57,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.mcodeCategory.fields.order') }}
+                            {{ trans('mcode::cruds.mcodeCategory.fields.order') }}
                         </th>
                         <td>
                             {{ $mcodeCategory->order }}
@@ -65,7 +65,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.mcodeCategory.fields.image') }}
+                            {{ trans('mcode::cruds.mcodeCategory.fields.image') }}
                         </th>
                         <td>
                             @if($mcodeCategory->image)
@@ -78,8 +78,8 @@
                 </tbody>
             </table>
             <div class="form-group">
-                <a class="btn btn-default" href="{{ route('mcode:admin.mcode-categories.index') }}">
-                    {{ trans('global.back_to_list') }}
+                <a class="btn btn-default" href="{{ route('admin.mcode-categories.index') }}">
+                    {{ trans('mcode::global.back_to_list') }}
                 </a>
             </div>
         </div>
@@ -88,18 +88,18 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.relatedData') }}
+        {{ trans('mcode::global.relatedData') }}
     </div>
     <ul class="nav nav-tabs" role="tablist" id="relationship-tabs">
         <li class="nav-item">
             <a class="nav-link" href="#categories_mcode_features" role="tab" data-toggle="tab">
-                {{ trans('cruds.mcodeFeature.title') }}
+                {{ trans('mcode::cruds.mcodeFeature.title') }}
             </a>
         </li>
     </ul>
     <div class="tab-content">
         <div class="tab-pane" role="tabpanel" id="categories_mcode_features">
-            @includeIf('admin.mcodeCategories.relationships.categoriesMcodeFeatures', ['mcodeFeatures' => $mcodeCategory->categoriesMcodeFeatures])
+            @includeIf('mcode::admin.mcodeCategories.relationships.categoriesMcodeFeatures', ['mcodeFeatures' => $mcodeCategory->categoriesMcodeFeatures])
         </div>
     </div>
 </div>

@@ -4,45 +4,45 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.create') }} {{ trans('cruds.mcode.title_singular') }}
+        {{ trans('mcode::global.create') }} {{ trans('mcode::cruds.mcode.title_singular') }}
     </div>
 
     <div class="card-body">
-        <form method="POST" action="{{ route("mcode:admin.mcodes.store") }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route("admin.mcodes.store") }}" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <div class="form-check {{ $errors->has('published') ? 'is-invalid' : '' }}">
                     <input type="hidden" name="published" value="0">
                     <input class="form-check-input" type="checkbox" name="published" id="published" value="1" {{ old('published', 0) == 1 || old('published') === null ? 'checked' : '' }}>
-                    <label class="form-check-label" for="published">{{ trans('cruds.mcode.fields.published') }}</label>
+                    <label class="form-check-label" for="published">{{ trans('mcode::cruds.mcode.fields.published') }}</label>
                 </div>
                 @if($errors->has('published'))
                     <span class="text-danger">{{ $errors->first('published') }}</span>
                 @endif
-                <span class="help-block">{{ trans('cruds.mcode.fields.published_helper') }}</span>
+                <span class="help-block">{{ trans('mcode::cruds.mcode.fields.published_helper') }}</span>
             </div>
             <div class="form-group">
-                <label for="name">{{ trans('cruds.mcode.fields.name') }}</label>
+                <label for="name">{{ trans('mcode::cruds.mcode.fields.name') }}</label>
                 <input class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" type="text" name="name" id="name" value="{{ old('name', '') }}">
                 @if($errors->has('name'))
                     <span class="text-danger">{{ $errors->first('name') }}</span>
                 @endif
-                <span class="help-block">{{ trans('cruds.mcode.fields.name_helper') }}</span>
+                <span class="help-block">{{ trans('mcode::cruds.mcode.fields.name_helper') }}</span>
             </div>
             <div class="form-group">
-                <label for="photo">{{ trans('cruds.mcode.fields.photo') }}</label>
+                <label for="photo">{{ trans('mcode::cruds.mcode.fields.photo') }}</label>
                 <div class="needsclick dropzone {{ $errors->has('photo') ? 'is-invalid' : '' }}" id="photo-dropzone">
                 </div>
                 @if($errors->has('photo'))
                     <span class="text-danger">{{ $errors->first('photo') }}</span>
                 @endif
-                <span class="help-block">{{ trans('cruds.mcode.fields.photo_helper') }}</span>
+                <span class="help-block">{{ trans('mcode::cruds.mcode.fields.photo_helper') }}</span>
             </div>
             <div class="form-group">
-                <label for="models">{{ trans('cruds.mcode.fields.models') }}</label>
+                <label for="models">{{ trans('mcode::cruds.mcode.fields.models') }}</label>
                 <div style="padding-bottom: 4px">
-                    <span class="btn btn-info btn-xs select-all" style="border-radius: 0">{{ trans('global.select_all') }}</span>
-                    <span class="btn btn-info btn-xs deselect-all" style="border-radius: 0">{{ trans('global.deselect_all') }}</span>
+                    <span class="btn btn-info btn-xs select-all" style="border-radius: 0">{{ trans('mcode::global.select_all') }}</span>
+                    <span class="btn btn-info btn-xs deselect-all" style="border-radius: 0">{{ trans('mcode::global.deselect_all') }}</span>
                 </div>
                 <select class="form-control select2 {{ $errors->has('models') ? 'is-invalid' : '' }}" name="models[]" id="models" multiple>
                     @foreach($models as $id => $models)
@@ -52,27 +52,27 @@
                 @if($errors->has('models'))
                     <span class="text-danger">{{ $errors->first('models') }}</span>
                 @endif
-                <span class="help-block">{{ trans('cruds.mcode.fields.models_helper') }}</span>
+                <span class="help-block">{{ trans('mcode::cruds.mcode.fields.models_helper') }}</span>
             </div>
             <div class="form-group">
-                <label for="slug">{{ trans('cruds.mcode.fields.slug') }}</label>
+                <label for="slug">{{ trans('mcode::cruds.mcode.fields.slug') }}</label>
                 <input class="form-control {{ $errors->has('slug') ? 'is-invalid' : '' }}" type="text" name="slug" id="slug" value="{{ old('slug', '') }}">
                 @if($errors->has('slug'))
                     <span class="text-danger">{{ $errors->first('slug') }}</span>
                 @endif
-                <span class="help-block">{{ trans('cruds.mcode.fields.slug_helper') }}</span>
+                <span class="help-block">{{ trans('mcode::cruds.mcode.fields.slug_helper') }}</span>
             </div>
             <div class="form-group">
-                <label for="desc">{{ trans('cruds.mcode.fields.desc') }}</label>
+                <label for="desc">{{ trans('mcode::cruds.mcode.fields.desc') }}</label>
                 <textarea class="form-control ckeditor {{ $errors->has('desc') ? 'is-invalid' : '' }}" name="desc" id="desc">{!! old('desc') !!}</textarea>
                 @if($errors->has('desc'))
                     <span class="text-danger">{{ $errors->first('desc') }}</span>
                 @endif
-                <span class="help-block">{{ trans('cruds.mcode.fields.desc_helper') }}</span>
+                <span class="help-block">{{ trans('mcode::cruds.mcode.fields.desc_helper') }}</span>
             </div>
             <div class="form-group">
                 <button class="btn btn-danger" type="submit">
-                    {{ trans('global.save') }}
+                    {{ trans('mcode::global.save') }}
                 </button>
             </div>
         </form>
@@ -86,7 +86,7 @@
 @section('scripts')
 <script>
     Dropzone.options.photoDropzone = {
-    url: '{{ route('mcode:admin.mcodes.storeMedia') }}',
+    url: '{{ route('admin.mcodes.storeMedia') }}',
     maxFilesize: 10, // MB
     acceptedFiles: '.jpeg,.jpg,.png,.gif',
     maxFiles: 1,
@@ -149,7 +149,7 @@
               return new Promise(function(resolve, reject) {
                 // Init request
                 var xhr = new XMLHttpRequest();
-                xhr.open('POST', '{{ route('mcode:admin.mcodes.storeCKEditorImages') }}', true);
+                xhr.open('POST', '{{ route('admin.mcodes.storeCKEditorImages') }}', true);
                 xhr.setRequestHeader('x-csrf-token', window._token);
                 xhr.setRequestHeader('Accept', 'application/json');
                 xhr.responseType = 'json';

@@ -3,15 +3,15 @@
 @can('mcode_category_create')
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
-            <a class="btn btn-success" href="{{ route('mcode:admin.mcode-categories.create') }}">
-                {{ trans('global.add') }} {{ trans('cruds.mcodeCategory.title_singular') }}
+            <a class="btn btn-success" href="{{ route('admin.mcode-categories.create') }}">
+                {{ trans('mcode::global.add') }} {{ trans('mcode::cruds.mcodeCategory.title_singular') }}
             </a>
         </div>
     </div>
 @endcan
 <div class="card">
     <div class="card-header">
-        {{ trans('cruds.mcodeCategory.title_singular') }} {{ trans('global.list') }}
+        {{ trans('mcode::cruds.mcodeCategory.title_singular') }} {{ trans('mcode::global.list') }}
     </div>
 
     <div class="card-body">
@@ -22,19 +22,19 @@
 
                     </th>
                     <th>
-                        {{ trans('cruds.mcodeCategory.fields.id') }}
+                        {{ trans('mcode::cruds.mcodeCategory.fields.id') }}
                     </th>
                     <th>
-                        {{ trans('cruds.mcodeCategory.fields.published') }}
+                        {{ trans('mcode::cruds.mcodeCategory.fields.published') }}
                     </th>
                     <th>
-                        {{ trans('cruds.mcodeCategory.fields.name') }}
+                        {{ trans('mcode::cruds.mcodeCategory.fields.name') }}
                     </th>
                     <th>
-                        {{ trans('cruds.mcodeCategory.fields.order') }}
+                        {{ trans('mcode::cruds.mcodeCategory.fields.order') }}
                     </th>
                     <th>
-                        {{ trans('cruds.mcodeCategory.fields.image') }}
+                        {{ trans('mcode::cruds.mcodeCategory.fields.image') }}
                     </th>
                     <th>
                         &nbsp;
@@ -54,10 +54,10 @@
     $(function () {
   let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
 @can('mcode_category_delete')
-  let deleteButtonTrans = '{{ trans('global.datatables.delete') }}';
+  let deleteButtonTrans = '{{ trans('mcode::global.datatables.delete') }}';
   let deleteButton = {
     text: deleteButtonTrans,
-    url: "{{ route('mcode:admin.mcode-categories.massDestroy') }}",
+    url: "{{ route('admin.mcode-categories.massDestroy') }}",
     className: 'btn-danger',
     action: function (e, dt, node, config) {
       var ids = $.map(dt.rows({ selected: true }).data(), function (entry) {
@@ -65,12 +65,12 @@
       });
 
       if (ids.length === 0) {
-        alert('{{ trans('global.datatables.zero_selected') }}')
+        alert('{{ trans('mcode::global.datatables.zero_selected') }}')
 
         return
       }
 
-      if (confirm('{{ trans('global.areYouSure') }}')) {
+      if (confirm('{{ trans('mcode::global.areYouSure') }}')) {
         $.ajax({
           headers: {'x-csrf-token': _token},
           method: 'POST',
@@ -89,7 +89,7 @@
     serverSide: true,
     retrieve: true,
     aaSorting: [],
-    ajax: "{{ route('mcode:admin.mcode-categories.index') }}",
+    ajax: "{{ route('admin.mcode-categories.index') }}",
     columns: [
       { data: 'placeholder', name: 'placeholder' },
 { data: 'id', name: 'id' },
@@ -97,7 +97,7 @@
 { data: 'name', name: 'name' },
 { data: 'order', name: 'order' },
 { data: 'image', name: 'image', sortable: false, searchable: false },
-{ data: 'actions', name: '{{ trans('global.actions') }}' }
+{ data: 'actions', name: '{{ trans('mcode::global.actions') }}' }
     ],
     orderCellsTop: true,
     order: [[ 1, 'desc' ]],

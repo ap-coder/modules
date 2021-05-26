@@ -36,7 +36,7 @@ class McodeCategoryController extends Controller
                 $deleteGate = 'mcode_category_delete';
                 $crudRoutePart = 'mcode-categories';
 
-                return view('partials.datatablesActions', compact(
+                return view('mcode::partials.datatablesActions', compact(
                 'viewGate',
                 'editGate',
                 'deleteGate',
@@ -69,7 +69,7 @@ class McodeCategoryController extends Controller
                 return '';
             });
 
-            $table->rawColumns(['actions', 'placeholder', 'published', 'image']);
+            $table->rawColumns(['actions', 'placeholder', 'published', 'image','order']);
 
             return $table->make(true);
         }

@@ -3,15 +3,15 @@
 @can('mcode_product_model_create')
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
-            <a class="btn btn-success" href="{{ route('mcode:admin.mcode-product-models.create') }}">
-                {{ trans('global.add') }} {{ trans('cruds.mcodeProductModel.title_singular') }}
+            <a class="btn btn-success" href="{{ route('admin.mcode-product-models.create') }}">
+                {{ trans('mcode::global.add') }} {{ trans('mcode::cruds.mcodeProductModel.title_singular') }}
             </a>
         </div>
     </div>
 @endcan
 <div class="card">
     <div class="card-header">
-        {{ trans('cruds.mcodeProductModel.title_singular') }} {{ trans('global.list') }}
+        {{ trans('mcode::cruds.mcodeProductModel.title_singular') }} {{ trans('mcode::global.list') }}
     </div>
 
     <div class="card-body">
@@ -22,16 +22,16 @@
 
                     </th>
                     <th>
-                        {{ trans('cruds.mcodeProductModel.fields.id') }}
+                        {{ trans('mcode::cruds.mcodeProductModel.fields.id') }}
                     </th>
                     <th>
-                        {{ trans('cruds.mcodeProductModel.fields.model') }}
+                        {{ trans('mcode::cruds.mcodeProductModel.fields.model') }}
                     </th>
                     <th>
-                        {{ trans('cruds.mcodeProductModel.fields.published') }}
+                        {{ trans('mcode::cruds.mcodeProductModel.fields.published') }}
                     </th>
                     <th>
-                        {{ trans('cruds.mcodeProductModel.fields.slug') }}
+                        {{ trans('mcode::cruds.mcodeProductModel.fields.slug') }}
                     </th>
                     <th>
                         &nbsp;
@@ -51,10 +51,10 @@
     $(function () {
   let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
 @can('mcode_product_model_delete')
-  let deleteButtonTrans = '{{ trans('global.datatables.delete') }}';
+  let deleteButtonTrans = '{{ trans('mcode::global.datatables.delete') }}';
   let deleteButton = {
     text: deleteButtonTrans,
-    url: "{{ route('mcode:admin.mcode-product-models.massDestroy') }}",
+    url: "{{ route('admin.mcode-product-models.massDestroy') }}",
     className: 'btn-danger',
     action: function (e, dt, node, config) {
       var ids = $.map(dt.rows({ selected: true }).data(), function (entry) {
@@ -62,12 +62,12 @@
       });
 
       if (ids.length === 0) {
-        alert('{{ trans('global.datatables.zero_selected') }}')
+        alert('{{ trans('mcode::global.datatables.zero_selected') }}')
 
         return
       }
 
-      if (confirm('{{ trans('global.areYouSure') }}')) {
+      if (confirm('{{ trans('mcode::global.areYouSure') }}')) {
         $.ajax({
           headers: {'x-csrf-token': _token},
           method: 'POST',
@@ -86,14 +86,14 @@
     serverSide: true,
     retrieve: true,
     aaSorting: [],
-    ajax: "{{ route('mcode:admin.mcode-product-models.index') }}",
+    ajax: "{{ route('admin.mcode-product-models.index') }}",
     columns: [
       { data: 'placeholder', name: 'placeholder' },
 { data: 'id', name: 'id' },
 { data: 'model', name: 'model' },
 { data: 'published', name: 'published' },
 { data: 'slug', name: 'slug' },
-{ data: 'actions', name: '{{ trans('global.actions') }}' }
+{ data: 'actions', name: '{{ trans('mcode::global.actions') }}' }
     ],
     orderCellsTop: true,
     order: [[ 1, 'desc' ]],

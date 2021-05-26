@@ -13,6 +13,7 @@ use Gate;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Yajra\DataTables\Facades\DataTables;
 
 class McodeFeatureController extends Controller
 {
@@ -33,7 +34,7 @@ class McodeFeatureController extends Controller
                 $deleteGate = 'mcode_feature_delete';
                 $crudRoutePart = 'mcode-features';
 
-                return view('mcode:partials.datatablesActions', compact(
+                return view('mcode::partials.datatablesActions', compact(
                 'viewGate',
                 'editGate',
                 'deleteGate',
@@ -79,7 +80,7 @@ class McodeFeatureController extends Controller
             return $table->make(true);
         }
 
-        return view('mcode:admin.mcodeFeatures.index');
+        return view('mcode::admin.mcodeFeatures.index');
     }
 
     public function create()
@@ -90,7 +91,7 @@ class McodeFeatureController extends Controller
 
         $models = McodeProductModel::all()->pluck('model', 'id');
 
-        return view('mcode:admin.mcodeFeatures.create', compact('categories', 'models'));
+        return view('mcode::admin.mcodeFeatures.create', compact('categories', 'models'));
     }
 
     public function store(StoreMcodeFeatureRequest $request)
@@ -112,7 +113,7 @@ class McodeFeatureController extends Controller
 
         $mcodeFeature->load('categories', 'models');
 
-        return view('mcode:admin.mcodeFeatures.edit', compact('categories', 'models', 'mcodeFeature'));
+        return view('mcode::admin.mcodeFeatures.edit', compact('categories', 'models', 'mcodeFeature'));
     }
 
     public function update(UpdateMcodeFeatureRequest $request, McodeFeature $mcodeFeature)
@@ -130,7 +131,7 @@ class McodeFeatureController extends Controller
 
         $mcodeFeature->load('categories', 'models');
 
-        return view('mcode:admin.mcodeFeatures.show', compact('mcodeFeature'));
+        return view('mcode::admin.mcodeFeatures.show', compact('mcodeFeature'));
     }
 
     public function destroy(McodeFeature $mcodeFeature)

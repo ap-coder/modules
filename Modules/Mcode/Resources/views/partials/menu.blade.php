@@ -5,7 +5,7 @@
 
                             </i>
                             <p>
-                                {{ trans('cruds.mcodeManager.title') }}
+                                {{ trans('mcode::cruds.mcodeManager.title') }}
                                 <i class="right fa fa-fw fa-angle-left nav-icon"></i>
                             </p>
                         </a>
@@ -17,7 +17,7 @@
 
                                         </i>
                                         <p>
-                                            {{ trans('cruds.mcode.title') }}
+                                            {{ trans('mcode::cruds.mcode.title') }}
                                         </p>
                                     </a>
                                 </li>
@@ -29,7 +29,7 @@
 
                                         </i>
                                         <p>
-                                            {{ trans('cruds.mcodeCategory.title') }}
+                                            {{ trans('mcode::cruds.mcodeCategory.title') }}
                                         </p>
                                     </a>
                                 </li>
@@ -41,7 +41,7 @@
 
                                         </i>
                                         <p>
-                                            {{ trans('cruds.mcodeFeature.title') }}
+                                            {{ trans('mcode::cruds.mcodeFeature.title') }}
                                         </p>
                                     </a>
                                 </li>
@@ -53,7 +53,7 @@
 
                                         </i>
                                         <p>
-                                            {{ trans('cruds.mcodeProductModel.title') }}
+                                            {{ trans('mcode::cruds.mcodeProductModel.title') }}
                                         </p>
                                     </a>
                                 </li>
