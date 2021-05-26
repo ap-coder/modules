@@ -4,13 +4,13 @@
     'name' => 'Laravel',
     'env' => 'local',
     'debug' => true,
-    'url' => 'http://localhost',
+    'url' => 'http://127.0.0.1:8000',
     'asset_url' => NULL,
     'timezone' => 'UTC',
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:TV4vi5C8eAf0fqysdE24uOZCMrUyCOgBpo9Qx8ygfkI=',
+    'key' => 'base64:DkYaGMwUi+dKdMylD798DELouauvtJ1mIGxIbP92eag=',
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (
@@ -185,7 +185,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => '/home/vagrant/modules/storage/framework/cache/data',
+        'path' => 'D:\\xampp\\htdocs\\modules\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -275,8 +275,8 @@
         'host' => '127.0.0.1',
         'port' => '3306',
         'database' => 'modules',
-        'username' => 'newuser',
-        'password' => 'admin',
+        'username' => 'root',
+        'password' => '',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
@@ -295,8 +295,8 @@
         'host' => '127.0.0.1',
         'port' => '3306',
         'database' => 'modules',
-        'username' => 'newuser',
-        'password' => 'admin',
+        'username' => 'root',
+        'password' => '',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -310,8 +310,8 @@
         'host' => '127.0.0.1',
         'port' => '3306',
         'database' => 'modules',
-        'username' => 'newuser',
-        'password' => 'admin',
+        'username' => 'root',
+        'password' => '',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -352,13 +352,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => '/home/vagrant/modules/storage/app',
+        'root' => 'D:\\xampp\\htdocs\\modules\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => '/home/vagrant/modules/storage/app/public',
-        'url' => 'http://localhost/storage',
+        'root' => 'D:\\xampp\\htdocs\\modules\\storage\\app/public',
+        'url' => 'http://127.0.0.1:8000/storage',
         'visibility' => 'public',
       ),
       's3' => 
@@ -374,7 +374,7 @@
     ),
     'links' => 
     array (
-      '/home/vagrant/modules/public/storage' => '/home/vagrant/modules/storage/app/public',
+      'D:\\xampp\\htdocs\\modules\\public\\storage' => 'D:\\xampp\\htdocs\\modules\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -408,13 +408,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => '/home/vagrant/modules/storage/logs/laravel.log',
+        'path' => 'D:\\xampp\\htdocs\\modules\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => '/home/vagrant/modules/storage/logs/laravel.log',
+        'path' => 'D:\\xampp\\htdocs\\modules\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -464,7 +464,7 @@
       ),
       'emergency' => 
       array (
-        'path' => '/home/vagrant/modules/storage/logs/laravel.log',
+        'path' => 'D:\\xampp\\htdocs\\modules\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -472,7 +472,7 @@
   array (
     'max_file_size' => 52428800,
     'pattern' => '*.log',
-    'storage_path' => '/home/vagrant/modules/storage/logs',
+    'storage_path' => 'D:\\xampp\\htdocs\\modules\\storage\\logs',
   ),
   'mail' => 
   array (
@@ -527,7 +527,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => '/home/vagrant/modules/resources/views/vendor/mail',
+        0 => 'D:\\xampp\\htdocs\\modules\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -537,7 +537,7 @@
     'stubs' => 
     array (
       'enabled' => false,
-      'path' => '/home/vagrant/modules/vendor/nwidart/laravel-modules/src/Commands/stubs',
+      'path' => 'D:\\xampp\\htdocs\\modules/vendor/nwidart/laravel-modules/src/Commands/stubs',
       'files' => 
       array (
         'routes/web' => 'Routes/web.php',
@@ -601,9 +601,9 @@
     ),
     'paths' => 
     array (
-      'modules' => '/home/vagrant/modules/Modules',
-      'assets' => '/home/vagrant/modules/public/modules',
-      'migration' => '/home/vagrant/modules/database/migrations',
+      'modules' => 'D:\\xampp\\htdocs\\modules\\Modules',
+      'assets' => 'D:\\xampp\\htdocs\\modules\\public\\modules',
+      'migration' => 'D:\\xampp\\htdocs\\modules\\database/migrations',
       'generator' => 
       array (
         'config' => 
@@ -792,7 +792,7 @@
       'enabled' => false,
       'paths' => 
       array (
-        0 => '/home/vagrant/modules/vendor/*/*',
+        0 => 'D:\\xampp\\htdocs\\modules\\vendor/*/*',
       ),
     ),
     'composer' => 
@@ -821,7 +821,7 @@
       'file' => 
       array (
         'class' => 'Nwidart\\Modules\\Activators\\FileActivator',
-        'statuses-file' => '/home/vagrant/modules/modules_statuses.json',
+        'statuses-file' => 'D:\\xampp\\htdocs\\modules\\modules_statuses.json',
         'cache-key' => 'activator.installed',
         'cache-lifetime' => 604800,
       ),
@@ -913,7 +913,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => '/home/vagrant/modules/storage/framework/sessions',
+    'files' => 'D:\\xampp\\htdocs\\modules\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -931,7 +931,7 @@
   ),
   'telescope' => 
   array (
-    'domain' => '',
+    'domain' => NULL,
     'path' => 'telescope',
     'driver' => 'database',
     'storage' => 
@@ -1019,9 +1019,35 @@
   array (
     'paths' => 
     array (
-      0 => '/home/vagrant/modules/resources/views',
+      0 => 'D:\\xampp\\htdocs\\modules\\resources\\views',
     ),
-    'compiled' => '/home/vagrant/modules/storage/framework/views',
+    'compiled' => 'D:\\xampp\\htdocs\\modules\\storage\\framework\\views',
+  ),
+  'eloquent-viewable' => 
+  array (
+    'models' => 
+    array (
+      'view' => 
+      array (
+        'table_name' => 'views',
+        'connection' => 'mysql',
+      ),
+    ),
+    'cache' => 
+    array (
+      'key' => 'cyrildewit.eloquent-viewable.cache',
+      'store' => 'file',
+    ),
+    'cooldown' => 
+    array (
+      'key' => 'cyrildewit.eloquent-viewable.cooldowns',
+    ),
+    'ignore_bots' => true,
+    'honor_dnt' => false,
+    'visitor_cookie_key' => 'eloquent_viewable',
+    'ignored_ip_addresses' => 
+    array (
+    ),
   ),
   'flare' => 
   array (
@@ -1076,7 +1102,7 @@
       2 => '127.0.0.1',
       3 => '127.0.0.1:8000',
       4 => '::1',
-      5 => 'localhost',
+      5 => '127.0.0.1',
     ),
     'expiration' => NULL,
     'middleware' => 
@@ -1219,6 +1245,67 @@
   'mcode' => 
   array (
     'name' => 'Mcode',
+  ),
+  'seotools' => 
+  array (
+    'meta' => 
+    array (
+      'defaults' => 
+      array (
+        'title' => 'It\'s Over 9000!',
+        'titleBefore' => false,
+        'description' => 'For those who helped create the Genki Dama',
+        'separator' => ' - ',
+        'keywords' => 
+        array (
+        ),
+        'canonical' => false,
+        'robots' => false,
+      ),
+      'webmaster_tags' => 
+      array (
+        'google' => NULL,
+        'bing' => NULL,
+        'alexa' => NULL,
+        'pinterest' => NULL,
+        'yandex' => NULL,
+        'norton' => NULL,
+      ),
+      'add_notranslate_class' => false,
+    ),
+    'opengraph' => 
+    array (
+      'defaults' => 
+      array (
+        'title' => 'Over 9000 Thousand!',
+        'description' => 'For those who helped create the Genki Dama',
+        'url' => false,
+        'type' => false,
+        'site_name' => false,
+        'images' => 
+        array (
+        ),
+      ),
+    ),
+    'twitter' => 
+    array (
+      'defaults' => 
+      array (
+      ),
+    ),
+    'json-ld' => 
+    array (
+      'defaults' => 
+      array (
+        'title' => 'Over 9000 Thousand!',
+        'description' => 'For those who helped create the Genki Dama',
+        'url' => false,
+        'type' => 'WebPage',
+        'images' => 
+        array (
+        ),
+      ),
+    ),
   ),
   'tinker' => 
   array (
