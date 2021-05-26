@@ -40,11 +40,8 @@ trait MediaUploadingTrait
 
         $file = $request->file('file');
 
-        $name =  trim($file->getClientOriginalName()) . '_' . Str::random(5);
-
-        Log::notice($name);
-
-        $name = trim($file->getClientOriginalName());
+        $name =  trim($file->getClientOriginalName()) . '_' . Str::random(5);      
+ 
         $name = strtolower($name);
 
         $name = str_replace(' ', '_', $name);
@@ -52,6 +49,8 @@ trait MediaUploadingTrait
         $name = str_replace(['[',']','{','}','(',')'], '', $name);
         $name = preg_replace('/--+/', '-', $name);
         $name = str_replace('-', '_', $name);
+
+        Log::notice($name);
 
         $file->move($path, $name);
 
