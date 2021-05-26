@@ -9,7 +9,8 @@ use Illuminate\Routing\Controller;
 use Modules\Mcode\Entities\McodeCategory;
 use Modules\Mcode\Entities\McodeFeature;
 
-use App\Models\ProductModel;
+use Modules\Mcode\Entities\Mcode;
+use Modules\Mcode\Entities\McodeProductModel;
 use App\Models\User;
 
 
@@ -27,12 +28,12 @@ class McodeController extends Controller
         // }else{
         //     //mcode model run here
         // }
-        
+        $mcodes = Mcode::published();
         $categories = McodeCategory::with('categoriesMcodeFeatures')->get();
         $features = McodeFeature::all();
 
 
-        return view('mcode::site.mcodes.index', compact('features', 'categories'));
+        return view('mcode::site.mcodes.index', compact('mcodes', 'features', 'categories'));
     }
 
     /**

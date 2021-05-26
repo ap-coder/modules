@@ -24,8 +24,8 @@
 			<div class="sort-destination-loader sort-destination-loader-showing mt-4 pt-2">
 				<div class="row team-list sort-destination" data-sort-id="configs">
 
-					{{-- @if (isset($products)) --}}
-					{{-- @foreach($products as $product) --}}
+					@if (isset($mcodes))
+					@foreach($mcodes as $product)
 					{{-- @foreach($product->associatedProductsDocs as $doc) --}}
 						{{-- @foreach ($doc->doctypes as $type) --}}
 							{{-- @if($type->slug == 'm-code') --}}
@@ -62,8 +62,8 @@
 							{{-- @endif --}}
 						{{-- @endforeach --}}
 					{{-- @endforeach --}}
-				{{-- @endforeach --}}
-					{{-- @endif --}}
+				@endforeach
+					@endif
 
 
 
