@@ -29,22 +29,38 @@
 		            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
 		                <h5 class="text-3 mb-3">News</h5>
 		                <div id="" class="text-color-light">
-		                    <p><a class="text-color-light" href="{{ route('blog.index') }}">Our Blog</a><br>
-		                       <a class="text-color-light" href="{{ route('press.index') }}">Press Releases</a><br>
+		                {{-- 	@if(module_path('mcode'))
+		                    <p>
+		                    	<a class="text-color-light" href="{{ route('blog.index') }}">Our Blog</a><br>
+		                       	<a class="text-color-light" href="{{ route('press.index') }}">Press Releases</a><br>
 		                    </p>
+		                    @else
+		                    <p>
+		                    	<a class="text-color-light" href="{{ url('about/blog') }}">Our Blog</a><br>
+		                       	<a class="text-color-light" href="{{ url('about/press') }}">Press Releases</a><br>
+		                    </p>
+		                    @endif --}}
 		                </div>
-		                {{-- <a href="{{ route('blog') }}"><h5 class="text-3 mb-3">Our Blog</h5></a><br> --}}
-		                      {{-- <a href="{{ url('news') }}"><h5 class="text-3 mb-3">Press Releases</h5></a><br> --}}
+ 
+		            {{--     @if(!module_path('mcode'))      
 			                <a href="{{ route('about') }}">
 			                    <h5 class="text-3 mb-3">About Us</h5>
 			                </a>
 			                <a href="{{ route('careers') }}">
 			                    <h5 class="text-3 mb-3">Careers</h5>
 			                </a>
+			            @else
+			            	<a href="{{ url('about') }}">
+			                    <h5 class="text-3 mb-3">About Us</h5>
+			                </a>
+			                <a href="{{ url('careers') }}">
+			                    <h5 class="text-3 mb-3">Careers</h5>
+			                </a>
+			            @endif --}}
 		            </div>
 		            <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
 		                <div class="contact-details">
-		                    <a href="{{ route('contact') }}"><h5 class="text-3 mb-3">CONTACT US</h5></a>
+		                    <a href="{{ url('contact') }}"><h5 class="text-3 mb-3">CONTACT US</h5></a>
 		                    <ul class="list list-icons list-icons-lg">
 		                        <li class="mb-1"><i class="fas fa-location-arrow"></i><a class=" text-color-light" href="https://g.page/codecorp?share" target="_blank">434 West Ascension Way, Ste. 300<br>Murray UT 84123</a></li>
 		                        <li class="mb-1"><i class="fas fa-phone"></i><p class="m-0"><a class=" text-color-light" href="tel:8014952200">+01 801-495-2200</a></p></li>
@@ -84,11 +100,15 @@
 		                <div class="col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end text-color-light text-white">
 		                    <nav id="sub-menu">
 		                        <ul>
-
-		                        	<li><i class="fas fa-angle-right"></i><a href="{{ route('support.privacy') }}"  class="ml-1 text-decoration-none text-color-light">Privacy Policy</a></li>
-		                            <li><i class="fas fa-angle-right"></i><a href="{{ route('support.eula') }}" class="ml-1 text-decoration-none text-color-light">EULA</a></li>
-		                            {{-- <li><i class="fas fa-angle-right"></i><a href="#" class="ml-1 text-decoration-none"> Sitemap</a></li> --}}
-		                            <li><i class="fas fa-angle-right"></i><a href="{{ route('contact') }}" class="ml-1 text-decoration-none text-color-light"> Contact Us</a></li>
+	{{-- 								@if(!module_path('mcode'))   
+			                        	<li><i class="fas fa-angle-right"></i><a href="{{ route('support.privacy') }}"  class="ml-1 text-decoration-none text-color-light">Privacy Policy</a></li>
+			                            <li><i class="fas fa-angle-right"></i><a href="{{ route('support.eula') }}" class="ml-1 text-decoration-none text-color-light">EULA</a></li>
+			                            <li><i class="fas fa-angle-right"></i><a href="{{ route('contact') }}" class="ml-1 text-decoration-none text-color-light"> Contact Us</a></li>
+		                            @else
+			                        	<li><i class="fas fa-angle-right"></i><a href="{{ url('support/privacy') }}"  class="ml-1 text-decoration-none text-color-light">Privacy Policy</a></li>
+			                            <li><i class="fas fa-angle-right"></i><a href="{{ url('support/eula') }}" class="ml-1 text-decoration-none text-color-light">EULA</a></li>
+			                            <li><i class="fas fa-angle-right"></i><a href="{{ url('contact') }}" class="ml-1 text-decoration-none text-color-light"> Contact Us</a></li>
+		                            @endif --}}
 		                        </ul>
 		                    </nav>
 		                </div>

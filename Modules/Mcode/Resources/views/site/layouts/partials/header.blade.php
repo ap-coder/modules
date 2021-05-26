@@ -15,7 +15,15 @@
 								<div class="header-row">
 									<div class="header-nav header-nav-line header-nav-top-line header-nav-top-line-with-border order-2 order-lg-1">
 										<div class="header-nav-main header-nav-main-square header-nav-main-effect-2 header-nav-main-sub-effect-1">
-										@include('site.layouts.partials.nav')
+										@if(module_path('mcode'))
+											{{-- @include('site.layouts.partials.nav') --}}
+										@else
+											@include('site.layouts.partials.nav')
+										@endif
+
+{{-- <?php if(module_path('mcode')): ?>
+ <h1>YA THIS IS A MCODE </h1>
+<?php endif; ?> --}}
 										</div>
 										<button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main nav">
 											<i class="fas fa-bars"></i>

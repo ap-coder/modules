@@ -24,14 +24,14 @@
 			<div class="sort-destination-loader sort-destination-loader-showing mt-4 pt-2">
 				<div class="row team-list sort-destination" data-sort-id="configs">
 
-					@if (isset($mcodes))
+					{{-- @if (isset($mcodes)) --}}
 					@foreach($mcodes as $product)
 					{{-- @foreach($product->associatedProductsDocs as $doc) --}}
 						{{-- @foreach ($doc->doctypes as $type) --}}
 							{{-- @if($type->slug == 'm-code') --}}
 
 
-							<div class="col-12 col-sm-6 col-lg-3 isotope-item {{ $doc->config_catalog_filter ?? '' }}">
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item ">
 								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
 									<span class="thumb-info-wrapper">
 
@@ -63,7 +63,7 @@
 						{{-- @endforeach --}}
 					{{-- @endforeach --}}
 				@endforeach
-					@endif
+					{{-- @endif --}}
 
 
 
