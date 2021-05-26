@@ -33,6 +33,7 @@ class McodeFeature extends Model
         'slug',
         'template',
         'defaults',
+        'order',
         'created_at',
         'updated_at',
         'deleted_at',

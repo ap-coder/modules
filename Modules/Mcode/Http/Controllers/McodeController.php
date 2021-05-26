@@ -12,6 +12,7 @@ use Modules\Mcode\Entities\McodeFeature;
 use App\Models\ProductModel;
 use App\Models\User;
 
+
 class McodeController extends Controller
 {
     /**
@@ -27,7 +28,7 @@ class McodeController extends Controller
         //     //mcode model run here
         // }
         
-        $categories = McodeCategory::with('mcode_features')->get();
+        $categories = McodeCategory::with('categoriesMcodeFeatures')->get();
         $features = McodeFeature::all();
 
 
