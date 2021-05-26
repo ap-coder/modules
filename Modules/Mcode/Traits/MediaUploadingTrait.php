@@ -3,9 +3,13 @@
 namespace Modules\Mcode\Traits;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;
 
 trait MediaUploadingTrait
 {
+
     public function storeMedia(Request $request)
     {
         // Validates file size
@@ -36,7 +40,18 @@ trait MediaUploadingTrait
 
         $file = $request->file('file');
 
-        $name = uniqid() . '_' . trim($file->getClientOriginalName());
+        $name =  trim($file->getClientOriginalName()) . '_' . Str::random(5);
+
+        Log::notice($name);
+
+        $name = trim($file->getClientOriginalName());
+        $name = strtolower($name);
+
+        $name = str_replace(' ', '_', $name);
+        $name = str_replace(['@','&','*','%','$','#'], '', $name);
+        $name = str_replace(['[',']','{','}','(',')'], '', $name);
+        $name = preg_replace('/--+/', '-', $name);
+        $name = str_replace('-', '_', $name);
 
         $file->move($path, $name);
 
