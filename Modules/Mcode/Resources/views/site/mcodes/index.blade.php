@@ -1,4 +1,4 @@
-@extends('site.layouts.mcode')
+@extends('mcode::site.layouts.mcodes')
 
 @section('slider')
     @include('mcode::site.mcodes.partials.masthead')
