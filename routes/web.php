@@ -1,13 +1,14 @@
 <?php
 
 Route::redirect('/', '/login');
-Route::get('/home', function () {
-    if (session('status')) {
-        return redirect()->route('admin.home')->with('status', session('status'));
-    }
 
-    return redirect()->route('admin.home');
-});
+// Route::get('/home', function () {
+//     if (session('status')) {
+//         return redirect()->route('admin.home')->with('status', session('status'));
+//     }
+
+//     return redirect()->route('admin.home');
+// });
 
 Auth::routes(['register' => false]);
 
