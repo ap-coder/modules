@@ -31,7 +31,7 @@ class UpdateMcodeRequest extends FormRequest
                 'string',
                 'nullable',
             ],
-        ];
+
         ];
     }
 }
