@@ -16,6 +16,13 @@ class DatabaseSeeder extends Seeder
         $this->call(UsersTableSeeder::class);
         $this->call(RoleUserTableSeeder::class);
 
-        $this->call(McodeCategoriesTableSeeder::class);
+        // $this->call(\Modules\Mcode\Database\Seeders\McodeCategoriesTableSeeder::class);
+        // $this->call(\Modules\Mcode\Database\Seeders\McodesTableSeeder::class);
+        // $this->call(\Modules\Mcode\Database\Seeders\McodeCategoryMcodeFeatureTableSeeder::class);
+        // $this->call(\Modules\Mcode\Database\Seeders\McodeFeatureMcodeProductModelTableSeeder::class);
+        // $this->call(\Modules\Mcode\Database\Seeders\McodeFeaturesTableSeeder::class);
+        // $this->call(\Modules\Mcode\Database\Seeders\McodeMcodeProductModelTableSeeder::class);
+        // $this->call(\Modules\Mcode\Database\Seeders\McodeProductModelsTableSeeder::class);
+        $this->call(MediaTableSeeder::class);
     }
 }
