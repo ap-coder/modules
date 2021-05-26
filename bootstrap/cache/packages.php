@@ -1,4 +1,26 @@
 <?php return array (
+  'artesaos/seotools' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Artesaos\\SEOTools\\Providers\\SEOToolsServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'SEOMeta' => 'Artesaos\\SEOTools\\Facades\\SEOMeta',
+      'OpenGraph' => 'Artesaos\\SEOTools\\Facades\\OpenGraph',
+      'Twitter' => 'Artesaos\\SEOTools\\Facades\\TwitterCard',
+      'JsonLd' => 'Artesaos\\SEOTools\\Facades\\JsonLd',
+      'SEO' => 'Artesaos\\SEOTools\\Facades\\SEOTools',
+    ),
+  ),
+  'cyrildewit/eloquent-viewable' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'CyrildeWit\\EloquentViewable\\EloquentViewableServiceProvider',
+    ),
+  ),
   'facade/ignition' => 
   array (
     'providers' => 
