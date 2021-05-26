@@ -50,7 +50,7 @@ trait MediaUploadingTrait
         $name = preg_replace('/--+/', '-', $name);
         $name = str_replace('-', '_', $name);
 
-        Log::notice($name);
+        Log::info($name);
 
         $file->move($path, $name);
 
