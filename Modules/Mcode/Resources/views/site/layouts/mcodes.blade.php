@@ -61,11 +61,11 @@
 			@hasSection('top-bar')
 				@yield('top-bar')
 			   <header id="header" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 135, 'stickySetTop': '-135px', 'stickyChangeLogo': true}">
-					@include('site.layouts.partials.header')
+					{{-- @include('site.layouts.partials.header') --}}
 				</header>
 			@else
 				<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
-					@include('site.layouts.partials.header')
+					{{-- @include('site.layouts.partials.header') --}}
 				</header>
 			@endif
 
@@ -75,12 +75,12 @@
 			<div role="main" class="main @yield('main-classes')">
 				@yield('above-content')
 				@yield('slider')
-				@include('flash::message')
+				{{-- @include('flash::message') --}}
 					@yield('content')
 				@yield('below-content')
 			</div> <!-- main close -->
 
-			@include('site.layouts.partials.footer')
+			{{-- @include('site.layouts.partials.footer') --}}
 		</div>
 
 		@include('site.layouts.partials.javascript')
