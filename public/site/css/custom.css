@@ -2949,4 +2949,40 @@
             text-align: right
         }
     }
+    
+    .feature_holder #accordion .panel-heading {
+        padding: 0;
+        display: inline-block;
+    }
+    
+    .feature_holder #accordion .panel {
+        border-bottom: 2px solid #d3d3d3;
+        padding-top: 10px;
+    }
+    
+    .feature_holder #accordion .panel-title>a {
+        display: block;
+        padding: 0.4em 0;
+        outline: none;
+        font-weight: bold;
+        text-decoration: none;
+        color: #565454;
+    }
+    
+    .feature_holder #accordion .panel-title>a.collapsed {
+        color: #9a9a9a;
+    }
+    
+    .feature_holder #accordion .panel-title>a.accordion-toggle::before,
+    .feature_holder #accordion a[data-toggle="collapse"]::before {
+        content: "\f078";
+        float: right;
+        font-family: "Font Awesome 5 Free";
+        margin-left: 2em;
+    }
+    
+    .feature_holder #accordion .panel-title>a.accordion-toggle.collapsed::before,
+    .feature_holder #accordion a.collapsed[data-toggle="collapse"]::before {
+        content: "\f077";
+    }
     /* feature box */
