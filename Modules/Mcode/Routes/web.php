@@ -51,4 +51,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Mcode', 'mi
 
 Route::prefix('mcode')->group(function() {
     Route::get('/', 'McodeController@index');
+    Route::get('/category', 'McodeController@category');
+    Route::get('/feature', 'McodeController@feature');
 });

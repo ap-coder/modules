@@ -97,4 +97,16 @@ class McodeController extends Controller
     {
         //
     }
+
+    public function category()
+    {
+        $categories = McodeCategory::orderBy('order','ASC')->get();
+        return view('mcode::site.mcodes.steps.category',compact('categories'));
+    }
+
+    public function feature()
+    {
+        $categories = McodeCategory::orderBy('order','ASC')->get();
+        return view('mcode::site.mcodes.steps.feature',compact('categories'));
+    }
 }
