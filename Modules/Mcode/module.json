@@ -8,7 +8,7 @@
         "Modules\\Mcode\\Providers\\McodeServiceProvider"
     ],
     "aliases": {},
-    "files": [],
+    "files": ["Helpers.php"],
     "requires": []
 
 }

@@ -28,9 +28,11 @@ class McodeController extends Controller
         // }else{
         //     //mcode model run here
         // }
-        $mcodes = Mcode::published();
+        $mcodes = Mcode::published()->get();
         $categories = McodeCategory::with('categoriesMcodeFeatures')->get();
         $features = McodeFeature::all();
+
+        // dd($mcodes);
 
 
         return view('mcode::site.mcodes.index', compact('mcodes', 'features', 'categories'));

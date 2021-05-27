@@ -7,14 +7,12 @@
 													</li> --}}
 
 
-
-
 													<li class="dropdown">
-														<a href="{{ route('products.index') }}" class="dropdown-item dropdown-toggle text-2 {{ Nav::isResource('products') }}" itemprop="url">
+														{{-- <a href="@if(code_custom('mcode')): {{ route('products.index') }} @endif" class="dropdown-item dropdown-toggle text-2 {{ Nav::isResource('products') }}" itemprop="url"> --}}
 															Products
-														</a>
+														{{-- </a> --}}
 														<ul class="dropdown-menu">
-															<li class="dropdown-submenu" itemprop="name">
+												{{-- 			<li class="dropdown-submenu" itemprop="name">
 																<a class="dropdown-item text-2" href="{{ route('products.hardware') }}" itemprop="url">Hardware</a>
 															</li>
 															<li class="dropdown-submenu" itemprop="name">
@@ -28,11 +26,11 @@
 															</li>
 															<li class="dropdown-submenu" itemprop="name">
 																 <a class="dropdown-item text-2" href="{{ route('products.whycode') }}" itemprop="url">Why Code</a>
-															</li>
+															</li> --}}
 														</ul>
 													</li>
 
-													<li class="dropdown">
+													{{-- <li class="dropdown">
 														<a class="dropdown-item dropdown-toggle text-2 {{ Nav::isResource('solutions') }}" href="#">
 															Solutions
 														</a>
@@ -56,15 +54,16 @@
 															{{-- <li class="dropdown-submenu" itemprop="name">
 																<a class="dropdown-item text-2" href="#" itemprop="url">Public Sector / Gov</a>
 															</li> --}}
-															<li class="dropdown-submenu" itemprop="name">
+															{{-- <li class="dropdown-submenu" itemprop="name">
 																<a class="dropdown-item text-2" href="{{ route('solutions.fips') }}" itemprop="url">FIPS</a>
 															</li>
 															<li class="dropdown-submenu" itemprop="name">
 																<a class="dropdown-item text-2" href="{{ route('solutions.oem') }}" itemprop="url">OEM</a>
-															</li>
+															</li> --}}
 
 														</ul>
-													</li>
+													</li> --}}
+													{{-- 
 													<li class="dropdown">
 														<a class="dropdown-item dropdown-toggle text-2 {{ Nav::isResource('partners') }}" href="#">
 															Partners
@@ -78,7 +77,7 @@
 															</li>
 															{{-- <li class="dropdown-submenu" itemprop="name">
 																<a class="dropdown-item text-2" href="{{ route('partners.code-partners') }}" itemprop="url">ISVs</a>
-															</li> --}}
+															</li> 
 															<li class="dropdown-submenu" itemprop="name">
 																<a class="dropdown-item text-2" href="{{ route('solutions.oem') }}" itemprop="url">OEMs</a>
 															</li>
@@ -93,14 +92,14 @@
 															</li>
 
 														</ul>
-													</li>
+													</li> --}}
 
 													<li class="dropdown">
 														<a class="dropdown-item dropdown-toggle text-2 {{ Nav::isResource('about') }}" href="#">
 															About
 														</a>
 														<ul class="dropdown-menu">
-															<li class="dropdown-submenu" itemprop="name">
+															{{-- <li class="dropdown-submenu" itemprop="name">
 																<a class="dropdown-item text-2" href="{{ route('about') }}" itemprop="url">About Us</a>
 															</li>
 															<li class="dropdown-submenu" itemprop="name">
@@ -108,13 +107,13 @@
 															</li>
 															<li class="dropdown-submenu" itemprop="name">
 																<a class="dropdown-item text-2" href="{{ route('sales-team.index') }}">Sales Team</a>
-															</li>
+															</li> --}}
 															{{-- <li class="dropdown-submenu" itemprop="name">
 																<a class="dropdown-item text-2" href="{{ route('blog.index') }}" itemprop="url">Blog</a>
 															</li> --}}
-															<li class="dropdown-submenu" itemprop="name">
+															{{-- <li class="dropdown-submenu" itemprop="name">
 																<a class="dropdown-item text-2" href="{{ route('combined-media') }}" itemprop="url">News, Content & Media</a>
-															</li>
+															</li> --}}
 															{{-- <li class="dropdown-submenu" itemprop="name">
 																<a class="dropdown-item text-2" href="{{ route('white-papers.index') }}" itemprop="url">White Papers</a>
 															</li> --}}
@@ -138,46 +137,7 @@
 														<a class="dropdown-item dropdown-toggle text-2" href="#">
 															Support
 														</a>
-														<ul class="dropdown-menu">
-
-															<li class="dropdown-submenu" itemprop="name">
-																<a class="dropdown-item text-2" href="{{ route(('support.rma-request')) }}" itemprop="url">RMA / Support</a>
-															</li>
-															<li class="dropdown-submenu" itemprop="name">
-																<a class="dropdown-item text-2" href="{{ route(('support.config-guides')) }}" itemprop="url">Config Catalog</a>
-															</li>
-															<li class="dropdown-submenu" itemprop="name">
-																<a class="dropdown-item text-2" target="_blank" href="https://licensing.codecorp.com/goto.php" itemprop="url">License Generation</a>
-															</li>
-															<li class="dropdown-submenu" itemprop="name">
-																<a class="dropdown-item text-2" href="{{ route(('about.patent-marking')) }}" itemprop="url">Patent Marking</a>
-															</li>
-
-
-
-
-															{{-- <li class="dropdown-submenu" itemprop="name">
-																<a class="dropdown-item text-2" href="{{ route('coming-soon') }}" itemprop="url">Firmware &amp; Software</a>
-															</li> --}}
-
-
-															<li class="dropdown-submenu" itemprop="name">
-																<a class="dropdown-item text-2" href="{{ route('support.privacy') }}" itemprop="url">Privacy Policy</a>
-															</li>
-															<li class="dropdown-submenu" itemprop="name">
-																<a class="dropdown-item text-2" href="{{ route('support.eula') }}" itemprop="url">EULA Statement</a>
-															</li>
-															<li class="dropdown-submenu" itemprop="name">
-																<a class="dropdown-item text-2" href="{{ route('support.warranty') }}" itemprop="url">Limited Warranty</a>
-															</li>
-															<li class="dropdown-submenu" itemprop="name">
-																<a class="dropdown-item text-2" href="{{ route('support.warranty-coverage-terms') }}" itemprop="url">Warranty Terms</a>
-															</li>
-															{{-- <li class="dropdown-submenu" itemprop="name">
-																<a class="dropdown-item text-2" href="{{ route('faqs.index') }}" itemprop="url">FAQs</a>
-															</li> --}}
-
-														</ul>
+														 
 													</li>
 													<li class="dropdown">
 														<a class="dropdown-item dropdown-toggle text-2" href="{{ route('contact') }}">
