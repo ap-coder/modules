@@ -163,7 +163,10 @@
             </div>
             
           </div>
+        {!! QrCode::generate('SYMAXCSEN0') !!}
         
+
+        {{-- , SYDATMSMR1, SYDATMSRX1 --}}
         
         <div class="button-div">
             <button type="button" class="back">Back</button>
@@ -173,6 +176,8 @@
 		</div>
 	</div>
 </div>
+
+
 
 
 <hr class="invisible">

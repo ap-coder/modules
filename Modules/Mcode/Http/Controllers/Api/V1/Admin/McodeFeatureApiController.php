@@ -8,6 +8,7 @@ use Modules\Mcode\Http\Requests\UpdateMcodeFeatureRequest;
 use Modules\Mcode\Transformers\Admin\McodeFeatureResource;
 use Modules\Mcode\Entities\McodeFeature;
 use Gate;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
