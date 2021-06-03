@@ -13,6 +13,19 @@ Route::redirect('/', '/login');
 Auth::routes(['register' => false]);
 
 
+Route::get('/cu', function () {
+   // chdir('/');
+   // $output=shell_exec('composer update');
+    
+    echo "running update"."<br>";
+    echo exec('pwd')."<br /> <hr>";
+    echo "<pre>";
+    exec('composer update',$output);
+    // print_r ($output);
+    // echo $output;
+    var_dump($output);
+    echo "</pre>";
+});
 
 
 Route::get('/r', function ()
