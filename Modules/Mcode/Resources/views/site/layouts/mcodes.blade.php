@@ -53,10 +53,16 @@
 			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV6G7TP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			{{-- <script> console.log("ENV: Development");</script> --}}
 		@elseif(\App::environment() === 'local')
+
 		@endif
 
-		<div class="body">
-
+		@if (\App::environment('MODULE_DEBUG'== 'true')) 
+		<hr /> <h1>BEFORE BODY BODY</h1> <hr />
+		@endif
+				<div class="body">
+		@if (\App::environment('MODULE_DEBUG'== 'true')) 
+		<hr /> <h1> INSIDE BODY</h1> <hr />
+		@endif
 
 			@hasSection('top-bar')
 				@yield('top-bar')
@@ -78,14 +84,14 @@
 			@endif
 
 
+@yield('above-main')
+
 
 		 {{-- <div role="main" class="main" style="min-height: calc(100vh - 600px);"> --}}
 			<div role="main" class="main @yield('main-classes')">
-				@yield('above-content')
+				@if (\App::environment('MODULE_DEBUG'== 'true')) <hr /> <h1> INSIDE main</h1> <hr />	@endif	 
 				@yield('slider')
-				{{-- @include('flash::message') --}}
-					@yield('content')
-				@yield('below-content')
+				@yield('content')
 			</div> <!-- main close -->
 
 			
@@ -111,10 +117,6 @@
             } );
         </script>
 
-
-		<!-- {{App::environment()}} -->
-
-{{-- @include('site.layouts.partials.debug') --}}
 
 	</body>
 </html>

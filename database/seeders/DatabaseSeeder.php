@@ -24,5 +24,7 @@ class DatabaseSeeder extends Seeder
         // $this->call(\Modules\Mcode\Database\Seeders\McodeMcodeProductModelTableSeeder::class);
         // $this->call(\Modules\Mcode\Database\Seeders\McodeProductModelsTableSeeder::class);
         $this->call(MediaTableSeeder::class);
+        $this->call(McodeFeaturesTableSeeder::class);
+        $this->call(McodeProductModelsTableSeeder::class);
     }
 }

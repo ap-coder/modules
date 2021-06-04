@@ -8,7 +8,7 @@ use Illuminate\Routing\Controller;
 // use Mcode::Entities\McodeCategory;
 use Modules\Mcode\Entities\McodeCategory;
 use Modules\Mcode\Entities\McodeFeature;
-use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use SimpleSoftwareIO\QrCode\Facades\QrCode; 
 use Modules\Mcode\Entities\Mcode;
 use Modules\Mcode\Entities\McodeProductModel;
 use App\Models\User;

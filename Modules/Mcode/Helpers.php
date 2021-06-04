@@ -3,16 +3,16 @@
 namespace Modules\Mcode;
 
 
-if(!function_exists('code_custom')) 
-{
+// if(!function_exists('code_custom')) 
+// {
 
-	function code_custom($name, $path = ''):string 
-	{
-		$module = app('modules')->find($name);
+// 	function code_custom($name, $path = ''):string 
+// 	{
+// 		$module = app('modules')->find($name);
 
-		return $module->getPath(). ($path ? DIRECTORY_SEPARATOR . $path : $path);
-	}
-}
+// 		return $module->getPath(). ($path ? DIRECTORY_SEPARATOR . $path : $path);
+// 	}
+// }
 
 
 
