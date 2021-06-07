@@ -12,6 +12,7 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Modules\Mcode\Entities\Mcode;
 use Modules\Mcode\Entities\McodeProductModel;
 use App\Models\User;
+use Modules\Mcode\Helpers;
 
 
 class McodeController extends Controller
@@ -28,6 +29,7 @@ class McodeController extends Controller
         // }else{
         //     //mcode model run here
         // }
+	    
         $mcodes = Mcode::published()->get();
         $categories = McodeCategory::with('categoriesMcodeFeatures')->get();
         $features = McodeFeature::all();

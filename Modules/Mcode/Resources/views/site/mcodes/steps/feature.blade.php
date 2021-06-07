@@ -43,9 +43,9 @@
                               <div class="col col-2" data-label="Code">{{ $feature->mcode ?? '' }}</div>
                               <div class="col col-4 feturedesc" data-label="Description">{{ $feature->description ?? '' }}</div>
                               <div class="col col-2" data-label="Barcode">
-                                {{  asset('site/img/modules/qr_click.png') }}
-                                 {{-- {{ QrCode::size(100)->generate($feature->source_string) }} --}}
-                          
+                                {{-- <img src="{{  asset('site/img/modules/qr_click.png') }}" alt=""> --}}
+                                 {!! QrCode::generate($feature->formatted_source_string) !!}
+ 
                               <div class="col col-1 selectfeture" data-label="Select">
                                 <label class="checkbox">
                                   <input type="checkbox" />
@@ -67,7 +67,25 @@
             
           </div>
     
-        
+@php
+
+// $string =  $request;
+
+// $header = chr(1).'Y'.chr(29).chr(2);
+// $pipe = chr(3);
+// $footer = chr(3) . chr(4);
+
+// $string = trim(preg_replace('/\s\s+/', $pipe, $string));
+// $str = str_replace(' ', $pipe, $string);
+
+// dd($header . $str . $footer);
+
+
+
+ @endphp       
+
+{{--{!! QrCode::generate($header. $str . $footer) !!}--}}
+
 
         {{-- , SYDATMSMR1, SYDATMSRX1 --}}
         
@@ -89,7 +107,7 @@
 {{-- <span>REBOOT</span>
 {!! QrCode::generate(chr(1).'Y' . chr(29).chr(2).'RDCMRB1' . chr(3). chr(4)) !!} <br> --}}
 
- {!! QrCode::generate(chr(1).'Y' . chr(29).chr(2).'CDOPSPX""'.chr(3).'CDOPSFO1' . chr(3). chr(4)) !!}
+{{--  {!! QrCode::generate(chr(1).'Y' . chr(29).chr(2).'CDOPSPX""'.chr(3).'CDOPSFO1' . chr(3). chr(4)) !!} --}}
  
 
 <hr class="invisible">
