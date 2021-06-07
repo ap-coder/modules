@@ -66,28 +66,7 @@
 
             
           </div>
-    
-@php
-
-// $string =  $request;
-
-// $header = chr(1).'Y'.chr(29).chr(2);
-// $pipe = chr(3);
-// $footer = chr(3) . chr(4);
-
-// $string = trim(preg_replace('/\s\s+/', $pipe, $string));
-// $str = str_replace(' ', $pipe, $string);
-
-// dd($header . $str . $footer);
-
-
-
- @endphp       
-
-{{--{!! QrCode::generate($header. $str . $footer) !!}--}}
-
-
-        {{-- , SYDATMSMR1, SYDATMSRX1 --}}
+   
         
         <div class="button-div">
             <button type="button" class="back">Back</button>
@@ -96,20 +75,6 @@
       
     </div>
  
-{{-- </div> --}}
-
-  
-{{-- {!! QrCode::generate(chr(1).'Y' . chr(29).chr(2). $feature->source_string . chr(3). chr(4)) !!} --}}
-
-<hr class="invisible">
-<hr class="invisible pb-4">
-
-{{-- <span>REBOOT</span>
-{!! QrCode::generate(chr(1).'Y' . chr(29).chr(2).'RDCMRB1' . chr(3). chr(4)) !!} <br> --}}
-
-{{--  {!! QrCode::generate(chr(1).'Y' . chr(29).chr(2).'CDOPSPX""'.chr(3).'CDOPSFO1' . chr(3). chr(4)) !!} --}}
- 
-
 <hr class="invisible">
 <hr class="invisible pb-4">
 
