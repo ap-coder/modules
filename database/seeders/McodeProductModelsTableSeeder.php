@@ -338,6 +338,83 @@ class McodeProductModelsTableSeeder extends Seeder
                 'updated_at' => '2021-06-04 18:03:54',
                 'deleted_at' => NULL,
             ),
+            29 => 
+            array (
+                'id' => 30,
+                'model' => 'CR950-K301',
+                'description' => NULL,
+                'published' => 1,
+                'slug' => 'cr950-k301',
+                'created_at' => '2021-06-04 22:44:55',
+                'updated_at' => '2021-06-04 22:44:55',
+                'deleted_at' => NULL,
+            ),
+            30 => 
+            array (
+                'id' => 31,
+                'model' => 'CR8212',
+                'description' => NULL,
+                'published' => 1,
+                'slug' => 'cr8212',
+                'created_at' => '2021-06-04 22:45:30',
+                'updated_at' => '2021-06-04 22:45:30',
+                'deleted_at' => NULL,
+            ),
+            31 => 
+            array (
+                'id' => 32,
+                'model' => 'CR8222',
+                'description' => NULL,
+                'published' => 1,
+                'slug' => 'cr8222',
+                'created_at' => '2021-06-04 22:45:57',
+                'updated_at' => '2021-06-04 22:45:57',
+                'deleted_at' => NULL,
+            ),
+            32 => 
+            array (
+                'id' => 33,
+                'model' => 'CR8221',
+                'description' => NULL,
+                'published' => 1,
+                'slug' => 'cr8221',
+                'created_at' => '2021-06-04 22:46:08',
+                'updated_at' => '2021-06-04 22:46:08',
+                'deleted_at' => NULL,
+            ),
+            33 => 
+            array (
+                'id' => 34,
+                'model' => 'CR4900',
+                'description' => NULL,
+                'published' => 1,
+                'slug' => 'cr4900',
+                'created_at' => '2021-06-07 22:41:27',
+                'updated_at' => '2021-06-07 22:41:27',
+                'deleted_at' => NULL,
+            ),
+            34 => 
+            array (
+                'id' => 35,
+                'model' => 'CR950-K302',
+                'description' => NULL,
+                'published' => 1,
+                'slug' => 'cr950-k302',
+                'created_at' => '2021-06-07 22:48:24',
+                'updated_at' => '2021-06-07 22:48:24',
+                'deleted_at' => NULL,
+            ),
+            35 => 
+            array (
+                'id' => 36,
+                'model' => 'CR1100',
+                'description' => NULL,
+                'published' => 1,
+                'slug' => 'cr1100',
+                'created_at' => '2021-06-07 22:48:33',
+                'updated_at' => '2021-06-07 22:48:33',
+                'deleted_at' => NULL,
+            ),
         ));
         
         

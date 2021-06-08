@@ -54,8 +54,13 @@ class McodeFeature extends Model
             $pipe = chr(3);
             $footer = chr(3) . chr(4);
             
+            $string = str_replace(',EO1', '', $this->source_string);
+            $string = str_replace(',PO2', '', $this->source_string);
+            $string = str_replace(',PO2', '', $this->source_string);
             $string = trim(preg_replace('/\s\s+/', $pipe, $this->source_string));
             $string = str_replace(' ', $pipe, $this->source_string);
+            $string = str_replace(',', $pipe, $this->source_string);
+            $string = str_replace(', ', $pipe, $this->source_string);
      
             $source_string = $header . $this->source_string. $footer;
             
