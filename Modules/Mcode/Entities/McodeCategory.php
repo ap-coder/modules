@@ -77,6 +77,13 @@ class McodeCategory extends Model implements HasMedia
         return $this->belongsToMany(McodeFeature::class);
     }
 
+
+    public function features()
+    {
+        return $this->belongsToMany(McodeFeature::class);
+    }
+
+
     public function getImageAttribute()
     {
         $file = $this->getMedia('image')->last();

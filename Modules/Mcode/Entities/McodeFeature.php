@@ -48,6 +48,20 @@ class McodeFeature extends Model
         // });
     }
 
+    public function getFormattedSourceStringAttribute()
+    {       
+            $header = chr(1).'Y'.chr(29).chr(2);
+            $pipe = chr(3);
+            $footer = chr(3) . chr(4);
+            
+            $string = trim(preg_replace('/\s\s+/', $pipe, $this->source_string));
+            $string = str_replace(' ', $pipe, $this->source_string);
+     
+            $source_string = $header . $this->source_string. $footer;
+            
+            return $source_string;
+    }
+
     public static function last()
     {
         return static::all()->last();
