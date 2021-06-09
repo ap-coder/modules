@@ -26,5 +26,10 @@ class DatabaseSeeder extends Seeder
         $this->call(MediaTableSeeder::class);
         $this->call(McodeFeaturesTableSeeder::class);
         $this->call(McodeProductModelsTableSeeder::class);
+        $this->call(McodeCategoriesTableSeeder::class);
+        $this->call(McodesTableSeeder::class);
+        $this->call(McodeCategoryMcodeFeatureTableSeeder::class);
+        $this->call(McodeFeatureMcodeProductModelTableSeeder::class);
+        $this->call(McodeMcodeProductModelTableSeeder::class);
     }
 }

@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+}
+
+hr.process {  
+  border-top: 5px solid black;
+  }
+
+.config-header {
+  flex: 1;
+ 
+}
+
+.process-container {
+  display: flex;
+  flex: 1;
+  border: 1px solid #e3e3e3;
+  background-color: #ffff00;
+}
+
+.layout-item {
+  display: flex;
+  flex: 1;
+  border: 1px solid #e3e3e3;
+  background-color: lightcyan;
+}
+
+.process-item {
+  display: flex;
+  background-color: white;
+}
+
+.layout-item-center {
+ flex-basis:80%;
+  /* border: 1px solid #e3e3e3; */
+}
+
+
+.left-side, .right-side {
+  flex-basis:10%;
+}
+
+
+.process-item .dot {
+flex-basis:20%;
+}
+
+.process-item .line {
+flex-basis:80%;
+}
+
+
+
+
+.full-width {
+width: calc(100vw – 25px);
+position: relative;
+left: 50%;
+right: 50%;
+margin-left: calc(-50vw + 12.5px);
+margin-right: calc(-50vw + 12.5px);
+}

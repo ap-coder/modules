@@ -21,7 +21,7 @@ class McodeFeaturesTableSeeder extends Seeder
         \DB::table('mcode_features')->insert(array (
             0 => 
             array (
-                'id' => 743,
+
                 'published' => 0,
                 'mcode' => 'M20000',
                 'name' => 'Australian Post On',
@@ -41,7 +41,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             1 => 
             array (
-                'id' => 744,
+
                 'published' => 0,
                 'mcode' => 'M20001',
                 'name' => 'Australian Post Off',
@@ -61,7 +61,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             2 => 
             array (
-                'id' => 745,
+
                 'published' => 0,
                 'mcode' => 'M20002',
                 'name' => 'Aztec On',
@@ -81,7 +81,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             3 => 
             array (
-                'id' => 746,
+
                 'published' => 0,
                 'mcode' => 'M20003',
                 'name' => 'Aztec Off',
@@ -101,7 +101,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             4 => 
             array (
-                'id' => 747,
+
                 'published' => 0,
                 'mcode' => 'M20004',
                 'name' => 'Aztec Inverse & Normal On',
@@ -121,7 +121,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             5 => 
             array (
-                'id' => 748,
+
                 'published' => 0,
                 'mcode' => 'M20005',
                 'name' => 'Aztec Inverse Off',
@@ -141,7 +141,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             6 => 
             array (
-                'id' => 749,
+
                 'published' => 0,
                 'mcode' => 'M20006',
                 'name' => 'BC412 On',
@@ -161,7 +161,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             7 => 
             array (
-                'id' => 750,
+
                 'published' => 0,
                 'mcode' => 'M20007',
                 'name' => 'BC412 Off',
@@ -181,7 +181,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             8 => 
             array (
-                'id' => 751,
+
                 'published' => 0,
                 'mcode' => 'M20008',
                 'name' => 'Canada Post On',
@@ -201,7 +201,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             9 => 
             array (
-                'id' => 752,
+
                 'published' => 0,
                 'mcode' => 'M20009',
                 'name' => 'Canada Post Off',
@@ -221,7 +221,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             10 => 
             array (
-                'id' => 753,
+
                 'published' => 0,
                 'mcode' => 'M20010',
                 'name' => 'Codabar On',
@@ -241,7 +241,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             11 => 
             array (
-                'id' => 754,
+
                 'published' => 0,
                 'mcode' => 'M20011',
                 'name' => 'Codabar Off',
@@ -261,7 +261,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             12 => 
             array (
-                'id' => 755,
+
                 'published' => 0,
                 'mcode' => 'M20012',
                 'name' => 'Codabar Checksum On',
@@ -281,7 +281,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             13 => 
             array (
-                'id' => 756,
+
                 'published' => 0,
                 'mcode' => 'M20013',
                 'name' => 'Codabar Checksum Off',
@@ -301,7 +301,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             14 => 
             array (
-                'id' => 757,
+
                 'published' => 0,
                 'mcode' => 'M20014',
                 'name' => 'Remove Codabar Start and Stop Delimiters',
@@ -321,7 +321,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             15 => 
             array (
-                'id' => 758,
+
                 'published' => 0,
                 'mcode' => 'M20015',
                 'name' => 'Keep Codabar Start and Stop Delimiters',
@@ -341,7 +341,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             16 => 
             array (
-                'id' => 759,
+
                 'published' => 0,
                 'mcode' => 'M20018',
                 'name' => 'Codablock F On',
@@ -361,7 +361,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             17 => 
             array (
-                'id' => 760,
+
                 'published' => 0,
                 'mcode' => 'M20019',
                 'name' => 'Codablock F Off',
@@ -381,7 +381,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             18 => 
             array (
-                'id' => 761,
+
                 'published' => 0,
                 'mcode' => 'M20020',
                 'name' => 'Code 11 On',
@@ -401,7 +401,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             19 => 
             array (
-                'id' => 762,
+
                 'published' => 0,
                 'mcode' => 'M20021',
                 'name' => 'Code 11 Off',
@@ -421,7 +421,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             20 => 
             array (
-                'id' => 763,
+
                 'published' => 0,
                 'mcode' => 'M20022',
                 'name' => 'Code 11 Checksum Stripped from Result On',
@@ -441,7 +441,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             21 => 
             array (
-                'id' => 764,
+
                 'published' => 0,
                 'mcode' => 'M20023',
                 'name' => 'Code 11 Checksum Stripped from Result Off',
@@ -461,7 +461,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             22 => 
             array (
-                'id' => 765,
+
                 'published' => 0,
                 'mcode' => 'M20024',
             'name' => 'Code 32 (Italian Pharmacode) On',
@@ -481,7 +481,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             23 => 
             array (
-                'id' => 766,
+
                 'published' => 0,
                 'mcode' => 'M20025',
             'name' => 'Code 32 (Italian Pharmacode) Off',
@@ -501,7 +501,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             24 => 
             array (
-                'id' => 767,
+
                 'published' => 0,
                 'mcode' => 'M20026',
                 'name' => 'Code 39 On',
@@ -521,7 +521,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             25 => 
             array (
-                'id' => 768,
+
                 'published' => 0,
                 'mcode' => 'M20027',
                 'name' => 'Code 39 Off',
@@ -541,7 +541,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             26 => 
             array (
-                'id' => 769,
+
                 'published' => 0,
                 'mcode' => 'M20028',
                 'name' => 'Code 39 Checksum On',
@@ -561,7 +561,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             27 => 
             array (
-                'id' => 770,
+
                 'published' => 0,
                 'mcode' => 'M20029',
                 'name' => 'Code 39 Checksum Off',
@@ -581,7 +581,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             28 => 
             array (
-                'id' => 771,
+
                 'published' => 0,
                 'mcode' => 'M20030',
                 'name' => 'Code 39 Checksum Stripped from Result On',
@@ -601,7 +601,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             29 => 
             array (
-                'id' => 772,
+
                 'published' => 0,
                 'mcode' => 'M20031',
                 'name' => 'Code 11 Disable Checksum Checking',
@@ -621,7 +621,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             30 => 
             array (
-                'id' => 773,
+
                 'published' => 0,
                 'mcode' => 'M20032',
                 'name' => 'Code 11 One Digit Checksum',
@@ -641,7 +641,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             31 => 
             array (
-                'id' => 774,
+
                 'published' => 0,
                 'mcode' => 'M20033',
                 'name' => 'Code 11 Two Digit Checksum',
@@ -661,7 +661,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             32 => 
             array (
-                'id' => 775,
+
                 'published' => 0,
                 'mcode' => 'M20034',
                 'name' => 'Code 128 On',
@@ -681,7 +681,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             33 => 
             array (
-                'id' => 776,
+
                 'published' => 0,
                 'mcode' => 'M20035',
                 'name' => 'Code 128 Off',
@@ -701,7 +701,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             34 => 
             array (
-                'id' => 777,
+
                 'published' => 0,
                 'mcode' => 'M20036',
                 'name' => 'Composite On',
@@ -721,7 +721,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             35 => 
             array (
-                'id' => 778,
+
                 'published' => 0,
                 'mcode' => 'M20037',
                 'name' => 'Composite Off',
@@ -741,7 +741,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             36 => 
             array (
-                'id' => 779,
+
                 'published' => 0,
                 'mcode' => 'M20038',
                 'name' => 'Data Matrix On',
@@ -761,7 +761,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             37 => 
             array (
-                'id' => 780,
+
                 'published' => 0,
                 'mcode' => 'M20039',
                 'name' => 'Data Matrix Off',
@@ -781,7 +781,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             38 => 
             array (
-                'id' => 781,
+
                 'published' => 0,
                 'mcode' => 'M20040',
                 'name' => 'Data Matrix Inverse and Normal On',
@@ -801,7 +801,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             39 => 
             array (
-                'id' => 782,
+
                 'published' => 0,
                 'mcode' => 'M20041',
                 'name' => 'Data Matrix Inverse Off',
@@ -821,7 +821,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             40 => 
             array (
-                'id' => 783,
+
                 'published' => 0,
                 'mcode' => 'M20042',
                 'name' => 'Data Matrix Mirror On',
@@ -841,7 +841,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             41 => 
             array (
-                'id' => 784,
+
                 'published' => 0,
                 'mcode' => 'M20043',
                 'name' => 'Data Matrix Mirror Off',
@@ -861,7 +861,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             42 => 
             array (
-                'id' => 785,
+
                 'published' => 0,
                 'mcode' => 'M20044',
                 'name' => 'Data Matrix Rectangular On',
@@ -881,7 +881,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             43 => 
             array (
-                'id' => 786,
+
                 'published' => 0,
                 'mcode' => 'M20045',
                 'name' => 'Data Matrix Rectangular Off',
@@ -901,7 +901,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             44 => 
             array (
-                'id' => 787,
+
                 'published' => 0,
                 'mcode' => 'M20046',
                 'name' => 'Data Matrix Rectangular Extended On',
@@ -921,7 +921,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             45 => 
             array (
-                'id' => 788,
+
                 'published' => 0,
                 'mcode' => 'M20047',
                 'name' => 'Data Matrix Rectangular Extended Off',
@@ -941,7 +941,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             46 => 
             array (
-                'id' => 789,
+
                 'published' => 0,
                 'mcode' => 'M20048',
                 'name' => 'Grid Matrix On',
@@ -961,7 +961,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             47 => 
             array (
-                'id' => 790,
+
                 'published' => 0,
                 'mcode' => 'M20049',
                 'name' => 'Grid Matrix Off',
@@ -981,7 +981,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             48 => 
             array (
-                'id' => 791,
+
                 'published' => 0,
                 'mcode' => 'M20050',
                 'name' => 'GS1 DataBar On',
@@ -1001,7 +1001,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             49 => 
             array (
-                'id' => 792,
+
                 'published' => 0,
                 'mcode' => 'M20051',
                 'name' => 'GS1 DataBar Off',
@@ -1021,7 +1021,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             50 => 
             array (
-                'id' => 793,
+
                 'published' => 0,
                 'mcode' => 'M20052',
                 'name' => 'Han Xin On',
@@ -1041,7 +1041,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             51 => 
             array (
-                'id' => 794,
+
                 'published' => 0,
                 'mcode' => 'M20053',
                 'name' => 'Han Xin Off',
@@ -1061,7 +1061,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             52 => 
             array (
-                'id' => 795,
+
                 'published' => 0,
                 'mcode' => 'M20054',
                 'name' => 'Han Xin Inverse On',
@@ -1081,7 +1081,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             53 => 
             array (
-                'id' => 796,
+
                 'published' => 0,
                 'mcode' => 'M20055',
                 'name' => 'Han Xin Inverse Off',
@@ -1101,7 +1101,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             54 => 
             array (
-                'id' => 797,
+
                 'published' => 0,
                 'mcode' => 'M20056',
                 'name' => 'Han Xin Mirror On',
@@ -1121,7 +1121,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             55 => 
             array (
-                'id' => 798,
+
                 'published' => 0,
                 'mcode' => 'M20057',
                 'name' => 'Han Xin Mirror Off',
@@ -1141,7 +1141,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             56 => 
             array (
-                'id' => 799,
+
                 'published' => 0,
                 'mcode' => 'M20058',
                 'name' => 'Hong Kong 2 of 5 On',
@@ -1161,7 +1161,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             57 => 
             array (
-                'id' => 800,
+
                 'published' => 0,
                 'mcode' => 'M20059',
                 'name' => 'Hong Kong 2 of 5 Off',
@@ -1181,7 +1181,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             58 => 
             array (
-                'id' => 801,
+
                 'published' => 0,
                 'mcode' => 'M20060',
                 'name' => 'Interleaved 2 of 5 On',
@@ -1201,7 +1201,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             59 => 
             array (
-                'id' => 802,
+
                 'published' => 0,
                 'mcode' => 'M20061',
                 'name' => 'Interleaved 2 of 5 Off',
@@ -1221,7 +1221,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             60 => 
             array (
-                'id' => 803,
+
                 'published' => 0,
                 'mcode' => 'M20062',
                 'name' => 'Interleaved 2 of 5 Checksum On',
@@ -1241,7 +1241,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             61 => 
             array (
-                'id' => 804,
+
                 'published' => 0,
                 'mcode' => 'M20063',
                 'name' => 'Interleaved 2 of 5 Checksum Off',
@@ -1261,7 +1261,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             62 => 
             array (
-                'id' => 805,
+
                 'published' => 0,
                 'mcode' => 'M20064',
                 'name' => 'Interleaved 2 of 5 Checksum Stripped from Result On',
@@ -1281,7 +1281,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             63 => 
             array (
-                'id' => 806,
+
                 'published' => 0,
                 'mcode' => 'M20065',
                 'name' => 'Japan Post On',
@@ -1301,7 +1301,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             64 => 
             array (
-                'id' => 807,
+
                 'published' => 0,
                 'mcode' => 'M20066',
                 'name' => 'Japan Post Off',
@@ -1321,7 +1321,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             65 => 
             array (
-                'id' => 808,
+
                 'published' => 0,
                 'mcode' => 'M20067',
             'name' => 'KIX (Dutch Post) On',
@@ -1341,7 +1341,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             66 => 
             array (
-                'id' => 809,
+
                 'published' => 0,
                 'mcode' => 'M20068',
             'name' => 'KIX (Dutch Post) Off',
@@ -1361,7 +1361,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             67 => 
             array (
-                'id' => 810,
+
                 'published' => 0,
                 'mcode' => 'M20069',
                 'name' => 'Korean Post On',
@@ -1381,7 +1381,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             68 => 
             array (
-                'id' => 811,
+
                 'published' => 0,
                 'mcode' => 'M20070',
                 'name' => 'Korean Post Off',
@@ -1401,7 +1401,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             69 => 
             array (
-                'id' => 812,
+
                 'published' => 0,
                 'mcode' => 'M20071',
                 'name' => 'Matrix 2 of 5 On',
@@ -1421,7 +1421,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             70 => 
             array (
-                'id' => 813,
+
                 'published' => 0,
                 'mcode' => 'M20072',
                 'name' => 'Matrix 2 of 5 Off',
@@ -1441,7 +1441,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             71 => 
             array (
-                'id' => 814,
+
                 'published' => 0,
                 'mcode' => 'M20073',
                 'name' => 'Maxicode On',
@@ -1461,7 +1461,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             72 => 
             array (
-                'id' => 815,
+
                 'published' => 0,
                 'mcode' => 'M20074',
                 'name' => 'Maxicode Off',
@@ -1481,7 +1481,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             73 => 
             array (
-                'id' => 816,
+
                 'published' => 0,
                 'mcode' => 'M20075',
                 'name' => 'MSI Plessey On',
@@ -1501,7 +1501,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             74 => 
             array (
-                'id' => 817,
+
                 'published' => 0,
                 'mcode' => 'M20076',
                 'name' => 'MSI Plessey Off',
@@ -1521,7 +1521,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             75 => 
             array (
-                'id' => 818,
+
                 'published' => 0,
                 'mcode' => 'M20077',
                 'name' => 'Interleaved 2 of 5 Checksum Stripped from Result Off',
@@ -1541,7 +1541,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             76 => 
             array (
-                'id' => 819,
+
                 'published' => 0,
                 'mcode' => 'M20078',
                 'name' => 'MSI Plessey Checksum Off',
@@ -1561,7 +1561,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             77 => 
             array (
-                'id' => 820,
+
                 'published' => 0,
                 'mcode' => 'M20079',
                 'name' => 'MSI Plessey Checksum Must Be Mod 10',
@@ -1581,7 +1581,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             78 => 
             array (
-                'id' => 821,
+
                 'published' => 0,
                 'mcode' => 'M20080',
                 'name' => 'MSI Plessey Checksum Must Be Mod 10/10',
@@ -1601,7 +1601,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             79 => 
             array (
-                'id' => 822,
+
                 'published' => 0,
                 'mcode' => 'M20081',
                 'name' => 'MSI Plessey Checksum Must Be Mod 11/10',
@@ -1621,7 +1621,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             80 => 
             array (
-                'id' => 823,
+
                 'published' => 0,
                 'mcode' => 'M20082',
                 'name' => 'MSI Plessey Checksum Stripped from Result On',
@@ -1641,7 +1641,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             81 => 
             array (
-                'id' => 824,
+
                 'published' => 0,
                 'mcode' => 'M20083',
                 'name' => 'MSI Plessey Checksum Stripped from Result Off',
@@ -1661,7 +1661,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             82 => 
             array (
-                'id' => 825,
+
                 'published' => 0,
                 'mcode' => 'M20084',
                 'name' => 'NEC 2 of 5 On',
@@ -1681,7 +1681,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             83 => 
             array (
-                'id' => 826,
+
                 'published' => 0,
                 'mcode' => 'M20085',
                 'name' => 'NEC 2 of 5 Off',
@@ -1701,7 +1701,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             84 => 
             array (
-                'id' => 827,
+
                 'published' => 0,
                 'mcode' => 'M20086',
                 'name' => 'NEC 2 of 5 Checksum On',
@@ -1721,7 +1721,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             85 => 
             array (
-                'id' => 828,
+
                 'published' => 0,
                 'mcode' => 'M20087',
                 'name' => 'NEC 2 of 5 Checksum Off',
@@ -1741,7 +1741,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             86 => 
             array (
-                'id' => 829,
+
                 'published' => 0,
                 'mcode' => 'M20088',
                 'name' => 'PDF417 On',
@@ -1761,7 +1761,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             87 => 
             array (
-                'id' => 830,
+
                 'published' => 0,
                 'mcode' => 'M20089',
                 'name' => 'PDF417 Off',
@@ -1781,7 +1781,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             88 => 
             array (
-                'id' => 831,
+
                 'published' => 0,
                 'mcode' => 'M20090',
                 'name' => 'Micro PDF417 On',
@@ -1801,7 +1801,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             89 => 
             array (
-                'id' => 832,
+
                 'published' => 0,
                 'mcode' => 'M20091',
                 'name' => 'Micro PDF417 Off',
@@ -1821,7 +1821,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             90 => 
             array (
-                'id' => 833,
+
                 'published' => 0,
                 'mcode' => 'M20092',
                 'name' => 'Pharmacode On',
@@ -1841,7 +1841,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             91 => 
             array (
-                'id' => 834,
+
                 'published' => 0,
                 'mcode' => 'M20093',
                 'name' => 'Pharmacode Off',
@@ -1861,7 +1861,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             92 => 
             array (
-                'id' => 835,
+
                 'published' => 0,
                 'mcode' => 'M20094',
             'name' => 'Pharmacode Reverse Barcode Decoding (Right to Left)',
@@ -1881,7 +1881,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             93 => 
             array (
-                'id' => 836,
+
                 'published' => 0,
                 'mcode' => 'M20095',
             'name' => 'Pharmacode Normal Barcode Decoding (Left to Right)',
@@ -1901,7 +1901,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             94 => 
             array (
-                'id' => 837,
+
                 'published' => 0,
                 'mcode' => 'M20096',
                 'name' => 'QR Code On',
@@ -1921,7 +1921,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             95 => 
             array (
-                'id' => 838,
+
                 'published' => 0,
                 'mcode' => 'M20097',
                 'name' => 'QR Code Off',
@@ -1941,7 +1941,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             96 => 
             array (
-                'id' => 839,
+
                 'published' => 0,
                 'mcode' => 'M20098',
                 'name' => 'QR Code Standard Only',
@@ -1961,7 +1961,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             97 => 
             array (
-                'id' => 840,
+
                 'published' => 0,
                 'mcode' => 'M20099',
                 'name' => 'QR Code Inverse Only',
@@ -1981,7 +1981,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             98 => 
             array (
-                'id' => 841,
+
                 'published' => 0,
                 'mcode' => 'M20100',
                 'name' => 'QR Code Inverse and Normal On',
@@ -2001,7 +2001,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             99 => 
             array (
-                'id' => 842,
+
                 'published' => 0,
                 'mcode' => 'M20101',
                 'name' => 'QR Code Mirror On',
@@ -2021,7 +2021,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             100 => 
             array (
-                'id' => 843,
+
                 'published' => 0,
                 'mcode' => 'M20102',
                 'name' => 'QR Code Mirror Off',
@@ -2041,7 +2041,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             101 => 
             array (
-                'id' => 844,
+
                 'published' => 0,
                 'mcode' => 'M20103',
                 'name' => 'Micro QR Code On',
@@ -2061,7 +2061,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             102 => 
             array (
-                'id' => 845,
+
                 'published' => 0,
                 'mcode' => 'M20104',
                 'name' => 'Micro QR Code Off',
@@ -2081,7 +2081,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             103 => 
             array (
-                'id' => 846,
+
                 'published' => 0,
                 'mcode' => 'M20105',
                 'name' => 'Mode 1 QR Code On',
@@ -2101,7 +2101,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             104 => 
             array (
-                'id' => 847,
+
                 'published' => 0,
                 'mcode' => 'M20106',
                 'name' => 'Mode 1 QR Code Off',
@@ -2121,7 +2121,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             105 => 
             array (
-                'id' => 848,
+
                 'published' => 0,
                 'mcode' => 'M20107',
                 'name' => 'Straight 2 of 5 On',
@@ -2141,7 +2141,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             106 => 
             array (
-                'id' => 849,
+
                 'published' => 0,
                 'mcode' => 'M20108',
                 'name' => 'Straight 2 of 5 Off',
@@ -2161,7 +2161,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             107 => 
             array (
-                'id' => 850,
+
                 'published' => 0,
                 'mcode' => 'M20109',
                 'name' => 'Telepen On',
@@ -2181,7 +2181,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             108 => 
             array (
-                'id' => 851,
+
                 'published' => 0,
                 'mcode' => 'M20110',
                 'name' => 'Telepen Off',
@@ -2201,7 +2201,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             109 => 
             array (
-                'id' => 852,
+
                 'published' => 0,
                 'mcode' => 'M20111',
                 'name' => 'Reset to Factory Defaults',
@@ -2221,7 +2221,7 @@ class McodeFeaturesTableSeeder extends Seeder
             ),
             110 => 
             array (
-                'id' => 853,
+
                 'published' => 0,
                 'mcode' => 'M20112',
                 'name' => 'Reset to RS232 Factory Defaults',
@@ -2244,7 +2244,7 @@ CMMOSCMSE',
             ),
             111 => 
             array (
-                'id' => 854,
+
                 'published' => 0,
                 'mcode' => 'M20113',
                 'name' => 'Output Reader Configuration',
@@ -2264,7 +2264,7 @@ CMMOSCMSE',
             ),
             112 => 
             array (
-                'id' => 855,
+
                 'published' => 0,
                 'mcode' => 'M20114',
                 'name' => 'Get Reader Parameters',
@@ -2284,7 +2284,7 @@ CMMOSCMSE',
             ),
             113 => 
             array (
-                'id' => 856,
+
                 'published' => 0,
                 'mcode' => 'M20115',
                 'name' => 'Enable Serial, Raw, and Echo Communications',
@@ -2307,7 +2307,7 @@ FWCMSOR1,OE1',
             ),
             114 => 
             array (
-                'id' => 857,
+
                 'published' => 0,
                 'mcode' => 'M20116',
                 'name' => 'Output Telepen as ASCII',
@@ -2327,7 +2327,7 @@ FWCMSOR1,OE1',
             ),
             115 => 
             array (
-                'id' => 858,
+
                 'published' => 0,
                 'mcode' => 'M20117',
                 'name' => 'Output Telepen as Numeric',
@@ -2347,7 +2347,7 @@ FWCMSOR1,OE1',
             ),
             116 => 
             array (
-                'id' => 859,
+
                 'published' => 0,
                 'mcode' => 'M20118',
                 'name' => 'Trioptic On',
@@ -2367,7 +2367,7 @@ FWCMSOR1,OE1',
             ),
             117 => 
             array (
-                'id' => 860,
+
                 'published' => 0,
                 'mcode' => 'M20119',
                 'name' => 'Trioptic Off',
@@ -2387,7 +2387,7 @@ FWCMSOR1,OE1',
             ),
             118 => 
             array (
-                'id' => 861,
+
                 'published' => 0,
                 'mcode' => 'M20120',
                 'name' => 'Reverse Trioptic On',
@@ -2407,7 +2407,7 @@ FWCMSOR1,OE1',
             ),
             119 => 
             array (
-                'id' => 862,
+
                 'published' => 0,
                 'mcode' => 'M20121',
                 'name' => 'Reverse Trioptic Off',
@@ -2427,7 +2427,7 @@ FWCMSOR1,OE1',
             ),
             120 => 
             array (
-                'id' => 863,
+
                 'published' => 0,
                 'mcode' => 'M20122',
                 'name' => 'Keep Trioptic Start and Stop Delimiters',
@@ -2447,7 +2447,7 @@ FWCMSOR1,OE1',
             ),
             121 => 
             array (
-                'id' => 864,
+
                 'published' => 0,
                 'mcode' => 'M20123',
                 'name' => 'Remove Trioptic Start and Stop Delimiters',
@@ -2467,7 +2467,7 @@ FWCMSOR1,OE1',
             ),
             122 => 
             array (
-                'id' => 865,
+
                 'published' => 0,
                 'mcode' => 'M20124',
                 'name' => 'UK Royal Mail On',
@@ -2487,7 +2487,7 @@ FWCMSOR1,OE1',
             ),
             123 => 
             array (
-                'id' => 866,
+
                 'published' => 0,
                 'mcode' => 'M20125',
                 'name' => 'UK Royal Mail Off',
@@ -2507,7 +2507,7 @@ FWCMSOR1,OE1',
             ),
             124 => 
             array (
-                'id' => 867,
+
                 'published' => 0,
                 'mcode' => 'M20126',
                 'name' => 'UPC/EAN On',
@@ -2527,7 +2527,7 @@ FWCMSOR1,OE1',
             ),
             125 => 
             array (
-                'id' => 868,
+
                 'published' => 0,
                 'mcode' => 'M20127',
                 'name' => 'UPC/EAN Off',
@@ -2547,7 +2547,7 @@ FWCMSOR1,OE1',
             ),
             126 => 
             array (
-                'id' => 869,
+
                 'published' => 0,
                 'mcode' => 'M20128',
                 'name' => 'UPC Supplemental On',
@@ -2567,7 +2567,7 @@ FWCMSOR1,OE1',
             ),
             127 => 
             array (
-                'id' => 870,
+
                 'published' => 0,
                 'mcode' => 'M20129',
                 'name' => 'UPC Supplemental Off',
@@ -2587,7 +2587,7 @@ FWCMSOR1,OE1',
             ),
             128 => 
             array (
-                'id' => 871,
+
                 'published' => 0,
                 'mcode' => 'M20130',
                 'name' => 'Convert EAN-8 to EAN-13',
@@ -2607,7 +2607,7 @@ FWCMSOR1,OE1',
             ),
             129 => 
             array (
-                'id' => 872,
+
                 'published' => 0,
                 'mcode' => 'M20131',
                 'name' => 'Do Not Convert EAN-8 to EAN-13',
@@ -2627,7 +2627,7 @@ FWCMSOR1,OE1',
             ),
             130 => 
             array (
-                'id' => 873,
+
                 'published' => 0,
                 'mcode' => 'M20132',
                 'name' => 'UPC E Expansion On',
@@ -2647,7 +2647,7 @@ FWCMSOR1,OE1',
             ),
             131 => 
             array (
-                'id' => 874,
+
                 'published' => 0,
                 'mcode' => 'M20133',
                 'name' => 'UPC E Expansion Off',
@@ -2667,7 +2667,7 @@ FWCMSOR1,OE1',
             ),
             132 => 
             array (
-                'id' => 875,
+
                 'published' => 0,
                 'mcode' => 'M20134',
                 'name' => 'Convert UPC-A to EAN-13',
@@ -2687,7 +2687,7 @@ FWCMSOR1,OE1',
             ),
             133 => 
             array (
-                'id' => 876,
+
                 'published' => 0,
                 'mcode' => 'M20135',
                 'name' => 'Do Not Convert UPC-A to EAN-13',
@@ -2707,7 +2707,7 @@ FWCMSOR1,OE1',
             ),
             134 => 
             array (
-                'id' => 877,
+
                 'published' => 0,
                 'mcode' => 'M20136',
                 'name' => 'Convert Bookland EAN-13 to ISBN',
@@ -2727,7 +2727,7 @@ FWCMSOR1,OE1',
             ),
             135 => 
             array (
-                'id' => 878,
+
                 'published' => 0,
                 'mcode' => 'M20137',
                 'name' => 'Do Not Convert Bookland EAN-13 to ISBN',
@@ -2747,7 +2747,7 @@ FWCMSOR1,OE1',
             ),
             136 => 
             array (
-                'id' => 879,
+
                 'published' => 0,
                 'mcode' => 'M20138',
                 'name' => 'Convert Bookland EAN-13 to ISSN',
@@ -2767,7 +2767,7 @@ FWCMSOR1,OE1',
             ),
             137 => 
             array (
-                'id' => 880,
+
                 'published' => 0,
                 'mcode' => 'M20139',
                 'name' => 'Do Not Convert Bookland EAN-13 to ISSN',
@@ -2787,7 +2787,7 @@ FWCMSOR1,OE1',
             ),
             138 => 
             array (
-                'id' => 881,
+
                 'published' => 0,
                 'mcode' => 'M20140',
                 'name' => 'Transmit UPC-A Check Digit',
@@ -2807,7 +2807,7 @@ FWCMSOR1,OE1',
             ),
             139 => 
             array (
-                'id' => 882,
+
                 'published' => 0,
                 'mcode' => 'M20141',
                 'name' => 'Do Not Transmit UPC-A Check Digit',
@@ -2827,7 +2827,7 @@ FWCMSOR1,OE1',
             ),
             140 => 
             array (
-                'id' => 883,
+
                 'published' => 0,
                 'mcode' => 'M20142',
                 'name' => 'Transmit UPC-A Number System',
@@ -2847,7 +2847,7 @@ FWCMSOR1,OE1',
             ),
             141 => 
             array (
-                'id' => 884,
+
                 'published' => 0,
                 'mcode' => 'M20143',
                 'name' => 'Do Not Transmit UPC-A Number System',
@@ -2867,7 +2867,7 @@ FWCMSOR1,OE1',
             ),
             142 => 
             array (
-                'id' => 885,
+
                 'published' => 0,
                 'mcode' => 'M20144',
                 'name' => 'Transmit UPC-E Check Digit',
@@ -2887,7 +2887,7 @@ FWCMSOR1,OE1',
             ),
             143 => 
             array (
-                'id' => 886,
+
                 'published' => 0,
                 'mcode' => 'M20145',
                 'name' => 'Do Not Transmit UPC-E Check Digit',
@@ -2907,7 +2907,7 @@ FWCMSOR1,OE1',
             ),
             144 => 
             array (
-                'id' => 887,
+
                 'published' => 0,
                 'mcode' => 'M20146',
                 'name' => 'Transmit UPC-E Number System',
@@ -2927,7 +2927,7 @@ FWCMSOR1,OE1',
             ),
             145 => 
             array (
-                'id' => 888,
+
                 'published' => 0,
                 'mcode' => 'M20147',
                 'name' => 'Do Not Transmit UPC-E Number System',
@@ -2947,7 +2947,7 @@ FWCMSOR1,OE1',
             ),
             146 => 
             array (
-                'id' => 889,
+
                 'published' => 0,
                 'mcode' => 'M20148',
                 'name' => 'Transmit EAN-8 Check Digit',
@@ -2967,7 +2967,7 @@ FWCMSOR1,OE1',
             ),
             147 => 
             array (
-                'id' => 890,
+
                 'published' => 0,
                 'mcode' => 'M20149',
                 'name' => 'Do Not Transmit EAN-8 Check Digit',
@@ -2987,7 +2987,7 @@ FWCMSOR1,OE1',
             ),
             148 => 
             array (
-                'id' => 891,
+
                 'published' => 0,
                 'mcode' => 'M20150',
                 'name' => 'Transmit EAN-13 Check Digit',
@@ -3007,7 +3007,7 @@ FWCMSOR1,OE1',
             ),
             149 => 
             array (
-                'id' => 892,
+
                 'published' => 0,
                 'mcode' => 'M20151',
                 'name' => 'Do Not Transmit EAN-13 Check Digit',
@@ -3027,7 +3027,7 @@ FWCMSOR1,OE1',
             ),
             150 => 
             array (
-                'id' => 893,
+
                 'published' => 0,
                 'mcode' => 'M20152',
                 'name' => 'UPU ID Tags On',
@@ -3047,7 +3047,7 @@ FWCMSOR1,OE1',
             ),
             151 => 
             array (
-                'id' => 894,
+
                 'published' => 0,
                 'mcode' => 'M20153',
                 'name' => 'UPU ID Tags Off',
@@ -3067,7 +3067,7 @@ FWCMSOR1,OE1',
             ),
             152 => 
             array (
-                'id' => 895,
+
                 'published' => 0,
                 'mcode' => 'M20154',
                 'name' => 'USPS Intelligent Mail On',
@@ -3087,7 +3087,7 @@ FWCMSOR1,OE1',
             ),
             153 => 
             array (
-                'id' => 896,
+
                 'published' => 0,
                 'mcode' => 'M20155',
                 'name' => 'USPS Intelligent Mail Off',
@@ -3107,7 +3107,7 @@ FWCMSOR1,OE1',
             ),
             154 => 
             array (
-                'id' => 897,
+
                 'published' => 0,
                 'mcode' => 'M20156',
                 'name' => 'USPS Planet On',
@@ -3127,7 +3127,7 @@ FWCMSOR1,OE1',
             ),
             155 => 
             array (
-                'id' => 898,
+
                 'published' => 0,
                 'mcode' => 'M20157',
                 'name' => 'USPS Planet Off',
@@ -3147,7 +3147,7 @@ FWCMSOR1,OE1',
             ),
             156 => 
             array (
-                'id' => 899,
+
                 'published' => 0,
                 'mcode' => 'M20158',
                 'name' => 'USPS Postnet On',
@@ -3167,7 +3167,7 @@ FWCMSOR1,OE1',
             ),
             157 => 
             array (
-                'id' => 900,
+
                 'published' => 0,
                 'mcode' => 'M20159',
                 'name' => 'USPS Postnet Off',
@@ -3187,7 +3187,7 @@ FWCMSOR1,OE1',
             ),
             158 => 
             array (
-                'id' => 901,
+
                 'published' => 0,
                 'mcode' => 'M20160',
                 'name' => 'RS232 Interface - 1200 Baud Rate',
@@ -3207,7 +3207,7 @@ FWCMSOR1,OE1',
             ),
             159 => 
             array (
-                'id' => 902,
+
                 'published' => 0,
                 'mcode' => 'M20161',
                 'name' => 'RS232 Interface - 2400 Baud Rate',
@@ -3227,7 +3227,7 @@ FWCMSOR1,OE1',
             ),
             160 => 
             array (
-                'id' => 903,
+
                 'published' => 0,
                 'mcode' => 'M20162',
                 'name' => 'RS232 Interface - 4800 Baud Rate',
@@ -3247,7 +3247,7 @@ FWCMSOR1,OE1',
             ),
             161 => 
             array (
-                'id' => 904,
+
                 'published' => 0,
                 'mcode' => 'M20163',
                 'name' => 'RS232 Interface - 9600 Baud Rate',
@@ -3267,7 +3267,7 @@ FWCMSOR1,OE1',
             ),
             162 => 
             array (
-                'id' => 905,
+
                 'published' => 0,
                 'mcode' => 'M20164',
                 'name' => 'RS232 Interface - 19200 Baud Rate',
@@ -3287,7 +3287,7 @@ FWCMSOR1,OE1',
             ),
             163 => 
             array (
-                'id' => 906,
+
                 'published' => 0,
                 'mcode' => 'M20165',
                 'name' => 'RS232 Interface - 38400 Baud Rate',
@@ -3307,7 +3307,7 @@ FWCMSOR1,OE1',
             ),
             164 => 
             array (
-                'id' => 907,
+
                 'published' => 0,
                 'mcode' => 'M20166',
                 'name' => 'RS232 Interface - 57600 Baud Rate',
@@ -3327,7 +3327,7 @@ FWCMSOR1,OE1',
             ),
             165 => 
             array (
-                'id' => 908,
+
                 'published' => 0,
                 'mcode' => 'M20167',
                 'name' => 'RS232 Interface - 115200 Baud Rate',
@@ -3347,7 +3347,7 @@ FWCMSOR1,OE1',
             ),
             166 => 
             array (
-                'id' => 909,
+
                 'published' => 0,
                 'mcode' => 'M20168',
                 'name' => 'RS232 Interface - 7 Data Bits',
@@ -3367,7 +3367,7 @@ FWCMSOR1,OE1',
             ),
             167 => 
             array (
-                'id' => 910,
+
                 'published' => 0,
                 'mcode' => 'M20169',
                 'name' => 'RS232 Interface - 8 Data Bits',
@@ -3387,7 +3387,7 @@ FWCMSOR1,OE1',
             ),
             168 => 
             array (
-                'id' => 911,
+
                 'published' => 0,
                 'mcode' => 'M20170',
                 'name' => 'RS232 Interface - 1 Stop Bit',
@@ -3407,7 +3407,7 @@ FWCMSOR1,OE1',
             ),
             169 => 
             array (
-                'id' => 912,
+
                 'published' => 0,
                 'mcode' => 'M20171',
                 'name' => 'RS232 Interface - 2 Stop Bits',
@@ -3427,7 +3427,7 @@ FWCMSOR1,OE1',
             ),
             170 => 
             array (
-                'id' => 913,
+
                 'published' => 0,
                 'mcode' => 'M20172',
                 'name' => 'RS232 Interface - Even Parity',
@@ -3447,7 +3447,7 @@ FWCMSOR1,OE1',
             ),
             171 => 
             array (
-                'id' => 914,
+
                 'published' => 0,
                 'mcode' => 'M20173',
                 'name' => 'RS232 Interface - No Parity',
@@ -3467,7 +3467,7 @@ FWCMSOR1,OE1',
             ),
             172 => 
             array (
-                'id' => 915,
+
                 'published' => 0,
                 'mcode' => 'M20174',
                 'name' => 'RS232 Interface - Odd Parity',
@@ -3487,7 +3487,7 @@ FWCMSOR1,OE1',
             ),
             173 => 
             array (
-                'id' => 916,
+
                 'published' => 0,
                 'mcode' => 'M20175',
                 'name' => 'RS232 Interface Flow Control On',
@@ -3507,7 +3507,7 @@ FWCMSOR1,OE1',
             ),
             174 => 
             array (
-                'id' => 917,
+
                 'published' => 0,
                 'mcode' => 'M20176',
                 'name' => 'RS232 Interface Flow Control Off',
@@ -3527,7 +3527,7 @@ FWCMSOR1,OE1',
             ),
             175 => 
             array (
-                'id' => 918,
+
                 'published' => 0,
                 'mcode' => 'M20177',
                 'name' => 'USB HID Vendor Mode',
@@ -3547,7 +3547,7 @@ FWCMSOR1,OE1',
             ),
             176 => 
             array (
-                'id' => 919,
+
                 'published' => 0,
                 'mcode' => 'M20178',
                 'name' => 'USB Keyboard Mode',
@@ -3567,7 +3567,7 @@ FWCMSOR1,OE1',
             ),
             177 => 
             array (
-                'id' => 920,
+
                 'published' => 0,
                 'mcode' => 'M20179',
                 'name' => 'Get Active Language',
@@ -3587,7 +3587,7 @@ FWCMSOR1,OE1',
             ),
             178 => 
             array (
-                'id' => 921,
+
                 'published' => 0,
                 'mcode' => 'M20180',
                 'name' => 'List Installed Languages',
@@ -3607,7 +3607,7 @@ FWCMSOR1,OE1',
             ),
             179 => 
             array (
-                'id' => 922,
+
                 'published' => 0,
                 'mcode' => 'M20181',
                 'name' => 'Keyboard Support: French-Belgian Keyboard Mapping for Windows',
@@ -3627,7 +3627,7 @@ FWCMSOR1,OE1',
             ),
             180 => 
             array (
-                'id' => 923,
+
                 'published' => 0,
                 'mcode' => 'M20182',
                 'name' => 'Keyboard Support: US English Keyboard Mapping for Windows',
@@ -3647,7 +3647,7 @@ FWCMSOR1,OE1',
             ),
             181 => 
             array (
-                'id' => 924,
+
                 'published' => 0,
                 'mcode' => 'M20184',
                 'name' => 'Keyboard Support: English Keyboard Mapping for Apple',
@@ -3667,7 +3667,7 @@ FWCMSOR1,OE1',
             ),
             182 => 
             array (
-                'id' => 925,
+
                 'published' => 0,
                 'mcode' => 'M20185',
                 'name' => 'Keyboard Support: French Keyboard Mapping for Windows',
@@ -3687,7 +3687,7 @@ FWCMSOR1,OE1',
             ),
             183 => 
             array (
-                'id' => 926,
+
                 'published' => 0,
                 'mcode' => 'M20186',
                 'name' => 'Keyboard Support: French Keyboard Mapping for Apple',
@@ -3707,7 +3707,7 @@ FWCMSOR1,OE1',
             ),
             184 => 
             array (
-                'id' => 927,
+
                 'published' => 0,
                 'mcode' => 'M20187',
                 'name' => 'Keyboard Support: German Keyboard Mapping for Apple',
@@ -3727,7 +3727,7 @@ FWCMSOR1,OE1',
             ),
             185 => 
             array (
-                'id' => 928,
+
                 'published' => 0,
                 'mcode' => 'M20188',
                 'name' => 'Keyboard Support: German Keyboard Mapping for Windows',
@@ -3747,7 +3747,7 @@ FWCMSOR1,OE1',
             ),
             186 => 
             array (
-                'id' => 929,
+
                 'published' => 0,
                 'mcode' => 'M20189',
                 'name' => 'Keyboard Support: German-Swiss Keyboard Mapping for Apple',
@@ -3767,7 +3767,7 @@ FWCMSOR1,OE1',
             ),
             187 => 
             array (
-                'id' => 930,
+
                 'published' => 0,
                 'mcode' => 'M20190',
                 'name' => 'Keyboard Support: German-Swiss Keyboard Mapping for Windows',
@@ -3787,7 +3787,7 @@ FWCMSOR1,OE1',
             ),
             188 => 
             array (
-                'id' => 931,
+
                 'published' => 0,
                 'mcode' => 'M20191',
                 'name' => 'Keyboard Support: Italian Keyboard Mapping for Apple',
@@ -3807,7 +3807,7 @@ FWCMSOR1,OE1',
             ),
             189 => 
             array (
-                'id' => 932,
+
                 'published' => 0,
                 'mcode' => 'M20192',
                 'name' => 'Keyboard Support: Japanese Keyboard Mapping for Windows',
@@ -3827,7 +3827,7 @@ FWCMSOR1,OE1',
             ),
             190 => 
             array (
-                'id' => 933,
+
                 'published' => 0,
                 'mcode' => 'M20193',
                 'name' => 'Keyboard Support: Spanish-Latin American Keyboard Mapping for Windows',
@@ -3847,7 +3847,7 @@ FWCMSOR1,OE1',
             ),
             191 => 
             array (
-                'id' => 934,
+
                 'published' => 0,
                 'mcode' => 'M20194',
                 'name' => 'Keyboard Support: Russian Keyboard Mapping for Windows',
@@ -3867,7 +3867,7 @@ FWCMSOR1,OE1',
             ),
             192 => 
             array (
-                'id' => 935,
+
                 'published' => 0,
                 'mcode' => 'M20195',
                 'name' => 'Keyboard Support: Spanish Keyboard Mapping for Windows',
@@ -3887,7 +3887,7 @@ FWCMSOR1,OE1',
             ),
             193 => 
             array (
-                'id' => 936,
+
                 'published' => 0,
                 'mcode' => 'M20196',
                 'name' => 'Keyboard Support: Spanish Keyboard Mapping for Apple',
@@ -3907,7 +3907,7 @@ FWCMSOR1,OE1',
             ),
             194 => 
             array (
-                'id' => 937,
+
                 'published' => 0,
                 'mcode' => 'M20197',
                 'name' => 'Keyboard Support: UK English Keyboard Mapping for Windows',
@@ -3927,7 +3927,7 @@ FWCMSOR1,OE1',
             ),
             195 => 
             array (
-                'id' => 938,
+
                 'published' => 0,
                 'mcode' => 'M20198',
             'name' => 'Keyboard Support: US International (Universal) Keyboard Mapping for Windows',
@@ -3947,7 +3947,7 @@ FWCMSOR1,OE1',
             ),
             196 => 
             array (
-                'id' => 939,
+
                 'published' => 0,
                 'mcode' => 'M20199',
                 'name' => 'Motion Detect Always On',
@@ -3967,7 +3967,7 @@ FWCMSOR1,OE1',
             ),
             197 => 
             array (
-                'id' => 940,
+
                 'published' => 0,
                 'mcode' => 'M20200',
             'name' => 'Motion Detect/Continuous Scan Off (Out of Stand)',
@@ -3987,7 +3987,7 @@ FWCMSOR1,OE1',
             ),
             198 => 
             array (
-                'id' => 941,
+
                 'published' => 0,
                 'mcode' => 'M20203',
                 'name' => 'Data Encoding: Raw ASCII to Keyboard XML File Lookup',
@@ -4007,7 +4007,7 @@ FWCMSOR1,OE1',
             ),
             199 => 
             array (
-                'id' => 942,
+
                 'published' => 0,
                 'mcode' => 'M20204',
                 'name' => 'Data Encoding: UTF8 to Unicode Codepoint - Alt Sequences for Windows',
@@ -4027,7 +4027,7 @@ FWCMSOR1,OE1',
             ),
             200 => 
             array (
-                'id' => 943,
+
                 'published' => 0,
                 'mcode' => 'M20205',
                 'name' => 'Data Encoding: ASCII to Unicode Codepoint - Alt Sequences for Windows',
@@ -4047,7 +4047,7 @@ FWCMSOR1,OE1',
             ),
             201 => 
             array (
-                'id' => 944,
+
                 'published' => 0,
                 'mcode' => 'M20206',
                 'name' => 'Data Encoding: ASCII to Unicode Codepoint - Keyboard XML File Lookup',
@@ -4067,7 +4067,7 @@ FWCMSOR1,OE1',
             ),
             202 => 
             array (
-                'id' => 945,
+
                 'published' => 0,
                 'mcode' => 'M20207',
                 'name' => 'Erase Prefix Data',
@@ -4089,7 +4089,7 @@ CDOPSFO1',
             ),
             203 => 
             array (
-                'id' => 946,
+
                 'published' => 0,
                 'mcode' => 'M20208',
                 'name' => 'Erase Suffix Data',
@@ -4111,7 +4111,7 @@ CDOPSFO1',
             ),
             204 => 
             array (
-                'id' => 947,
+
                 'published' => 0,
                 'mcode' => 'M20209',
                 'name' => 'Prefix Comma',
@@ -4132,7 +4132,7 @@ CDOPSFO1',
             ),
             205 => 
             array (
-                'id' => 948,
+
                 'published' => 0,
                 'mcode' => 'M20210',
                 'name' => 'Prefix Space',
@@ -4154,7 +4154,7 @@ CDOPSFO1',
             ),
             206 => 
             array (
-                'id' => 949,
+
                 'published' => 0,
                 'mcode' => 'M20211',
             'name' => 'Prefix Tab (RS232 Mode Only)',
@@ -4176,7 +4176,7 @@ CDOPSFO1',
             ),
             207 => 
             array (
-                'id' => 950,
+
                 'published' => 0,
                 'mcode' => 'M20212',
             'name' => 'Suffix Carriage Return (RS232 Mode Only)',
@@ -4198,7 +4198,7 @@ CDOPSFO1',
             ),
             208 => 
             array (
-                'id' => 951,
+
                 'published' => 0,
                 'mcode' => 'M20213',
             'name' => 'Suffix Carriage Return Line Feed (RS232 Mode Only)',
@@ -4220,7 +4220,7 @@ CDOPSFO1',
             ),
             209 => 
             array (
-                'id' => 952,
+
                 'published' => 0,
                 'mcode' => 'M20214',
             'name' => 'Suffix Line Feed (RS232 Mode Only)',
@@ -4242,7 +4242,7 @@ CDOPSFO1',
             ),
             210 => 
             array (
-                'id' => 953,
+
                 'published' => 0,
                 'mcode' => 'M20215',
                 'name' => 'Suffix Comma',
@@ -4264,7 +4264,7 @@ CDOPSFO1',
             ),
             211 => 
             array (
-                'id' => 954,
+
                 'published' => 0,
                 'mcode' => 'M20216',
                 'name' => 'Suffix Space',
@@ -4286,7 +4286,7 @@ CDOPSFO1',
             ),
             212 => 
             array (
-                'id' => 955,
+
                 'published' => 0,
                 'mcode' => 'M20217',
             'name' => 'Suffix Tab (RS232 Mode Only)',
@@ -4308,7 +4308,7 @@ CDOPSFO1',
             ),
             213 => 
             array (
-                'id' => 956,
+
                 'published' => 0,
                 'mcode' => 'M20218',
             'name' => 'Prefix Tab (USB Keyboard Mode Only)',
@@ -4330,7 +4330,7 @@ CDOPSFO1',
             ),
             214 => 
             array (
-                'id' => 957,
+
                 'published' => 0,
                 'mcode' => 'M20219',
             'name' => 'Suffix Enter (USB Keyboard Mode Only)',
@@ -4352,7 +4352,7 @@ CDOPSFO1',
             ),
             215 => 
             array (
-                'id' => 958,
+
                 'published' => 0,
                 'mcode' => 'M20220',
             'name' => 'Suffix Tab (USB Keyboard Mode Only)',
@@ -4374,7 +4374,7 @@ CDOPSFO1',
             ),
             216 => 
             array (
-                'id' => 959,
+
                 'published' => 0,
                 'mcode' => 'M20221',
                 'name' => 'Convert Barcode Data to Uppercase',
@@ -4397,7 +4397,7 @@ CDOPSFO1',
             ),
             217 => 
             array (
-                'id' => 960,
+
                 'published' => 0,
                 'mcode' => 'M20222',
                 'name' => 'Convert Barcode Data to Lowercase',
@@ -4420,7 +4420,7 @@ CDOPSFO1',
             ),
             218 => 
             array (
-                'id' => 961,
+
                 'published' => 0,
                 'mcode' => 'M20223',
                 'name' => 'Disable Data Formatting',
@@ -4443,7 +4443,7 @@ CDOPSFO0',
             ),
             219 => 
             array (
-                'id' => 962,
+
                 'published' => 0,
                 'mcode' => 'M20224',
                 'name' => 'Continuous Scan Mode On',
@@ -4463,7 +4463,7 @@ CDOPSFO0',
             ),
             220 => 
             array (
-                'id' => 963,
+
                 'published' => 0,
                 'mcode' => 'M20225',
                 'name' => 'Enable HID POS Mode',
@@ -4483,7 +4483,7 @@ CDOPSFO0',
             ),
             221 => 
             array (
-                'id' => 964,
+
                 'published' => 0,
                 'mcode' => 'M20226',
                 'name' => 'Enable CDC VCOM Mode',
@@ -4503,7 +4503,7 @@ CDOPSFO0',
             ),
             222 => 
             array (
-                'id' => 965,
+
                 'published' => 0,
                 'mcode' => 'M20227',
                 'name' => 'No Scan Delay with Motion Detection',
@@ -4523,7 +4523,7 @@ CDOPSFO0',
             ),
             223 => 
             array (
-                'id' => 966,
+
                 'published' => 0,
                 'mcode' => 'M20228',
                 'name' => '500 ms Scan Delay with Motion Detection',
@@ -4546,7 +4546,7 @@ CDVASBD1',
             ),
             224 => 
             array (
-                'id' => 967,
+
                 'published' => 0,
                 'mcode' => 'M20229',
                 'name' => 'Disable Duplicate Scan Delay',
@@ -4566,7 +4566,7 @@ CDVASBD1',
             ),
             225 => 
             array (
-                'id' => 968,
+
                 'published' => 0,
                 'mcode' => 'M20230',
                 'name' => '1 Second Duplicate Scan Delay',
@@ -4589,7 +4589,7 @@ CDVASBD1',
             ),
             226 => 
             array (
-                'id' => 969,
+
                 'published' => 0,
                 'mcode' => 'M20231',
                 'name' => '2 Second Duplicate Scan Delay',
@@ -4612,7 +4612,7 @@ CDVASBD1',
             ),
             227 => 
             array (
-                'id' => 970,
+
                 'published' => 0,
                 'mcode' => 'M20233',
                 'name' => '5 Second Duplicate Scan Delay',
@@ -4635,7 +4635,7 @@ CDVASBD1',
             ),
             228 => 
             array (
-                'id' => 971,
+
                 'published' => 0,
                 'mcode' => 'M20234',
                 'name' => '10 Second Duplicate Scan Delay',
@@ -4658,7 +4658,7 @@ CDVASBD1',
             ),
             229 => 
             array (
-                'id' => 972,
+
                 'published' => 0,
                 'mcode' => 'M20235',
                 'name' => '30 Second Duplicate Scan Delay',
@@ -4681,7 +4681,7 @@ CDVASBD1',
             ),
             230 => 
             array (
-                'id' => 973,
+
                 'published' => 0,
                 'mcode' => 'M20236',
                 'name' => '1 Hour Duplicate Scan Delay',
@@ -4704,7 +4704,7 @@ CDVASBD1',
             ),
             231 => 
             array (
-                'id' => 974,
+
                 'published' => 0,
                 'mcode' => 'M20237',
                 'name' => '1 Day Duplicate Scan Delay',
@@ -4727,7 +4727,7 @@ CDVASBD1',
             ),
             232 => 
             array (
-                'id' => 975,
+
                 'published' => 0,
                 'mcode' => 'M20238',
                 'name' => 'Enable Packet Mode',
@@ -4747,7 +4747,7 @@ CDVASBD1',
             ),
             233 => 
             array (
-                'id' => 976,
+
                 'published' => 0,
                 'mcode' => 'M20239',
                 'name' => 'Enable Raw Mode',
@@ -4767,7 +4767,7 @@ CDVASBD1',
             ),
             234 => 
             array (
-                'id' => 977,
+
                 'published' => 0,
                 'mcode' => 'M20240',
                 'name' => 'Enable Cell Phone Reading Enhancement',
@@ -4790,7 +4790,7 @@ CDOPSCE1',
             ),
             235 => 
             array (
-                'id' => 978,
+
                 'published' => 0,
                 'mcode' => 'M20241',
                 'name' => 'Disable Cell Phone Reading Enhancement',
@@ -4813,7 +4813,7 @@ CDOPSCE0',
             ),
             236 => 
             array (
-                'id' => 979,
+
                 'published' => 0,
                 'mcode' => 'M20242',
                 'name' => 'Enable Upload Image Mode',
@@ -4833,7 +4833,7 @@ CDOPSCE0',
             ),
             237 => 
             array (
-                'id' => 980,
+
                 'published' => 0,
                 'mcode' => 'M20243',
                 'name' => 'Disable Upload Image Mode',
@@ -4853,7 +4853,7 @@ CDOPSCE0',
             ),
             238 => 
             array (
-                'id' => 981,
+
                 'published' => 0,
                 'mcode' => 'M20244',
                 'name' => 'Set Motion Detect Maximum Brightness to 100%',
@@ -4873,7 +4873,7 @@ CDOPSCE0',
             ),
             239 => 
             array (
-                'id' => 982,
+
                 'published' => 0,
                 'mcode' => 'M20245',
                 'name' => 'Set Motion Detect Maximum Brightness to 75%',
@@ -4893,7 +4893,7 @@ CDOPSCE0',
             ),
             240 => 
             array (
-                'id' => 983,
+
                 'published' => 0,
                 'mcode' => 'M20246',
                 'name' => 'Set Motion Detect Maximum Brightness to 50%',
@@ -4913,7 +4913,7 @@ CDOPSCE0',
             ),
             241 => 
             array (
-                'id' => 984,
+
                 'published' => 0,
                 'mcode' => 'M20247',
                 'name' => 'Set Motion Detect Maximum Brightness to 25%',
@@ -4933,7 +4933,7 @@ CDOPSCE0',
             ),
             242 => 
             array (
-                'id' => 985,
+
                 'published' => 0,
                 'mcode' => 'M20248',
                 'name' => 'Enable Stand Detection',
@@ -4953,7 +4953,7 @@ CDOPSCE0',
             ),
             243 => 
             array (
-                'id' => 986,
+
                 'published' => 0,
                 'mcode' => 'M20249',
                 'name' => 'Disable Stand Detection',
@@ -4973,7 +4973,7 @@ CDOPSCE0',
             ),
             244 => 
             array (
-                'id' => 987,
+
                 'published' => 0,
                 'mcode' => 'M20250',
                 'name' => 'Enable USB VCOM mode',
@@ -4993,7 +4993,7 @@ CDOPSCE0',
             ),
             245 => 
             array (
-                'id' => 988,
+
                 'published' => 0,
                 'mcode' => 'M20251',
                 'name' => 'Enable RS-232 Serial mode',
@@ -5013,7 +5013,7 @@ CDOPSCE0',
             ),
             246 => 
             array (
-                'id' => 989,
+
                 'published' => 0,
                 'mcode' => 'M20255',
                 'name' => 'Convert Barcode Data to Bracketed Hex Output',
@@ -5036,7 +5036,7 @@ CDOPSFO1',
             ),
             247 => 
             array (
-                'id' => 990,
+
                 'published' => 0,
                 'mcode' => 'M20256',
                 'name' => 'Enable UDI/HIBC Validation',
@@ -5056,7 +5056,7 @@ CDOPSFO1',
             ),
             248 => 
             array (
-                'id' => 991,
+
                 'published' => 0,
                 'mcode' => 'M20257',
                 'name' => 'Enable ISO15434 Validation',
@@ -5076,7 +5076,7 @@ CDOPSFO1',
             ),
             249 => 
             array (
-                'id' => 992,
+
                 'published' => 0,
                 'mcode' => 'M20258',
                 'name' => 'Enable ISO15434 & ISO15418 Validation',
@@ -5096,7 +5096,7 @@ CDOPSFO1',
             ),
             250 => 
             array (
-                'id' => 993,
+
                 'published' => 0,
                 'mcode' => 'M20259',
                 'name' => 'Enable BC412 - Disabled BC412 Revers',
@@ -5119,7 +5119,7 @@ SYB412SRD0',
             ),
             251 => 
             array (
-                'id' => 994,
+
                 'published' => 0,
                 'mcode' => 'M20260',
                 'name' => 'Disable BC412 - Disable BC412 Revers',
@@ -5142,7 +5142,7 @@ SYB412SRD0',
             ),
             252 => 
             array (
-                'id' => 995,
+
                 'published' => 0,
                 'mcode' => 'M20261',
                 'name' => 'Enable BC412 - Enable BC412 Reverse',
@@ -5165,7 +5165,7 @@ SYB412SRD1',
             ),
             253 => 
             array (
-                'id' => 996,
+
                 'published' => 0,
                 'mcode' => 'M20262',
                 'name' => 'Reverse BC412 Off',
@@ -5185,7 +5185,7 @@ SYB412SRD1',
             ),
             254 => 
             array (
-                'id' => 997,
+
                 'published' => 0,
                 'mcode' => 'M20263',
                 'name' => 'Code 49 On',
@@ -5205,7 +5205,7 @@ SYB412SRD1',
             ),
             255 => 
             array (
-                'id' => 998,
+
                 'published' => 0,
                 'mcode' => 'M20264',
                 'name' => 'Code 49 Off',
@@ -5225,7 +5225,7 @@ SYB412SRD1',
             ),
             256 => 
             array (
-                'id' => 999,
+
                 'published' => 0,
                 'mcode' => 'M20265',
                 'name' => 'Code 93 On',
@@ -5245,7 +5245,7 @@ SYB412SRD1',
             ),
             257 => 
             array (
-                'id' => 1000,
+
                 'published' => 0,
                 'mcode' => 'M20266',
                 'name' => 'Code 93 Off',
@@ -5265,7 +5265,7 @@ SYB412SRD1',
             ),
             258 => 
             array (
-                'id' => 1001,
+
                 'published' => 0,
                 'mcode' => 'M20268',
                 'name' => 'Disable GS1 DataBar Omnidirectional and GS1 DataBar Truncated',
@@ -5285,7 +5285,7 @@ SYB412SRD1',
             ),
             259 => 
             array (
-                'id' => 1002,
+
                 'published' => 0,
                 'mcode' => 'M20271',
                 'name' => 'Enable GS1 DataBar Stacked and GS1 DataBar Stacked Omnidirectional',
@@ -5305,7 +5305,7 @@ SYB412SRD1',
             ),
             260 => 
             array (
-                'id' => 1003,
+
                 'published' => 0,
                 'mcode' => 'M20272',
                 'name' => 'Disable GS1 DataBar Stacked and GS1 DataBar Stacked Omnidirectional',
@@ -5325,7 +5325,7 @@ SYB412SRD1',
             ),
             261 => 
             array (
-                'id' => 1004,
+
                 'published' => 0,
                 'mcode' => 'M20273',
                 'name' => 'Enable GS1 DataBar Expanded',
@@ -5345,7 +5345,7 @@ SYB412SRD1',
             ),
             262 => 
             array (
-                'id' => 1005,
+
                 'published' => 0,
                 'mcode' => 'M20274',
                 'name' => 'Disable GS1 DataBar Expanded',
@@ -5365,7 +5365,7 @@ SYB412SRD1',
             ),
             263 => 
             array (
-                'id' => 1006,
+
                 'published' => 0,
                 'mcode' => 'M20275',
                 'name' => 'Enable GS1 DataBar Expanded Stacked',
@@ -5385,7 +5385,7 @@ SYB412SRD1',
             ),
             264 => 
             array (
-                'id' => 1007,
+
                 'published' => 0,
                 'mcode' => 'M20276',
                 'name' => 'Disable GS1 DataBar Expanded Stacked',
@@ -5405,7 +5405,7 @@ SYB412SRD1',
             ),
             265 => 
             array (
-                'id' => 1008,
+
                 'published' => 0,
                 'mcode' => 'M20277',
                 'name' => 'Enable GS1 DataBar Limited',
@@ -5425,7 +5425,7 @@ SYB412SRD1',
             ),
             266 => 
             array (
-                'id' => 1009,
+
                 'published' => 0,
                 'mcode' => 'M20278',
                 'name' => 'Disable GS1 DataBar Limited',
@@ -5445,7 +5445,7 @@ SYB412SRD1',
             ),
             267 => 
             array (
-                'id' => 1010,
+
                 'published' => 0,
                 'mcode' => 'M20281',
                 'name' => 'Grid Matrix Inverse On',
@@ -5465,7 +5465,7 @@ SYB412SRD1',
             ),
             268 => 
             array (
-                'id' => 1011,
+
                 'published' => 0,
                 'mcode' => 'M20282',
                 'name' => 'Grid Matrix Inverse Off',
@@ -5485,7 +5485,7 @@ SYB412SRD1',
             ),
             269 => 
             array (
-                'id' => 1012,
+
                 'published' => 0,
                 'mcode' => 'M20283',
                 'name' => 'Grid Matrix Mirror On',
@@ -5505,7 +5505,7 @@ SYB412SRD1',
             ),
             270 => 
             array (
-                'id' => 1013,
+
                 'published' => 0,
                 'mcode' => 'M20284',
                 'name' => 'Grid Matrix Mirror Off',
@@ -5525,7 +5525,7 @@ SYB412SRD1',
             ),
             271 => 
             array (
-                'id' => 1014,
+
                 'published' => 0,
                 'mcode' => 'M20285',
                 'name' => 'Royal Mail Checksum On',
@@ -5545,7 +5545,7 @@ SYB412SRD1',
             ),
             272 => 
             array (
-                'id' => 1015,
+
                 'published' => 0,
                 'mcode' => 'M20286',
                 'name' => 'Royal Mail Checksum Off',
@@ -5565,7 +5565,7 @@ SYB412SRD1',
             ),
             273 => 
             array (
-                'id' => 1016,
+
                 'published' => 0,
                 'mcode' => 'M20287',
                 'name' => 'UK Plessey On',
@@ -5585,7 +5585,7 @@ SYB412SRD1',
             ),
             274 => 
             array (
-                'id' => 1017,
+
                 'published' => 0,
                 'mcode' => 'M20288',
                 'name' => 'UK Plessey Off',
@@ -5605,7 +5605,7 @@ SYB412SRD1',
             ),
             275 => 
             array (
-                'id' => 1018,
+
                 'published' => 0,
                 'mcode' => 'M20289',
                 'name' => 'Pharmacode Color On',
@@ -5625,7 +5625,7 @@ SYB412SRD1',
             ),
             276 => 
             array (
-                'id' => 1019,
+
                 'published' => 0,
                 'mcode' => 'M20290',
                 'name' => 'Pharmacode Color Off',
@@ -5645,7 +5645,7 @@ SYB412SRD1',
             ),
             277 => 
             array (
-                'id' => 1020,
+
                 'published' => 0,
                 'mcode' => 'M20291',
                 'name' => 'Custom QR Code On',
@@ -5665,7 +5665,7 @@ SYB412SRD1',
             ),
             278 => 
             array (
-                'id' => 1021,
+
                 'published' => 0,
                 'mcode' => 'M20292',
                 'name' => 'Custom QR Code Off',
@@ -5685,7 +5685,7 @@ SYB412SRD1',
             ),
             279 => 
             array (
-                'id' => 1022,
+
                 'published' => 0,
                 'mcode' => 'M20293',
             'name' => 'Enable VeriFone (Ruby) Defaults',
@@ -5720,7 +5720,7 @@ CDOPSVF1',
             ),
             280 => 
             array (
-                'id' => 1023,
+
                 'published' => 0,
                 'mcode' => 'M20294',
                 'name' => 'Enable Target LED During Image Capture',
@@ -5740,7 +5740,7 @@ CDOPSVF1',
             ),
             281 => 
             array (
-                'id' => 1024,
+
                 'published' => 0,
                 'mcode' => 'M20295',
                 'name' => 'Disable Target LED During Image Capture',
@@ -5760,7 +5760,7 @@ CDOPSVF1',
             ),
             282 => 
             array (
-                'id' => 1025,
+
                 'published' => 0,
                 'mcode' => 'M20296',
                 'name' => 'Trigger Mode On In Stand',
@@ -5780,7 +5780,7 @@ CDOPSVF1',
             ),
             283 => 
             array (
-                'id' => 1026,
+
                 'published' => 0,
                 'mcode' => 'M20297',
                 'name' => 'Motion Detection On In Stand',
@@ -5800,7 +5800,7 @@ CDOPSVF1',
             ),
             284 => 
             array (
-                'id' => 1027,
+
                 'published' => 0,
                 'mcode' => 'M20298',
                 'name' => 'Continuous Scan Mode On In Stand',
@@ -5820,7 +5820,7 @@ CDOPSVF1',
             ),
             285 => 
             array (
-                'id' => 1028,
+
                 'published' => 0,
                 'mcode' => 'M20302',
                 'name' => 'Enable Stand Detection',
@@ -5840,7 +5840,7 @@ CDOPSVF1',
             ),
             286 => 
             array (
-                'id' => 1029,
+
                 'published' => 0,
                 'mcode' => 'M20303',
                 'name' => 'Disable Stand Detection',
@@ -5860,7 +5860,7 @@ CDOPSVF1',
             ),
             287 => 
             array (
-                'id' => 1030,
+
                 'published' => 0,
                 'mcode' => 'M20305',
             'name' => 'Alternate Operating System (Linux/Mac) On',
@@ -5889,7 +5889,7 @@ CMUKSIN5000',
             ),
             288 => 
             array (
-                'id' => 1031,
+
                 'published' => 0,
                 'mcode' => 'M20306',
             'name' => 'Alternate Operating System (Linux/Mac) Off',
@@ -5918,7 +5918,7 @@ CMUKRIN',
             ),
             289 => 
             array (
-                'id' => 1032,
+
                 'published' => 0,
                 'mcode' => 'M20307',
                 'name' => 'Enable USB OPOS/JPOS Mode ',
@@ -5944,7 +5944,7 @@ CDOPSPA1',
             ),
             290 => 
             array (
-                'id' => 1033,
+
                 'published' => 0,
                 'mcode' => 'M20308',
                 'name' => 'Enable RS232 OPOS/JPOS Mode',
@@ -5976,7 +5976,7 @@ CDOPSPA1',
             ),
             291 => 
             array (
-                'id' => 1034,
+
                 'published' => 0,
                 'mcode' => 'M20309',
                 'name' => 'HW Flow Control One Way',
@@ -5996,7 +5996,7 @@ CDOPSPA1',
             ),
             292 => 
             array (
-                'id' => 1035,
+
                 'published' => 0,
                 'mcode' => 'M20310',
                 'name' => 'Enable Gilbarco',
@@ -6016,7 +6016,7 @@ CDOPSPA1',
             ),
             293 => 
             array (
-                'id' => 1036,
+
                 'published' => 0,
                 'mcode' => 'M20311',
                 'name' => 'Disable Gilbarco',
@@ -6036,7 +6036,7 @@ CDOPSPA1',
             ),
             294 => 
             array (
-                'id' => 1037,
+
                 'published' => 0,
                 'mcode' => 'M20312',
                 'name' => 'Enable NCR',
@@ -6056,7 +6056,7 @@ CDOPSPA1',
             ),
             295 => 
             array (
-                'id' => 1038,
+
                 'published' => 0,
                 'mcode' => 'M20313',
                 'name' => 'Disable NCR',
@@ -6076,7 +6076,7 @@ CDOPSPA1',
             ),
             296 => 
             array (
-                'id' => 1039,
+
                 'published' => 0,
                 'mcode' => 'M20314',
                 'name' => 'Enable NCR2',
@@ -6096,7 +6096,7 @@ CDOPSPA1',
             ),
             297 => 
             array (
-                'id' => 1040,
+
                 'published' => 0,
                 'mcode' => 'M20315',
                 'name' => 'Disable NCR2',
@@ -6116,7 +6116,7 @@ CDOPSPA1',
             ),
             298 => 
             array (
-                'id' => 1041,
+
                 'published' => 0,
                 'mcode' => 'M20316',
                 'name' => 'Disable WINCNIX',
@@ -6136,7 +6136,7 @@ CDOPSPA1',
             ),
             299 => 
             array (
-                'id' => 1042,
+
                 'published' => 0,
                 'mcode' => 'M20317',
                 'name' => 'Enable WINCNIX',
@@ -6156,7 +6156,7 @@ CDOPSPA1',
             ),
             300 => 
             array (
-                'id' => 1043,
+
                 'published' => 0,
                 'mcode' => 'M20318',
                 'name' => 'Aztec Mirror On',
@@ -6179,7 +6179,7 @@ SYAZTCSMR1',
             ),
             301 => 
             array (
-                'id' => 1044,
+
                 'published' => 0,
                 'mcode' => 'M20319',
                 'name' => 'Aztec Mirror Off',
@@ -6199,7 +6199,7 @@ SYAZTCSMR1',
             ),
             302 => 
             array (
-                'id' => 1045,
+
                 'published' => 0,
                 'mcode' => 'M20320',
                 'name' => 'Code 39 Extended Full ASCII Off',
@@ -6219,7 +6219,7 @@ SYAZTCSMR1',
             ),
             303 => 
             array (
-                'id' => 1046,
+
                 'published' => 0,
                 'mcode' => 'M20321',
                 'name' => 'Code 39 Extended Full ASCII On',
@@ -6242,7 +6242,7 @@ SYCO39SEA1',
             ),
             304 => 
             array (
-                'id' => 1047,
+
                 'published' => 0,
                 'mcode' => 'M20322',
                 'name' => 'Erase Prefix & Suffix Data',
@@ -6266,7 +6266,7 @@ CDOPSPX""',
             ),
             305 => 
             array (
-                'id' => 1048,
+
                 'published' => 0,
                 'mcode' => 'M20325',
                 'name' => 'Reader Raw Text Commands Off',
@@ -6286,7 +6286,7 @@ CDOPSPX""',
             ),
             306 => 
             array (
-                'id' => 1049,
+
                 'published' => 0,
                 'mcode' => 'M20326',
                 'name' => 'Reader Raw Text Commands On',
@@ -6306,7 +6306,7 @@ CDOPSPX""',
             ),
             307 => 
             array (
-                'id' => 1050,
+
                 'published' => 0,
                 'mcode' => 'M20329',
                 'name' => 'Beep On Vibrate On',
@@ -6329,7 +6329,7 @@ FBINSBE1',
             ),
             308 => 
             array (
-                'id' => 1051,
+
                 'published' => 0,
                 'mcode' => 'M20330',
                 'name' => 'Beep Off Vibrate On',
@@ -6352,7 +6352,7 @@ FBVBSEN1',
             ),
             309 => 
             array (
-                'id' => 1052,
+
                 'published' => 0,
                 'mcode' => 'M20331',
                 'name' => 'Beep On Vibrate Off',
@@ -6375,7 +6375,7 @@ FBVBSEN0',
             ),
             310 => 
             array (
-                'id' => 1053,
+
                 'published' => 0,
                 'mcode' => 'M20332',
                 'name' => 'Beep Off Vibrate Off',
@@ -6398,7 +6398,7 @@ FBVBSEN0',
             ),
             311 => 
             array (
-                'id' => 1054,
+
                 'published' => 0,
                 'mcode' => 'M20333',
                 'name' => 'Enable Targeting-Always-On',
@@ -6418,7 +6418,7 @@ FBVBSEN0',
             ),
             312 => 
             array (
-                'id' => 1055,
+
                 'published' => 0,
                 'mcode' => 'M20334',
                 'name' => 'Disable Targeting-Always-On',
@@ -6438,7 +6438,7 @@ FBVBSEN0',
             ),
             313 => 
             array (
-                'id' => 1056,
+
                 'published' => 0,
                 'mcode' => 'M20335',
                 'name' => 'Save All Reader Settings',
@@ -6458,7 +6458,7 @@ FBVBSEN0',
             ),
             314 => 
             array (
-                'id' => 1057,
+
                 'published' => 0,
                 'mcode' => 'M20339',
                 'name' => 'Beep Volume 0%',
@@ -6487,7 +6487,7 @@ FBERSVO0',
             ),
             315 => 
             array (
-                'id' => 1058,
+
                 'published' => 0,
                 'mcode' => 'M20340',
                 'name' => 'Beep Volume 33%',
@@ -6516,7 +6516,7 @@ FBERSVO3',
             ),
             316 => 
             array (
-                'id' => 1059,
+
                 'published' => 0,
                 'mcode' => 'M20341',
                 'name' => 'Beep Volume 67%',
@@ -6545,7 +6545,7 @@ FBERSVO20',
             ),
             317 => 
             array (
-                'id' => 1060,
+
                 'published' => 0,
                 'mcode' => 'M20342',
                 'name' => 'Beep Volume 100%',
@@ -6574,7 +6574,7 @@ FBERSVO100',
             ),
             318 => 
             array (
-                'id' => 1061,
+
                 'published' => 0,
                 'mcode' => 'M20343',
                 'name' => 'Prefix AIM ID Off',
@@ -6594,7 +6594,7 @@ FBERSVO100',
             ),
             319 => 
             array (
-                'id' => 1062,
+
                 'published' => 0,
                 'mcode' => 'M20344',
                 'name' => 'Prefix AIM ID On',
@@ -6614,7 +6614,7 @@ FBERSVO100',
             ),
             320 => 
             array (
-                'id' => 1063,
+
                 'published' => 0,
                 'mcode' => 'M20345',
                 'name' => 'Reboot Reader',
@@ -6634,7 +6634,7 @@ FBERSVO100',
             ),
             321 => 
             array (
-                'id' => 1064,
+
                 'published' => 0,
                 'mcode' => 'M20346',
                 'name' => 'USB Virtual COM Multiple Ports',
@@ -6654,7 +6654,7 @@ FBERSVO100',
             ),
             322 => 
             array (
-                'id' => 1065,
+
                 'published' => 0,
                 'mcode' => 'M20347',
                 'name' => 'USB Virtual COM Common Ports',
@@ -6674,7 +6674,7 @@ FBERSVO100',
             ),
             323 => 
             array (
-                'id' => 1066,
+
                 'published' => 0,
                 'mcode' => 'M20350',
                 'name' => 'Control Character Input - Language Default - Default',
@@ -6694,7 +6694,7 @@ FBERSVO100',
             ),
             324 => 
             array (
-                'id' => 1067,
+
                 'published' => 0,
                 'mcode' => 'M20351',
                 'name' => 'Control Character Input - Ctrl + Character',
@@ -6714,7 +6714,7 @@ FBERSVO100',
             ),
             325 => 
             array (
-                'id' => 1068,
+
                 'published' => 0,
                 'mcode' => 'M20352',
                 'name' => 'Control Character Input - Alt + Keypad',
@@ -6734,7 +6734,7 @@ FBERSVO100',
             ),
             326 => 
             array (
-                'id' => 1069,
+
                 'published' => 0,
                 'mcode' => 'M20353',
                 'name' => 'Control Character Input -Alt + Leading Zero',
@@ -6754,7 +6754,7 @@ FBERSVO100',
             ),
             327 => 
             array (
-                'id' => 1070,
+
                 'published' => 0,
                 'mcode' => 'M20357',
                 'name' => 'Enable GoCode & GoCode Mirror Decoding',
@@ -6774,7 +6774,7 @@ FBERSVO100',
             ),
             328 => 
             array (
-                'id' => 1071,
+
                 'published' => 0,
                 'mcode' => 'M20361',
                 'name' => 'Reader Information, limited',
@@ -6809,7 +6809,7 @@ RDRRGDD',
             ),
             329 => 
             array (
-                'id' => 1072,
+
                 'published' => 0,
                 'mcode' => 'M20362',
                 'name' => 'Enable Chinese Barcodes encoded using UTF-8',
@@ -6835,7 +6835,7 @@ CMHDSEA0',
             ),
             330 => 
             array (
-                'id' => 1073,
+
                 'published' => 0,
                 'mcode' => 'M20363',
                 'name' => 'Keyboard Support: Italian Keyboard Mapping for Windows',
@@ -6855,7 +6855,7 @@ CMHDSEA0',
             ),
             331 => 
             array (
-                'id' => 1074,
+
                 'published' => 0,
                 'mcode' => 'M20364',
                 'name' => 'Keyboard Support: Portuguese Keyboard Mapping for Windows',
@@ -6875,7 +6875,7 @@ CMHDSEA0',
             ),
             332 => 
             array (
-                'id' => 1075,
+
                 'published' => 0,
                 'mcode' => 'M20365',
                 'name' => 'On-Counter Trigger Mode',
@@ -6895,7 +6895,7 @@ CMHDSEA0',
             ),
             333 => 
             array (
-                'id' => 1076,
+
                 'published' => 0,
                 'mcode' => 'M20366',
                 'name' => 'On-Counter Pick List Mode',
@@ -6915,7 +6915,7 @@ CMHDSEA0',
             ),
             334 => 
             array (
-                'id' => 1077,
+
                 'published' => 0,
                 'mcode' => 'M20367',
                 'name' => 'On-Counter Detect Barcode Mode - Default',
@@ -6935,7 +6935,7 @@ CMHDSEA0',
             ),
             335 => 
             array (
-                'id' => 1078,
+
                 'published' => 0,
                 'mcode' => 'M20368',
                 'name' => 'Off-Counter Trigger Mode - Default',
@@ -6955,7 +6955,7 @@ CMHDSEA0',
             ),
             336 => 
             array (
-                'id' => 1079,
+
                 'published' => 0,
                 'mcode' => 'M20369',
                 'name' => 'Off-Counter Pick List Mode',
@@ -6975,7 +6975,7 @@ CMHDSEA0',
             ),
             337 => 
             array (
-                'id' => 1080,
+
                 'published' => 0,
                 'mcode' => 'M20370',
                 'name' => 'Off-Counter Detect Barcode Mode',
@@ -6995,7 +6995,7 @@ CMHDSEA0',
             ),
             338 => 
             array (
-                'id' => 1081,
+
                 'published' => 0,
                 'mcode' => 'M20371',
                 'name' => 'On-Counter Duplicate Scan Delay 500 ms',
@@ -7015,7 +7015,7 @@ CMHDSEA0',
             ),
             339 => 
             array (
-                'id' => 1082,
+
                 'published' => 0,
                 'mcode' => 'M20372',
                 'name' => 'Off-Counter Duplicate Scan Delay 0 ms',
@@ -7035,7 +7035,7 @@ CMHDSEA0',
             ),
             340 => 
             array (
-                'id' => 1083,
+
                 'published' => 0,
                 'mcode' => 'M20373',
                 'name' => 'On-Counter Duplicate Scan Delay 1 day',
@@ -7055,7 +7055,7 @@ CMHDSEA0',
             ),
             341 => 
             array (
-                'id' => 1084,
+
                 'published' => 0,
                 'mcode' => 'M20374',
                 'name' => 'On-Counter Duplicate Scan Delay 1 hour',
@@ -7075,7 +7075,7 @@ CMHDSEA0',
             ),
             342 => 
             array (
-                'id' => 1085,
+
                 'published' => 0,
                 'mcode' => 'M20375',
                 'name' => 'On-Counter Duplicate Scan Delay 1 sec',
@@ -7095,7 +7095,7 @@ CMHDSEA0',
             ),
             343 => 
             array (
-                'id' => 1086,
+
                 'published' => 0,
                 'mcode' => 'M20376',
                 'name' => 'On-Counter Duplicate Scan Delay 2 sec',
@@ -7115,7 +7115,7 @@ CMHDSEA0',
             ),
             344 => 
             array (
-                'id' => 1087,
+
                 'published' => 0,
                 'mcode' => 'M20377',
                 'name' => 'On-Counter Duplicate Scan Delay 3 sec',
@@ -7135,7 +7135,7 @@ CMHDSEA0',
             ),
             345 => 
             array (
-                'id' => 1088,
+
                 'published' => 0,
                 'mcode' => 'M20378',
                 'name' => 'On-Counter Duplicate Scan Delay 5 sec',
@@ -7155,7 +7155,7 @@ CMHDSEA0',
             ),
             346 => 
             array (
-                'id' => 1089,
+
                 'published' => 0,
                 'mcode' => 'M20379',
                 'name' => 'On-Counter Duplicate Scan Delay 10 sec',
@@ -7175,7 +7175,7 @@ CMHDSEA0',
             ),
             347 => 
             array (
-                'id' => 1090,
+
                 'published' => 0,
                 'mcode' => 'M20380',
                 'name' => 'On-Counter Duplicate Scan Delay 30 sec',
@@ -7195,7 +7195,7 @@ CMHDSEA0',
             ),
             348 => 
             array (
-                'id' => 1091,
+
                 'published' => 0,
                 'mcode' => 'M20381',
                 'name' => 'Set Bluetooth HID Keyboard mode',
@@ -7215,7 +7215,7 @@ CMHDSEA0',
             ),
             349 => 
             array (
-                'id' => 1092,
+
                 'published' => 0,
                 'mcode' => 'M20382',
                 'name' => 'Get Full Battery Information',
@@ -7235,7 +7235,7 @@ CMHDSEA0',
             ),
             350 => 
             array (
-                'id' => 1093,
+
                 'published' => 0,
                 'mcode' => 'M20385',
                 'name' => 'Preemptive Mode On',
@@ -7255,7 +7255,7 @@ CMHDSEA0',
             ),
             351 => 
             array (
-                'id' => 1094,
+
                 'published' => 0,
                 'mcode' => 'M20386',
                 'name' => 'Preemptive Mode Off',
@@ -7275,7 +7275,7 @@ CMHDSEA0',
             ),
             352 => 
             array (
-                'id' => 1095,
+
                 'published' => 0,
                 'mcode' => 'M20387',
                 'name' => 'Disable Presentation Scan Mode in Charger',
@@ -7295,7 +7295,7 @@ CMHDSEA0',
             ),
             353 => 
             array (
-                'id' => 1096,
+
                 'published' => 0,
                 'mcode' => 'M20388',
                 'name' => 'Enable Presentation Scan Mode in Charger with Motion Detection',
@@ -7315,7 +7315,7 @@ CMHDSEA0',
             ),
             354 => 
             array (
-                'id' => 1097,
+
                 'published' => 0,
                 'mcode' => 'M20389',
                 'name' => 'Enable Presentation Scan Mode in Charger with Barcode Detection',
@@ -7335,7 +7335,7 @@ CMHDSEA0',
             ),
             355 => 
             array (
-                'id' => 1098,
+
                 'published' => 0,
                 'mcode' => 'M20390',
                 'name' => 'Reset Bluetooth Reader to Factory Defaults',
@@ -7358,7 +7358,7 @@ BTRDXCC',
             ),
             356 => 
             array (
-                'id' => 1099,
+
                 'published' => 0,
                 'mcode' => 'M20391',
                 'name' => 'Enable Handle Trigger',
@@ -7378,7 +7378,7 @@ BTRDXCC',
             ),
             357 => 
             array (
-                'id' => 1100,
+
                 'published' => 0,
                 'mcode' => 'M20392',
                 'name' => 'Disable Handle Trigger',
@@ -7398,7 +7398,7 @@ BTRDXCC',
             ),
             358 => 
             array (
-                'id' => 1101,
+
                 'published' => 0,
                 'mcode' => 'M20393',
                 'name' => 'Enable Top Front Trigger',
@@ -7418,7 +7418,7 @@ BTRDXCC',
             ),
             359 => 
             array (
-                'id' => 1102,
+
                 'published' => 0,
                 'mcode' => 'M20394',
                 'name' => 'Disable Top Front Trigger',
@@ -7438,7 +7438,7 @@ BTRDXCC',
             ),
             360 => 
             array (
-                'id' => 1103,
+
                 'published' => 0,
                 'mcode' => 'M20395',
                 'name' => 'Enable Top Rear Trigger',
@@ -7458,7 +7458,7 @@ BTRDXCC',
             ),
             361 => 
             array (
-                'id' => 1104,
+
                 'published' => 0,
                 'mcode' => 'M20396',
                 'name' => 'Disable Top Rear Trigger',
@@ -7478,7 +7478,7 @@ BTRDXCC',
             ),
             362 => 
             array (
-                'id' => 1105,
+
                 'published' => 0,
                 'mcode' => 'M20397',
             'name' => 'Clear connection (pairing) history on Bluetooth reader',
@@ -7498,7 +7498,7 @@ BTRDXCC',
             ),
             363 => 
             array (
-                'id' => 1106,
+
                 'published' => 0,
                 'mcode' => 'M20398',
                 'name' => 'Get Bluetooth parameters',
@@ -7518,7 +7518,7 @@ BTRDXCC',
             ),
             364 => 
             array (
-                'id' => 1107,
+
                 'published' => 0,
                 'mcode' => 'M20399',
                 'name' => 'Set reader into USB Full Speed mode',
@@ -7541,12 +7541,12 @@ RDCMXEV3',
             ),
             365 => 
             array (
-                'id' => 1108,
+
                 'published' => 0,
                 'mcode' => 'M20400',
                 'name' => 'Set reader into USB High Speed mode',
                 'description' => 'Set reader into USB High Speed mode',
-            'source_string' => 'CMUBSFS0\'.chr(3).\'RDCMXEV3',
+                'source_string' => 'CMUBSFS0 RDCMXEV3',
                 'safe_source' => NULL,
                 'client_name' => NULL,
                 'client_description' => NULL,
@@ -7561,7 +7561,7 @@ RDCMXEV3',
             ),
             366 => 
             array (
-                'id' => 1109,
+
                 'published' => 0,
                 'mcode' => 'M20401',
                 'name' => 'Disconnect Reader from Base',
@@ -7581,7 +7581,7 @@ RDCMXEV3',
             ),
             367 => 
             array (
-                'id' => 1110,
+
                 'published' => 0,
                 'mcode' => 'M20402',
                 'name' => 'Get Battery Information',
@@ -7607,7 +7607,7 @@ RDBIGLF',
             ),
             368 => 
             array (
-                'id' => 1111,
+
                 'published' => 0,
                 'mcode' => 'M20403',
                 'name' => 'Enable Reader auto-reconnecting to Base',
@@ -7627,7 +7627,7 @@ RDBIGLF',
             ),
             369 => 
             array (
-                'id' => 1112,
+
                 'published' => 0,
                 'mcode' => 'M20404',
                 'name' => 'Disable Reader auto-reconnecting to Base',
@@ -7647,7 +7647,7 @@ RDBIGLF',
             ),
             370 => 
             array (
-                'id' => 1113,
+
                 'published' => 0,
                 'mcode' => 'M20405',
                 'name' => 'Set charging base to no inter-character delay',
@@ -7667,7 +7667,7 @@ RDBIGLF',
             ),
             371 => 
             array (
-                'id' => 1114,
+
                 'published' => 0,
                 'mcode' => 'M20406',
                 'name' => 'Set charging base to 20 ms inter-character delay',
@@ -7687,7 +7687,7 @@ RDBIGLF',
             ),
             372 => 
             array (
-                'id' => 1115,
+
                 'published' => 0,
                 'mcode' => 'M20407',
                 'name' => 'Set charging base to 40 ms inter-character delay',
@@ -7707,7 +7707,7 @@ RDBIGLF',
             ),
             373 => 
             array (
-                'id' => 1116,
+
                 'published' => 0,
                 'mcode' => 'M20408',
                 'name' => 'Get BT Base Information',
@@ -7742,7 +7742,7 @@ BTBRXCM[BTCMPRD0]',
             ),
             374 => 
             array (
-                'id' => 1117,
+
                 'published' => 0,
                 'mcode' => 'M20409',
                 'name' => 'Enable Link Lock between BT reader and charger',
@@ -7762,7 +7762,7 @@ BTBRXCM[BTCMPRD0]',
             ),
             375 => 
             array (
-                'id' => 1118,
+
                 'published' => 0,
                 'mcode' => 'M20410',
                 'name' => 'Disable Link Lock Between BT reader and charger',
@@ -7782,7 +7782,7 @@ BTBRXCM[BTCMPRD0]',
             ),
             376 => 
             array (
-                'id' => 1119,
+
                 'published' => 0,
                 'mcode' => 'M20411',
                 'name' => 'BT reader powers off after 1 hr',
@@ -7805,7 +7805,7 @@ PMSDSVA3600',
             ),
             377 => 
             array (
-                'id' => 1120,
+
                 'published' => 0,
                 'mcode' => 'M20412',
                 'name' => 'BT reader powers off after 2 hrs',
@@ -7828,7 +7828,7 @@ PMSDSVA7200',
             ),
             378 => 
             array (
-                'id' => 1121,
+
                 'published' => 0,
                 'mcode' => 'M20413',
                 'name' => 'BT reader powers off after 3 hrs',
@@ -7851,7 +7851,7 @@ PMSDSVA10800',
             ),
             379 => 
             array (
-                'id' => 1122,
+
                 'published' => 0,
                 'mcode' => 'M20414',
                 'name' => 'BT reader powers off after 4 hrs',
@@ -7874,7 +7874,7 @@ PMSDSVA14400',
             ),
             380 => 
             array (
-                'id' => 1123,
+
                 'published' => 0,
                 'mcode' => 'M20415',
                 'name' => 'BT reader does not automatically power off ',
@@ -7894,7 +7894,7 @@ PMSDSVA14400',
             ),
             381 => 
             array (
-                'id' => 1124,
+
                 'published' => 0,
                 'mcode' => 'M20416',
                 'name' => 'Power off reader now',
@@ -7914,7 +7914,7 @@ PMSDSVA14400',
             ),
             382 => 
             array (
-                'id' => 1125,
+
                 'published' => 0,
                 'mcode' => 'M20417',
                 'name' => 'Disable paging beep',
@@ -7934,7 +7934,7 @@ PMSDSVA14400',
             ),
             383 => 
             array (
-                'id' => 1126,
+
                 'published' => 0,
                 'mcode' => 'M20418',
                 'name' => 'Paging time out 15 seconds',
@@ -7954,7 +7954,7 @@ PMSDSVA14400',
             ),
             384 => 
             array (
-                'id' => 1127,
+
                 'published' => 0,
                 'mcode' => 'M20419',
                 'name' => 'Paging time out 30 seconds',
@@ -7974,7 +7974,7 @@ PMSDSVA14400',
             ),
             385 => 
             array (
-                'id' => 1128,
+
                 'published' => 0,
                 'mcode' => 'M20420',
                 'name' => 'Paging time out 60 seconds',
@@ -7994,7 +7994,7 @@ PMSDSVA14400',
             ),
             386 => 
             array (
-                'id' => 1129,
+
                 'published' => 0,
                 'mcode' => 'M20421',
                 'name' => 'BT HID Keyboard Intercharacter no delay',
@@ -8014,7 +8014,7 @@ PMSDSVA14400',
             ),
             387 => 
             array (
-                'id' => 1130,
+
                 'published' => 0,
                 'mcode' => 'M20422',
                 'name' => 'BT HID Keyboard Intercharacter delay 20 ms',
@@ -8034,7 +8034,7 @@ PMSDSVA14400',
             ),
             388 => 
             array (
-                'id' => 1131,
+
                 'published' => 0,
                 'mcode' => 'M20423',
                 'name' => 'BT HID Keyboard Intercharacter delay 40 ms',
@@ -8054,7 +8054,7 @@ PMSDSVA14400',
             ),
             389 => 
             array (
-                'id' => 1132,
+
                 'published' => 0,
                 'mcode' => 'M20424',
                 'name' => 'Get BT Charging Base Configuration',
@@ -8080,7 +8080,7 @@ BTBRXCM[BTCMPRD0]',
             ),
             390 => 
             array (
-                'id' => 1133,
+
                 'published' => 0,
                 'mcode' => 'M20425',
                 'name' => 'Reset BT Charging Base to Factory Defaults',
@@ -8100,7 +8100,7 @@ BTBRXCM[BTCMPRD0]',
             ),
             391 => 
             array (
-                'id' => 1134,
+
                 'published' => 0,
                 'mcode' => 'M20426',
                 'name' => 'Disable Beep During Reconnection',
@@ -8120,7 +8120,7 @@ BTBRXCM[BTCMPRD0]',
             ),
             392 => 
             array (
-                'id' => 1135,
+
                 'published' => 0,
                 'mcode' => 'M20427',
                 'name' => 'Enable Beep Every 30 seconds During Reconnection',
@@ -8140,7 +8140,7 @@ BTBRXCM[BTCMPRD0]',
             ),
             393 => 
             array (
-                'id' => 1136,
+
                 'published' => 0,
                 'mcode' => 'M20428',
             'name' => 'Clear connection (pairing) history on the Bluetooth Charging Station',
@@ -8160,7 +8160,7 @@ BTBRXCM[BTCMPRD0]',
             ),
             394 => 
             array (
-                'id' => 1137,
+
                 'published' => 0,
                 'mcode' => 'M20429',
                 'name' => 'Sets communication protocol to raw and enable IBM POS mode',
@@ -8183,7 +8183,7 @@ CMMOSCMIP',
             ),
             395 => 
             array (
-                'id' => 1138,
+
                 'published' => 0,
                 'mcode' => 'M20430',
                 'name' => 'Always Attempt Cell Phone and Printed Decoding',
@@ -8203,7 +8203,7 @@ CMMOSCMIP',
             ),
             396 => 
             array (
-                'id' => 1139,
+
                 'published' => 0,
                 'mcode' => 'M20431',
                 'name' => 'Save Base HID POS mode',
@@ -8223,7 +8223,7 @@ CMMOSCMIP',
             ),
             397 => 
             array (
-                'id' => 1140,
+
                 'published' => 0,
                 'mcode' => 'M20432',
                 'name' => 'Save Base HID Keyboard mode',
@@ -8243,7 +8243,7 @@ CMMOSCMIP',
             ),
             398 => 
             array (
-                'id' => 1141,
+
                 'published' => 0,
                 'mcode' => 'M20433',
                 'name' => 'Base transmit power high',
@@ -8263,7 +8263,7 @@ CMMOSCMIP',
             ),
             399 => 
             array (
-                'id' => 1142,
+
                 'published' => 0,
                 'mcode' => 'M20434',
                 'name' => 'Base transmit power medium',
@@ -8283,7 +8283,7 @@ CMMOSCMIP',
             ),
             400 => 
             array (
-                'id' => 1143,
+
                 'published' => 0,
                 'mcode' => 'M20435',
                 'name' => 'Base transmit power low',
@@ -8303,7 +8303,7 @@ CMMOSCMIP',
             ),
             401 => 
             array (
-                'id' => 1144,
+
                 'published' => 0,
                 'mcode' => 'M20436',
                 'name' => 'Bluetooth App Mode',
@@ -8323,7 +8323,7 @@ CMMOSCMIP',
             ),
             402 => 
             array (
-                'id' => 1145,
+
                 'published' => 0,
                 'mcode' => 'M20437',
                 'name' => 'Set Base VCOM mode',
@@ -8343,7 +8343,7 @@ CMMOSCMIP',
             ),
             403 => 
             array (
-                'id' => 1146,
+
                 'published' => 0,
                 'mcode' => 'M20438',
                 'name' => 'Set Base CDC mode',
@@ -8363,7 +8363,7 @@ CMMOSCMIP',
             ),
             404 => 
             array (
-                'id' => 1147,
+
                 'published' => 0,
                 'mcode' => 'M20439',
                 'name' => 'Set Base HID POS Mode',
@@ -8383,7 +8383,7 @@ CMMOSCMIP',
             ),
             405 => 
             array (
-                'id' => 1148,
+
                 'published' => 0,
                 'mcode' => 'M20440',
                 'name' => 'Set Base IBM surePOS mode',
@@ -8403,7 +8403,7 @@ CMMOSCMIP',
             ),
             406 => 
             array (
-                'id' => 1149,
+
                 'published' => 0,
                 'mcode' => 'M20441',
                 'name' => 'On-Table Motion Mode IR',
@@ -8423,7 +8423,7 @@ CMMOSCMIP',
             ),
             407 => 
             array (
-                'id' => 1150,
+
                 'published' => 0,
                 'mcode' => 'M20442',
                 'name' => 'Off-Table Motion Mode IR',
@@ -8443,7 +8443,7 @@ CMMOSCMIP',
             ),
             408 => 
             array (
-                'id' => 1151,
+
                 'published' => 0,
                 'mcode' => 'M20443',
                 'name' => 'Enable Age Verification-If supported by hardware',
@@ -8463,7 +8463,7 @@ CMMOSCMIP',
             ),
             409 => 
             array (
-                'id' => 1152,
+
                 'published' => 0,
                 'mcode' => 'M20444',
                 'name' => 'Disable Age Verification',
@@ -8483,7 +8483,7 @@ CMMOSCMIP',
             ),
             410 => 
             array (
-                'id' => 1153,
+
                 'published' => 0,
                 'mcode' => 'M20445',
                 'name' => 'Honor Expiration Date',
@@ -8503,7 +8503,7 @@ CMMOSCMIP',
             ),
             411 => 
             array (
-                'id' => 1154,
+
                 'published' => 0,
                 'mcode' => 'M20446',
                 'name' => 'Ignore Expiration Date',
@@ -8523,7 +8523,7 @@ CMMOSCMIP',
             ),
             412 => 
             array (
-                'id' => 1155,
+
                 'published' => 0,
                 'mcode' => 'M20447',
                 'name' => 'On-Table Quick Decode Mode Using Red Illumination',
@@ -8543,7 +8543,7 @@ CMMOSCMIP',
             ),
             413 => 
             array (
-                'id' => 1156,
+
                 'published' => 0,
                 'mcode' => 'M20448',
                 'name' => 'Off-Table Quick Decode Mode Using Red Illumination',
@@ -8563,7 +8563,7 @@ CMMOSCMIP',
             ),
             414 => 
             array (
-                'id' => 1157,
+
                 'published' => 0,
                 'mcode' => 'M20449',
                 'name' => 'On-Table Motion Mode Using Red Illumination',
@@ -8583,7 +8583,7 @@ CMMOSCMIP',
             ),
             415 => 
             array (
-                'id' => 1158,
+
                 'published' => 0,
                 'mcode' => 'M20450',
                 'name' => 'Off-Table Motion Mode Using Red Illumination',
@@ -8603,7 +8603,7 @@ CMMOSCMIP',
             ),
             416 => 
             array (
-                'id' => 1159,
+
                 'published' => 0,
                 'mcode' => 'M20451',
                 'name' => 'Camera Mirroring Horizontally Enabled',
@@ -8623,7 +8623,7 @@ CMMOSCMIP',
             ),
             417 => 
             array (
-                'id' => 1160,
+
                 'published' => 0,
                 'mcode' => 'M20452',
                 'name' => 'Camera Mirroring Horizontally Disabled',
@@ -8643,7 +8643,7 @@ CMMOSCMIP',
             ),
             418 => 
             array (
-                'id' => 1161,
+
                 'published' => 0,
                 'mcode' => 'M20453',
                 'name' => 'Camera Mirroring Vertically Enabled',
@@ -8663,7 +8663,7 @@ CMMOSCMIP',
             ),
             419 => 
             array (
-                'id' => 1162,
+
                 'published' => 0,
                 'mcode' => 'M20454',
                 'name' => 'Camera Mirroring Vertically Disabled',
@@ -8683,7 +8683,7 @@ CMMOSCMIP',
             ),
             420 => 
             array (
-                'id' => 1163,
+
                 'published' => 0,
                 'mcode' => 'M20455',
                 'name' => 'Accept Non-DL PDF417 During AV',
@@ -8703,7 +8703,7 @@ CMMOSCMIP',
             ),
             421 => 
             array (
-                'id' => 1164,
+
                 'published' => 0,
                 'mcode' => 'M20456',
                 'name' => 'Reject Non-DL PDF417 During AV',
