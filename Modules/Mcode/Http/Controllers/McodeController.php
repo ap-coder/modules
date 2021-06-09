@@ -111,4 +111,12 @@ class McodeController extends Controller
         $categories = McodeCategory::orderBy('order','ASC')->get();
         return view('mcode::site.mcodes.steps.feature',compact('categories'));
     }
+
+    public function getQrModalDetails(Request $request)
+    {
+        $feature = McodeFeature::where('id',$request->id)->first();
+        $html = view('mcode::site.mcodes.steps.qr-modal', compact('feature'))->render();
+        $data['html']=$html;
+        echo json_encode($data);
+    }
 }

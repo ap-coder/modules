@@ -53,4 +53,5 @@ Route::prefix('mcode')->group(function() {
     Route::get('/', 'McodeController@index');
     Route::get('/category', 'McodeController@category');
     Route::get('/feature', 'McodeController@feature');
+    Route::post('/getQrModalDetails', 'McodeController@getQrModalDetails');
 });

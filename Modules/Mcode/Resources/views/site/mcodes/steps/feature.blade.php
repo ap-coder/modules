@@ -42,10 +42,13 @@
                             <li class="table-row">
                               <div class="col col-2" data-label="Code">{{ $feature->mcode ?? '' }}</div>
                               <div class="col col-4 feturedesc" data-label="Description">{{ $feature->description ?? '' }}</div>
-                              <div class="col col-2" data-label="Barcode">
+                              <div class="col col-2 openQrModal" data-label="Barcode" mid="{{ $feature->id }}">
                                 {{-- <img src="{{  asset('site/img/modules/qr_click.png') }}" alt=""> --}}
                                  {!! QrCode::generate($feature->formatted_source_string) !!}
- 
+
+  
+
+                              </div>
                               <div class="col col-1 selectfeture" data-label="Select">
                                 <label class="checkbox">
                                   <input type="checkbox" />
@@ -75,6 +78,17 @@
       
     </div>
  
+
+                                   
+<!-- The Modal -->
+<div class="modal qrdetailmodal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">      
+
+    </div>
+  </div>
+</div>
+
 <hr class="invisible">
 <hr class="invisible pb-4">
 
@@ -86,5 +100,22 @@
 @section('scripts')
 @parent
 
+<script>
+  $('.openQrModal').click(function(){
+    var id=$(this).attr('mid');
+    var _token = $('input[name="_token"]').val();
+          $.ajax({
+            url:"{{ url('mcode/getQrModalDetails') }}",
+            dataType:'json',
+            method:"POST",
+            data:{id:id, _token:_token},
+            success:function(data){
+              $('.qrdetailmodal .modal-content').html(data.html);
+              $('.qrdetailmodal').modal('show');
+            }
+          });
+  });
+</script>
 
 @endsection
+
