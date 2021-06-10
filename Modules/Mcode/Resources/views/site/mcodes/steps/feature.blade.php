@@ -4,7 +4,7 @@
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
 
-@foreach($categories as $category)
+            @foreach($categories as $category)
  
 
 
@@ -33,8 +33,8 @@
                               <div class="col col-2" data-label="Code">{{ $feature->mcode ?? '' }}</div>
                               <div class="col col-4 feturedesc" data-label="Description">{{ $feature->description ?? '' }}</div>
                               <div class="col col-2 openQrModal" data-label="Barcode" mid="{{ $feature->id }}">
-                                {{-- <img src="{{  asset('site/img/modules/qr_click.png') }}" alt=""> --}}
-                                 {!! QrCode::generate($feature->formatted_source_string) !!}
+                                <img src="{{  asset('site/img/modules/qr_click.png') }}" alt="qr click icon" title="Click To Open">
+                                 {{-- {!! QrCode::generate($feature->formatted_source_string) !!} --}}
 
   
 
@@ -55,7 +55,7 @@
             </div>
 
 
-@endforeach
+            @endforeach
 
             
           </div>

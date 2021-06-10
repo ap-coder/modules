@@ -1,6 +1,5 @@
 
-<div class="container">
-	<div class="row">
+ 
 	<div class="mcode_step_holder category_holder">
         <h2>What type of category are you looking for?</h2>
         <div class="category_box">
@@ -26,6 +25,5 @@
             <button type="button" class="next nextBtn" step="2">Next</button>
         </div>
 			
-		</div>
 	</div>
-</div>
+ 
