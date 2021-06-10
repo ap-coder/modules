@@ -19,6 +19,7 @@
         "laravel/telescope": "^4.4",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.2",
+        "niklasravnsborg/laravel-pdf": "^4.1",
         "nwidart/laravel-modules": "^8.2",
         "orangehill/iseed": "3",
         "rap2hpoutre/laravel-log-viewer": "^1.7",
