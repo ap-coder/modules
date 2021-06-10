@@ -1,14 +1,4 @@
-@extends('mcode::site.layouts.mcodes')
 
-
-@section('styles') 
-
-@endsection
-
-@section('content')
-
- 
-{{-- <div class="container"> --}}
  
     <div class="mcode_step_holder feature_holder">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -72,50 +62,9 @@
    
         
         <div class="button-div">
-            <button type="button" class="back">Back</button>
+            <button type="button" class="back prevBtn" step="3">Back</button>
             <button type="button" class="next">Generate</button>
         </div>
       
     </div>
  
-
-                                   
-<!-- The Modal -->
-<div class="modal qrdetailmodal">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">      
-
-    </div>
-  </div>
-</div>
-
-<hr class="invisible">
-<hr class="invisible pb-4">
-
-@endsection
-
-@section('below-content')
-@endsection
-
-@section('scripts')
-@parent
-
-<script>
-  $('.openQrModal').click(function(){
-    var id=$(this).attr('mid');
-    var _token = $('input[name="_token"]').val();
-          $.ajax({
-            url:"{{ url('mcode/getQrModalDetails') }}",
-            dataType:'json',
-            method:"POST",
-            data:{id:id, _token:_token},
-            success:function(data){
-              $('.qrdetailmodal .modal-content').html(data.html);
-              $('.qrdetailmodal').modal('show');
-            }
-          });
-  });
-</script>
-
-@endsection
-

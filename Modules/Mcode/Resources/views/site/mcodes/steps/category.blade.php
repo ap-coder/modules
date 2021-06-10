@@ -1,11 +1,3 @@
-@extends('mcode::site.layouts.mcodes')
-
-
-@section('styles') 
-
-@endsection
-
-@section('content')
 
 <div class="container">
 	<div class="row">
@@ -19,7 +11,7 @@
 					<td>
 						<div>
 							<label class="checkbox">
-                                <input type="checkbox" />
+                                <input type="checkbox" name="category" id="category" value="{{ $category->id }}"/>
                                 <span class="primary"></span>
                             </label>
 						</div>
@@ -30,25 +22,10 @@
         </div>
         
         <div class="button-div">
-            <button type="button" class="back">Back</button>
-            <button type="button" class="next">Next</button>
+            <button type="button" class="back prevBtn" step="2">Back</button>
+            <button type="button" class="next nextBtn" step="2">Next</button>
         </div>
 			
 		</div>
 	</div>
 </div>
-
-
-<hr class="invisible">
-<hr class="invisible pb-4">
-
-@endsection
-
-@section('below-content')
-@endsection
-
-@section('scripts')
-@parent
-
-
-@endsection
