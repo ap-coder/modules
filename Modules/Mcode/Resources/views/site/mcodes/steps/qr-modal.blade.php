@@ -21,7 +21,7 @@
       </div>
       <div class="col-md-7">
         {{--  <img class="qr_code_img" src="{{ url('site/img/qr_code.jpg') }}">  --}}
-        {!! QrCode::generate($feature->formatted_source_string) !!}
+        {!! QrCode::eyeColor(0, 204,0,0, 204,0,0 )->eyeColor(2, 204,0,0, 0,0,0 )->eyeColor(1, 204,0,0, 0,0,0 )->size(200)->generate($feature->formatted_source_string) !!}
       </div>
     </div>
   </div>

@@ -1,21 +1,3 @@
-@extends('mcode::site.layouts.mcodes')
-
-@section('layout',  "boxed mcodes cc-100")
-@section('htmlschema', "Website")
-@section('bodyschema', "WebPage")
-@section('main-classes', "")
-
-@section('above-main')
-    @include('mcode::site.mcodes.partials.process-header')
-@endsection
-
-@section('styles') 
-
-@endsection
-
-@section('content')
-
- 
 	<div class="mcode_step_holder category_holder">
         <h2>What type of category are you looking for?</h2>
         <div class="category_box">
@@ -26,7 +8,7 @@
 					<td>
 						<div>
 							<label class="checkbox">
-                                <input type="checkbox" />
+                                <input type="checkbox" name="category" id="category" value="{{ $category->id }}"/>
                                 <span class="primary"></span>
                             </label>
 						</div>
@@ -37,24 +19,9 @@
         </div>
         
         <div class="button-div">
-            <button type="button" class="back">Back</button>
-            <button type="button" class="next">Next</button>
+            <button type="button" class="back prevBtn" step="2">Back</button>
+            <button type="button" class="next nextBtn" step="2">Next</button>
         </div>
 			
-		</div>
  
-
-
-<hr class="invisible">
-<hr class="invisible pb-4">
-
-@endsection
-
-@section('below-content')
-@endsection
-
-@section('scripts')
-@parent
-
-
-@endsection
+	</div>
