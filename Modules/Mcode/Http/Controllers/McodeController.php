@@ -129,8 +129,9 @@ class McodeController extends Controller
         $data = [
             'foo' => 'bar'
         ];
-        $pdf = PDF::loadView('pdf.document', $data);
-        return $pdf->stream('document.pdf');
+        $pdf = PDF::loadView('mcode::pdf.document', $data);
+        
+        return $pdf->stream('mcode::document.pdf');
 
     }
 }
