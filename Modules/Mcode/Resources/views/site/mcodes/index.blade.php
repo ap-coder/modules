@@ -1,5 +1,11 @@
 @extends('mcode::site.layouts.mcodes')
 
+@section('layout',  "boxed mcodes cc-100")
+@section('htmlschema', "Website")
+@section('bodyschema', "WebPage")
+@section('main-classes', "")
+
+
 @section('above-main')
     @include('mcode::site.mcodes.partials.process-header')
 @endsection

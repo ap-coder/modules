@@ -41,7 +41,7 @@
 		</style>
 
 	</head>
-	<body @hasSection('bodyClasses') class="@yield('bodyClasses')"  @endif @hasSection('bodyschema') itemscope="" itemtype="http://schema.org/@yield('bodyschema')" @endif>
+	<body @hasSection('bodyClasses') class="@yield('bodyClasses')"  @endif @hasSection('bodyschema') itemscope="" itemtype="http://schema.org/@yield('bodyschema')" @endif data-plugin-page-transition>
 			{{-- @if (env('CUSTOMDEBUG')!='ON' /* ON/OFF */) --}}
 
 		@if(\App::environment() === 'production')
@@ -59,7 +59,11 @@
 		@if (\App::environment('MODULE_DEBUG'== 'true')) 
 		<hr /> <h1>BEFORE BODY BODY</h1> <hr />
 		@endif
-				<div class="body">
+		
+
+		<div class="body">
+		
+
 		@if (\App::environment('MODULE_DEBUG'== 'true')) 
 		<hr /> <h1> INSIDE BODY</h1> <hr />
 		@endif

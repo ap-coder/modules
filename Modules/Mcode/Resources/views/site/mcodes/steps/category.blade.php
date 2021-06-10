@@ -1,5 +1,13 @@
 @extends('mcode::site.layouts.mcodes')
 
+@section('layout',  "boxed mcodes cc-100")
+@section('htmlschema', "Website")
+@section('bodyschema', "WebPage")
+@section('main-classes', "")
+
+@section('above-main')
+    @include('mcode::site.mcodes.partials.process-header')
+@endsection
 
 @section('styles') 
 
@@ -7,8 +15,7 @@
 
 @section('content')
 
-<div class="container">
-	<div class="row">
+ 
 	<div class="mcode_step_holder category_holder">
         <h2>What type of category are you looking for?</h2>
         <div class="category_box">
@@ -35,8 +42,7 @@
         </div>
 			
 		</div>
-	</div>
-</div>
+ 
 
 
 <hr class="invisible">
