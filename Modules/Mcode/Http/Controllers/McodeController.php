@@ -13,6 +13,7 @@ use Modules\Mcode\Entities\Mcode;
 use Modules\Mcode\Entities\McodeProductModel;
 use App\Models\User;
 use Modules\Mcode\Helpers;
+use PDF;
 
 
 class McodeController extends Controller
@@ -121,5 +122,16 @@ class McodeController extends Controller
         $html = view('mcode::site.mcodes.steps.qr-modal', compact('feature'))->render();
         $data['html']=$html;
         echo json_encode($data);
+    }
+
+    public function generatePdf(Request $request){
+
+        $data = [
+            'foo' => 'bar'
+        ];
+        $pdf = PDF::loadView('mcode::pdf.document', $data);
+        
+        return $pdf->stream('mcode::document.pdf');
+
     }
 }
