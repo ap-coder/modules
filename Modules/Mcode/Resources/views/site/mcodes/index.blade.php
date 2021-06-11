@@ -21,10 +21,11 @@
   .left-side, .right-side { flex-basis: 20%; }
   .layout-item-center { justify-content: space-between; flex-basis: 40%; position: relative; }
   .dot { flex-basis: 20px; }
-  .line { flex-basis: 30%; }
+  .line { flex-basis: 70%; }
   .line::after { content: ''; width: 90%; height: 5px; background: black; display: block; position: relative; top: .25em; margin: 0 auto; }
-  .white::after { content: ''; width: 90%; height: 5px; background: white; display: block; position: relative; top: .25em; margin: 0 auto; }
+  .white::after { content: ''; width: 90%; height: 5px; background: white; display: block; position: relative; top: .25em; margin: 0 auto; transition: all .6s ease;}
   input#source_string { font-family: CONSOLAS; font-size: 24px; }
+
  </style>
 @endsection
 
@@ -114,7 +115,10 @@
     if(step==1){
       $('#productID').val($(this).attr('productID'));
       $('#step-1').hide();
-      $('#step-2').fadeIn(300);
+      $('#step-2').fadeIn(1000);
+      $('.stepone').addClass('white');
+      $('.stepone i').removeClass('far');
+      $('.stepone i').addClass('fas');
     }else if(step==2){
       var checkboxValues = [];
       $('input[name=category]:checked').map(function() {
@@ -134,7 +138,10 @@
           });
 
       $('#step-2').hide();
-      $('#step-3').fadeIn(300);
+      $('#step-3').fadeIn(1000);
+      $('.steptwo').addClass('white');
+      $('.steptwo i').removeClass('far');
+      $('.steptwo i').addClass('fas');
     }
   });
 
@@ -142,14 +149,35 @@
     var step=$(this).attr('step');
     if(step==2){
       $('#step-2').hide();
-      $('#step-1').fadeIn(300);
+      $('#step-1').fadeIn(1000);
+      $('.stepone').removeClass('white');
+      $('.stepone i').removeClass('fas');
+      $('.stepone i').addClass('far');
     }else if(step==3){
       $('#step-3').hide();
-      $('#step-2').fadeIn(300);
+      $('#step-2').fadeIn(1000);
+      
+      $('.steptwo').removeClass('white');
+      $('.steptwo i').removeClass('fas');
+      $('.steptwo i').addClass('far');
     }
   });
 
+  $(document.body).on('change', '.category_box .checkboxinput' ,function(){
+    var checkboxValues = [];
+      $('input[name=category]:checked').map(function() {
+          checkboxValues.push($(this).val());
+      });
 
+    if (checkboxValues.length>0) {
+      $('#categoryButton').prop("disabled", false);
+      $('#categoryButton').removeClass('disabled');
+    }else{
+      $('#categoryButton').prop("disabled", true);
+      $('#categoryButton').addClass('disabled');
+    }
+      
+  });
 </script>
 
 <script>
@@ -167,6 +195,35 @@
             }
           });
   });
+
+</script>
+
+<script>
+var expanded = false;
+
+function showCheckboxes() {
+  var checkboxes = document.getElementById("categorybox");
+  if (!expanded) {
+    checkboxes.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxes.style.display = "none";
+    expanded = false;
+  }
+}
+
+var expandedRadio = false;
+
+function showRadioboxes() {
+  var checkboxes = document.getElementById("orderby");
+  if (!expandedRadio) {
+    checkboxes.style.display = "block";
+    expandedRadio = true;
+  } else {
+    checkboxes.style.display = "none";
+    expandedRadio = false;
+  }
+}
 </script>
 
 <script src="{{ asset('site/js/examples/examples.portfolio.js') }}"></script>

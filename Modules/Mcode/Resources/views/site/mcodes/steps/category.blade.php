@@ -8,7 +8,7 @@
 					<td>
 						<div>
 							<label class="checkbox">
-                                <input type="checkbox" name="category" id="category" value="{{ $category->id }}"/>
+                                <input type="checkbox" name="category" id="category" class="checkboxinput" value="{{ $category->id }}"/>
                                 <span class="primary"></span>
                             </label>
 						</div>
@@ -20,7 +20,7 @@
         
         <div class="button-div">
             <button type="button" class="back prevBtn" step="2">Back</button>
-            <button type="button" class="next nextBtn" step="2">Next</button>
+            <button type="button" class="next nextBtn disabled" disabled step="2" id="categoryButton">Next</button>
         </div>
 			
  
