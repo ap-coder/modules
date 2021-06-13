@@ -111,7 +111,8 @@ class McodeController extends Controller
     {
         $ids=$request->ids;
         $categories = McodeCategory::orWhereIn('id',$ids)->orderBy('order','ASC')->get();
-        $html = view('mcode::site.mcodes.steps.feature',compact('categories'))->render();
+        $filterCategories = McodeCategory::orderBy('order','ASC')->get();
+        $html = view('mcode::site.mcodes.steps.feature',compact('categories','filterCategories'))->render();
         $data['html']=$html;
         echo json_encode($data);
     }
@@ -127,11 +128,12 @@ class McodeController extends Controller
     public function generatePdf(Request $request){
 
         $data = [
-            'foo' => 'bar'
+            'title' => 'Testing PDF download for new feature!'
         ];
-        $pdf = PDF::loadView('mcode::pdf.document', $data);
+        $pdf = PDF::loadView('mcode::pdf.document', compact('data'));
         
-        return $pdf->stream('mcode::document.pdf');
+        // return $pdf->stream('document.pdf');
+        return $pdf->download('document.pdf');
 
     }
 }

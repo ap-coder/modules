@@ -25,7 +25,9 @@
   .line::after { content: ''; width: 90%; height: 5px; background: black; display: block; position: relative; top: .25em; margin: 0 auto; }
   .white::after { content: ''; width: 90%; height: 5px; background: white; display: block; position: relative; top: .25em; margin: 0 auto; transition: all .6s ease;}
   input#source_string { font-family: CONSOLAS; font-size: 24px; }
-
+  html.boxed .main {
+    overflow: inherit !important;
+}
  </style>
 @endsection
 
@@ -212,6 +214,14 @@ function showCheckboxes() {
   }
 }
 
+function FilterNext() {
+  var checkboxes = document.getElementById("categorybox");
+  checkboxes.style.display = "none";
+  expanded = false;
+}
+
+
+
 var expandedRadio = false;
 
 function showRadioboxes() {
@@ -223,6 +233,15 @@ function showRadioboxes() {
     checkboxes.style.display = "none";
     expandedRadio = false;
   }
+}
+
+function SearchIcon() {
+  var checkboxes = document.getElementById("categorybox");
+  var radios = document.getElementById("orderby");
+  checkboxes.style.display = "none";
+  expanded = false;
+  radios.style.display = "none";
+  expandedRadio = false;
 }
 </script>
 

@@ -24,26 +24,17 @@
                     <img src="https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png" alt="">
                   </label>
                 </div>
+                @foreach ($filterCategories as $category)
                 <div class="checkboxlabel">
-                  First checkbox <label class="checkbox">
-                    <input type="checkbox">
+                  {{ $category->name }} <label class="checkbox">
+                    <input type="checkbox" name="filtercategory[]" value="{{ $category->id }}">
                     <span class="primary"></span>
                   </label>
                 </div>
-                <div class="checkboxlabel">
-                  First checkbox <label class="checkbox">
-                    <input type="checkbox">
-                    <span class="primary"></span>
-                  </label>
-                </div>
-                <div class="checkboxlabel">
-                  First checkbox <label class="checkbox">
-                    <input type="checkbox">
-                    <span class="primary"></span>
-                  </label>
-                </div>
+                @endforeach
+                
                 <div class="checkboxbtn">
-                  <button class="checkBtn">Next</button>
+                  <button class="checkBtn" type="button" onclick="FilterNext();">Next</button>
                 </div>
                 
               </div>
@@ -81,7 +72,7 @@
             </div>
         </div>
         <div class="col-lg-2 col-md-12 col-xs-12 col-sm-12">
-            <div class="lastBtn">
+            <div class="lastBtn" onclick="SearchIcon()">
               <img src="https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png" alt="">
             </div>
         </div>

@@ -4,7 +4,7 @@
     <ul class="qr_icons">
       <li><i class="fas fa-share-square"></i></li>
       <li><img src="{{ url('site/img/seperate.png') }}"></li>
-      <li><img src="{{ url('site/img/download.png') }}"></li>
+      <li><a target="_blank" href="{{ url('mcode/getPdf') }}"><img src="{{ url('site/img/download.png') }}"></a></li>
       <li><img src="{{ url('site/img/printer.png') }}"></li>
     </ul>
   </div>
