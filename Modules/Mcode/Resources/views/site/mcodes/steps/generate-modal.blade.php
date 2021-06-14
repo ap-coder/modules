@@ -23,10 +23,11 @@
       <div class="col-md-7">
          {{-- <img class="qr_code_img" src="{{ url('site/img/qr_code.jpg') }}"> --}}
         @php
-        $mcodes=implode(' ',$features->pluck('mcode')->toArray());
+            $mcodes=implode(' ',$features->pluck('mcode')->toArray());
             $string = Modules\Mcode\Helpers\Format::combinedSource($mcodes);
         @endphp
-        {!! QrCode::eyeColor(0, 204,0,0, 204,0,0 )->eyeColor(2, 204,0,0, 0,0,0 )->eyeColor(1, 204,0,0, 0,0,0 )->size(250)->generate($string) !!}
+
+        <img src="data:image/png;base64, {!! base64_encode(QrCode::eyeColor(0, 204,0,0, 204,0,0 )->eyeColor(2, 204,0,0, 0,0,0 )->eyeColor(1, 204,0,0, 0,0,0 )->format('png')->size(300)->generate($string)) !!} ">
       </div>
     </div>
 
