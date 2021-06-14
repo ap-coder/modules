@@ -20,7 +20,7 @@
         
         <div class="button-div">
             <button type="button" class="back prevBtn" step="2">Back</button>
-            <button type="button" class="next nextBtn disabled" disabled step="2" id="categoryButton">Next</button>
+            <button type="button" class="next nextBtn disabled" disabled step="2" id="categoryButton">Update</button>
         </div>
 			
  
