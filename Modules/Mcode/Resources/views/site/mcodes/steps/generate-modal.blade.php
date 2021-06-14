@@ -26,7 +26,7 @@
         $mcodes=implode(' ',$features->pluck('mcode')->toArray());
             $string = Modules\Mcode\Helpers\Format::combinedSource($mcodes);
         @endphp
-        {!! QrCode::generate($string) !!}
+        {!! QrCode::eyeColor(0, 204,0,0, 204,0,0 )->eyeColor(2, 204,0,0, 0,0,0 )->eyeColor(1, 204,0,0, 0,0,0 )->size(200)->generate($string) !!}
       </div>
     </div>
 
