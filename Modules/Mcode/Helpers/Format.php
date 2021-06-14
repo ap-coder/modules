@@ -17,7 +17,6 @@ class Format
 		
 		$source_string = $header . $source_string . $footer;
 		
-		return $source_string;
-		
+		return $source_string;		
 	}
 }

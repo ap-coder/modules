@@ -145,4 +145,17 @@ class McodeController extends Controller
         return $pdf->download('document.pdf');
 
     }
+
+    public function viewPdf(Request $request){
+
+        $data = [
+            'title' => 'Code Configuration Guide!'
+        ];
+
+        $pdf = PDF::loadView('mcode::pdf.document', compact('data'));
+        
+  
+        return $pdf->stream('document.pdf');
+
+    }
 }

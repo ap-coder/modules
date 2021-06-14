@@ -35,7 +35,7 @@
 
  
  
- <section class="section section-default bg-color-white">
+ <section class="section section-default bg-color-white" style="min-height: calc(100vh - 1000px);">
   
   <form action="#" method="POST" enctype="multipart/form-data">
   @csrf
@@ -76,6 +76,12 @@
           @endforeach
         </div>
       </div>
+
+      
+
+        
+
+
     </div>
     </div>
 

@@ -56,3 +56,6 @@ Route::prefix('mcode')->group(function() {
     Route::post('/getQrModalDetails', 'McodeController@getQrModalDetails');
     Route::get('/getPdf', 'McodeController@generatePdf');
 });
+
+
+ Route::get('/pdf', '\Modules\Mcode\Http\Controllers\McodeController@viewPdf');
