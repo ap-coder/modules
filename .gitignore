@@ -16,3 +16,11 @@ yarn-error.log
 .idea/php.xml
 /.idea
 /.idea/
+.idea/code-comments.xml
+.idea/deployment.xml
+.idea/laravel-plugin.xml
+.idea/misc.xml
+.idea/modules.iml
+.idea/php.xml
+.idea/phpunit.xml
+.idea/symfony2.xml
