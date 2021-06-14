@@ -25,4 +25,7 @@
     </div>
   </div>
 
-  
+  <!-- Modal footer -->
+  <div class="modal-footer productNameonFooter">
+    <span>This is for {{ $product->name ?? '' }} configuration.</span>
+  </div>

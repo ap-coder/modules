@@ -80,7 +80,7 @@
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
 
-            @foreach($categories as $category)
+            @foreach($categories as $ckey => $category)
  
             <div class="panel panel-default">
               <div class="panel-heading" role="tab" id="heading-{{ $loop->iteration }}">
@@ -90,7 +90,7 @@
                   </a>
                 </h4>
               </div>
-              <div id="collapse-{{ $loop->iteration }}" class="panel-collapse in collapse" role="tabpanel" aria-labelledby="heading-{{ $loop->iteration }}">
+              <div id="collapse-{{ $loop->iteration }}" class="panel-collapse in collapse @if($ckey==0) show  @endif" role="tabpanel" aria-labelledby="heading-{{ $loop->iteration }}">
                 <div class="panel-body">
                     <div class="feature_box">
                         <ul class="responsive-table">

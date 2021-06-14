@@ -128,8 +128,10 @@ class McodeController extends Controller
 
     public function getQrModalDetails(Request $request)
     {
+        $productID=$request->productID;
+        $product = Mcode::where('id',$productID)->first();
         $feature = McodeFeature::where('id',$request->id)->first();
-        $html = view('mcode::site.mcodes.steps.qr-modal', compact('feature'))->render();
+        $html = view('mcode::site.mcodes.steps.qr-modal', compact('feature','product'))->render();
         $data['html']=$html;
         echo json_encode($data);
     }
