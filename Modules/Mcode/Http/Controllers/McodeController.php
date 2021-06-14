@@ -110,7 +110,7 @@ class McodeController extends Controller
     public function getFeature(Request $request)
     {
         $ids=$request->ids;
-        $categories = McodeCategory::orWhereIn('id',$ids)->orderBy('order','ASC')->get();
+        $categories = McodeCategory::whereIn('id',$ids)->orderBy('order','ASC')->get();
         $filterCategories = McodeCategory::orderBy('order','ASC')->get();
         $html = view('mcode::site.mcodes.steps.feature',compact('categories','filterCategories'))->render();
         $data['html']=$html;
@@ -121,6 +121,15 @@ class McodeController extends Controller
     {
         $feature = McodeFeature::where('id',$request->id)->first();
         $html = view('mcode::site.mcodes.steps.qr-modal', compact('feature'))->render();
+        $data['html']=$html;
+        echo json_encode($data);
+    }
+
+    public function getGenerateModalDetails(Request $request)
+    {
+        $ids=$request->ids;
+        $features = McodeFeature::whereIn('id',$ids)->get();
+        $html = view('mcode::site.mcodes.steps.generate-modal', compact('features'))->render();
         $data['html']=$html;
         echo json_encode($data);
     }

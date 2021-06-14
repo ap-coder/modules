@@ -99,8 +99,17 @@
 
 
                                    
-<!-- The Modal -->
-<div class="modal qrdetailmodal">
+<!-- The qrdetailmodal Modal -->
+<div class="modal qrdetailmodal qrmodal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">      
+
+    </div>
+  </div>
+</div>
+
+<!-- The generatemodal Modal -->
+<div class="modal generatemodal qrmodal">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">      
 
@@ -112,6 +121,22 @@
 @parent
 
 <script>
+  
+  $(document.body).on('click', '.seperate' ,function(){
+    var click = $(this).attr('click');
+    if (click=='false') {
+      $(this).attr('click','true');
+      $(this).addClass('active');
+      $('#combined').hide();
+      $('#saprater').show();
+    } else {
+      $(this).attr('click','false');
+      $(this).removeClass('active');
+      $('#combined').show();
+      $('#saprater').hide();
+    }
+  });
+
   $(document.body).on('click', '.nextBtn' ,function(){
     var step=$(this).attr('step');
     if(step==1){
@@ -180,6 +205,23 @@
     }
       
   });
+
+  $(document.body).on('change', '.selectfeture .feturecheckbox' ,function(){
+    var feturecheckbox = [];
+      $('input[name=feturecheckbox]:checked').map(function() {
+        feturecheckbox.push($(this).val());
+      });
+      
+
+    if (feturecheckbox.length>0) {
+      $('#GenerateButton').prop("disabled", false);
+      $('#GenerateButton').removeClass('disabled');
+    }else{
+      $('#GenerateButton').prop("disabled", true);
+      $('#GenerateButton').addClass('disabled');
+    }
+      
+  });
 </script>
 
 <script>
@@ -194,6 +236,23 @@
             success:function(data){
               $('.qrdetailmodal .modal-content').html(data.html);
               $('.qrdetailmodal').modal('show');
+            }
+          });
+  });
+  $(document.body).on('click', '#GenerateButton' ,function(){
+    var checkboxValues = [];
+      $('input[name=feturecheckbox]:checked').map(function() {
+          checkboxValues.push($(this).val());
+      });
+    var _token = $('input[name="_token"]').val();
+          $.ajax({
+            url:"{{ url('mcode/getGenerateModalDetails') }}",
+            dataType:'json',
+            method:"POST",
+            data:{ids:checkboxValues, _token:_token},
+            success:function(data){
+              $('.generatemodal .modal-content').html(data.html);
+              $('.generatemodal').modal('show');
             }
           });
   });
