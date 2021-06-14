@@ -14,3 +14,5 @@ npm-debug.log
 yarn-error.log
 .idea/modules.iml
 .idea/php.xml
+/.idea
+/.idea/
