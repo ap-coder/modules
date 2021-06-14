@@ -21,10 +21,10 @@
         </ul>
       </div>
       <div class="col-md-7">
-         <img class="qr_code_img" src="{{ url('site/img/qr_code.jpg') }}">
-         {{-- {{ $features->pluck('mcode') }}  --}}
+         {{-- <img class="qr_code_img" src="{{ url('site/img/qr_code.jpg') }}"> --}}
         @php
-            $string = Modules\Mcode\Helpers\Format::combinedSource('M20232 M212121');
+        $mcodes=implode(' ',$features->pluck('mcode')->toArray());
+            $string = Modules\Mcode\Helpers\Format::combinedSource($mcodes);
         @endphp
         {!! QrCode::generate($string) !!}
       </div>
