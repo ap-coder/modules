@@ -112,7 +112,7 @@
                               </div>
                               <div class="col col-1 selectfeture" data-label="Select">
                                 <label class="checkbox">
-                                  <input type="checkbox" />
+                                  <input type="checkbox" name="feturecheckbox" class="feturecheckbox" value="{{ $feature->id }}" />
                                   <span class="primary"></span>
                                 </label>
                               </div>
@@ -134,7 +134,7 @@
         
         <div class="button-div">
             <button type="button" class="back prevBtn" step="3">Back</button>
-            <button type="button" class="next">Generate</button>
+            <button type="button" class="next disabled" disabled id="GenerateButton">Generate</button>
         </div>
       
     </div>

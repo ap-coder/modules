@@ -2998,22 +2998,23 @@
     /* feature box */
     /* qr modal box */
     
-    .qrdetailmodal .close {
+    .qrmodal .close {
         float: left;
         margin-left: 0 !important;
         font-size: 3rem;
         font-weight: 300;
     }
     
-    .qrdetailmodal .modal-header {
+    .qrmodal .modal-header {
         border-bottom: 1px solid transparent;
     }
     
-    .qrdetailmodal .modal-footer {
+    .qrmodal .modal-footer {
         border-top: 1px solid transparent;
+        margin-top: 30px;
     }
     
-    .qrdetailmodal .modal-content {
+    .qrmodal .modal-content {
         border-radius: 1.5rem;
         padding: 0px 25px 30px 0px;
     }
@@ -3033,16 +3034,16 @@
         color: #fff;
     }
     
-    .qrdetailmodal ul.qr_icons li i {
+    .qrmodal ul.qr_icons li i {
         font-size: 22px;
         padding: 9px 10px;
     }
     
-    .qrdetailmodal ul.qr_icons {
+    .qrmodal ul.qr_icons {
         display: inline-flex;
     }
     
-    .qrdetailmodal ul.qr_icons li {
+    .qrmodal ul.qr_icons li {
         list-style: none;
         border: 3px solid #d3d3d3;
         box-shadow: 0 0 9px 0 rgb(0 0 0 / 10%);
@@ -3050,24 +3051,29 @@
         margin-right: 10px;
         width: 55px;
         border-radius: 10px;
+        cursor: pointer;
     }
     
-    .qrdetailmodal .modal-body {
+    .qrmodal ul.qr_icons li.active {
+        background: #e0ebff;
+    }
+    
+    .qrmodal .modal-body {
         padding: 0 5rem;
     }
     
-    .qrdetailmodal .modal-body h2 {
+    .qrmodal .modal-body h2 {
         color: #AE2025;
         font-size: 20px !important;
         margin-bottom: 10px;
     }
     
-    .qrdetailmodal .modal-body ul {
+    .qrmodal .modal-body ul {
         padding: 0 18px;
         list-style: none;
     }
     
-    .qrdetailmodal .modal-body ul li {
+    .qrmodal .modal-body ul li {
         color: #565454;
         font-size: 12px;
         letter-spacing: .03em;
@@ -3075,13 +3081,13 @@
         margin-top: 10px;
     }
     
-    .qrdetailmodal .modal-body ul li span {
+    .qrmodal .modal-body ul li span {
         color: #565454;
         font-size: 10px;
         font-weight: 400;
     }
     
-    .qrdetailmodal .modal-body ul li::before {
+    .qrmodal .modal-body ul li::before {
         content: "• ";
         /* Add content: \2022 is the CSS Code/unicode for a bullet */
         color: #AE2025;
@@ -3099,8 +3105,40 @@
         /* Also needed for space (tweak if needed) */
     }
     
-    .qrdetailmodal .qr_code_img {
+    .qrmodal .qr_code_img {
         width: 250px;
+    }
+    
+    .saprater {
+        text-align: center;
+        margin-top: 40px;
+    }
+    
+    .sapraterBorder {
+        border-right: 2px solid #ddd;
+    }
+    
+    .qrmodal .modal-body .saprater h2 {
+        text-align: center;
+        color: #000 !important;
+        font-size: 28px !important;
+        margin-top: 20px;
+    }
+    
+    .saprater h3 {
+        text-align: left;
+        color: #9a9a9a !important;
+        font-size: 14px !important;
+    }
+    
+    .saprater span {
+        font-size: 12px;
+        float: right;
+        margin-right: 40px;
+    }
+    
+    .qrmodal .modal-dialog {
+        margin: 5.75rem auto !important;
     }
     /* qr modal box */
     /* feature-filter */
