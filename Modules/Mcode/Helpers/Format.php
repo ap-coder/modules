@@ -4,15 +4,15 @@ namespace Modules\Mcode\Helpers;
 
 class Format
 {
-	public static function combinedSource (Request $request)
+	public static function combinedSource (string $string)
 	{
 		$header = chr(1).'Y'.chr(29).chr(2);
 		$pipe = chr(3);
 		$footer = chr(3) . chr(4);
 		
-		$request = str_replace(', ', ',', $request);
-		$request = trim(preg_replace('/\s\s+/', $pipe, $request));
-		$source_string = str_replace(' ', $pipe, $request);
+		$string = str_replace(', ', ',', $string);
+		$string = trim(preg_replace('/\s\s+/', $pipe, $string));
+		$source_string = str_replace(' ', $pipe, $string);
 
 		
 		$source_string = $header . $source_string . $footer;
