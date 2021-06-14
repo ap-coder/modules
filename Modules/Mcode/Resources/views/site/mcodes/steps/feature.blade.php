@@ -96,7 +96,7 @@
                         <ul class="responsive-table">
                             <li class="table-header">
                               <div class="col col-2">Code</div>
-                              <div class="col col-5">Description</div>
+                              <div class="col col-7">Description</div>
                               <div class="col col-2">Barcode</div>
                               <div class="col col-1">Select</div>
                             </li>
@@ -104,7 +104,7 @@
                             @foreach($category->categoriesMcodeFeatures as $feature)
                             <li class="table-row">
                               <div class="col col-2" data-label="Code">{{ $feature->mcode ?? '' }}</div>
-                              <div class="col col-5 feturedesc text-3" data-label="Description">{{ $feature->description ?? '' }}</div>
+                              <div class="col col-7 feturedesc text-3" data-label="Description">{{ $feature->description ?? '' }}</div>
                               <div class="col col-2 openQrModal" data-label="Barcode" mid="{{ $feature->id }}">
                                 <img src="{{  asset('site/img/modules/qr_click.png') }}" alt="qr click icon" title="Click To Open">
                                  {{-- {!! QrCode::generate($feature->formatted_source_string) !!} --}} 
