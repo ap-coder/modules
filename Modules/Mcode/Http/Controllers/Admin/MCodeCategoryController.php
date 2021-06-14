@@ -1,5 +1,4 @@
 <?php
-
 namespace Modules\Mcode\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
@@ -8,7 +7,7 @@ use Modules\Mcode\Http\Requests\MassDestroyMcodeCategoryRequest;
 use Modules\Mcode\Http\Requests\StoreMcodeCategoryRequest;
 use Modules\Mcode\Http\Requests\UpdateMcodeCategoryRequest;
 use Modules\Mcode\Entities\McodeCategory;
-use Gate;
+use Illuminate\Auth\Access\Gate;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;

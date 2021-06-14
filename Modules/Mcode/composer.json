@@ -9,15 +9,20 @@
     ],
     "extra": {
         "laravel": {
-            "providers": [],
+            "providers": [
+                "Modules\\Mcode\\Providers\\HelperServiceProvider::class"
+            ],
             "aliases": {
-
+                "Format": "Modules\\Mcode\\Facades\\Format::class"
             }
         }
     },
     "autoload": {
         "psr-4": {
-            "Modules\\Mcode\\": ""
+            "Modules\\Mcode\\":"",
+            "Modules\\Mcode\\Facades": "Facades",
+            "Modules\\Mcode\\Helpers": "Helpers",
+            "Modules\\Mcode\\Providers": "Providers"
         }
     }
 }

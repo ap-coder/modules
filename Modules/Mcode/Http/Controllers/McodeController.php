@@ -12,16 +12,18 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Modules\Mcode\Entities\Mcode;
 use Modules\Mcode\Entities\McodeProductModel;
 use App\Models\User;
-use Modules\Mcode\Helpers;
+
 use PDF;
+use Modules\Mcode\Helpers\Format;
 
 
 class McodeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     * @return Renderable
-     */
+	public function __construct()
+	{
+	
+	}
+	
     public function index()
     {
         // $model = 'App\Models\\' . \Str::studly(\Str::singular('ProductModel'));
@@ -34,6 +36,10 @@ class McodeController extends Controller
         $mcodes = Mcode::published()->get();
         $categories = McodeCategory::with('categoriesMcodeFeatures')->get();
         $features = McodeFeature::all();
+	
+        
+        // dd(Format::combinedSource("YEA IT WORKED."));
+
 
         // dd($mcodes);
 
@@ -112,8 +118,11 @@ class McodeController extends Controller
         $ids=$request->ids;
         $categories = McodeCategory::whereIn('id',$ids)->orderBy('order','ASC')->get();
         $filterCategories = McodeCategory::orderBy('order','ASC')->get();
+        
         $html = view('mcode::site.mcodes.steps.feature',compact('categories','filterCategories'))->render();
+        
         $data['html']=$html;
+        
         echo json_encode($data);
     }
 
