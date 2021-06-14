@@ -27,7 +27,7 @@
             $string = Modules\Mcode\Helpers\Format::combinedSource($mcodes);
         @endphp
 
-        <img src="data:image/png;base64, {!! base64_encode(QrCode::eyeColor(0, 204,0,0, 204,0,0 )->eyeColor(2, 204,0,0, 0,0,0 )->eyeColor(1, 204,0,0, 0,0,0 )->format('png')->size(300)->generate($string)) !!} ">
+        <img class="img-fluid" src="data:image/png;base64, {!! base64_encode(QrCode::eyeColor(0, 204,0,0, 204,0,0 )->eyeColor(2, 204,0,0, 0,0,0 )->eyeColor(1, 204,0,0, 0,0,0 )->format('png')->size(300)->generate($string)) !!} ">
       </div>
     </div>
 
