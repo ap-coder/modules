@@ -233,12 +233,13 @@
 <script>
   $(document.body).on('click', '.openQrModal' ,function(){
     var id=$(this).attr('mid');
+    var productID=$('#productID').val();
     var _token = $('input[name="_token"]').val();
           $.ajax({
             url:"{{ url('mcode/getQrModalDetails') }}",
             dataType:'json',
             method:"POST",
-            data:{id:id, _token:_token},
+            data:{id:id,productID:productID, _token:_token},
             success:function(data){
               $('.qrdetailmodal .modal-content').html(data.html);
               $('.qrdetailmodal').modal('show');
