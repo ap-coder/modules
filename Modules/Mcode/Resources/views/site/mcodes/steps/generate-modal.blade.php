@@ -26,15 +26,15 @@
         $mcodes=implode(' ',$features->pluck('mcode')->toArray());
             $string = Modules\Mcode\Helpers\Format::combinedSource($mcodes);
         @endphp
-        {!! QrCode::eyeColor(0, 204,0,0, 204,0,0 )->eyeColor(2, 204,0,0, 0,0,0 )->eyeColor(1, 204,0,0, 0,0,0 )->size(200)->generate($string) !!}
+        {!! QrCode::eyeColor(0, 204,0,0, 204,0,0 )->eyeColor(2, 204,0,0, 0,0,0 )->eyeColor(1, 204,0,0, 0,0,0 )->size(250)->generate($string) !!}
       </div>
     </div>
 
     <div class="row" id="saprater" style="display: none;">
       @foreach ($features as $key => $feature)
       <div class="col-md-6 saprater @if($key % 2 == 0) sapraterBorder @endif">
-        {!! QrCode::eyeColor(0, 204,0,0, 204,0,0 )->eyeColor(2, 204,0,0, 0,0,0 )->eyeColor(1, 204,0,0, 0,0,0 )->size(200)->generate($feature->formatted_source_string) !!}
-        <h2>{{ $feature->mcode ?? '' }}</h2>
+        {!! QrCode::eyeColor(0, 204,0,0, 204,0,0 )->eyeColor(2, 204,0,0, 0,0,0 )->eyeColor(1, 204,0,0, 0,0,0 )->size(150)->generate($feature->formatted_source_string) !!}
+        {{-- <h2>{{ $feature->mcode ?? '' }}</h2> --}}
         <h3>{{ $feature->description ?? '' }}</h3>
         <span>{{ $feature->mcode ?? '' }}</span>
       </div>
