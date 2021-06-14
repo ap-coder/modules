@@ -33,13 +33,13 @@
                             <i class="text-white far fa-circle"></i>
                         </div>
                         
-                        {{--  <div class="process-item line">
+                         <div class="process-item line">
                             <hr class="process">
                         </div>
                         
                         <div class="process-item dot">
                             <i class="text-white far fa-circle"></i>
-                        </div>  --}}
+                        </div> 
 
                     </div>
 

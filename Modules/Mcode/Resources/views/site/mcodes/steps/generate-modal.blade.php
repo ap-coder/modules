@@ -21,14 +21,18 @@
         </ul>
       </div>
       <div class="col-md-7">
-        {{--  <img class="qr_code_img" src="{{ url('site/img/qr_code.jpg') }}">  --}}
-        {!! QrCode::eyeColor(0, 204,0,0, 204,0,0 )->eyeColor(2, 204,0,0, 0,0,0 )->eyeColor(1, 204,0,0, 0,0,0 )->size(200)->generate('hello') !!}
+         <img class="qr_code_img" src="{{ url('site/img/qr_code.jpg') }}">
+         {{-- {{ $features->pluck('mcode') }}  --}}
+        @php
+            $string = Modules\Mcode\Helpers\Format::combinedSource('M20232 M212121');
+        @endphp
+        {!! QrCode::generate($string) !!}
       </div>
     </div>
 
     <div class="row" id="saprater" style="display: none;">
-      @foreach ($features as $feature)
-      <div class="col-md-6 saprater">
+      @foreach ($features as $key => $feature)
+      <div class="col-md-6 saprater @if($key % 2 == 0) sapraterBorder @endif">
         {!! QrCode::eyeColor(0, 204,0,0, 204,0,0 )->eyeColor(2, 204,0,0, 0,0,0 )->eyeColor(1, 204,0,0, 0,0,0 )->size(200)->generate($feature->formatted_source_string) !!}
         <h2>{{ $feature->mcode ?? '' }}</h2>
         <h3>{{ $feature->description ?? '' }}</h3>
