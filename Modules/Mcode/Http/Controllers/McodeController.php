@@ -147,13 +147,23 @@ class McodeController extends Controller
 
     public function generatePdf(Request $request){
 
+        $productID=$request->productID;
+        $categoryIDs=explode(',',$request->categoryIDs);
+        $featureIDs=explode(',',$request->featureIDs);
+
+        $product = Mcode::where('id',$productID)->first();
+        $features = McodeFeature::whereIn('id',$featureIDs)->get();
+        $categories = McodeCategory::whereIn('id',$categoryIDs)->get();
+
+       
         $data = [
-            'title' => 'Testing PDF download for new feature!'
-        ];
-        $pdf = PDF::loadView('mcode::pdf.document', compact('data'));
+            'content' => 'Code Configuration Guide!'
+        ];  
+
+        $pdf = PDF::loadView('mcode::pdf.document', compact('data','product','features','categories'));
         
-        // return $pdf->stream('document.pdf');
-        return $pdf->download('document.pdf');
+        return $pdf->stream('document.pdf');
+        // return $pdf->download('document.pdf');
 
     }
 
@@ -161,7 +171,7 @@ class McodeController extends Controller
 
         $data = [
             'title' => 'Code Configuration Guide!'
-        ];
+        ];        
 
         $pdf = PDF::loadView('mcode::pdf.document', compact('data'));
         
