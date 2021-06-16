@@ -1,0 +1,9 @@
+
+
+
+fixes on contractors
+filters type on discuss not working right
+reply on discuss show is showing form to non logged in users
+directory is not showing category only on pros/cagetory/
+directory has broken or unclosed div allowing footer to come up over content
+on homepage category when you click on listing to goes to /contractor/cagetegory/show instead of pros/cagetegory/show
