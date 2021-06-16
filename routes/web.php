@@ -1,6 +1,8 @@
 <?php
 
-Route::redirect('/', '/login');
+Route::redirect('/', '/mcode');
+
+Route::redirect('login', '/login');
 
 // Route::get('/home', function () {
 //     if (session('status')) {
