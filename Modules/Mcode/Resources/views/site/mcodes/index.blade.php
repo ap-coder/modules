@@ -22,8 +22,8 @@
   .layout-item-center { justify-content: space-between; flex-basis: 40%; position: relative; }
   .dot { flex-basis: 20px; }
   .line { flex-basis: 70%; }
-  .line::after { content: ''; width: 90%; height: 5px; background: black; display: block; position: relative; top: .25em; margin: 0 auto; }
-  .white::after { content: ''; width: 90%; height: 5px; background: white; display: block; position: relative; top: .25em; margin: 0 auto; transition: all .6s ease;}
+  .line::after { content: ''; width: 90%; height: 10px; border-radius: 5px;background: black; display: block; position: relative; top: .25em; margin: 0 auto; }
+  .white::after { content: ''; width: 90%; height: 10px; border-radius: 5px;background: white; display: block; position: relative; top: .25em; margin: 0 auto; transition: all .6s ease;}
   input#source_string { font-family: CONSOLAS; font-size: 24px; }
   html.boxed .main {
     overflow: inherit !important;

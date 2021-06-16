@@ -1,5 +1,5 @@
 
-<section class="page-header page-header-modern bg-color-light-scale-3 page-header-md">
+<section class="page-header page-header-modern bg-color-light-scale-8 page-header-md pb-0 mb-0">
     <div class="container-fluid">
         <div class="row">
             <div class="config-header">

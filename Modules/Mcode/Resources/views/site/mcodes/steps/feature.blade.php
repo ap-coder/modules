@@ -34,7 +34,7 @@
                 @endforeach
                 
                 <div class="checkboxbtn">
-                  <button class="checkBtn" type="button" onclick="FilterNext();">Next</button>
+                  <button class="checkBtn" type="button" onclick="FilterNext();">Update</button>
                 </div>
                 
               </div>
