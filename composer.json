@@ -23,6 +23,7 @@
         "nwidart/laravel-modules": "^8.2",
         "orangehill/iseed": "3",
         "rap2hpoutre/laravel-log-viewer": "^1.7",
+        "milon/barcode": "^8.0", 
         "simplesoftwareio/simple-qrcode": "^4.2",
         "spatie/laravel-medialibrary": "^8.7",
         "wulfheart/pretty_routes": "^0.3.0",

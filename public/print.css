@@ -1,0 +1,30 @@
+
+
+@page noheader {
+	frontpage: cover-page;
+   		header:_blank;
+        footer: _blank;
+}
+
+@page { 
+		
+		header:page-header;
+ 
+		footer: page-footer;
+		content: page-content;
+ 
+
+		/*margin: 2mm;	 */
+	  /*background: rgb(15, 15, 15); */
+
+	  			 
+		/*	margin: 1.0in;
+			border: thin solid black;
+			padding: 1em;*/
+			
+			 
+
+
+
+
+} 

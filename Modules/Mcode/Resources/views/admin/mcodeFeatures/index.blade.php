@@ -18,36 +18,16 @@
         <table class=" table table-bordered table-striped table-hover ajaxTable datatable datatable-McodeFeature">
             <thead>
                 <tr>
-                    <th width="10">
-
-                    </th>
-                    <th>
-                        {{ trans('mcode::cruds.mcodeFeature.fields.id') }}
-                    </th>
-                    <th>
-                        {{ trans('mcode::cruds.mcodeFeature.fields.published') }}
-                    </th>
-                    <th>
-                        {{ trans('mcode::cruds.mcodeFeature.fields.mcode') }}
-                    </th>
-                    <th>
-                        {{ trans('mcode::cruds.mcodeFeature.fields.name') }}
-                    </th>
-                    <th>
-                        {{ trans('mcode::cruds.mcodeFeature.fields.defaults') }}
-                    </th>
-                    <th>
-                        {{ trans('mcode::cruds.mcodeFeature.fields.categories') }}
-                    </th>
-                    <th>
-                        {{ trans('mcode::cruds.mcodeFeature.fields.models') }}
-                    </th>
-                    <th>
-                        {{ trans('mcode::cruds.mcode.fields.order') }}
-                    </th>
-                    <th>
-                        &nbsp;
-                    </th>
+                    <th width="10"> </th>
+                    <th> {{ trans('mcode::cruds.mcodeFeature.fields.id') }} </th> 
+                    <th> {{ trans('mcode::cruds.mcodeFeature.fields.published') }} </th> 
+                    <th> {{ trans('mcode::cruds.mcodeFeature.fields.mcode') }} </th> 
+                    <th> {{ trans('mcode::cruds.mcodeFeature.fields.name') }} </th> 
+                    {{-- <th> {{ trans('mcode::cruds.mcodeFeature.fields.defaults') }} </th> --}} 
+                    <th> {{ trans('mcode::cruds.mcodeFeature.fields.categories') }} </th> 
+                    <th> {{ trans('mcode::cruds.mcodeFeature.fields.models') }} </th> 
+                    {{-- <th> {{ trans('mcode::cruds.mcode.fields.order') }} </th>  --}}
+                    <th> &nbsp; </th> 
                 </tr>
             </thead>
         </table>
@@ -105,17 +85,19 @@
         { data: 'published', name: 'published' },
         { data: 'mcode', name: 'mcode' },
         { data: 'name', name: 'name' },
-        { data: 'defaults', name: 'defaults' },
+        // { data: 'defaults', name: 'defaults' },
         { data: 'categories', name: 'categories.name' },
         { data: 'models', name: 'models.model' },
-        { data: 'order', name: 'order' },
+        // { data: 'order', name: 'order' },
         { data: 'actions', name: '{{ trans('mcode::global.actions') }}' }
     ],
     orderCellsTop: true,
     order: [[ 1, 'desc' ]],
     pageLength: 100,
   };
+
   let table = $('.datatable-McodeFeature').DataTable(dtOverrideGlobals);
+
   $('a[data-toggle="tab"]').on('shown.bs.tab click', function(e){
       $($.fn.dataTable.tables(true)).DataTable()
           .columns.adjust();

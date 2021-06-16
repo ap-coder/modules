@@ -55,13 +55,13 @@ class McodeFeatureController extends Controller
             $table->editColumn('name', function ($row) {
                 return $row->name ? $row->name : '';
             });
-            $table->editColumn('defaults', function ($row) {
-                return $row->defaults ? $row->defaults : '';
-            });
+            // $table->editColumn('defaults', function ($row) {
+            //     return $row->defaults ? $row->defaults : '';
+            // });
             $table->editColumn('categories', function ($row) {
                 $labels = [];
                 foreach ($row->categories as $category) {
-                    $labels[] = sprintf('<span class="label label-info label-many">%s</span>', $category->name);
+                    $labels[] = sprintf('<span class="btn btn-outline-primary">%s</span>', $category->name);
                 }
 
                 return implode(' ', $labels);
@@ -69,14 +69,14 @@ class McodeFeatureController extends Controller
             $table->editColumn('models', function ($row) {
                 $labels = [];
                 foreach ($row->models as $model) {
-                    $labels[] = sprintf('<span class="label label-info label-many">%s</span>', $model->model);
+                    $labels[] = sprintf('<span class="btn btn-outline-primary">%s</span>', $model->model);
                 }
 
                 return implode(' ', $labels);
             });
-            $table->editColumn('order', function ($row) {
-                return $row->order ? $row->order : '';
-            });
+            // $table->editColumn('order', function ($row) {
+            //     return $row->order ? $row->order : '';
+            // });
 
             $table->rawColumns(['actions', 'placeholder', 'published', 'categories', 'models']);
 

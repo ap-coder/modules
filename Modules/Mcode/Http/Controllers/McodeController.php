@@ -8,7 +8,7 @@ use Illuminate\Routing\Controller;
 // use Mcode::Entities\McodeCategory;
 use Modules\Mcode\Entities\McodeCategory;
 use Modules\Mcode\Entities\McodeFeature;
-use SimpleSoftwareIO\QrCode\Facades\QrCode; 
+// use SimpleSoftwareIO\QrCode\Facades\QrCode; 
 use Modules\Mcode\Entities\Mcode;
 use Modules\Mcode\Entities\McodeProductModel;
 use App\Models\User;
@@ -155,12 +155,16 @@ class McodeController extends Controller
         $features = McodeFeature::whereIn('id',$featureIDs)->get();
         $categories = McodeCategory::whereIn('id',$categoryIDs)->get();
 
+        $config = ['instanceConfigurator' => function($mpdf) {
+            $mpdf->SetImportUse();
+            $mpdf->SetDocTemplate(asset('cover.pdf'), true);
+        }];
        
         $data = [
             'content' => 'Code Configuration Guide!'
         ];  
 
-        $pdf = PDF::loadView('mcode::pdf.document', compact('data','product','features','categories'));
+        $pdf = PDF::loadView('mcode::pdf.document', compact('data','product','features','categories'), $config);
         
         return $pdf->stream('document.pdf');
         // return $pdf->download('document.pdf');
