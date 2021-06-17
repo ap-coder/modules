@@ -14,6 +14,9 @@ class McodeFeature extends Model
 
     public $table = 'mcode_features';
 
+    protected $primaryKey = 'mcode';
+
+
     protected $dates = [
         'created_at',
         'updated_at',
@@ -50,20 +53,43 @@ class McodeFeature extends Model
 
     public function getFormattedSourceStringAttribute()
     {       
+       
+
+        if (str_starts_with($this->source_string, '%01X%1d%02')) {
+            
+            /* M1 CODES */
+            $header = chr(1).'X'.chr(29).chr(2);
+             
+            $footer = chr(4);
+            
+            // $string = str_replace(', ', ',', $this->source_string);
+
+            $string = trim(preg_replace('/\s\s+/', $pipe, $this->source_string));
+            // $string = str_replace(' ', $pipe, $this->source_string);
+            $string = str_replace('%01X%1d%02', $header, $this->source_string);
+            $string = str_replace('%04', $footer, $this->source_string);
+     
+            $source_string = $this->source_string;
+            
+            return $source_string;
+
+        }else{
+
+            /* M2 CODES */
             $header = chr(1).'Y'.chr(29).chr(2);
             $pipe = chr(3);
             $footer = chr(3) . chr(4);
             
-            $string = str_replace(', ', ',', $this->source_string);
-
             $string = trim(preg_replace('/\s\s+/', $pipe, $this->source_string));
             $string = str_replace(' ', $pipe, $this->source_string);
-            $string = str_replace(',', $pipe, $this->source_string);
-            $string = str_replace(', ', $pipe, $this->source_string);
      
             $source_string = $header . $this->source_string. $footer;
             
             return $source_string;
+       
+       }
+
+
     }
 
     public static function last()
@@ -83,7 +109,7 @@ class McodeFeature extends Model
 
     public function categories()
     {
-        return $this->belongsToMany(McodeCategory::class);
+        return $this->belongsToMany(McodeCategory::class, 'mcode_category_mcode_feature', 'mcode_feature_id');
     }
 
     protected function serializeDate(DateTimeInterface $date)
