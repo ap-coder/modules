@@ -6,6 +6,7 @@ use \DateTimeInterface;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Facades\Log;
 
 class McodeFeature extends Model
 {
@@ -56,6 +57,8 @@ class McodeFeature extends Model
        
 
         if (str_starts_with($this->source_string, '%01X%1d%02')) {
+
+            Log::info("M1 CODE SCANNED");
             
             /* M1 CODES */
             $header = chr(1).'X'.chr(29).chr(2);
@@ -74,6 +77,8 @@ class McodeFeature extends Model
             return $source_string;
 
         }else{
+
+            Log::info("M1 CODE SCANNED");
 
             /* M2 CODES */
             $header = chr(1).'Y'.chr(29).chr(2);
