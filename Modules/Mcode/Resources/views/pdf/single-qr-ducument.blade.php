@@ -42,7 +42,7 @@ https://mpdf.github.io/what-else-can-i-do/forms.html
 
 <div class="coverpage">
 	<div class="fullwidth">
-    
+		<img src="{{ $product->photo ? $product->photo->getUrl() : '' }}" style="width:90mm;">
 	<h1>cover-page</h1>
 	<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam ipsam distinctio aliquid qui deleniti commodi reprehenderit amet fugiat delectus. Magni enim quod perspiciatis qui aspernatur optio recusandae animi tenetur labore.</p>
 	</div>
