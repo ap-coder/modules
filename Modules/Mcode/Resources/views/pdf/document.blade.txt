@@ -2,24 +2,17 @@
 <link rel="stylesheet"  type="application/pdf" href="{{ asset('print.css') }}" />
 
 <htmlpagefrontpage name="cover-page">
-<h1>{{ $product->name ?? '' }}</h1>
-
-	@php
-        $mcodes=implode(' ',$features->pluck('mcode')->toArray());
-        $string = Modules\Mcode\Helpers\Format::combinedSource($mcodes);
-    @endphp
-
-
-
+<h1 style="margin-top:4rem;">COVER PAGE</h1>
+<p>This Is Where The PDF Cover Page Should Be</p>
 </htmlpagefrontpage>
  
 
 
 
 <htmlpageheader name="page-header">
-	<div class="header" style="border-bottom:1px solid black; margin-bottom:5rem;">
-		<div style="border-bottom: 1px solid #000000; font-weight: bold;  font-size: 10pt; margin-top:1rem;">
-			<img width="100px" src="{{ public_path('site/img/code_logo_300w.png') }}" style="margin-bottom:1rem;">	 
+	<div class="header" style="border-bottom:1px solid black;">
+		<div style="border-bottom: 1px solid #000000; font-weight: bold;  font-size: 10pt;">
+			<img width="100px" src="{{ public_path('site/img/code_logo_300w.png') }}" style="">	 
 			<div style=" text-align: right; font-family: sans-serif;">
 				
 			</div>
@@ -56,47 +49,6 @@
 	<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam ipsam distinctio aliquid qui deleniti commodi reprehenderit amet fugiat delectus. Magni enim quod perspiciatis qui aspernatur optio recusandae animi tenetur labore.</p>
 	</div>
 </div>
-
-<div class="combinedqr">
-	<h1>Combined Configurations</h1>
-	<table>
-		<tr>
-			<td>{{ $data['content'] }}</td>
-		</tr>
-	</table>
-
-	<div style="text-align: center">
-	    <img class="img-fluid" src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(300)->generate($string)) !!} ">
-	</div>
-	<div class="2-columns">
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, odio, sequi! Ducimus error voluptate nihil libero voluptatem, commodi id nesciunt ipsam odit aperiam quos praesentium, vitae. Dicta, voluptate repudiandae quaerat.
-	</div>
-
-
-	<table>
-		@foreach ($features as $feature)
-		<tr>
-			<td>{{ $feature->description ?? '' }} <br> <span>{{ $feature->mcode ?? '' }}</span></td>
-		</tr>
-		@endforeach
-	</table>
-
-	<table>
-		@foreach ($features as $feature)
-		<tr>
-			<td>
-				<img class="img-fluid" src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(150)->generate($feature->description)) !!} ">
-				</td>
-		</tr>
-		<tr>
-			<td>{{ $feature->description ?? '' }} <br> <span>{{ $feature->mcode ?? '' }}</span></td>
-		</tr>
-		@endforeach
-	</table>
-  
-
-</div>
-
 
 <div class="page-toc">
 	<h1>page-toc</h1>

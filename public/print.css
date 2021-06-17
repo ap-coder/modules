@@ -1,30 +1,69 @@
+ 
+@page { 
+		size: auto;
+		frontpage: cover-page;
+		header:page-header;
+		footer: page-footer;
+		content: page-content;
+		/*sheet-size: A3-L;*/
 
+} 
 
+@page qrcombined { 
+		size: auto;
+		 
+		header:page-header;
+		footer:page-footer;
+	 
+
+} 
+ 
+@page cover-page {
+   		header: _blank;
+        footer: _blank;
+}
+ 
 @page noheader {
-	frontpage: cover-page;
-   		header:_blank;
+   		header: _blank;
         footer: _blank;
 }
 
-@page { 
-		
-		header:page-header;
+@page toc { sheet-size: A4; }
+
+div.coverpage {
+    page-break-before: right;
+    page: noheader;
+
+}
  
-		footer: page-footer;
-		content: page-content;
- 
+div.combinedqr{
+	page-break-before: right;
+	page: qrcombined;
+	margin-top: 2rem;
+}
 
-		/*margin: 2mm;	 */
-	  /*background: rgb(15, 15, 15); */
+div.page-toc {
+    page-break-before: right;
+    page: toc;
+}
 
-	  			 
-		/*	margin: 1.0in;
-			border: thin solid black;
-			padding: 1em;*/
-			
-			 
+div.noheader {
+    page-break-before: right;
+    page: noheader;
+}
 
-
-
-
-} 
+div.myfixed {
+	page-break-before: right;
+	page: noheader;
+    position: absolute;
+    overflow: visible;
+    left: 0;
+    right: 0;
+    width: 100mm;   /* you must specify a width */
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #000088;
+    background-color: #EEDDFF;
+}
