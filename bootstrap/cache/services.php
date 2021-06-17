@@ -52,6 +52,7 @@
     48 => 'App\\Providers\\EventServiceProvider',
     49 => 'App\\Providers\\RouteServiceProvider',
     50 => 'App\\Providers\\TelescopeServiceProvider',
+    51 => 'niklasravnsborg\\LaravelPdf\\PdfServiceProvider',
   ),
   'eager' => 
   array (
@@ -91,6 +92,7 @@
     33 => 'App\\Providers\\EventServiceProvider',
     34 => 'App\\Providers\\RouteServiceProvider',
     35 => 'App\\Providers\\TelescopeServiceProvider',
+    36 => 'niklasravnsborg\\LaravelPdf\\PdfServiceProvider',
   ),
   'deferred' => 
   array (

@@ -156,15 +156,41 @@ class McodeController extends Controller
         $categories = McodeCategory::whereIn('id',$categoryIDs)->get();
 
         $config = ['instanceConfigurator' => function($mpdf) {
-            $mpdf->SetImportUse();
-            $mpdf->SetDocTemplate(asset('cover.pdf'), true);
+            // $mpdf->SetImportUse();
+            $mpdf->SetDocTemplate(public_path('cover.pdf'), true);
         }];
        
         $data = [
             'content' => 'Code Configuration Guide!'
-        ];  
+        ];
 
-        $pdf = PDF::loadView('mcode::pdf.document', compact('data','product','features','categories'), $config);
+        $pdf = PDF::loadView('mcode::pdf.document', compact('data','product','features','categories'),[], $config);
+        
+        return $pdf->stream('document.pdf');
+        // return $pdf->download('document.pdf');
+
+    }
+
+    public function getSinglePdf(Request $request){
+
+        $productID=$request->productID;
+        $categoryIDs=explode(',',$request->categoryIDs);
+        $featureIDs=$request->featureIDs;
+
+        $product = Mcode::where('id',$productID)->first();
+        $feature = McodeFeature::where('id',$featureIDs)->first();
+        $categories = McodeCategory::whereIn('id',$categoryIDs)->get();
+
+        $config = ['instanceConfigurator' => function($mpdf) {
+            //$mpdf->SetImportUse();
+            $mpdf->SetDocTemplate(public_path('cover.pdf'), true);
+        }];
+       
+        $data = [
+            'content' => 'Code Configuration Guide!'
+        ];
+
+        $pdf = PDF::loadView('mcode::pdf.single-qr-ducument', compact('data','product','feature','categories'),[], $config);
         
         return $pdf->stream('document.pdf');
         // return $pdf->download('document.pdf');

@@ -4,10 +4,6 @@
 <htmlpagefrontpage name="cover-page">
 <h1>{{ $product->name ?? '' }}</h1>
 
-	@php
-        $mcodes=implode(' ',$features->pluck('mcode')->toArray());
-        $string = Modules\Mcode\Helpers\Format::combinedSource($mcodes);
-    @endphp
 
 </htmlpagefrontpage>
 
@@ -46,7 +42,7 @@ https://mpdf.github.io/what-else-can-i-do/forms.html
 
 <div class="coverpage">
 	<div class="fullwidth">
-    <img src="{{ $product->photo ? $product->photo->getUrl() : '' }}" style="width:90mm;">
+    
 	<h1>cover-page</h1>
 	<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam ipsam distinctio aliquid qui deleniti commodi reprehenderit amet fugiat delectus. Magni enim quod perspiciatis qui aspernatur optio recusandae animi tenetur labore.</p>
 	</div>
@@ -55,31 +51,26 @@ https://mpdf.github.io/what-else-can-i-do/forms.html
 
 
 <div class="combinedqr">
-	<h1>Combined Configurations</h1>
+	<h1>Single Configurations</h1>
 	<table>
 		<tr>
 			<td>{{ $data['content'] }}</td>
 		</tr>
 	</table>
 
-	<div style="text-align: center">
-	    <img class="img-fluid" src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(300)->generate($string)) !!} ">
-	</div>
+	
 	<div class="2-columns">
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, odio, sequi! Ducimus error voluptate nihil libero voluptatem, commodi id nesciunt ipsam odit aperiam quos praesentium, vitae. Dicta, voluptate repudiandae quaerat.
 	</div>
 
 
 	<table>
-		@foreach ($features as $feature)
 		<tr>
 			<td>{{ $feature->description ?? '' }} <br> <span>{{ $feature->mcode ?? '' }}</span></td>
 		</tr>
-		@endforeach
 	</table>
 
 	<table>
-		@foreach ($features as $feature)
 		<tr>
 			<td>
 				<img class="img-fluid" src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(150)->generate($feature->description)) !!} ">
@@ -88,17 +79,11 @@ https://mpdf.github.io/what-else-can-i-do/forms.html
 		<tr>
 			<td>{{ $feature->description ?? '' }} <br> <span>{{ $feature->mcode ?? '' }}</span></td>
 		</tr>
-		@endforeach
 	</table>
   
 
 </div>
 
-
-<div class="page-toc">
-	<h1>page-toc</h1>
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, voluptate ipsum laudantium nesciunt repellendus deleniti vel officiis, praesentium similique voluptatibus? Veniam fugiat, quisquam neque, maiores soluta ab vel sit? Aliquid.</p>
-</div>
 
 
 <div class="noheader">
@@ -112,7 +97,6 @@ https://mpdf.github.io/what-else-can-i-do/forms.html
 	{{-- <columns column-count="n" vAlign="justify" column-gap="n" /> --}}
 Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec mattis lacus ac purus feugiat semper. Donec aliquet nunc odio, vitae pellentesque diam. Pellentesque sed velit lacus. Duis quis dui quis sem consectetur sollicitudin. Cras dolor quam, dapibus et pretium sit amet, elementum vel arcu. 
 </div>
-
 
 {{-- <div style="position: fixed; right: 0mm; bottom: 0mm; rotate: -90;">
     <barcode code="" class="barcode" />
