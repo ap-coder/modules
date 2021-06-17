@@ -12,8 +12,10 @@
 
 
 </htmlpagefrontpage>
- 
 
+
+layout setup documentation here:
+https://mpdf.github.io/what-else-can-i-do/forms.html
 
 
 <htmlpageheader name="page-header">
