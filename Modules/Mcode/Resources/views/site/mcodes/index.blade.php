@@ -95,7 +95,7 @@
 
     <input type="hidden" name="productID" id="productID">
     <input type="hidden" name="categoryIDs" id="categoryIDs">
-    <input type="hidden" name="featureIDs" id="featureIDs">
+    <input type="text" name="featureIDs" id="featureIDs">
   </form>
 
 </section>
@@ -134,6 +134,17 @@
     var categoryIDs=$('#categoryIDs').val();
     var featureIDs=$('#featureIDs').val();
     var url="{{ url('mcode/getPdf') }}?productID="+productID+"&categoryIDs="+categoryIDs+"&featureIDs="+featureIDs;
+    window.open(
+      url,
+  '_blank' // <- This is what makes it open in a new window.
+);
+  });
+
+  $(document.body).on('click', '.downloadSingledPdf' ,function(){
+    var productID=$('#productID').val();
+    var categoryIDs=$('#categoryIDs').val();
+    var featureIDs=$('#featureIDs').val();
+    var url="{{ url('mcode/getSinglePdf') }}?productID="+productID+"&categoryIDs="+categoryIDs+"&featureIDs="+featureIDs;
     window.open(
       url,
   '_blank' // <- This is what makes it open in a new window.
@@ -245,8 +256,10 @@
 <script>
   $(document.body).on('click', '.openQrModal' ,function(){
     var id=$(this).attr('mid');
+    $('#featureIDs').val(id);
     var productID=$('#productID').val();
     var _token = $('input[name="_token"]').val();
+    
           $.ajax({
             url:"{{ url('mcode/getQrModalDetails') }}",
             dataType:'json',
@@ -263,6 +276,7 @@
       $('input[name=feturecheckbox]:checked').map(function() {
           checkboxValues.push($(this).val());
       });
+      $('#featureIDs').val(checkboxValues);
     var _token = $('input[name="_token"]').val();
           $.ajax({
             url:"{{ url('mcode/getGenerateModalDetails') }}",
