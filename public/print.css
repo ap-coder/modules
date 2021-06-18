@@ -5,22 +5,32 @@
 		header:page-header;
 		footer: page-footer;
 		content: page-content;
-		/*sheet-size: A3-L;*/
+		sheet-size: Letter;
 
 } 
 
 @page qrcombined { 
 		size: auto;
-		 
 		header:page-header;
 		footer:page-footer;
 	 
 
 } 
+
+@page single-qr { 
+	 	/*page-break-before: right;*/
+		sheet-size: Letter;
+		header:page-header;
+		/*footer:page-footer;*/
+		 margin-top: 2.5cm;
+
+}
  
 @page cover-page {
    		header: _blank;
         footer: _blank;
+        sheet-size: Letter;
+
 }
  
 @page noheader {
@@ -28,16 +38,33 @@
         footer: _blank;
 }
 
-@page toc { sheet-size: A4; }
+@page toc {  }
+
+
 
 div.coverpage {
-    page-break-before: right;
-    page: noheader;
-
+    /*page-break-before: right;*/
+    page: cover-page;
 }
  
+
+
+ #cover-title {    	 
+ 
+  /*font-family: "Droid Sans",Inconsolata;*/
+  font-weight: 900; color: #ffffff;
+ 
+}
+
+div.singleqr{ 
+	/*page-break-before: right;*/
+	page: single-qr;
+	header:page-header; 
+}
+
+
 div.combinedqr{
-	page-break-before: right;
+	/*page-break-before: right;*/
 	page: qrcombined;
 	margin-top: 2rem;
 }
@@ -52,18 +79,60 @@ div.noheader {
     page: noheader;
 }
 
-div.myfixed {
-	page-break-before: right;
-	page: noheader;
-    position: absolute;
-    overflow: visible;
-    left: 0;
-    right: 0;
-    width: 100mm;   /* you must specify a width */
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid #000088;
-    background-color: #EEDDFF;
+
+
+div.mpdf_toc {
+    font-family: sans-serif;
+    font-size: 11pt;
 }
+a.mpdf_toc_a  {
+    text-decoration: none;
+    color: black;
+}
+
+/* Whole line level 0 */
+div.mpdf_toc_level_0 {
+    line-height: 1.5;
+    margin-left: 0;
+    padding-right: 2em;
+}
+
+/* padding-right should match e.g <dottab outdent="2em" /> 0 is default */
+/* Title level 0 - may be inside <a> */
+span.mpdf_toc_t_level_0 {
+    font-weight: bold;
+}
+
+/* Page no. level 0 - may be inside <a> */
+span.mpdf_toc_p_level_0 {}
+
+/* Whole line level 1 */
+div.mpdf_toc_level_1 {
+    margin-left: 2em;
+    text-indent: -2em;
+    padding-right: 2em;
+}
+
+/* padding-right should match <dottab outdent="2em" /> 2em is default */
+/* Title level 1 */
+span.mpdf_toc_t_level_1 {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Page no. level 1 - may be inside <a> */
+span.mpdf_toc_p_level_1  {}
+
+/* Whole line level 2 */
+div.mpdf_toc_level_2 {
+    margin-left: 4em;
+    text-indent: -2em;
+    padding-right: 2em;
+}
+
+/* padding-right should match <dottab outdent="2em" /> 2em is default */
+/* Title level 2 */
+span.mpdf_toc_t_level_2 {}
+
+/* Page no. level 2 - may be inside <a> */
+span.mpdf_toc_p_level_2 {}

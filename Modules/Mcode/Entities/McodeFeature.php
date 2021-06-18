@@ -15,7 +15,7 @@ class McodeFeature extends Model
 
     public $table = 'mcode_features';
 
-    protected $primaryKey = 'mcode';
+    // protected $primaryKey = 'mcode';
 
 
     protected $dates = [
@@ -56,23 +56,35 @@ class McodeFeature extends Model
     {       
        
 
-        if (str_starts_with($this->source_string, '%01X%1d%02')) {
+        if (str_starts_with($this->source_string, '%01X')) {
 
             Log::info("M1 CODE SCANNED");
-            
-            /* M1 CODES */
-            $header = chr(1).'X'.chr(29).chr(2);
+            $string = [];
              
-            $footer = chr(4);
+            do {
+                $string = str_replace("  ", " ", $this->source_string, $count);
+            } while (
+                $count > 0
+            );
             
-            // $string = str_replace(', ', ',', $this->source_string);
+            
 
-            $string = trim(preg_replace('/\s\s+/', $pipe, $this->source_string));
-            // $string = str_replace(' ', $pipe, $this->source_string);
-            $string = str_replace('%01X%1d%02', $header, $this->source_string);
-            $string = str_replace('%04', $footer, $this->source_string);
+
+            // $string = trim(preg_replace('/\s\s+/', $pipe, $this->source_string));
+            // $string = str_replace('%01X%1d%02', chr(1).'X'. chr(29) . chr(2), $this->source_string);
+            $string = str_replace('%01X', chr(1). 'X', $string);
+            $string = str_replace('%1D', chr(29), $string);
+            $string = str_replace('%02', chr(2), $string);
+            $string = str_replace('%0f0', chr(240), $string);
+            $string = str_replace('%04', chr(4), $string);
+
+$control_char = array(
+ 
+    chr(0), chr(1), chr(2), chr(3), chr(4), chr(5), chr(6), chr(7), chr(8), chr(9), chr(10), chr(11), chr(12), chr(13), chr(14), chr(15), chr(16), chr(17), chr(18), chr(19), chr(20), chr(21), chr(22), chr(23), chr(24), chr(25), chr(26), chr(27), chr(28), chr(29), chr(30), chr(31),
+);
+
      
-            $source_string = $this->source_string;
+            $source_string = $string;
             
             return $source_string;
 
@@ -80,17 +92,17 @@ class McodeFeature extends Model
 
             Log::info("M1 CODE SCANNED");
 
-            /* M2 CODES */
-            $header = chr(1).'Y'.chr(29).chr(2);
-            $pipe = chr(3);
-            $footer = chr(3) . chr(4);
+            // /* M2 CODES */
+            // $header = chr(1).'Y'.chr(29).chr(2);
+            // $pipe = chr(3);
+            // $footer = chr(3) . chr(4);
             
-            $string = trim(preg_replace('/\s\s+/', $pipe, $this->source_string));
-            $string = str_replace(' ', $pipe, $this->source_string);
+            // $string = trim(preg_replace('/\s\s+/', $pipe, $this->source_string));
+            // $string = str_replace(' ', $pipe, $this->source_string);
      
-            $source_string = $header . $this->source_string. $footer;
+            // $source_string = $header . $this->source_string. $footer;
             
-            return $source_string;
+            // return $source_string;
        
        }
 
@@ -114,7 +126,7 @@ class McodeFeature extends Model
 
     public function categories()
     {
-        return $this->belongsToMany(McodeCategory::class, 'mcode_category_mcode_feature', 'mcode_feature_id');
+        return $this->belongsToMany(McodeCategory::class);
     }
 
     protected function serializeDate(DateTimeInterface $date)

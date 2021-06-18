@@ -181,16 +181,31 @@ class McodeController extends Controller
         $feature = McodeFeature::where('id',$featureIDs)->first();
         $categories = McodeCategory::whereIn('id',$categoryIDs)->get();
 
+
+
         $config = ['instanceConfigurator' => function($mpdf) {
-            //$mpdf->SetImportUse();
-            $mpdf->SetDocTemplate(public_path('cover.pdf'), true);
+            //$mpdf = new \Mpdf\Mpdf(['format' => 'A4']);
+            // $mpdf->SetWatermarkText("Paid");
+            // $mpdf->showWatermarkText = true;
+            // $mpdf->watermark_font = 'DejaVuSansCondensed';
+            // $mpdf->watermarkTextAlpha = 0.1;
+            $mpdf->SetDisplayMode('fullwidth');
+            $mpdf->SetDocTemplate(public_path('cover.pdf'), false);
+        
+
+            $mpdf->h2toc = array(
+                'H1' => 0,
+                'H2' => 1,
+                'H3' => 2
+            );
+ 
         }];
        
-        $data = [
-            'content' => 'Code Configuration Guide!'
-        ];
+        // $data = [
+        //     'content' => 'Code Configuration Guide!'
+        // ];
 
-        $pdf = PDF::loadView('mcode::pdf.single-qr-ducument', compact('data','product','feature','categories'),[], $config);
+        $pdf = PDF::loadView('mcode::pdf.single-qr-ducument', compact('product','feature','categories'),[], $config);
         
         return $pdf->stream('document.pdf');
         // return $pdf->download('document.pdf');

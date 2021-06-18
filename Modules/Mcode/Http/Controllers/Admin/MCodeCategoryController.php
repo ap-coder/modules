@@ -20,7 +20,7 @@ class McodeCategoryController extends Controller
 
     public function index(Request $request)
     {
-        abort_if(Gate::denies('mcode_category_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        //abort_if(Gate::denies('mcode_category_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         if ($request->ajax()) {
             $query = McodeCategory::query()->select(sprintf('%s.*', (new McodeCategory())->table));
@@ -59,10 +59,10 @@ class McodeCategoryController extends Controller
             $table->editColumn('image', function ($row) {
                 if ($photo = $row->image) {
                     return sprintf(
-        '<a href="%s" target="_blank"><img src="%s" width="50px" height="50px"></a>',
-        $photo->url,
-        $photo->thumbnail
-    );
+                        '<a href="%s" target="_blank"><img src="%s" width="50px" height="50px"></a>',
+                        $photo->url,
+                        $photo->thumbnail
+                    );
                 }
 
                 return '';
