@@ -20,7 +20,17 @@
       </div>
       <div class="col-md-7">
         {{--  <img class="qr_code_img" src="{{ url('site/img/qr_code.jpg') }}">  --}}
-        {!! QrCode::eyeColor(0, 204,0,0, 204,0,0 )->eyeColor(2, 204,0,0, 0,0,0 )->eyeColor(1, 204,0,0, 0,0,0 )->size(200)->generate($feature->formatted_source_string) !!}
+        {{-- {!! QrCode::size(200)->generate($feature->formatted_source_string) !!} --}}
+
+                        @if(str_starts_with($feature->mcode, 'M2'))
+                       {{--  <img src="data:image/png;base64, '{{ DNS1D::getBarcodePNG($feature->formatted_source_string, 'QRCODE',3,33) }}'" alt="barcode" /> --}}
+                          {!! DNS2D::getBarcodeHTML($feature->formatted_source_string, 'QRCODE') !!}
+                        IT DOES
+                        @else
+                        IT DOES NOT
+                          {!! DNS2D::getBarcodeHTML($feature->formatted_source_string, 'DATAMATRIX') !!}
+                        @endif
+
       </div>
     </div>
   </div>
