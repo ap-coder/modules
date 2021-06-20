@@ -207,7 +207,8 @@ class McodeController extends Controller
 
         $pdf = PDF::loadView('mcode::pdf.single-qr-ducument', compact('product','feature','categories'),[], $config);
         
-        return $pdf->stream('document.pdf');
+        $name=$product->name.'_'.$feature->mcode.'_config.pdf';
+        return $pdf->stream($name);
         // return $pdf->download('document.pdf');
 
     }

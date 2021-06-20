@@ -95,7 +95,7 @@
 
     <input type="hidden" name="productID" id="productID">
     <input type="hidden" name="categoryIDs" id="categoryIDs">
-    <input type="text" name="featureIDs" id="featureIDs">
+    <input type="hidden" name="featureIDs" id="featureIDs">
   </form>
 
 </section>
