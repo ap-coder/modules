@@ -82,10 +82,11 @@ class McodeController extends Controller
         $productID=$request->productID;
         $product = Mcode::where('id',$productID)->first();
         $feature = McodeFeature::where('id',$request->id)->first();
-
-        dd($feature->formatted_source_string);
+ 
         $html = view('mcode::site.mcodes.steps.qr-modal', compact('feature','product'))->render();
+
         $data['html']=$html;
+
         echo json_encode($data);
     }
 
@@ -109,7 +110,7 @@ class McodeController extends Controller
         $categories = McodeCategory::whereIn('id',$categoryIDs)->get();
 
     
-            $source_strings = implode(' ', $features->pluck('mcode')->toArray());
+            $source_strings = implode(' ', $features->pluck('source_string')->toArray());
 
             // $dd($source_string);
 
