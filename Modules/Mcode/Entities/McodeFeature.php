@@ -59,6 +59,7 @@ class McodeFeature extends Model
         if (str_starts_with($this->source_string, '%01X')) {
 
             Log::info("M1 CODE SCANNED");
+
             $string = [];
              
             do {
@@ -76,10 +77,7 @@ class McodeFeature extends Model
             $string = str_replace('%1D', chr(29), $string);
             $string = str_replace('%02', chr(2), $string);
             $string = str_replace('%0f0', chr(240), $string);
-            $string = str_replace('%04', chr(4), $string);
-
-
-     
+            $string = str_replace('%04', chr(4), $string); 
             $source_string = $string;
             
             return $source_string;

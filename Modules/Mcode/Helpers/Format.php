@@ -7,17 +7,18 @@ class Format
 {
 	public static function combinedSource (string $string)
 	{
-   		if (str_starts_with($string, '%01X%1d%02')) {
+   		if (str_starts_with($string, '%01X')) {
 
             Log::info("M1 CODE SCANNED");
             
+            $string = [];
             /* M1 CODES */
             $string = str_replace('%01X', chr(1). 'X', $string);
             $string = str_replace('%1D', chr(29), $string);
             $string = str_replace('%02', chr(2), $string);
             $string = str_replace('%0f0', chr(240), $string);
-            $string = str_replace('%04', chr(4), $string)
-     
+            $string = str_replace('%04', chr(4), $string);
+	           
             $source_string = $string;
             
             return $source_string;
@@ -51,4 +52,7 @@ class Format
 		// $source_string = $header . $source_string . $footer;
 		// return $source_string;		
 	}
+
+ 
+  
 }

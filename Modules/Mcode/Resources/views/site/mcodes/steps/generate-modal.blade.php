@@ -1,3 +1,9 @@
+@php
+    // $ss=implode(' ', $features->pluck('source_string')->toArray());
+
+    // $string = Modules\Mcode\Helpers\Format::combinedSource($ss);
+@endphp
+
 <!-- Modal Header -->
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -16,25 +22,34 @@
         <h2>Includes</h2>
         <ul>
           @foreach ($features as $feature)
-            <li>{{ $feature->description ?? '' }} <br> <span>{{ $feature->mcode ?? '' }}</span></li>
+            <li>{!! $feature->description ?? '' !!} <br> <span>{!! $feature->mcode ?? '' !!}</span></li>
           @endforeach
         </ul>
       </div>
       <div class="col-md-7">
          {{-- <img class="qr_code_img" src="{{ url('site/img/qr_code.jpg') }}"> --}}
-        @php
-            $mcodes=implode(' ',$features->pluck('mcode')->toArray());
-            $string = Modules\Mcode\Helpers\Format::combinedSource($mcodes);
-        @endphp
 
-        <img class="img-fluid" src="data:image/png;base64, {!! base64_encode(QrCode::eyeColor(0, 204,0,0, 204,0,0 )->eyeColor(2, 204,0,0, 0,0,0 )->eyeColor(1, 204,0,0, 0,0,0 )->format('png')->size(300)->generate($string)) !!} ">
+
+
+          blah blah blah 
+
+            {{-- {!! dump($ss) !!} --}}
+
+            {{-- @if(str_starts_with($feature->mcode, 'M2'))
+            CODE HERE: {!! dump($feature->formatted_source_string) !!} 
+            <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'QRCODE',10,10) . '" alt="barcode"   />'; ?>
+            @else
+            CODE HERE: {!!  dump($feature->formatted_source_string)  !!} 
+            <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'DATAMATRIX',10,10) . '" alt="barcode"   />'; ?>
+            @endif --}}
+   
       </div>
     </div>
 
     <div class="row" id="saprater" style="display: none;">
       @foreach ($features as $key => $feature)
       <div class="col-md-6 saprater @if($key % 2 == 0) sapraterBorder @endif">
-        {!! QrCode::eyeColor(0, 204,0,0, 204,0,0 )->eyeColor(2, 204,0,0, 0,0,0 )->eyeColor(1, 204,0,0, 0,0,0 )->size(150)->generate($feature->formatted_source_string) !!}
+        {{-- {!! QrCode::size(150)->generate($feature->formatted_source_string) !!} --}}
         {{-- <h2>{{ $feature->mcode ?? '' }}</h2> --}}
         <h3>{{ $feature->description ?? '' }}</h3>
         <span>{{ $feature->mcode ?? '' }}</span>
