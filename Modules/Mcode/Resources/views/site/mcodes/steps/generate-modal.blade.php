@@ -1,7 +1,6 @@
 @php
-    // $ss=implode(' ', $features->pluck('source_string')->toArray());
-
-    // $string = Modules\Mcode\Helpers\Format::combinedSource($ss);
+    $ss = implode(' ', $features->pluck('source_string')->toArray());
+    $ss = Modules\Mcode\Helpers\Format::combinedSource($ss);
 @endphp
 
 <!-- Modal Header -->
@@ -28,31 +27,32 @@
       </div>
       <div class="col-md-7">
          {{-- <img class="qr_code_img" src="{{ url('site/img/qr_code.jpg') }}"> --}}
-
-
-
-          blah blah blah 
-
+ 
             {{-- {!! dump($ss) !!} --}}
 
-            {{-- @if(str_starts_with($feature->mcode, 'M2'))
-            CODE HERE: {!! dump($feature->formatted_source_string) !!} 
-            <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'QRCODE',10,10) . '" alt="barcode"   />'; ?>
+            @if(str_starts_with($feature->mcode, 'M2'))
+            {{-- CODE HERE: {!! dump($feature->formatted_source_string) !!}  --}}
+            <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($ss, 'QRCODE',10,10) . '" alt="barcode"   />'; ?>
             @else
-            CODE HERE: {!!  dump($feature->formatted_source_string)  !!} 
-            <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'DATAMATRIX',10,10) . '" alt="barcode"   />'; ?>
-            @endif --}}
+            {{-- CODE HERE: {!!  dump($feature->formatted_source_string)  !!}  --}}
+            <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($ss, 'DATAMATRIX',10,10) . '" alt="barcode"   />'; ?>
+            @endif
    
       </div>
     </div>
 
     <div class="row" id="saprater" style="display: none;">
       @foreach ($features as $key => $feature)
-      <div class="col-md-6 saprater @if($key % 2 == 0) sapraterBorder @endif">
+      <div class="col-md-6 saprater @if($key % 2 == 0) sapraterBorder @endif" style="text-align:center;">
+            <h2>{{ $feature->mcode ?? '' }}</h2>
         {{-- {!! QrCode::size(150)->generate($feature->formatted_source_string) !!} --}}
-        {{-- <h2>{{ $feature->mcode ?? '' }}</h2> --}}
+            @if(str_starts_with($feature->mcode, 'M2'))
+            <?php echo '<img width="150px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'QRCODE',10,10) . '" alt="barcode"   />'; ?>
+            @else
+            <?php echo '<img width="150px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'DATAMATRIX',10,10) . '" alt="barcode"   />'; ?>
+            @endif
         <h3>{{ $feature->description ?? '' }}</h3>
-        <span>{{ $feature->mcode ?? '' }}</span>
+     
       </div>
       @endforeach
     </div>

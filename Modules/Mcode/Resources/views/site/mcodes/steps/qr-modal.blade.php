@@ -14,28 +14,8 @@
       <div class="col-md-6">
  
 
-        @if(str_starts_with($feature->mcode, 'M2'))
-        CODE HERE: {!! $feature->formatted_source_string !!} 
-        <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'QRCODE',10,10) . '" alt="barcode"   />'; ?>
-          {{-- <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'QRCODE',10,10) . '" alt="barcode"   />'; ?> --}}
-        IT DOES
-        @else
-        IT DOES NOT <br>
-        CODE HERE: {!!  $feature->formatted_source_string  !!} 
-        <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'DATAMATRIX',10,10) . '" alt="barcode"   />'; ?>
-          {{-- <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'DATAMATRIX',10,10). '" alt="barcode"   />'; ?> --}}
-        @endif
 
-
-                   {{--      @if(str_starts_with($feature->mcode, 'M2'))
-                        
-                          <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodeHTML($feature->formatted_source_string, 'QRCODE') . '" alt="barcode"   />'; ?>
-                        IT DOES
-                        @else
-                        IT DOES NOT
-                          <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodeHTML($feature->formatted_source_string, 'DATAMATRIX'). '" alt="barcode"   />'; ?>
-                        @endif --}}
-
+ 
       </div>
       <div class="col-md-6">
         <h2>Includes</h2>

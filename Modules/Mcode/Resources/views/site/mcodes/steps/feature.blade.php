@@ -1,5 +1,5 @@
 
-
+<div class="container">
     <div class="mcode_step_holder feature_holder">
       <div class="feature-filter row">
         <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12">
@@ -26,7 +26,8 @@
                 </div>
                 @foreach ($filterCategories as $category)
                 <div class="checkboxlabel">
-                  {{ $category->name }} <label class="checkbox">
+                  {{ $category->name }} 
+                  <label class="checkbox">
                     <input type="checkbox" name="filtercategory[]" value="{{ $category->id }}">
                     <span class="primary"></span>
                   </label>
@@ -103,26 +104,17 @@
 
                             @foreach($category->categoriesMcodeFeatures as $feature)
                             <li class="table-row">
-                              <div class="col col-2" data-label="Code">{{ $feature->mcode ?? '' }}</div>
-                              <div class="col col-7 feturedesc text-3" data-label="Description">{{ $feature->description ?? '' }}</div>
+                              <div class="col col-2 text-4" data-label="Code">{{ $feature->mcode ?? '' }}</div>
+                              <div class="col col-7 feturedesc text-3" data-label="Description">{{ $feature->description ?? '' }} <?php // dump($feature->formatted_source_string) ?></div>
                               <div class="col col-2 openQrModal" data-label="Barcode" mid="{{ $feature->id }}">
                                 <img src="{{  asset('site/img/modules/qr_click.png') }}" alt="qr click icon" title="Click To Open">
-                                 {{-- {!! QrCode::generate($feature->formatted_source_string) !!} --}} 
-                                     new qr
-                                 
-                                   {{-- @php dd($feature->formatted_source_string) @endphp --}}
-<?php dump($feature->formatted_source_string)?>
-                                   {!! $feature->formatted_source_string !!}
+                              
 
-                        @if(str_starts_with($feature->mcode, 'M1'))            
-                        <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'DATAMATRIX',5,5) . '" alt="barcode"   />'; ?>
-                        IT DOES
-
-                        @else
-                        IT DOES NOT
-                        {{-- {!! DNS2D::getBarcodeHTML($feature->formatted_source_string, 'DATAMATRIX') !!} --}}
-                       
-                        @endif
+                                {{-- @if(str_starts_with($feature->mcode, 'M1'))            
+                                <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'DATAMATRIX',5,5) . '" alt="barcode"   />'; ?>
+                                @else
+                                <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'QRCODE',5,5) . '" alt="barcode"   />'; ?>                       
+                                @endif --}}
                               </div>
                               <div class="col col-1 selectfeture" data-label="Select">
                                 <label class="checkbox">
@@ -152,4 +144,4 @@
         </div>
       
     </div>
- 
+ </div>
