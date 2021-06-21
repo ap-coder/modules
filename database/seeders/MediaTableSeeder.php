@@ -201,26 +201,6 @@ class MediaTableSeeder extends Seeder
             ),
             9 => 
             array (
-                'id' => 12,
-                'model_type' => 'Modules\\Mcode\\Entities\\Mcode',
-                'model_id' => 13,
-                'uuid' => '5de7e140-d7b1-4561-86ad-9859a615a10e',
-                'collection_name' => 'photo',
-                'name' => '60ae9400d12b4_6000-iso-cropped',
-                'file_name' => '60ae9400d12b4_6000-iso-cropped.png',
-                'mime_type' => 'image/png',
-                'disk' => 'public',
-                'conversions_disk' => 'public',
-                'size' => 55120,
-                'manipulations' => '[]',
-                'custom_properties' => '{"generated_conversions":{"thumb":true,"preview":true,"product":true}}',
-                'responsive_images' => '[]',
-                'order_column' => 12,
-                'created_at' => '2021-05-26 18:31:38',
-                'updated_at' => '2021-05-26 18:31:38',
-            ),
-            10 => 
-            array (
                 'id' => 13,
                 'model_type' => 'Modules\\Mcode\\Entities\\Mcode',
                 'model_id' => 14,
@@ -239,7 +219,7 @@ class MediaTableSeeder extends Seeder
                 'created_at' => '2021-05-26 18:32:37',
                 'updated_at' => '2021-05-26 18:32:38',
             ),
-            11 => 
+            10 => 
             array (
                 'id' => 14,
                 'model_type' => 'Modules\\Mcode\\Entities\\Mcode',
@@ -259,7 +239,7 @@ class MediaTableSeeder extends Seeder
                 'created_at' => '2021-05-26 18:34:30',
                 'updated_at' => '2021-05-26 18:34:31',
             ),
-            12 => 
+            11 => 
             array (
                 'id' => 15,
                 'model_type' => 'Modules\\Mcode\\Entities\\Mcode',
@@ -279,7 +259,7 @@ class MediaTableSeeder extends Seeder
                 'created_at' => '2021-05-26 18:35:31',
                 'updated_at' => '2021-05-26 18:35:31',
             ),
-            13 => 
+            12 => 
             array (
                 'id' => 16,
                 'model_type' => 'Modules\\Mcode\\Entities\\Mcode',
@@ -299,7 +279,7 @@ class MediaTableSeeder extends Seeder
                 'created_at' => '2021-05-26 18:36:11',
                 'updated_at' => '2021-05-26 18:36:12',
             ),
-            14 => 
+            13 => 
             array (
                 'id' => 17,
                 'model_type' => 'Modules\\Mcode\\Entities\\Mcode',
@@ -319,7 +299,7 @@ class MediaTableSeeder extends Seeder
                 'created_at' => '2021-05-26 18:53:07',
                 'updated_at' => '2021-05-26 18:53:08',
             ),
-            15 => 
+            14 => 
             array (
                 'id' => 18,
                 'model_type' => 'Modules\\Mcode\\Entities\\Mcode',
@@ -338,6 +318,46 @@ class MediaTableSeeder extends Seeder
                 'order_column' => 18,
                 'created_at' => '2021-05-26 19:01:39',
                 'updated_at' => '2021-05-26 19:01:40',
+            ),
+            15 => 
+            array (
+                'id' => 20,
+                'model_type' => 'Modules\\Mcode\\Entities\\Mcode',
+                'model_id' => 15,
+                'uuid' => '85191887-c74a-4884-9705-06dd32096bfb',
+                'collection_name' => 'photo',
+                'name' => '8000_iso_600x600_2',
+                'file_name' => '8000_iso_600x600_2.png_xnrgk',
+                'mime_type' => 'image/png',
+                'disk' => 'public',
+                'conversions_disk' => 'public',
+                'size' => 377451,
+                'manipulations' => '[]',
+                'custom_properties' => '{"generated_conversions":{"thumb":true,"preview":true,"product":true}}',
+                'responsive_images' => '[]',
+                'order_column' => 20,
+                'created_at' => '2021-06-18 22:34:21',
+                'updated_at' => '2021-06-18 22:34:22',
+            ),
+            16 => 
+            array (
+                'id' => 21,
+                'model_type' => 'Modules\\Mcode\\Entities\\Mcode',
+                'model_id' => 13,
+                'uuid' => '7c8f8825-6923-4713-8cc3-0f591dab1bb3',
+                'collection_name' => 'photo',
+                'name' => '6000_iso_600x600_1',
+                'file_name' => '6000_iso_600x600_1.png_xfyb5',
+                'mime_type' => 'image/png',
+                'disk' => 'public',
+                'conversions_disk' => 'public',
+                'size' => 163769,
+                'manipulations' => '[]',
+                'custom_properties' => '{"generated_conversions":{"thumb":true,"preview":true,"product":true}}',
+                'responsive_images' => '[]',
+                'order_column' => 21,
+                'created_at' => '2021-06-18 22:38:27',
+                'updated_at' => '2021-06-18 22:38:27',
             ),
         ));
         

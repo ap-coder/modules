@@ -25,6 +25,8 @@
 		 margin-top: 2.5cm;
 
 }
+
+
  
 @page cover-page {
    		header: _blank;
@@ -60,6 +62,7 @@ div.singleqr{
 	/*page-break-before: right;*/
 	page: single-qr;
 	header:page-header; 
+
 }
 
 
@@ -79,7 +82,7 @@ div.noheader {
     page: noheader;
 }
 
-
+h1.roboto {font-family: "Archivo Black"!important;color: blue;font-weight:700; }
 
 div.mpdf_toc {
     font-family: sans-serif;
@@ -136,3 +139,5 @@ span.mpdf_toc_t_level_2 {}
 
 /* Page no. level 2 - may be inside <a> */
 span.mpdf_toc_p_level_2 {}
+
+

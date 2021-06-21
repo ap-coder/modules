@@ -78,10 +78,6 @@ class McodeFeature extends Model
             $string = str_replace('%0f0', chr(240), $string);
             $string = str_replace('%04', chr(4), $string);
 
-$control_char = array(
- 
-    chr(0), chr(1), chr(2), chr(3), chr(4), chr(5), chr(6), chr(7), chr(8), chr(9), chr(10), chr(11), chr(12), chr(13), chr(14), chr(15), chr(16), chr(17), chr(18), chr(19), chr(20), chr(21), chr(22), chr(23), chr(24), chr(25), chr(26), chr(27), chr(28), chr(29), chr(30), chr(31),
-);
 
      
             $source_string = $string;
@@ -90,19 +86,19 @@ $control_char = array(
 
         }else{
 
-            Log::info("M1 CODE SCANNED");
+            Log::info("M2 CODE SCANNED");
 
-            // /* M2 CODES */
-            // $header = chr(1).'Y'.chr(29).chr(2);
-            // $pipe = chr(3);
-            // $footer = chr(3) . chr(4);
+            /* M2 CODES */
+            $header = chr(1).'Y'.chr(29).chr(2);
+            $pipe = chr(3);
+            $footer = chr(3) . chr(4);
             
-            // $string = trim(preg_replace('/\s\s+/', $pipe, $this->source_string));
-            // $string = str_replace(' ', $pipe, $this->source_string);
+            $string = trim(preg_replace('/\s\s+/', $pipe, $this->source_string));
+            $string = str_replace(' ', $pipe, $string);
      
-            // $source_string = $header . $this->source_string. $footer;
+            $source_string = $header . $string. $footer;
             
-            // return $source_string;
+            return $source_string;
        
        }
 

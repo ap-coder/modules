@@ -2129,6 +2129,1403 @@ class McodeCategoryMcodeFeatureTableSeeder extends Seeder
                 'mcode_feature_id' => 422,
                 'mcode_category_id' => 17,
             ),
+            422 => 
+            array (
+                'mcode_feature_id' => 596,
+                'mcode_category_id' => 19,
+            ),
+            423 => 
+            array (
+                'mcode_feature_id' => 585,
+                'mcode_category_id' => 19,
+            ),
+            424 => 
+            array (
+                'mcode_feature_id' => 586,
+                'mcode_category_id' => 19,
+            ),
+            425 => 
+            array (
+                'mcode_feature_id' => 587,
+                'mcode_category_id' => 19,
+            ),
+            426 => 
+            array (
+                'mcode_feature_id' => 588,
+                'mcode_category_id' => 19,
+            ),
+            427 => 
+            array (
+                'mcode_feature_id' => 589,
+                'mcode_category_id' => 19,
+            ),
+            428 => 
+            array (
+                'mcode_feature_id' => 590,
+                'mcode_category_id' => 19,
+            ),
+            429 => 
+            array (
+                'mcode_feature_id' => 591,
+                'mcode_category_id' => 19,
+            ),
+            430 => 
+            array (
+                'mcode_feature_id' => 592,
+                'mcode_category_id' => 19,
+            ),
+            431 => 
+            array (
+                'mcode_feature_id' => 593,
+                'mcode_category_id' => 19,
+            ),
+            432 => 
+            array (
+                'mcode_feature_id' => 594,
+                'mcode_category_id' => 19,
+            ),
+            433 => 
+            array (
+                'mcode_feature_id' => 595,
+                'mcode_category_id' => 19,
+            ),
+            434 => 
+            array (
+                'mcode_feature_id' => 427,
+                'mcode_category_id' => 7,
+            ),
+            435 => 
+            array (
+                'mcode_feature_id' => 428,
+                'mcode_category_id' => 7,
+            ),
+            436 => 
+            array (
+                'mcode_feature_id' => 429,
+                'mcode_category_id' => 7,
+            ),
+            437 => 
+            array (
+                'mcode_feature_id' => 430,
+                'mcode_category_id' => 7,
+            ),
+            438 => 
+            array (
+                'mcode_feature_id' => 431,
+                'mcode_category_id' => 7,
+            ),
+            439 => 
+            array (
+                'mcode_feature_id' => 432,
+                'mcode_category_id' => 7,
+            ),
+            440 => 
+            array (
+                'mcode_feature_id' => 433,
+                'mcode_category_id' => 7,
+            ),
+            441 => 
+            array (
+                'mcode_feature_id' => 434,
+                'mcode_category_id' => 15,
+            ),
+            442 => 
+            array (
+                'mcode_feature_id' => 435,
+                'mcode_category_id' => 15,
+            ),
+            443 => 
+            array (
+                'mcode_feature_id' => 436,
+                'mcode_category_id' => 15,
+            ),
+            444 => 
+            array (
+                'mcode_feature_id' => 437,
+                'mcode_category_id' => 15,
+            ),
+            445 => 
+            array (
+                'mcode_feature_id' => 438,
+                'mcode_category_id' => 15,
+            ),
+            446 => 
+            array (
+                'mcode_feature_id' => 439,
+                'mcode_category_id' => 15,
+            ),
+            447 => 
+            array (
+                'mcode_feature_id' => 440,
+                'mcode_category_id' => 15,
+            ),
+            448 => 
+            array (
+                'mcode_feature_id' => 441,
+                'mcode_category_id' => 15,
+            ),
+            449 => 
+            array (
+                'mcode_feature_id' => 442,
+                'mcode_category_id' => 15,
+            ),
+            450 => 
+            array (
+                'mcode_feature_id' => 443,
+                'mcode_category_id' => 15,
+            ),
+            451 => 
+            array (
+                'mcode_feature_id' => 444,
+                'mcode_category_id' => 15,
+            ),
+            452 => 
+            array (
+                'mcode_feature_id' => 445,
+                'mcode_category_id' => 15,
+            ),
+            453 => 
+            array (
+                'mcode_feature_id' => 446,
+                'mcode_category_id' => 15,
+            ),
+            454 => 
+            array (
+                'mcode_feature_id' => 447,
+                'mcode_category_id' => 15,
+            ),
+            455 => 
+            array (
+                'mcode_feature_id' => 448,
+                'mcode_category_id' => 15,
+            ),
+            456 => 
+            array (
+                'mcode_feature_id' => 449,
+                'mcode_category_id' => 15,
+            ),
+            457 => 
+            array (
+                'mcode_feature_id' => 450,
+                'mcode_category_id' => 15,
+            ),
+            458 => 
+            array (
+                'mcode_feature_id' => 451,
+                'mcode_category_id' => 15,
+            ),
+            459 => 
+            array (
+                'mcode_feature_id' => 452,
+                'mcode_category_id' => 15,
+            ),
+            460 => 
+            array (
+                'mcode_feature_id' => 453,
+                'mcode_category_id' => 15,
+            ),
+            461 => 
+            array (
+                'mcode_feature_id' => 454,
+                'mcode_category_id' => 15,
+            ),
+            462 => 
+            array (
+                'mcode_feature_id' => 455,
+                'mcode_category_id' => 15,
+            ),
+            463 => 
+            array (
+                'mcode_feature_id' => 456,
+                'mcode_category_id' => 15,
+            ),
+            464 => 
+            array (
+                'mcode_feature_id' => 457,
+                'mcode_category_id' => 15,
+            ),
+            465 => 
+            array (
+                'mcode_feature_id' => 458,
+                'mcode_category_id' => 15,
+            ),
+            466 => 
+            array (
+                'mcode_feature_id' => 459,
+                'mcode_category_id' => 15,
+            ),
+            467 => 
+            array (
+                'mcode_feature_id' => 460,
+                'mcode_category_id' => 15,
+            ),
+            468 => 
+            array (
+                'mcode_feature_id' => 461,
+                'mcode_category_id' => 15,
+            ),
+            469 => 
+            array (
+                'mcode_feature_id' => 462,
+                'mcode_category_id' => 15,
+            ),
+            470 => 
+            array (
+                'mcode_feature_id' => 463,
+                'mcode_category_id' => 15,
+            ),
+            471 => 
+            array (
+                'mcode_feature_id' => 464,
+                'mcode_category_id' => 15,
+            ),
+            472 => 
+            array (
+                'mcode_feature_id' => 465,
+                'mcode_category_id' => 15,
+            ),
+            473 => 
+            array (
+                'mcode_feature_id' => 466,
+                'mcode_category_id' => 15,
+            ),
+            474 => 
+            array (
+                'mcode_feature_id' => 467,
+                'mcode_category_id' => 15,
+            ),
+            475 => 
+            array (
+                'mcode_feature_id' => 468,
+                'mcode_category_id' => 15,
+            ),
+            476 => 
+            array (
+                'mcode_feature_id' => 469,
+                'mcode_category_id' => 15,
+            ),
+            477 => 
+            array (
+                'mcode_feature_id' => 470,
+                'mcode_category_id' => 15,
+            ),
+            478 => 
+            array (
+                'mcode_feature_id' => 471,
+                'mcode_category_id' => 15,
+            ),
+            479 => 
+            array (
+                'mcode_feature_id' => 472,
+                'mcode_category_id' => 15,
+            ),
+            480 => 
+            array (
+                'mcode_feature_id' => 473,
+                'mcode_category_id' => 15,
+            ),
+            481 => 
+            array (
+                'mcode_feature_id' => 474,
+                'mcode_category_id' => 15,
+            ),
+            482 => 
+            array (
+                'mcode_feature_id' => 475,
+                'mcode_category_id' => 15,
+            ),
+            483 => 
+            array (
+                'mcode_feature_id' => 476,
+                'mcode_category_id' => 15,
+            ),
+            484 => 
+            array (
+                'mcode_feature_id' => 477,
+                'mcode_category_id' => 15,
+            ),
+            485 => 
+            array (
+                'mcode_feature_id' => 478,
+                'mcode_category_id' => 15,
+            ),
+            486 => 
+            array (
+                'mcode_feature_id' => 479,
+                'mcode_category_id' => 15,
+            ),
+            487 => 
+            array (
+                'mcode_feature_id' => 480,
+                'mcode_category_id' => 15,
+            ),
+            488 => 
+            array (
+                'mcode_feature_id' => 481,
+                'mcode_category_id' => 15,
+            ),
+            489 => 
+            array (
+                'mcode_feature_id' => 482,
+                'mcode_category_id' => 15,
+            ),
+            490 => 
+            array (
+                'mcode_feature_id' => 483,
+                'mcode_category_id' => 15,
+            ),
+            491 => 
+            array (
+                'mcode_feature_id' => 484,
+                'mcode_category_id' => 15,
+            ),
+            492 => 
+            array (
+                'mcode_feature_id' => 485,
+                'mcode_category_id' => 15,
+            ),
+            493 => 
+            array (
+                'mcode_feature_id' => 486,
+                'mcode_category_id' => 15,
+            ),
+            494 => 
+            array (
+                'mcode_feature_id' => 487,
+                'mcode_category_id' => 15,
+            ),
+            495 => 
+            array (
+                'mcode_feature_id' => 488,
+                'mcode_category_id' => 15,
+            ),
+            496 => 
+            array (
+                'mcode_feature_id' => 489,
+                'mcode_category_id' => 15,
+            ),
+            497 => 
+            array (
+                'mcode_feature_id' => 490,
+                'mcode_category_id' => 15,
+            ),
+            498 => 
+            array (
+                'mcode_feature_id' => 491,
+                'mcode_category_id' => 15,
+            ),
+            499 => 
+            array (
+                'mcode_feature_id' => 492,
+                'mcode_category_id' => 15,
+            ),
+        ));
+        \DB::table('mcode_category_mcode_feature')->insert(array (
+            0 => 
+            array (
+                'mcode_feature_id' => 493,
+                'mcode_category_id' => 15,
+            ),
+            1 => 
+            array (
+                'mcode_feature_id' => 494,
+                'mcode_category_id' => 15,
+            ),
+            2 => 
+            array (
+                'mcode_feature_id' => 495,
+                'mcode_category_id' => 15,
+            ),
+            3 => 
+            array (
+                'mcode_feature_id' => 496,
+                'mcode_category_id' => 15,
+            ),
+            4 => 
+            array (
+                'mcode_feature_id' => 497,
+                'mcode_category_id' => 10,
+            ),
+            5 => 
+            array (
+                'mcode_feature_id' => 498,
+                'mcode_category_id' => 10,
+            ),
+            6 => 
+            array (
+                'mcode_feature_id' => 499,
+                'mcode_category_id' => 7,
+            ),
+            7 => 
+            array (
+                'mcode_feature_id' => 500,
+                'mcode_category_id' => 7,
+            ),
+            8 => 
+            array (
+                'mcode_feature_id' => 501,
+                'mcode_category_id' => 4,
+            ),
+            9 => 
+            array (
+                'mcode_feature_id' => 502,
+                'mcode_category_id' => 4,
+            ),
+            10 => 
+            array (
+                'mcode_feature_id' => 503,
+                'mcode_category_id' => 4,
+            ),
+            11 => 
+            array (
+                'mcode_feature_id' => 504,
+                'mcode_category_id' => 4,
+            ),
+            12 => 
+            array (
+                'mcode_feature_id' => 505,
+                'mcode_category_id' => 4,
+            ),
+            13 => 
+            array (
+                'mcode_feature_id' => 506,
+                'mcode_category_id' => 4,
+            ),
+            14 => 
+            array (
+                'mcode_feature_id' => 507,
+                'mcode_category_id' => 4,
+            ),
+            15 => 
+            array (
+                'mcode_feature_id' => 508,
+                'mcode_category_id' => 4,
+            ),
+            16 => 
+            array (
+                'mcode_feature_id' => 509,
+                'mcode_category_id' => 4,
+            ),
+            17 => 
+            array (
+                'mcode_feature_id' => 510,
+                'mcode_category_id' => 4,
+            ),
+            18 => 
+            array (
+                'mcode_feature_id' => 511,
+                'mcode_category_id' => 11,
+            ),
+            19 => 
+            array (
+                'mcode_feature_id' => 512,
+                'mcode_category_id' => 11,
+            ),
+            20 => 
+            array (
+                'mcode_feature_id' => 513,
+                'mcode_category_id' => 12,
+            ),
+            21 => 
+            array (
+                'mcode_feature_id' => 514,
+                'mcode_category_id' => 12,
+            ),
+            22 => 
+            array (
+                'mcode_feature_id' => 515,
+                'mcode_category_id' => 18,
+            ),
+            23 => 
+            array (
+                'mcode_feature_id' => 516,
+                'mcode_category_id' => 18,
+            ),
+            24 => 
+            array (
+                'mcode_feature_id' => 517,
+                'mcode_category_id' => 18,
+            ),
+            25 => 
+            array (
+                'mcode_feature_id' => 518,
+                'mcode_category_id' => 18,
+            ),
+            26 => 
+            array (
+                'mcode_feature_id' => 519,
+                'mcode_category_id' => 14,
+            ),
+            27 => 
+            array (
+                'mcode_feature_id' => 520,
+                'mcode_category_id' => 14,
+            ),
+            28 => 
+            array (
+                'mcode_feature_id' => 521,
+                'mcode_category_id' => 14,
+            ),
+            29 => 
+            array (
+                'mcode_feature_id' => 522,
+                'mcode_category_id' => 14,
+            ),
+            30 => 
+            array (
+                'mcode_feature_id' => 523,
+                'mcode_category_id' => 14,
+            ),
+            31 => 
+            array (
+                'mcode_feature_id' => 524,
+                'mcode_category_id' => 14,
+            ),
+            32 => 
+            array (
+                'mcode_feature_id' => 525,
+                'mcode_category_id' => 14,
+            ),
+            33 => 
+            array (
+                'mcode_feature_id' => 526,
+                'mcode_category_id' => 14,
+            ),
+            34 => 
+            array (
+                'mcode_feature_id' => 527,
+                'mcode_category_id' => 14,
+            ),
+            35 => 
+            array (
+                'mcode_feature_id' => 528,
+                'mcode_category_id' => 7,
+            ),
+            36 => 
+            array (
+                'mcode_feature_id' => 529,
+                'mcode_category_id' => 7,
+            ),
+            37 => 
+            array (
+                'mcode_feature_id' => 530,
+                'mcode_category_id' => 11,
+            ),
+            38 => 
+            array (
+                'mcode_feature_id' => 531,
+                'mcode_category_id' => 12,
+            ),
+            39 => 
+            array (
+                'mcode_feature_id' => 532,
+                'mcode_category_id' => 18,
+            ),
+            40 => 
+            array (
+                'mcode_feature_id' => 533,
+                'mcode_category_id' => 18,
+            ),
+            41 => 
+            array (
+                'mcode_feature_id' => 534,
+                'mcode_category_id' => 18,
+            ),
+            42 => 
+            array (
+                'mcode_feature_id' => 535,
+                'mcode_category_id' => 18,
+            ),
+            43 => 
+            array (
+                'mcode_feature_id' => 536,
+                'mcode_category_id' => 4,
+            ),
+            44 => 
+            array (
+                'mcode_feature_id' => 537,
+                'mcode_category_id' => 4,
+            ),
+            45 => 
+            array (
+                'mcode_feature_id' => 538,
+                'mcode_category_id' => 4,
+            ),
+            46 => 
+            array (
+                'mcode_feature_id' => 539,
+                'mcode_category_id' => 15,
+            ),
+            47 => 
+            array (
+                'mcode_feature_id' => 540,
+                'mcode_category_id' => 15,
+            ),
+            48 => 
+            array (
+                'mcode_feature_id' => 541,
+                'mcode_category_id' => 15,
+            ),
+            49 => 
+            array (
+                'mcode_feature_id' => 542,
+                'mcode_category_id' => 15,
+            ),
+            50 => 
+            array (
+                'mcode_feature_id' => 543,
+                'mcode_category_id' => 15,
+            ),
+            51 => 
+            array (
+                'mcode_feature_id' => 544,
+                'mcode_category_id' => 15,
+            ),
+            52 => 
+            array (
+                'mcode_feature_id' => 545,
+                'mcode_category_id' => 15,
+            ),
+            53 => 
+            array (
+                'mcode_feature_id' => 546,
+                'mcode_category_id' => 15,
+            ),
+            54 => 
+            array (
+                'mcode_feature_id' => 547,
+                'mcode_category_id' => 15,
+            ),
+            55 => 
+            array (
+                'mcode_feature_id' => 548,
+                'mcode_category_id' => 15,
+            ),
+            56 => 
+            array (
+                'mcode_feature_id' => 549,
+                'mcode_category_id' => 15,
+            ),
+            57 => 
+            array (
+                'mcode_feature_id' => 550,
+                'mcode_category_id' => 15,
+            ),
+            58 => 
+            array (
+                'mcode_feature_id' => 551,
+                'mcode_category_id' => 15,
+            ),
+            59 => 
+            array (
+                'mcode_feature_id' => 552,
+                'mcode_category_id' => 15,
+            ),
+            60 => 
+            array (
+                'mcode_feature_id' => 553,
+                'mcode_category_id' => 15,
+            ),
+            61 => 
+            array (
+                'mcode_feature_id' => 554,
+                'mcode_category_id' => 15,
+            ),
+            62 => 
+            array (
+                'mcode_feature_id' => 555,
+                'mcode_category_id' => 15,
+            ),
+            63 => 
+            array (
+                'mcode_feature_id' => 556,
+                'mcode_category_id' => 15,
+            ),
+            64 => 
+            array (
+                'mcode_feature_id' => 557,
+                'mcode_category_id' => 15,
+            ),
+            65 => 
+            array (
+                'mcode_feature_id' => 558,
+                'mcode_category_id' => 15,
+            ),
+            66 => 
+            array (
+                'mcode_feature_id' => 559,
+                'mcode_category_id' => 15,
+            ),
+            67 => 
+            array (
+                'mcode_feature_id' => 560,
+                'mcode_category_id' => 15,
+            ),
+            68 => 
+            array (
+                'mcode_feature_id' => 561,
+                'mcode_category_id' => 15,
+            ),
+            69 => 
+            array (
+                'mcode_feature_id' => 562,
+                'mcode_category_id' => 15,
+            ),
+            70 => 
+            array (
+                'mcode_feature_id' => 563,
+                'mcode_category_id' => 15,
+            ),
+            71 => 
+            array (
+                'mcode_feature_id' => 564,
+                'mcode_category_id' => 15,
+            ),
+            72 => 
+            array (
+                'mcode_feature_id' => 565,
+                'mcode_category_id' => 15,
+            ),
+            73 => 
+            array (
+                'mcode_feature_id' => 566,
+                'mcode_category_id' => 15,
+            ),
+            74 => 
+            array (
+                'mcode_feature_id' => 567,
+                'mcode_category_id' => 12,
+            ),
+            75 => 
+            array (
+                'mcode_feature_id' => 568,
+                'mcode_category_id' => 4,
+            ),
+            76 => 
+            array (
+                'mcode_feature_id' => 569,
+                'mcode_category_id' => 4,
+            ),
+            77 => 
+            array (
+                'mcode_feature_id' => 570,
+                'mcode_category_id' => 4,
+            ),
+            78 => 
+            array (
+                'mcode_feature_id' => 571,
+                'mcode_category_id' => 4,
+            ),
+            79 => 
+            array (
+                'mcode_feature_id' => 572,
+                'mcode_category_id' => 4,
+            ),
+            80 => 
+            array (
+                'mcode_feature_id' => 573,
+                'mcode_category_id' => 4,
+            ),
+            81 => 
+            array (
+                'mcode_feature_id' => 574,
+                'mcode_category_id' => 15,
+            ),
+            82 => 
+            array (
+                'mcode_feature_id' => 575,
+                'mcode_category_id' => 7,
+            ),
+            83 => 
+            array (
+                'mcode_feature_id' => 576,
+                'mcode_category_id' => 15,
+            ),
+            84 => 
+            array (
+                'mcode_feature_id' => 577,
+                'mcode_category_id' => 15,
+            ),
+            85 => 
+            array (
+                'mcode_feature_id' => 578,
+                'mcode_category_id' => 15,
+            ),
+            86 => 
+            array (
+                'mcode_feature_id' => 579,
+                'mcode_category_id' => 15,
+            ),
+            87 => 
+            array (
+                'mcode_feature_id' => 580,
+                'mcode_category_id' => 15,
+            ),
+            88 => 
+            array (
+                'mcode_feature_id' => 581,
+                'mcode_category_id' => 15,
+            ),
+            89 => 
+            array (
+                'mcode_feature_id' => 582,
+                'mcode_category_id' => 15,
+            ),
+            90 => 
+            array (
+                'mcode_feature_id' => 583,
+                'mcode_category_id' => 15,
+            ),
+            91 => 
+            array (
+                'mcode_feature_id' => 584,
+                'mcode_category_id' => 15,
+            ),
+            92 => 
+            array (
+                'mcode_feature_id' => 597,
+                'mcode_category_id' => 13,
+            ),
+            93 => 
+            array (
+                'mcode_feature_id' => 598,
+                'mcode_category_id' => 13,
+            ),
+            94 => 
+            array (
+                'mcode_feature_id' => 599,
+                'mcode_category_id' => 13,
+            ),
+            95 => 
+            array (
+                'mcode_feature_id' => 600,
+                'mcode_category_id' => 13,
+            ),
+            96 => 
+            array (
+                'mcode_feature_id' => 601,
+                'mcode_category_id' => 13,
+            ),
+            97 => 
+            array (
+                'mcode_feature_id' => 602,
+                'mcode_category_id' => 13,
+            ),
+            98 => 
+            array (
+                'mcode_feature_id' => 603,
+                'mcode_category_id' => 13,
+            ),
+            99 => 
+            array (
+                'mcode_feature_id' => 604,
+                'mcode_category_id' => 13,
+            ),
+            100 => 
+            array (
+                'mcode_feature_id' => 605,
+                'mcode_category_id' => 13,
+            ),
+            101 => 
+            array (
+                'mcode_feature_id' => 606,
+                'mcode_category_id' => 13,
+            ),
+            102 => 
+            array (
+                'mcode_feature_id' => 607,
+                'mcode_category_id' => 13,
+            ),
+            103 => 
+            array (
+                'mcode_feature_id' => 608,
+                'mcode_category_id' => 13,
+            ),
+            104 => 
+            array (
+                'mcode_feature_id' => 609,
+                'mcode_category_id' => 13,
+            ),
+            105 => 
+            array (
+                'mcode_feature_id' => 610,
+                'mcode_category_id' => 13,
+            ),
+            106 => 
+            array (
+                'mcode_feature_id' => 611,
+                'mcode_category_id' => 13,
+            ),
+            107 => 
+            array (
+                'mcode_feature_id' => 612,
+                'mcode_category_id' => 13,
+            ),
+            108 => 
+            array (
+                'mcode_feature_id' => 613,
+                'mcode_category_id' => 7,
+            ),
+            109 => 
+            array (
+                'mcode_feature_id' => 614,
+                'mcode_category_id' => 7,
+            ),
+            110 => 
+            array (
+                'mcode_feature_id' => 615,
+                'mcode_category_id' => 4,
+            ),
+            111 => 
+            array (
+                'mcode_feature_id' => 616,
+                'mcode_category_id' => 13,
+            ),
+            112 => 
+            array (
+                'mcode_feature_id' => 617,
+                'mcode_category_id' => 13,
+            ),
+            113 => 
+            array (
+                'mcode_feature_id' => 618,
+                'mcode_category_id' => 13,
+            ),
+            114 => 
+            array (
+                'mcode_feature_id' => 619,
+                'mcode_category_id' => 13,
+            ),
+            115 => 
+            array (
+                'mcode_feature_id' => 620,
+                'mcode_category_id' => 15,
+            ),
+            116 => 
+            array (
+                'mcode_feature_id' => 621,
+                'mcode_category_id' => 8,
+            ),
+            117 => 
+            array (
+                'mcode_feature_id' => 622,
+                'mcode_category_id' => 8,
+            ),
+            118 => 
+            array (
+                'mcode_feature_id' => 623,
+                'mcode_category_id' => 8,
+            ),
+            119 => 
+            array (
+                'mcode_feature_id' => 624,
+                'mcode_category_id' => 8,
+            ),
+            120 => 
+            array (
+                'mcode_feature_id' => 625,
+                'mcode_category_id' => 8,
+            ),
+            121 => 
+            array (
+                'mcode_feature_id' => 626,
+                'mcode_category_id' => 8,
+            ),
+            122 => 
+            array (
+                'mcode_feature_id' => 627,
+                'mcode_category_id' => 8,
+            ),
+            123 => 
+            array (
+                'mcode_feature_id' => 629,
+                'mcode_category_id' => 4,
+            ),
+            124 => 
+            array (
+                'mcode_feature_id' => 632,
+                'mcode_category_id' => 7,
+            ),
+            125 => 
+            array (
+                'mcode_feature_id' => 633,
+                'mcode_category_id' => 4,
+            ),
+            126 => 
+            array (
+                'mcode_feature_id' => 634,
+                'mcode_category_id' => 8,
+            ),
+            127 => 
+            array (
+                'mcode_feature_id' => 635,
+                'mcode_category_id' => 8,
+            ),
+            128 => 
+            array (
+                'mcode_feature_id' => 636,
+                'mcode_category_id' => 8,
+            ),
+            129 => 
+            array (
+                'mcode_feature_id' => 637,
+                'mcode_category_id' => 8,
+            ),
+            130 => 
+            array (
+                'mcode_feature_id' => 638,
+                'mcode_category_id' => 15,
+            ),
+            131 => 
+            array (
+                'mcode_feature_id' => 639,
+                'mcode_category_id' => 15,
+            ),
+            132 => 
+            array (
+                'mcode_feature_id' => 640,
+                'mcode_category_id' => 15,
+            ),
+            133 => 
+            array (
+                'mcode_feature_id' => 641,
+                'mcode_category_id' => 15,
+            ),
+            134 => 
+            array (
+                'mcode_feature_id' => 642,
+                'mcode_category_id' => 8,
+            ),
+            135 => 
+            array (
+                'mcode_feature_id' => 643,
+                'mcode_category_id' => 8,
+            ),
+            136 => 
+            array (
+                'mcode_feature_id' => 644,
+                'mcode_category_id' => 8,
+            ),
+            137 => 
+            array (
+                'mcode_feature_id' => 645,
+                'mcode_category_id' => 8,
+            ),
+            138 => 
+            array (
+                'mcode_feature_id' => 646,
+                'mcode_category_id' => 8,
+            ),
+            139 => 
+            array (
+                'mcode_feature_id' => 647,
+                'mcode_category_id' => 8,
+            ),
+            140 => 
+            array (
+                'mcode_feature_id' => 648,
+                'mcode_category_id' => 8,
+            ),
+            141 => 
+            array (
+                'mcode_feature_id' => 649,
+                'mcode_category_id' => 13,
+            ),
+            142 => 
+            array (
+                'mcode_feature_id' => 650,
+                'mcode_category_id' => 8,
+            ),
+            143 => 
+            array (
+                'mcode_feature_id' => 651,
+                'mcode_category_id' => 15,
+            ),
+            144 => 
+            array (
+                'mcode_feature_id' => 652,
+                'mcode_category_id' => 8,
+            ),
+            145 => 
+            array (
+                'mcode_feature_id' => 653,
+                'mcode_category_id' => 8,
+            ),
+            146 => 
+            array (
+                'mcode_feature_id' => 654,
+                'mcode_category_id' => 15,
+            ),
+            147 => 
+            array (
+                'mcode_feature_id' => 655,
+                'mcode_category_id' => 15,
+            ),
+            148 => 
+            array (
+                'mcode_feature_id' => 656,
+                'mcode_category_id' => 15,
+            ),
+            149 => 
+            array (
+                'mcode_feature_id' => 657,
+                'mcode_category_id' => 15,
+            ),
+            150 => 
+            array (
+                'mcode_feature_id' => 658,
+                'mcode_category_id' => 15,
+            ),
+            151 => 
+            array (
+                'mcode_feature_id' => 659,
+                'mcode_category_id' => 15,
+            ),
+            152 => 
+            array (
+                'mcode_feature_id' => 660,
+                'mcode_category_id' => 15,
+            ),
+            153 => 
+            array (
+                'mcode_feature_id' => 661,
+                'mcode_category_id' => 15,
+            ),
+            154 => 
+            array (
+                'mcode_feature_id' => 662,
+                'mcode_category_id' => 15,
+            ),
+            155 => 
+            array (
+                'mcode_feature_id' => 663,
+                'mcode_category_id' => 15,
+            ),
+            156 => 
+            array (
+                'mcode_feature_id' => 664,
+                'mcode_category_id' => 15,
+            ),
+            157 => 
+            array (
+                'mcode_feature_id' => 665,
+                'mcode_category_id' => 15,
+            ),
+            158 => 
+            array (
+                'mcode_feature_id' => 666,
+                'mcode_category_id' => 15,
+            ),
+            159 => 
+            array (
+                'mcode_feature_id' => 667,
+                'mcode_category_id' => 15,
+            ),
+            160 => 
+            array (
+                'mcode_feature_id' => 668,
+                'mcode_category_id' => 15,
+            ),
+            161 => 
+            array (
+                'mcode_feature_id' => 669,
+                'mcode_category_id' => 15,
+            ),
+            162 => 
+            array (
+                'mcode_feature_id' => 670,
+                'mcode_category_id' => 15,
+            ),
+            163 => 
+            array (
+                'mcode_feature_id' => 671,
+                'mcode_category_id' => 15,
+            ),
+            164 => 
+            array (
+                'mcode_feature_id' => 672,
+                'mcode_category_id' => 15,
+            ),
+            165 => 
+            array (
+                'mcode_feature_id' => 673,
+                'mcode_category_id' => 15,
+            ),
+            166 => 
+            array (
+                'mcode_feature_id' => 674,
+                'mcode_category_id' => 1,
+            ),
+            167 => 
+            array (
+                'mcode_feature_id' => 675,
+                'mcode_category_id' => 1,
+            ),
+            168 => 
+            array (
+                'mcode_feature_id' => 676,
+                'mcode_category_id' => 1,
+            ),
+            169 => 
+            array (
+                'mcode_feature_id' => 677,
+                'mcode_category_id' => 1,
+            ),
+            170 => 
+            array (
+                'mcode_feature_id' => 678,
+                'mcode_category_id' => 1,
+            ),
+            171 => 
+            array (
+                'mcode_feature_id' => 679,
+                'mcode_category_id' => 1,
+            ),
+            172 => 
+            array (
+                'mcode_feature_id' => 680,
+                'mcode_category_id' => 8,
+            ),
+            173 => 
+            array (
+                'mcode_feature_id' => 681,
+                'mcode_category_id' => 8,
+            ),
+            174 => 
+            array (
+                'mcode_feature_id' => 682,
+                'mcode_category_id' => 15,
+            ),
+            175 => 
+            array (
+                'mcode_feature_id' => 683,
+                'mcode_category_id' => 15,
+            ),
+            176 => 
+            array (
+                'mcode_feature_id' => 684,
+                'mcode_category_id' => 18,
+            ),
+            177 => 
+            array (
+                'mcode_feature_id' => 685,
+                'mcode_category_id' => 18,
+            ),
+            178 => 
+            array (
+                'mcode_feature_id' => 686,
+                'mcode_category_id' => 18,
+            ),
+            179 => 
+            array (
+                'mcode_feature_id' => 687,
+                'mcode_category_id' => 9,
+            ),
+            180 => 
+            array (
+                'mcode_feature_id' => 688,
+                'mcode_category_id' => 9,
+            ),
+            181 => 
+            array (
+                'mcode_feature_id' => 689,
+                'mcode_category_id' => 15,
+            ),
+            182 => 
+            array (
+                'mcode_feature_id' => 690,
+                'mcode_category_id' => 15,
+            ),
+            183 => 
+            array (
+                'mcode_feature_id' => 691,
+                'mcode_category_id' => 15,
+            ),
+            184 => 
+            array (
+                'mcode_feature_id' => 692,
+                'mcode_category_id' => 15,
+            ),
+            185 => 
+            array (
+                'mcode_feature_id' => 693,
+                'mcode_category_id' => 15,
+            ),
+            186 => 
+            array (
+                'mcode_feature_id' => 694,
+                'mcode_category_id' => 15,
+            ),
+            187 => 
+            array (
+                'mcode_feature_id' => 695,
+                'mcode_category_id' => 15,
+            ),
+            188 => 
+            array (
+                'mcode_feature_id' => 696,
+                'mcode_category_id' => 15,
+            ),
+            189 => 
+            array (
+                'mcode_feature_id' => 697,
+                'mcode_category_id' => 15,
+            ),
+            190 => 
+            array (
+                'mcode_feature_id' => 698,
+                'mcode_category_id' => 15,
+            ),
+            191 => 
+            array (
+                'mcode_feature_id' => 699,
+                'mcode_category_id' => 15,
+            ),
+            192 => 
+            array (
+                'mcode_feature_id' => 700,
+                'mcode_category_id' => 8,
+            ),
+            193 => 
+            array (
+                'mcode_feature_id' => 701,
+                'mcode_category_id' => 8,
+            ),
+            194 => 
+            array (
+                'mcode_feature_id' => 423,
+                'mcode_category_id' => 16,
+            ),
+            195 => 
+            array (
+                'mcode_feature_id' => 424,
+                'mcode_category_id' => 16,
+            ),
+            196 => 
+            array (
+                'mcode_feature_id' => 425,
+                'mcode_category_id' => 16,
+            ),
+            197 => 
+            array (
+                'mcode_feature_id' => 426,
+                'mcode_category_id' => 16,
+            ),
+            198 => 
+            array (
+                'mcode_feature_id' => 628,
+                'mcode_category_id' => 16,
+            ),
+            199 => 
+            array (
+                'mcode_feature_id' => 630,
+                'mcode_category_id' => 16,
+            ),
+            200 => 
+            array (
+                'mcode_feature_id' => 631,
+                'mcode_category_id' => 16,
+            ),
         ));
         
         

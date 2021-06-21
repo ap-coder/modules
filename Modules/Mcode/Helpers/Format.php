@@ -12,16 +12,11 @@ class Format
             Log::info("M1 CODE SCANNED");
             
             /* M1 CODES */
-            $header = chr(1).'X'.chr(29).chr(2);
-             
-            $footer = chr(4);
-            
-            // $string = str_replace(', ', ',', $string);
-
-            $string = trim(preg_replace('/\s\s+/', $pipe, $string));
-            // $string = str_replace(' ', $pipe, $string);
-            $string = str_replace('%01X%1d%02', $header, $string);
-            $string = str_replace('%04', $footer, $string);
+            $string = str_replace('%01X', chr(1). 'X', $string);
+            $string = str_replace('%1D', chr(29), $string);
+            $string = str_replace('%02', chr(2), $string);
+            $string = str_replace('%0f0', chr(240), $string);
+            $string = str_replace('%04', chr(4), $string)
      
             $source_string = $string;
             

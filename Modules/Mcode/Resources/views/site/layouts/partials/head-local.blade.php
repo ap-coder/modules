@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="{{ asset('site/vendor/animate/animate.min.css') }}">
 		<link rel="stylesheet" href="{{ asset('site/vendor/simple-line-icons/css/simple-line-icons.min.css') }}">
 		<link rel="stylesheet" href="{{ asset('site/vendor/owl.carousel/assets/owl.carousel.min.css') }}">
-{{--  --}}
+ 
 		<link rel="stylesheet" href="{{ asset('site/vendor/owl.carousel/assets/owl.theme.default.min.css') }}">
 		<link rel="stylesheet" href="{{ asset('site/vendor/magnific-popup/magnific-popup.min.css') }}">
 		<link rel="stylesheet" href="{{ asset('site/vendor/bootstrap-star-rating/css/star-rating.min.css') }}">

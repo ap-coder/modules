@@ -108,9 +108,21 @@
                               <div class="col col-2 openQrModal" data-label="Barcode" mid="{{ $feature->id }}">
                                 <img src="{{  asset('site/img/modules/qr_click.png') }}" alt="qr click icon" title="Click To Open">
                                  {{-- {!! QrCode::generate($feature->formatted_source_string) !!} --}} 
+                                     new qr
                                  
+                                   {{-- @php dd($feature->formatted_source_string) @endphp --}}
+<?php dump($feature->formatted_source_string)?>
+                                   {!! $feature->formatted_source_string !!}
 
+                        @if(str_starts_with($feature->mcode, 'M1'))            
+                        <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'DATAMATRIX',5,5) . '" alt="barcode"   />'; ?>
+                        IT DOES
 
+                        @else
+                        IT DOES NOT
+                        {{-- {!! DNS2D::getBarcodeHTML($feature->formatted_source_string, 'DATAMATRIX') !!} --}}
+                       
+                        @endif
                               </div>
                               <div class="col col-1 selectfeture" data-label="Select">
                                 <label class="checkbox">

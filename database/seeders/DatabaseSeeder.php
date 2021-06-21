@@ -36,5 +36,6 @@ class DatabaseSeeder extends Seeder
         $this->call(McodeCategoryMcodeFeatureTableSeeder::class);
         $this->call(McodeFeatureMcodeProductModelTableSeeder::class);
         $this->call(McodeMcodeProductModelTableSeeder::class);
+        $this->call(PersonalAccessTokensTableSeeder::class);
     }
 }

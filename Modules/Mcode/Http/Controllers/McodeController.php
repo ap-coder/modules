@@ -56,57 +56,6 @@ class McodeController extends Controller
         return view('mcode::create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     * @param Request $request
-     * @return Renderable
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Show the specified resource.
-     * @param int $id
-     * @return Renderable
-     */
-    public function show($id)
-    {
-        return view('mcode::show');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     * @param int $id
-     * @return Renderable
-     */
-    public function edit($id)
-    {
-        return view('mcode::edit');
-    }
-
-    /**
-     * Update the specified resource in storage.
-     * @param Request $request
-     * @param int $id
-     * @return Renderable
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     * @param int $id
-     * @return Renderable
-     */
-    public function destroy($id)
-    {
-        //
-    }
-
     public function category()
     {
         $categories = McodeCategory::orderBy('order','ASC')->get();
@@ -120,6 +69,8 @@ class McodeController extends Controller
         $filterCategories = McodeCategory::orderBy('order','ASC')->get();
         
         $html = view('mcode::site.mcodes.steps.feature',compact('categories','filterCategories'))->render();
+
+        
         
         $data['html']=$html;
         
@@ -131,6 +82,8 @@ class McodeController extends Controller
         $productID=$request->productID;
         $product = Mcode::where('id',$productID)->first();
         $feature = McodeFeature::where('id',$request->id)->first();
+
+        dd($feature->formatted_source_string);
         $html = view('mcode::site.mcodes.steps.qr-modal', compact('feature','product'))->render();
         $data['html']=$html;
         echo json_encode($data);
@@ -155,18 +108,29 @@ class McodeController extends Controller
         $features = McodeFeature::whereIn('id',$featureIDs)->get();
         $categories = McodeCategory::whereIn('id',$categoryIDs)->get();
 
+    
+            $source_strings = implode(' ', $features->pluck('mcode')->toArray());
+
+            // $dd($source_string);
+
+            $combined_string = Format::combinedSource($source_strings);
+ 
+
         $config = ['instanceConfigurator' => function($mpdf) {
-            // $mpdf->SetImportUse();
-            $mpdf->SetDocTemplate(public_path('cover.pdf'), true);
+            $mpdf->SetDocTemplate(public_path('cover.pdf'), false);
         }];
        
-        $data = [
-            'content' => 'Code Configuration Guide!'
-        ];
+        // $data = [
+        //     'content' => 'Combined Configuration!'
+        // ];
 
-        $pdf = PDF::loadView('mcode::pdf.document', compact('data','product','features','categories'),[], $config);
+        $pdf = PDF::loadView('mcode::pdf.document', compact('combined_string', 'product','features','categories'),[], $config);
         
-        return $pdf->stream('document.pdf');
+        $formatted_name = str_replace(' ', '_', $product->name);
+
+        $name=$formatted_name.'_full_config.pdf';
+
+        return $pdf->stream($name);
         // return $pdf->download('document.pdf');
 
     }
@@ -206,8 +170,10 @@ class McodeController extends Controller
         // ];
 
         $pdf = PDF::loadView('mcode::pdf.single-qr-ducument', compact('product','feature','categories'),[], $config);
-        
-        $name=$product->name.'_'.$feature->mcode.'_config.pdf';
+
+        $formatted_name = str_replace(' ', '_', $product->name);
+
+        $name=$formatted_name.'_'.$feature->mcode.'_config.pdf';
         return $pdf->stream($name);
         // return $pdf->download('document.pdf');
 
