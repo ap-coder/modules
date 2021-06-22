@@ -25,14 +25,14 @@
       <div class="col-md-7">
          {{-- <img class="qr_code_img" src="{{ url('site/img/qr_code.jpg') }}"> --}}
  
-            {!! dump($combined_string) !!}
+            {{-- {!! dump($combined_string) !!} --}}
 
             @if(str_starts_with($feature->mcode, 'M2'))
             {{-- CODE HERE: {!! dump($feature->formatted_source_string) !!}  --}}
-            <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'QRCODE',10,10) . '" alt="barcode"   />'; ?>
+            {{-- <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'QRCODE',10,10) . '" alt="barcode"   />'; ?> --}}
             @else
             {{-- CODE HERE: {!!  dump($feature->formatted_source_string)  !!}  --}}
-            <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'DATAMATRIX',10,10) . '" alt="barcode"   />'; ?>
+            {{-- <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'DATAMATRIX',10,10) . '" alt="barcode"   />'; ?> --}}
             @endif
    
       </div>
@@ -42,13 +42,13 @@
       @foreach ($features as $key => $feature)
       <div class="col-md-6 saprater @if($key % 2 == 0) sapraterBorder @endif" style="text-align:center;">
             <h2>{{ $feature->mcode ?? '' }}</h2>
-        {{-- {!! QrCode::size(150)->generate($feature->formatted_source_string) !!} --}}
+            {{-- {!! QrCode::size(150)->generate($feature->formatted_source_string) !!} --}}
             @if(str_starts_with($feature->mcode, 'M2'))
             <?php echo '<img width="150px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'QRCODE',10,10) . '" alt="barcode"   />'; ?>
             @else
             <?php echo '<img width="150px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'DATAMATRIX',10,10) . '" alt="barcode"   />'; ?>
             @endif
-        <h3>{{ $feature->description ?? '' }}</h3>
+          <h3>{{ $feature->description ?? '' }}</h3>
      
       </div>
       @endforeach

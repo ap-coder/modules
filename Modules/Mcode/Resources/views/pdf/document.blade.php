@@ -1,6 +1,13 @@
  
 <link rel="stylesheet"  type="application/pdf" href="{{ public_path('print.css') }}" />
-
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 10px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 10px;word-break:normal;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
 {{-- <htmlpagefrontpage name="cover-page">
 <h1>{{ $product->name ?? '' }}</h1>
 
@@ -86,84 +93,69 @@
 	<div style="text-align: center">
 		 
 		<div class="full-width">
-	  {{--     	@if(str_starts_with($feature->mcode, 'M2'))
-
-	      	@else
-
-	      	@endif --}}
+	       {{--  @if(str_starts_with($feature->mcode, 'M2'))
+	          <?php echo '<img width="100px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'QRCODE',10,10) . '" alt="barcode"   />'; ?>
+	        @else
+	          <?php echo '<img width="100px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'DATAMATRIX',10,10) . '" alt="barcode"   />'; ?>
+        	@endif --}}
 		</div>
 		 
-	</div>
-	<div class="2-columns">
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, odio, sequi! Ducimus error voluptate nihil libero voluptatem, commodi id nesciunt ipsam odit aperiam quos praesentium, vitae. Dicta, voluptate repudiandae quaerat.
-	</div>
 
-
-	<table>
-		@foreach ($features as $feature)
-		<tr>
-			<td>{{ $feature->description ?? '' }} <br> <span>{{ $feature->mcode ?? '' }}</span></td>
-		</tr>
-		@endforeach
-	</table>
-
-	<table>
-		@foreach ($features as $feature)
-		<tr>
-			<td>
-			 
-
-	@if(str_starts_with($feature->mcode, 'M2'))
-	<img class="img-fluid" src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(100)->generate($feature->formatted_source_string)) !!} ">
-	{{-- {!! DNS2D::getBarcodePNG($feature->formatted_source_string, 'QRCODE') !!} --}}
-	{{ $feature->mcode ?? '' }}
-	@else
-	{{-- {!! dd($feature->formatted_source_string) !!} --}}
+		 <div class="row feature-list">
 	 
- 	<?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG('4', 'DATAMATRIX',20,) . '" alt="barcode"   />'; ?>
-	<br />
-	<h2>{{ $feature->mcode ?? '' }}</h2>
-	<h3>{{ $feature->description ?? '' }}</h3>
-	@endif
+		 		 @foreach ($features as $feature)
+		 		 <div class="feature">{{ $feature->mcode ?? '' }} <br> {{ $feature->description ?? '' }}</div>
+		 		 @endforeach
+ 
+		 </div>
+	</div>
+<pagebreak>
 
+	<table class="tg" width="100%">
+	 
+	  @foreach($features->chunk(4) as $section)
+	  <tr>
+	    @foreach ($section as $feature)
+	    <td class="tg-0lax" colspan="1">
+	        @if(str_starts_with($feature->mcode, 'M2'))
+	          <?php echo '<img width="100px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'QRCODE',10,10) . '" alt="barcode"   />'; ?>
+	        @else
+	          <?php echo '<img width="100px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'DATAMATRIX',10,10) . '" alt="barcode"   />'; ?>
+	        @endif
 
-				</td>
-		</tr>
-		<tr>
-			<td>{{ $feature->description ?? '' }} <br> <span>{{ $feature->mcode ?? '' }}</span></td>
-		</tr>
-		@endforeach
+	    	<h2>{{ $feature->mcode ?? '' }}</h2>
+	    	<h3>{{ $feature->description ?? '' }}</h3>
+	    </td>
+	  @endforeach
+	  </tr>
+	  @endforeach
+	 
 	</table>
+
+
+{{-- @foreach($features->chunk(3) as $section) --}}
+{{-- @foreach($section as $news) --}}
   
+{{-- @foreach($features->chunk(3) as $section) 
+<div class="flex-container">
+	@foreach ($section as $feature)
+   	<div class="flex-items">
+        @if(str_starts_with($feature->mcode, 'M2'))
+          <?php echo '<img width="100px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'QRCODE',10,10) . '" alt="barcode"   />'; ?>
+        @else
+          <?php echo '<img width="100px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'DATAMATRIX',10,10) . '" alt="barcode"   />'; ?>
+        @endif
+   		<h2>{{ $feature->mcode ?? '' }}</h2>
+    	<h3>{{ $feature->description ?? '' }}</h3>
+   	</div>
+   	@endforeach
+</div>
+@endforeach --}}
+
+ 
+		
+ </div>
+  </div>
 
 </div>
-
-
-<div class="page-toc">
-	<h1>page-toc</h1>
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, voluptate ipsum laudantium nesciunt repellendus deleniti vel officiis, praesentium similique voluptatibus? Veniam fugiat, quisquam neque, maiores soluta ab vel sit? Aliquid.</p>
-</div>
-
-
-<div class="noheader">
-	<h1>noheader</h1>
-	<p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Corrupti exercitationem provident ad aspernatur, nulla, corporis quos laboriosam, dolor dolore blanditiis facere, recusandae. Quisquam quas optio obcaecati perspiciatis nihil, exercitationem harum!</p>
-</div>
-
-
-<div class="myfixed">
-
-	{{-- <columns column-count="n" vAlign="justify" column-gap="n" /> --}}
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec mattis lacus ac purus feugiat semper. Donec aliquet nunc odio, vitae pellentesque diam. Pellentesque sed velit lacus. Duis quis dui quis sem consectetur sollicitudin. Cras dolor quam, dapibus et pretium sit amet, elementum vel arcu. 
-</div>
-
-
-
-
-<p>Introduction: Here starts the document</p>
-
-<div style="position: absolute; top: 50mm; left: 50mm; width: 100mm;"> This is text in a fixed position block element. </div> 
-
-<div style="position: absolute; left:0; right: 0; top: 0; bottom: 0;">
-    {{-- <img src="{{ public_path('site/files/images/frontcover.jpg') }}" style="width: 210mm; height: 297mm; margin: 0;" /> --}}
-</div>
+ 

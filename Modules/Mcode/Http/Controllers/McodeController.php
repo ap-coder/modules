@@ -114,6 +114,8 @@ class McodeController extends Controller
         $combined_string = Format::combinedSource($source_strings);
  
 
+        \Log::info($combined_string);
+
         $config = ['instanceConfigurator' => function($mpdf) {
             $mpdf->SetDocTemplate(public_path('cover.pdf'), false);
             $mpdf->h2toc = array(
@@ -124,7 +126,7 @@ class McodeController extends Controller
         }];
        
         // $data = [
-        //     'content' => 'Combined Configuration!'
+        //     'content' => 
         // ];
 
         $pdf = PDF::loadView('mcode::pdf.document', compact('combined_string', 'product','features','categories'),[], $config);
