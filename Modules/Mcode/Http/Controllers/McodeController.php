@@ -110,15 +110,17 @@ class McodeController extends Controller
         $categories = McodeCategory::whereIn('id',$categoryIDs)->get();
 
     
-            $source_strings = implode(' ', $features->pluck('source_string')->toArray());
-
-            // $dd($source_string);
-
-            $combined_string = Format::combinedSource($source_strings);
+        $source_strings = implode(' ', $features->pluck('source_string')->toArray());
+        $combined_string = Format::combinedSource($source_strings);
  
 
         $config = ['instanceConfigurator' => function($mpdf) {
             $mpdf->SetDocTemplate(public_path('cover.pdf'), false);
+            $mpdf->h2toc = array(
+                'H1' => 0,
+                'H2' => 1,
+                'H3' => 2
+            );
         }];
        
         // $data = [
@@ -146,24 +148,17 @@ class McodeController extends Controller
         $feature = McodeFeature::where('id',$featureIDs)->first();
         $categories = McodeCategory::whereIn('id',$categoryIDs)->get();
 
-
-
         $config = ['instanceConfigurator' => function($mpdf) {
-            //$mpdf = new \Mpdf\Mpdf(['format' => 'A4']);
-            // $mpdf->SetWatermarkText("Paid");
+            // $mpdf = new \Mpdf\Mpdf(['format' => 'A4']);
+            // $mpdf->SetDisplayMode('fullwidth');
+            $mpdf->SetDisplayMode('fullpage');
+            $mpdf->SetDocTemplate(public_path('cover.pdf'), false);
+            // $mpdf->SetWatermarkText("CODE", false);
             // $mpdf->showWatermarkText = true;
             // $mpdf->watermark_font = 'DejaVuSansCondensed';
             // $mpdf->watermarkTextAlpha = 0.1;
-            $mpdf->SetDisplayMode('fullwidth');
-            $mpdf->SetDocTemplate(public_path('cover.pdf'), false);
-        
+            // $mpdf->TOCpagebreak();
 
-            $mpdf->h2toc = array(
-                'H1' => 0,
-                'H2' => 1,
-                'H3' => 2
-            );
- 
         }];
        
         // $data = [

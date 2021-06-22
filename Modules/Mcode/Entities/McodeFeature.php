@@ -24,6 +24,10 @@ class McodeFeature extends Model
         'deleted_at',
     ];
 
+    // protected $casts = [
+    //     'source_string' => 'string'
+    // ];
+
     protected $fillable = [
         'published',
         'mcode',
@@ -68,9 +72,6 @@ class McodeFeature extends Model
                 $count > 0
             );
             
-            
-
-
             // $string = trim(preg_replace('/\s\s+/', $pipe, $this->source_string));
             // $string = str_replace('%01X%1d%02', chr(1).'X'. chr(29) . chr(2), $this->source_string);
             $string = str_replace('%01X', chr(1). 'X', $string);

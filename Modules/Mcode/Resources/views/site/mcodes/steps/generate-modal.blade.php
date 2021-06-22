@@ -1,7 +1,4 @@
-@php
-    $ss = implode(' ', $features->pluck('source_string')->toArray());
-    $ss = Modules\Mcode\Helpers\Format::combinedSource($ss);
-@endphp
+
 
 <!-- Modal Header -->
 <div class="modal-header">
@@ -28,14 +25,14 @@
       <div class="col-md-7">
          {{-- <img class="qr_code_img" src="{{ url('site/img/qr_code.jpg') }}"> --}}
  
-            {{-- {!! dump($ss) !!} --}}
+            {!! dump($combined_string) !!}
 
             @if(str_starts_with($feature->mcode, 'M2'))
             {{-- CODE HERE: {!! dump($feature->formatted_source_string) !!}  --}}
-            <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($ss, 'QRCODE',10,10) . '" alt="barcode"   />'; ?>
+            <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'QRCODE',10,10) . '" alt="barcode"   />'; ?>
             @else
             {{-- CODE HERE: {!!  dump($feature->formatted_source_string)  !!}  --}}
-            <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($ss, 'DATAMATRIX',10,10) . '" alt="barcode"   />'; ?>
+            <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'DATAMATRIX',10,10) . '" alt="barcode"   />'; ?>
             @endif
    
       </div>

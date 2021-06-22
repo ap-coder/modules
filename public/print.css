@@ -6,6 +6,7 @@
 		footer: page-footer;
 		content: page-content;
 		sheet-size: Letter;
+        font-family: Helvetica;
 
 } 
 
@@ -13,6 +14,7 @@
 		size: auto;
 		header:page-header;
 		footer:page-footer;
+        font-family: Helvetica;
 	 
 
 } 
@@ -22,7 +24,8 @@
 		sheet-size: Letter;
 		header:page-header;
 		/*footer:page-footer;*/
-		 margin-top: 2.5cm;
+		margin-top: 2.5cm;
+        font-family: Helvetica;
 
 }
 
@@ -32,6 +35,7 @@
    		header: _blank;
         footer: _blank;
         sheet-size: Letter;
+        font-family: Helvetica;
 
 }
  
@@ -40,7 +44,7 @@
         footer: _blank;
 }
 
-@page toc {  }
+/*@page toc {  }*/
 
 
 
@@ -53,15 +57,17 @@ div.coverpage {
 
  #cover-title {    	 
  
-  /*font-family: "Droid Sans",Inconsolata;*/
-  font-weight: 900; color: #ffffff;
+  font-family: Helvetica;
+  font-weight: 900; 
+  color: #ffffff;
  
 }
 
 div.singleqr{ 
 	/*page-break-before: right;*/
 	page: single-qr;
-	header:page-header; 
+	header:page-header;
+    font-family: Helvetica;
 
 }
 
@@ -70,10 +76,11 @@ div.combinedqr{
 	/*page-break-before: right;*/
 	page: qrcombined;
 	margin-top: 2rem;
+    font-family: Helvetica;
 }
 
 div.page-toc {
-    page-break-before: right;
+    /*page-break-before: right;*/
     page: toc;
 }
 
@@ -82,62 +89,10 @@ div.noheader {
     page: noheader;
 }
 
-h1.roboto {font-family: "Archivo Black"!important;color: blue;font-weight:700; }
+h1#cover-title {font-family: Helvetica!important;color: #fff;font-weight:900; }
+h1.helvetica {font-family: Helvetica!important;font-weight:900; }
 
-div.mpdf_toc {
-    font-family: sans-serif;
-    font-size: 11pt;
+
+text {
+    font-family: Helvetica!important;
 }
-a.mpdf_toc_a  {
-    text-decoration: none;
-    color: black;
-}
-
-/* Whole line level 0 */
-div.mpdf_toc_level_0 {
-    line-height: 1.5;
-    margin-left: 0;
-    padding-right: 2em;
-}
-
-/* padding-right should match e.g <dottab outdent="2em" /> 0 is default */
-/* Title level 0 - may be inside <a> */
-span.mpdf_toc_t_level_0 {
-    font-weight: bold;
-}
-
-/* Page no. level 0 - may be inside <a> */
-span.mpdf_toc_p_level_0 {}
-
-/* Whole line level 1 */
-div.mpdf_toc_level_1 {
-    margin-left: 2em;
-    text-indent: -2em;
-    padding-right: 2em;
-}
-
-/* padding-right should match <dottab outdent="2em" /> 2em is default */
-/* Title level 1 */
-span.mpdf_toc_t_level_1 {
-    font-style: italic;
-    font-weight: bold;
-}
-
-/* Page no. level 1 - may be inside <a> */
-span.mpdf_toc_p_level_1  {}
-
-/* Whole line level 2 */
-div.mpdf_toc_level_2 {
-    margin-left: 4em;
-    text-indent: -2em;
-    padding-right: 2em;
-}
-
-/* padding-right should match <dottab outdent="2em" /> 2em is default */
-/* Title level 2 */
-span.mpdf_toc_t_level_2 {}
-
-/* Page no. level 2 - may be inside <a> */
-span.mpdf_toc_p_level_2 {}
-
-

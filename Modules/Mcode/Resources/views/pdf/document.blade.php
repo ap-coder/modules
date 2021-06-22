@@ -15,7 +15,7 @@
 {{-- https://mpdf.github.io/what-else-can-i-do/forms.html --}}
 
 <htmlpageheader name="page-header">
-	<div class="header" style="border-bottom:1px solid black; margin-bottom:5rem;">
+	<div class="header" style="border-bottom:1px solid black; margin-bottom:5rem;font-family: Helvetica;">
 		<div style="border-bottom: 1px solid #000000; font-weight: bold;  font-size: 10pt; margin-top:1rem;">
 			<img width="100px" src="{{ public_path('site/img/code_logo_300w.png') }}" style="margin-bottom:1rem;">	 
 			<div style=" text-align: right; font-family: sans-serif;">
@@ -26,7 +26,7 @@
 </htmlpageheader>
 
 <htmlpagefooter name="page-footer">
-	<table width="100%" style="border-bottom: 1px solid #000000;">
+	<table width="100%" style="border-bottom: 1px solid #000000;font-family: Helvetica;">
 	   <tr>
 		   <td width="33%">{DATE jS F Y}</td>
 		   <td width="33%" align="center">{PAGENO}/{nbpg}</td>
@@ -35,7 +35,7 @@
    </table>
    <div class="footer" style="margin-top:1rem;">
 	
-	   <div style="text-align:center; font-size:.5rem;">
+	   <div style="text-align:center; font-size:.5rem;font-family: Helvetica;">
 	   Corporate Office<br>
 	   434 West Ascension Way Suite 300 Salt Lake City, UT 84123, USA<br>
 	   Phone: 801-495-2200 Fax: 801-495-2202<br>
@@ -45,7 +45,7 @@
 </htmlpagefooter>
 
 
-<div name="cover-page" class="coverpage" style="display:flex; flex:1;">
+<div name="cover-page" class="coverpage" style="display:flex; flex:1;font-family: Helvetica;">
 	 
 
 	@if($product->photo)
@@ -54,7 +54,7 @@
 	</div>
 	@endif
  
-	<h1 id="cover-title" class="coverpage-title roboto" style="text-align:right;font-size: 48px;margin-top: 145px;">
+	<h1 id="cover-title" class="coverpage-title helvetica" style="font-family: Helvetica;text-align:right;font-size: 48px;margin-top: 145px;">
 		{{ $product->name ?? '' }}
 	</h1>
  
@@ -65,7 +65,7 @@
 
 
 
-
+<tocpagebreak>
 
 
 
