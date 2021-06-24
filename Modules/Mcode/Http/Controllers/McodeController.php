@@ -61,15 +61,8 @@ class McodeController extends Controller
     {
         $productID=$request->productID;
 
-        $mcodes = Mcode::where('id',$productID)->first();
-        $productModels=$mcodes->models->pluck('id')->toArray();
-        // models
-
-        // $features = McodeFeature::whereHas('models', function($query) use ($productModels) {
-        //     if($productModels){
-        //         $query->whereIn('mcode_product_model_id',$productModels);
-        //     }
-        //   })->get();
+        $mcode = Mcode::where('id',$productID)->first();
+        $productModels=$mcode->models->pluck('id')->toArray();
 
         $categories=\DB::table('mcode_features')
         ->leftJoin('mcode_feature_mcode_product_model', 'mcode_features.id', '=', 'mcode_feature_mcode_product_model.mcode_feature_id')
@@ -83,7 +76,7 @@ class McodeController extends Controller
           //dd($features);
 
         //$categories = McodeCategory::orderBy('order','ASC')->get();
-        $html = view('mcode::site.mcodes.steps.category',compact('categories'))->render();
+        $html = view('mcode::site.mcodes.steps.category',compact('categories','mcode'))->render();
         $data['html']=$html;
         
         echo json_encode($data);
@@ -92,19 +85,27 @@ class McodeController extends Controller
     public function getFeature(Request $request)
     {
         $productID=$request->productID;
-        $mcodes = Mcode::where('id',$productID)->first();
-        $productModels=$mcodes->models->pluck('id')->toArray();
+        $mcode = Mcode::where('id',$productID)->first();
+        $productModels=$mcode->models->pluck('id')->toArray();
 
         $ids=$request->ids;
-        $categories = McodeCategory::whereHas('categoriesMcodeFeatures', function($query) use ($productModels) {
-            if(count($productModels)>0){
-                $query->join('mcode_feature_mcode_product_model', 'mcode_feature_mcode_product_model.mcode_feature_id', '=', 'mcode_features.id')
-                ->whereIn('mcode_feature_mcode_product_model.mcode_product_model_id', $productModels);
-            }
-          })->whereIn('id',$ids)->orderBy('order','ASC')->get();
+        // $categories = McodeCategory::whereHas('categoriesMcodeFeatures', function($query) use ($productModels) {
+        //     if(count($productModels)>0){
+        //         $query->join('mcode_feature_mcode_product_model', 'mcode_features.id', '=', 'mcode_feature_mcode_product_model.mcode_feature_id')
+        //         ->whereIn('mcode_feature_mcode_product_model.mcode_product_model_id', $productModels);
+        //     }
+        //   })->whereIn('id',$ids)->orderBy('order','ASC')->get();
+
+        $categories = McodeCategory::with(['categoriesMcodeFeatures' => function($query) use ($productModels){
+
+            $query->join('mcode_feature_mcode_product_model', 'mcode_features.id', '=', 'mcode_feature_mcode_product_model.mcode_feature_id')
+            ->whereIn('mcode_feature_mcode_product_model.mcode_product_model_id', $productModels);
+        
+        }])->whereIn('id',$ids)->orderBy('order','ASC')->get();
+          
         $filterCategories = McodeCategory::orderBy('order','ASC')->get();
         
-        $html = view('mcode::site.mcodes.steps.feature',compact('categories','filterCategories'))->render();
+        $html = view('mcode::site.mcodes.steps.feature',compact('categories','filterCategories','mcode'))->render();
 
         
         
