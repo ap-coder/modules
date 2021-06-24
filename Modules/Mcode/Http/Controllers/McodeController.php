@@ -32,11 +32,21 @@ class McodeController extends Controller
         // }else{
         //     //mcode model run here
         // }
-	    
+	    $productModels = McodeProductModel::all();
         $mcodes = Mcode::published()->get();
         $categories = McodeCategory::with('categoriesMcodeFeatures')->get();
-        $features = McodeFeature::all();
-	
+
+        // $categories=\DB::table('mcode_features')
+        //     ->leftJoin('mcode_feature_mcode_product_model', 'mcode_features.id', '=', 'mcode_feature_mcode_product_model.mcode_feature_id')
+        //     ->leftJoin('mcode_category_mcode_feature', 'mcode_features.id', '=', 'mcode_category_mcode_feature.mcode_feature_id')
+        //     ->leftJoin('mcode_categories', 'mcode_category_mcode_feature.mcode_category_id', '=', 'mcode_category_mcode_feature.mcode_category_id')
+        //     ->select('mcode_categories.*')
+        //     ->whereIn('mcode_feature_mcode_product_model.mcode_product_model_id', $productModels)
+        //     ->where('mcode_categories.name', '!=','Obsolete')
+        //     ->groupBy('mcode_categories.id')
+        //     ->get();
+        
+	   $features = McodeFeature::all();
         
         // dd(Format::combinedSource("YEA IT WORKED."));
 
@@ -118,11 +128,22 @@ class McodeController extends Controller
 
         $config = ['instanceConfigurator' => function($mpdf) {
             $mpdf->SetDocTemplate(public_path('cover.pdf'), false);
+
+            ob_start();
+            // $mpdf->page = 0;
+            // $mpdf->state = 0;
+            // unset($mpdf->pages[0]);
+            // $mpdf->setAutoTopMargin = 'stretch';
+            $mpdf->setAutoBottomMargin = 'stretch';
+     
+            // $mpdf->max_colH_correction = 1.3;
+            // $mpdf->KeepColumns = true;
+
             $mpdf->h2toc = array(
-                'H1' => 0,
-                'H2' => 1,
-                'H3' => 2
+                'H1' => 0,             
             );
+
+            $mpdf->WriteHTML(ob_get_clean());
         }];
        
         // $data = [

@@ -25,9 +25,13 @@
   .line::after { content: ''; width: 90%; height: 10px; border-radius: 5px;background: black; display: block; position: relative; top: .25em; margin: 0 auto; }
   .white::after { content: ''; width: 90%; height: 10px; border-radius: 5px;background: white; display: block; position: relative; top: .25em; margin: 0 auto; transition: all .6s ease;}
   input#source_string { font-family: CONSOLAS; font-size: 24px; }
-  html.boxed .main {
-    overflow: inherit !important;
-}
+  html.boxed .main { overflow: inherit !important;}
+
+.modal-body.qrmodal  .row .col-md-6:nth-child(1) {margin: 0 auto!important; flex: 0; }
+.modal-body.qrmodal  .row .col-md-6:nth-child(2) {margin: 0!important; flex: 1; }
+
+ 
+
  </style>
 @endsection
 
