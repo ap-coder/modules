@@ -33,18 +33,28 @@ class McodeController extends Controller
         //     //mcode model run here
         // }
 	    $productModels = McodeProductModel::all();
-        $mcodes = Mcode::published()->get();
+        $mcodes = Mcode::all();
         $categories = McodeCategory::with('categoriesMcodeFeatures')->get();
 
-        // $categories=\DB::table('mcode_features')
-        //     ->leftJoin('mcode_feature_mcode_product_model', 'mcode_features.id', '=', 'mcode_feature_mcode_product_model.mcode_feature_id')
-        //     ->leftJoin('mcode_category_mcode_feature', 'mcode_features.id', '=', 'mcode_category_mcode_feature.mcode_feature_id')
-        //     ->leftJoin('mcode_categories', 'mcode_category_mcode_feature.mcode_category_id', '=', 'mcode_category_mcode_feature.mcode_category_id')
-        //     ->select('mcode_categories.*')
-        //     ->whereIn('mcode_feature_mcode_product_model.mcode_product_model_id', $productModels)
-        //     ->where('mcode_categories.name', '!=','Obsolete')
-        //     ->groupBy('mcode_categories.id')
-        //     ->get();
+        $categories=\DB::table('mcode_features')
+            ->join(
+                'mcode_feature_mcode_product_model', 'mcode_features.id', 
+                '=', 
+                'mcode_feature_mcode_product_model.mcode_feature_id')
+            ->join(
+                'mcode_category_mcode_feature', 'mcode_features.id', 
+                '=', 
+                'mcode_category_mcode_feature.mcode_feature_id')
+            ->join(
+                'mcode_categories', 'mcode_category_mcode_feature.mcode_category_id', 
+                '=', 
+                'mcode_category_mcode_feature.mcode_category_id')
+            ->select('mcode_categories.*')
+            ->whereIn('mcode_feature_mcode_product_model.mcode_product_model_id', $productModels)
+            ->where('mcode_categories.name', '!=','Obsolete')
+            // ->where('mcode.published', true)
+            ->groupBy('mcode_categories.id')
+            ->get();
         
 	   $features = McodeFeature::all();
         
@@ -52,6 +62,7 @@ class McodeController extends Controller
 
 
         // dd($mcodes);
+
 
 
         return view('mcode::site.mcodes.index', compact('mcodes', 'features', 'categories'));
@@ -130,15 +141,10 @@ class McodeController extends Controller
             $mpdf->SetDocTemplate(public_path('cover.pdf'), false);
 
             ob_start();
-            // $mpdf->page = 0;
-            // $mpdf->state = 0;
-            // unset($mpdf->pages[0]);
+ 
             // $mpdf->setAutoTopMargin = 'stretch';
             $mpdf->setAutoBottomMargin = 'stretch';
-     
-            // $mpdf->max_colH_correction = 1.3;
-            // $mpdf->KeepColumns = true;
-
+ 
             $mpdf->h2toc = array(
                 'H1' => 0,             
             );

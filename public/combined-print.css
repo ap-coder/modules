@@ -44,7 +44,7 @@
 		footer: page-footer;
   		margin-top: 2.5cm;
         font-family: Helvetica;
-        page-break-before: right;
+        page-break-inside:avoid;
 	 
 }
 
@@ -63,6 +63,7 @@
 		margin-top: 2.5cm;
         font-family: Helvetica;
         page-break-before: right;
+        
 }
 
 @page page-cqrl {
