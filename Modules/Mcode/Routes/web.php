@@ -51,7 +51,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Mcode', 'mi
 
 Route::prefix('mcode')->group(function() {
     Route::get('/', 'McodeController@index');
-    Route::get('/category', 'McodeController@category');
+    Route::post('/getCategory', 'McodeController@getCategory');
     Route::post('/getFeature', 'McodeController@getFeature');
     Route::post('/getQrModalDetails', 'McodeController@getQrModalDetails');
     Route::post('/getGenerateModalDetails', 'McodeController@getGenerateModalDetails');

@@ -86,7 +86,7 @@
     </div>
 
     <div id="step-2" style="display: none;">
-      @include('mcode::site.mcodes.steps.category')
+      {{--  @include('mcode::site.mcodes.steps.category')  --}}
     </div>
 
     <div id="step-3" style="display: none;">
@@ -169,7 +169,20 @@
   $(document.body).on('click', '.nextBtn' ,function(){
     var step=$(this).attr('step');
     if(step==1){
-      $('#productID').val($(this).attr('productID'));
+      var productID=$(this).attr('productID');
+      $('#productID').val(productID);
+
+      var _token = $('input[name="_token"]').val();
+          $.ajax({
+            url:"{{ url('mcode/getCategory') }}",
+            dataType:'json',
+            method:"POST",
+            data:{productID:productID, _token:_token},
+            success:function(data){
+              $('#step-2').html(data.html);
+            }
+          });
+
       $('#step-1').hide();
       $('#step-2').fadeIn(1000);
       $('.stepone').addClass('white');

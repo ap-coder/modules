@@ -56,10 +56,36 @@ class McodeController extends Controller
         return view('mcode::create');
     }
 
-    public function category()
+    public function getCategory(Request $request)
     {
-        $categories = McodeCategory::orderBy('order','ASC')->get();
-        return view('mcode::site.mcodes.steps.category',compact('categories'));
+        $productID=$request->productID;
+
+        $mcodes = Mcode::where('id',$productID)->first();
+        $productModels=$mcodes->models->pluck('id')->toArray();
+        // models
+
+        // $features = McodeFeature::whereHas('models', function($query) use ($productModels) {
+        //     if($productModels){
+        //         $query->whereIn('mcode_product_model_id',$productModels);
+        //     }
+        //   })->get();
+
+        $categories=\DB::table('mcode_features')
+        ->leftJoin('mcode_feature_mcode_product_model', 'mcode_features.id', '=', 'mcode_feature_mcode_product_model.mcode_feature_id')
+        ->leftJoin('mcode_category_mcode_feature', 'mcode_features.id', '=', 'mcode_category_mcode_feature.mcode_feature_id')
+        ->leftJoin('mcode_categories', 'mcode_category_mcode_feature.mcode_category_id', '=', 'mcode_categories.id')
+        ->select('mcode_categories.*')
+        ->where('mcode_categories.name', '!=','Obsolete')
+        ->whereIn('mcode_feature_mcode_product_model.mcode_product_model_id', $productModels)
+        ->groupBy('mcode_category_mcode_feature.mcode_category_id')
+        ->get();
+          //dd($features);
+
+        //$categories = McodeCategory::orderBy('order','ASC')->get();
+        $html = view('mcode::site.mcodes.steps.category',compact('categories'))->render();
+        $data['html']=$html;
+        
+        echo json_encode($data);
     }
 
     public function getFeature(Request $request)
@@ -110,23 +136,19 @@ class McodeController extends Controller
         $categories = McodeCategory::whereIn('id',$categoryIDs)->get();
 
     
-        $source_strings = implode(' ', $features->pluck('source_string')->toArray());
-        $combined_string = Format::combinedSource($source_strings);
- 
+            $source_strings = implode(' ', $features->pluck('source_string')->toArray());
 
-        \Log::info($combined_string);
+            // $dd($source_string);
+
+            $combined_string = Format::combinedSource($source_strings);
+ 
 
         $config = ['instanceConfigurator' => function($mpdf) {
             $mpdf->SetDocTemplate(public_path('cover.pdf'), false);
-            $mpdf->h2toc = array(
-                'H1' => 0,
-                'H2' => 1,
-                'H3' => 2
-            );
         }];
        
         // $data = [
-        //     'content' => 
+        //     'content' => 'Combined Configuration!'
         // ];
 
         $pdf = PDF::loadView('mcode::pdf.document', compact('combined_string', 'product','features','categories'),[], $config);
@@ -150,17 +172,24 @@ class McodeController extends Controller
         $feature = McodeFeature::where('id',$featureIDs)->first();
         $categories = McodeCategory::whereIn('id',$categoryIDs)->get();
 
+
+
         $config = ['instanceConfigurator' => function($mpdf) {
-            // $mpdf = new \Mpdf\Mpdf(['format' => 'A4']);
-            // $mpdf->SetDisplayMode('fullwidth');
-            $mpdf->SetDisplayMode('fullpage');
-            $mpdf->SetDocTemplate(public_path('cover.pdf'), false);
-            // $mpdf->SetWatermarkText("CODE", false);
+            //$mpdf = new \Mpdf\Mpdf(['format' => 'A4']);
+            // $mpdf->SetWatermarkText("Paid");
             // $mpdf->showWatermarkText = true;
             // $mpdf->watermark_font = 'DejaVuSansCondensed';
             // $mpdf->watermarkTextAlpha = 0.1;
-            // $mpdf->TOCpagebreak();
+            $mpdf->SetDisplayMode('fullwidth');
+            $mpdf->SetDocTemplate(public_path('cover.pdf'), false);
+        
 
+            $mpdf->h2toc = array(
+                'H1' => 0,
+                'H2' => 1,
+                'H3' => 2
+            );
+ 
         }];
        
         // $data = [

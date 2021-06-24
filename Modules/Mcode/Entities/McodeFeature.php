@@ -59,7 +59,6 @@ class McodeFeature extends Model
     public function getFormattedSourceStringAttribute()
     {       
        
-
         if (str_starts_with($this->source_string, '%01X')) {
 
             Log::info("M1 CODE SCANNED");
