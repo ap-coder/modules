@@ -198,13 +198,14 @@
           checkboxValues.push($(this).val());
       });
       $('#categoryIDs').val(checkboxValues);
+      var productID=$('#productID').val();
 
       var _token = $('input[name="_token"]').val();
           $.ajax({
             url:"{{ url('mcode/getFeature') }}",
             dataType:'json',
             method:"POST",
-            data:{ids:checkboxValues, _token:_token},
+            data:{ids:checkboxValues,productID:productID, _token:_token},
             success:function(data){
               $('#step-3').html(data.html);
             }
