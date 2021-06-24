@@ -18,7 +18,12 @@
         font-family: Helvetica;
 	 
 
-} 
+}
+
+@page combinedQrList{
+	    margin-top: 2.5cm;
+        font-family: Helvetica;
+}
 
 @page single-qr { 
 	 	/*page-break-before: right;*/

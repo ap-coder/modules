@@ -9,7 +9,7 @@
   </div>
 
   <!-- Modal body -->
-  <div class="modal-body">
+  <div class="modal-body qrmodal">
     <div class="row">
       <div class="col-md-6">
         @if(str_starts_with($feature->mcode, 'M2'))
@@ -25,7 +25,9 @@
           <li><span class="text-4">{!! $feature->description ?? '' !!}</span> </li>
           <li><span class="text-4">({!! $feature->mcode ?? '' !!})</span></li>
         </ul>
-         {!! dump($feature->formatted_source_string) !!}
+         <div class="debug" style="word-wrap: break-word;">
+           {!! dump($feature->formatted_source_string) !!}
+         </div>
       </div>
       
     </div>

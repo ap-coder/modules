@@ -5,7 +5,7 @@ namespace Modules\Mcode\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Modules\Mcode\Entities\Mcode;
 use Modules\Mcode\Entities\McodeProductModel;
-
+use Modules\Mcode\Entities\McodeCategory;
 use Modules\Mcode\Traits\MediaUploadingTrait;
 
 use Modules\Mcode\Http\Requests\MassDestroyMcodeRequest;

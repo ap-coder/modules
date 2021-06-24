@@ -32,11 +32,46 @@ class McodeController extends Controller
         // }else{
         //     //mcode model run here
         // }
-	    
-        $mcodes = Mcode::published()->get();
-        $categories = McodeCategory::with('categoriesMcodeFeatures')->get();
-        $features = McodeFeature::all();
-	
+	    $productModels = McodeProductModel::all();
+        $mcodes = Mcode::all();
+        // $categories = McodeCategory::with('categoriesMcodeFeatures')->get();
+
+        $category    = DB::table('mcode_categories')
+                             ->where('id', '!=', 17 )
+                             ->where('published', true)
+                             ->get();
+
+// $resultQuery = DB::table('contractors')
+//                  ->join('contractor_location', 'contractors.id', '=', 'contractor_location.contractor_id')
+//                  ->join('category_contractor', 'contractors.id', '=', 'category_contractor.contractor_id')
+//                  ->join('locations', 'contractor_location.location_id', '=', 'locations.id');
+// $locations = DB::table('locations')
+//                ->join('contractor_location', 'locations.id', '=', 'contractor_location.location_id')
+//                ->join('contractors', 'contractor_location.contractor_id', '=', 'contractors.id')
+//                ->select('locations.city', 'locations.latitude', 'locations.longitude')
+//                ->where('locations.published', 1)
+//                ->where('contractors.published', 1)
+//                     //->groupBy('locations.city')
+//                ->orderBy('locations.title', 'ASC')
+//                ->get();
+
+
+
+        $categories=\DB::table('mcode_features')
+            ->leftJoin('mcode_feature_mcode_product_model', 'mcode_features.id', '=', 'mcode_feature_mcode_product_model.mcode_feature_id')
+
+            ->leftJoin('mcode_category_mcode_feature', 'mcode_features.id', '=', 'mcode_category_mcode_feature.mcode_feature_id')
+
+            ->leftJoin('mcode_categories', 'mcode_category_mcode_feature.mcode_category_id', '=', 'mcode_category_mcode_feature.mcode_category_id')
+
+            ->select('mcode_categories.*')
+            ->whereIn('mcode_feature_mcode_product_model.mcode_product_model_id', $productModels)
+            // ->where('mcode_categories.name', '!=','Obsolete')
+            // ->where('mcode.published', true)
+            ->groupBy('mcode_categories.id')
+            ->get();
+        
+	   $features = McodeFeature::all();
         
         // dd(Format::combinedSource("YEA IT WORKED."));
 
@@ -145,6 +180,17 @@ class McodeController extends Controller
 
         $config = ['instanceConfigurator' => function($mpdf) {
             $mpdf->SetDocTemplate(public_path('cover.pdf'), false);
+
+            ob_start();
+ 
+            // $mpdf->setAutoTopMargin = 'stretch';
+            $mpdf->setAutoBottomMargin = 'stretch';
+ 
+            $mpdf->h2toc = array(
+                'H1' => 0,             
+            );
+
+            $mpdf->WriteHTML(ob_get_clean());
         }];
        
         // $data = [
