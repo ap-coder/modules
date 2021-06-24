@@ -97,11 +97,11 @@ mpdf-->
 	<p>Scan this code to configure all the functions at once from what you selected in our generator.</p>
 	<div style="text-align: center">
 		<div class="main-generated-qr" style="border:1px solid firebrick;width:60%;margin: 12em auto 0;padding:2rem;min-height:30%;">
-	       {{--  @if(str_starts_with($feature->mcode, 'M2'))
+	        @if (str_starts_with($combined_string, '%01X')) 
 	          <?php echo '<img width="100px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'QRCODE',10,10) . '" alt="barcode"   />'; ?>
 	        @else
 	          <?php echo '<img width="100px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'DATAMATRIX',10,10) . '" alt="barcode"   />'; ?>
-        	@endif --}}
+        	@endif
 
 		</div>
 			{{-- <columns column-count="n" vAlign="justify" column-gap="n" /> --}}
@@ -127,9 +127,9 @@ mpdf-->
 
   <table class="tg" width="100%">
    
-    @foreach($features->chunk(4) as $section)
+    {{-- @foreach($features->chunk(4) as $section) --}}
     <tr>
-      @foreach ($section as $feature)
+      @foreach ($features as $feature)
       <td class="tg-0lax" style="text-align:center;">
       	<div class="qr-image" style="text-align:center;margin-bottom: 4mm;">
           @if(str_starts_with($feature->mcode, 'M2'))
@@ -145,7 +145,7 @@ mpdf-->
       </td>
     @endforeach
     </tr>
-    @endforeach
+    {{-- @endforeach --}}
    
   </table>
 </body>

@@ -96,12 +96,14 @@ class McodeController extends Controller
         $productModels=$mcodes->models->pluck('id')->toArray();
 
         $ids=$request->ids;
+
         $categories = McodeCategory::whereHas('categoriesMcodeFeatures', function($query) use ($productModels) {
             if(count($productModels)>0){
                 $query->join('mcode_feature_mcode_product_model', 'mcode_feature_mcode_product_model.mcode_feature_id', '=', 'mcode_features.id')
                 ->whereIn('mcode_feature_mcode_product_model.mcode_product_model_id', $productModels);
             }
           })->whereIn('id',$ids)->orderBy('order','ASC')->get();
+
         $filterCategories = McodeCategory::orderBy('order','ASC')->get();
         
         $html = view('mcode::site.mcodes.steps.feature',compact('categories','filterCategories'))->render();
@@ -149,11 +151,11 @@ class McodeController extends Controller
             $source_strings = implode(' ', $features->pluck('source_string')->toArray());
 
             // $dd($source_string);
-
+            
             $combined_string = Format::combinedSource($source_strings);
  
 
-        $config = ['instanceConfigurator' => function($mpdf) {
+            $config = ['instanceConfigurator' => function($mpdf) {
             $mpdf->SetDocTemplate(public_path('cover.pdf'), false);
 
             ob_start();
