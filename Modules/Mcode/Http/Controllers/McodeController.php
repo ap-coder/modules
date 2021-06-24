@@ -34,24 +34,23 @@ class McodeController extends Controller
         // }
 	    $productModels = McodeProductModel::all();
         $mcodes = Mcode::all();
-        $categories = McodeCategory::with('categoriesMcodeFeatures')->get();
+        // $categories = McodeCategory::with('categoriesMcodeFeatures')->get();
+
+        $category    = DB::table('mcode_categories')
+                             ->where('id', '!=', 17 )
+                             ->where('published', true)
+                             ->get();
 
         $categories=\DB::table('mcode_features')
-            ->join(
-                'mcode_feature_mcode_product_model', 'mcode_features.id', 
-                '=', 
-                'mcode_feature_mcode_product_model.mcode_feature_id')
-            ->join(
-                'mcode_category_mcode_feature', 'mcode_features.id', 
-                '=', 
-                'mcode_category_mcode_feature.mcode_feature_id')
-            ->join(
-                'mcode_categories', 'mcode_category_mcode_feature.mcode_category_id', 
-                '=', 
-                'mcode_category_mcode_feature.mcode_category_id')
+            ->leftJoin('mcode_feature_mcode_product_model', 'mcode_features.id', '=', 'mcode_feature_mcode_product_model.mcode_feature_id')
+
+            ->leftJoin('mcode_category_mcode_feature', 'mcode_features.id', '=', 'mcode_category_mcode_feature.mcode_feature_id')
+
+            ->leftJoin('mcode_categories', 'mcode_category_mcode_feature.mcode_category_id', '=', 'mcode_category_mcode_feature.mcode_category_id')
+
             ->select('mcode_categories.*')
             ->whereIn('mcode_feature_mcode_product_model.mcode_product_model_id', $productModels)
-            ->where('mcode_categories.name', '!=','Obsolete')
+            // ->where('mcode_categories.name', '!=','Obsolete')
             // ->where('mcode.published', true)
             ->groupBy('mcode_categories.id')
             ->get();
@@ -62,7 +61,6 @@ class McodeController extends Controller
 
 
         // dd($mcodes);
-
 
 
         return view('mcode::site.mcodes.index', compact('mcodes', 'features', 'categories'));
