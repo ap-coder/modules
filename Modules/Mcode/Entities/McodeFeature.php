@@ -117,18 +117,20 @@ class McodeFeature extends Model
     }
 
 
-    public function scopeM1($query)
+    public function scopeM1Mcode($query)
     {
-        return $query->whereHas('mcode', function ($subQuery) {
-            $query->where('mcode', 'like', 'M1%');
-        });
+        return $query->where('mcode', 'like', 'M1%');
+        // return $query->whereHas('mcode', function ($subQuery) {
+        //     $subQuery->where('mcode', 'like', 'M1%');
+        // });
     }
 
-    public function scopeM2($query)
+    public function scopeM2Mcode($query)
     {
-        return $query->whereHas('mcode', function ($subQuery) {
-            $query->where('mcode', 'like', 'M2%');
-        });
+        return $query->where('mcode', 'like', 'M2%');
+        // return $query->whereHas('mcode', function ($subQuery) {
+        //     $subQuery->where('mcode', 'like', 'M2%');
+        // });
     }
 
     public function models()
