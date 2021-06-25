@@ -1,18 +1,33 @@
 <?php
 
 namespace Modules\Mcode\Helpers;
+
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
 class Format
 {
 	public static function combinedSource (string $string)
 	{
+        \Log::info($string);
+
    		if (str_starts_with($string, '%01X')) {
 
-            Log::info("M1 CODE SCANNED");
+            Log::info("M1 CODE SCANNED: ". $string);
+
+            do {
+                $string = str_replace("  ", " ", $this->source_string, $count);
+            } while (
+                $count > 0
+            );
+
+            // $string = implode(",", $string);
+
+            // dump($string);
             
-            $string = [];
+            // $string = [];
             /* M1 CODES */
+            // $string = str_replace(',', '', $string);
             $string = str_replace('%01X', chr(1). 'X', $string);
             $string = str_replace('%1D', chr(29), $string);
             $string = str_replace('%02', chr(2), $string);
@@ -20,6 +35,8 @@ class Format
             $string = str_replace('%04', chr(4), $string);
 	           
             $source_string = $string;
+
+            \Log::alert($source_string);
             
             return $source_string;
 

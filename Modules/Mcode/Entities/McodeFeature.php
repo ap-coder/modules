@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Facades\Log;
+use Modules\Mcode\Entities\McodeFeature;
+use Modules\Mcode\Entities\McodeCategory;
+
 
 class McodeFeature extends Model
 {
@@ -111,6 +114,21 @@ class McodeFeature extends Model
     public function scopePublished($query)
     {
         return $query->where('published', 1);
+    }
+
+
+    public function scopeM1($query)
+    {
+        return $query->whereHas('mcode', function ($subQuery) {
+            $query->where('mcode', 'like', 'M1%');
+        });
+    }
+
+    public function scopeM2($query)
+    {
+        return $query->whereHas('mcode', function ($subQuery) {
+            $query->where('mcode', 'like', 'M2%');
+        });
     }
 
     public function models()

@@ -32,17 +32,20 @@ class McodeController extends Controller
         // }else{
         //     //mcode model run here
         // }
+
 	    $productModels = McodeProductModel::all();
         $mcodes = Mcode::all();
         $categories = McodeCategory::with('categoriesMcodeFeatures')->get();
 
         
-	   $features = McodeFeature::all();
+	   // $features = McodeFeature::all();
+
+       $features = McodeFeature::m1()->get();
         
         // dd(Format::combinedSource("YEA IT WORKED."));
 
 
-        // dd($mcodes);
+        dd($features);
 
 
         return view('mcode::site.mcodes.index', compact('mcodes', 'features', 'categories'));
