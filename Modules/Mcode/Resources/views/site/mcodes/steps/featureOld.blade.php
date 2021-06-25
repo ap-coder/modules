@@ -94,11 +94,6 @@
             <div id="collapse-{{ $loop->iteration }}" class="panel-collapse in collapse @if($ckey==0) show  @endif" role="tabpanel" aria-labelledby="heading-{{ $loop->iteration }}">
               <div class="panel-body">
                   <div class="feature_box">
-                      
-
-
-
-
                       <ul class="responsive-table">
                           <li class="table-header">
                             <div class="col col-2">Code</div>

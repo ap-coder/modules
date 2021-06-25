@@ -31,7 +31,7 @@ WHERE
 'M10431'
 'M10432'
 
-
+http://eclecticgeek.com/dompdf/debug.php
 
 McodeFeature::where('mcode','M10375')->firstOrFail()->categories()->sync(19); 
 McodeFeature::where('mcode','M10376')->firstOrFail()->categories()->sync(19); 

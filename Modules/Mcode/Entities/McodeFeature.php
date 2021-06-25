@@ -7,7 +7,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Builder;
 
+/**
+ * @method mcode()
+ */
 class McodeFeature extends Model
 {
     use SoftDeletes;
@@ -102,6 +107,11 @@ class McodeFeature extends Model
 
 
     }
+	
+	public function expectsJson()
+	{
+		return ($this->ajax() && ! $this->pjax()) || $this->wantsJson();
+	}
 
     public static function last()
     {
@@ -111,6 +121,17 @@ class McodeFeature extends Model
     public function scopePublished($query)
     {
         return $query->where('published', 1);
+    }
+ 
+    public function scopeM1Mcode()
+    {
+        return $this->mcode()->where(Str::startsWith('mcode', 'M1'))->exists();
+    }
+	
+ 
+    public function scopeM2Mcode($query)
+    {
+        return $this->mcode()->where(Str::startsWith($query, 'M2'))->exists();
     }
 
     public function models()

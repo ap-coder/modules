@@ -62,13 +62,29 @@ WHERE
  
 
 
+        $categories=\DB::table('mcode_features')
+        ->leftJoin('mcode_feature_mcode_product_model', 'mcode_features.id', '=', 'mcode_feature_mcode_product_model.mcode_feature_id')
+        ->leftJoin('mcode_category_mcode_feature', 'mcode_features.id', '=', 'mcode_category_mcode_feature.mcode_feature_id')
+        ->leftJoin('mcode_categories', 'mcode_category_mcode_feature.mcode_category_id', '=', 'mcode_categories.id')
+        ->select('mcode_categories.*')
+        ->where('mcode_categories.name', '!=','Obsolete')
+        ->whereIn('mcode_feature_mcode_product_model.mcode_product_model_id', $productModels)
+        ->groupBy('mcode_category_mcode_feature.mcode_category_id')
+        ->get();
+
+
+    public function getIsM1McodeAttribute($query)
+    {
+        return $this->mcode()->where(Str::startsWith($query, 'M1'))->exists();
+    }
 
 
 
+$users = App\Models\User::popular()->orWhere->active()->get();
 
+   $features = McodeFeature::published()->orWhere->m1Mcode()->get();;
 
-
-
+Str::contains('This is my name', 'my');
 
 
 
@@ -151,6 +167,19 @@ category.name = 'Obsolete'
         ->where('categories.id', '!=','17')
         ->groupBy('categories.id')
         ->get();
+
+
+
+        $categories=\DB::table('mcode_features')
+        ->leftJoin('mcode_feature_mcode_product_model', 'mcode_features.id', '=', 'mcode_feature_mcode_product_model.mcode_feature_id')
+        ->leftJoin('mcode_category_mcode_feature', 'mcode_features.id', '=', 'mcode_category_mcode_feature.mcode_feature_id')
+        ->leftJoin('mcode_categories', 'mcode_category_mcode_feature.mcode_category_id', '=', 'mcode_categories.id')
+        ->select('mcode_categories.*')
+        ->where('mcode_categories.name', '!=','Obsolete')
+        ->whereIn('mcode_feature_mcode_product_model.mcode_product_model_id', $productModels)
+        ->groupBy('mcode_category_mcode_feature.mcode_category_id')
+        ->get();
+
 
 
 

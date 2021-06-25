@@ -5,46 +5,43 @@ namespace Modules\Mcode\Http\Controllers;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-// use Mcode::Entities\McodeCategory;
 use Modules\Mcode\Entities\McodeCategory;
 use Modules\Mcode\Entities\McodeFeature;
-// use SimpleSoftwareIO\QrCode\Facades\QrCode; 
 use Modules\Mcode\Entities\Mcode;
 use Modules\Mcode\Entities\McodeProductModel;
 use App\Models\User;
-
-use PDF;
+use niklasravnsborg\LaravelPdf\Facades\Pdf;
 use Modules\Mcode\Helpers\Format;
 
 
 class McodeController extends Controller
 {
-	public function __construct()
+	protected $productModels, $mcodes, $features, $categories;
+
+	public function __construct(McodeProductModel $productModels,Mcode $mcodes,McodeFeature $features, McodeCategory $categories)
 	{
-	
+	   $this->productModels = McodeProductModel::published()->get();
+       $this->mcodes = Mcode::published()->get();
+       $this->features = McodeFeature::published()->get();
+       $this->categories = McodeCategory::published()->get();
 	}
 	
     public function index()
     {
-        // $model = 'App\Models\\' . \Str::studly(\Str::singular('ProductModel'));
-        // if (is_subclass_of($model, 'Illuminate\Database\Eloquent\Model')) {
-        //     //parent model run here
-        // }else{
-        //     //mcode model run here
-        // }
-	    $productModels = McodeProductModel::all();
-        $mcodes = Mcode::all();
-        $categories = McodeCategory::with('categoriesMcodeFeatures')->get();
+
+
+	    $productModels = McodeProductModel::published()->get();
+        $mcodes = Mcode::published()->get();
+        $categories = McodeCategory::published()->with('categoriesMcodeFeatures')->get();
 
         
-	   $features = McodeFeature::all();
-        
-        // dd(Format::combinedSource("YEA IT WORKED."));
-
-
-        // dd($mcodes);
-
-
+//      $features = McodeFeature::published()->get();
+//	    $features = McodeFeature::published()->orWhere->isM1Mcode()->get();
+	    
+	    $features = McodeFeature::isM1Mcode()->get();
+	    
+	    dd($features);
+       
         return view('mcode::site.mcodes.index', compact('mcodes', 'features', 'categories'));
     }
 

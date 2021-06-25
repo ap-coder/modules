@@ -22,6 +22,18 @@
   .layout-item-center { justify-content: space-between; flex-basis: 40%; position: relative; }
   .dot { flex-basis: 20px; }
   .line { flex-basis: 70%; }
+
+@media (min-width: 576px) {
+  .process-container { display: flex; position: relative; flex: 1; margin: 2em 0; }
+  .layout-item { display: flex; flex: 1; }
+  .process-item { display: flex; flex: 1; }
+  .left-side, .right-side { flex-basis: 20%; }
+  .layout-item-center { justify-content: space-between; flex-basis: 40%; position: relative; }
+  .dot { flex-basis: 20px; }
+  .line { flex-basis: 70%; }
+}
+
+
   .line::after { content: ''; width: 90%; height: 10px; border-radius: 5px;background: black; display: block; position: relative; top: .25em; margin: 0 auto; }
   .white::after { content: ''; width: 90%; height: 10px; border-radius: 5px;background: white; display: block; position: relative; top: .25em; margin: 0 auto; transition: all .6s ease;}
   input#source_string { font-family: CONSOLAS; font-size: 24px; }

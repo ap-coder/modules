@@ -49,7 +49,17 @@ class McodeProductModel extends Model implements HasMedia
         $this->addMediaConversion('thumb')->fit('crop', 50, 50);
         $this->addMediaConversion('preview')->fit('crop', 120, 120);
     }
-
+	
+	public static function last()
+	{
+		return static::all()->last();
+	}
+	
+	public function scopePublished($query)
+	{
+		return $query->where('published', 1);
+	}
+	
     public function modelsMcodeFeatures()
     {
         return $this->belongsToMany(McodeFeature::class);
