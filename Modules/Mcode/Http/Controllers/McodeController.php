@@ -119,9 +119,10 @@ class McodeController extends Controller
     {
         $productID=$request->productID;
         $product = Mcode::where('id',$productID)->first();
+        $categories = McodeCategory::whereIn('id',$categoryIDs)->get();
         $feature = McodeFeature::where('id',$request->id)->first();
  
-        $html = view('mcode::site.mcodes.steps.qr-modal', compact('feature','product'))->render();
+        $html = view('mcode::site.mcodes.steps.qr-modal', compact('feature','product','categories'))->render();
 
         $data['html']=$html;
 
@@ -131,8 +132,16 @@ class McodeController extends Controller
     public function getGenerateModalDetails(Request $request)
     {
         $ids=$request->ids;
+        $categoryIDs=explode(',',$request->categoryIDs);
+        $featureIDs=explode(',',$request->featureIDs);
+        // $categories = McodeCategory::whereIn('id',$categoryIDs)->get();
         $features = McodeFeature::whereIn('id',$ids)->get();
-        $html = view('mcode::site.mcodes.steps.generate-modal', compact('features'))->render();
+        $categories = McodeCategory::with(['features' => function($query) use ($featureIDs){
+            $query->whereIn('id', $featureIDs);
+        }])->whereIn('id',$categoryIDs)->get();
+
+
+        $html = view('mcode::site.mcodes.steps.generate-modal', compact('features','categories'))->render();
         $data['html']=$html;
         echo json_encode($data);
     }
@@ -145,26 +154,37 @@ class McodeController extends Controller
 
         $product = Mcode::where('id',$productID)->first();
         $features = McodeFeature::whereIn('id',$featureIDs)->get();
-        $categories = McodeCategory::whereIn('id',$categoryIDs)->get();
+        //$categories = McodeCategory::whereIn('id',$categoryIDs)->get();
+
+        $categories = McodeCategory::with(['features' => function($query) use ($featureIDs){
+            $query->whereIn('id', $featureIDs);
+        }])->whereIn('id',$categoryIDs)->get();
 
     
-            $source_strings = implode(' ', $features->pluck('source_string')->toArray());
+            // $source_strings = implode(' ', $features->pluck('source_string')->toArray());
 
             // $dd($source_string);
             
-            $combined_string = Format::combinedSource($source_strings);
+            // $combined_string = Format::combinedSource($source_strings);
  
 
             $config = ['instanceConfigurator' => function($mpdf) {
             $mpdf->SetDocTemplate(public_path('cover.pdf'), false);
+            $mpdf->debug = 'true';
+           
 
             ob_start();
  
             // $mpdf->setAutoTopMargin = 'stretch';
             $mpdf->setAutoBottomMargin = 'stretch';
+            $mpdf->SetCompression(false);
+            $mpdf->justifyB4br = true;
+
  
             $mpdf->h2toc = array(
-                'H1' => 0,             
+                // 'H1' => 0,
+                // 'H2' => 1,
+                // 'H3' => 2      
             );
 
             $mpdf->WriteHTML(ob_get_clean());
@@ -174,7 +194,7 @@ class McodeController extends Controller
         //     'content' => 'Combined Configuration!'
         // ];
 
-        $pdf = PDF::loadView('mcode::pdf.document', compact('combined_string', 'product','features','categories'),[], $config);
+        $pdf = PDF::loadView('mcode::pdf.document', compact('product','features','categories'),[], $config);
         
         $formatted_name = str_replace(' ', '_', $product->name);
 
@@ -205,6 +225,8 @@ class McodeController extends Controller
             // $mpdf->watermarkTextAlpha = 0.1;
             $mpdf->SetDisplayMode('fullwidth');
             $mpdf->SetDocTemplate(public_path('cover.pdf'), false);
+            $mpdf->SetCompression(false);
+
         
 
             $mpdf->h2toc = array(
