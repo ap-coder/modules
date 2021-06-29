@@ -144,7 +144,14 @@ class McodeController extends Controller
 
         $product = Mcode::where('id',$productID)->first();
         $features = McodeFeature::whereIn('id',$featureIDs)->get();
+
         $categories = McodeCategory::whereIn('id',$categoryIDs)->get();
+
+        // $categories = McodeCategory::with(['features' => function($query) use ($featureIDs){
+
+        //     $query->whereIn('id', $featureIDs);
+        
+        // }])->whereIn('id',$categoryIDs)->get();
 
     
             $source_strings = implode(' ', $features->pluck('source_string')->toArray());
