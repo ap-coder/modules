@@ -2,7 +2,7 @@
 <div class="container">
     <div class="mcode_step_holder feature_holder">
       <div class="feature-filter row">
-        <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12">
+        <div class="col-lg-7 col-md-12 col-xs-12 col-sm-12">
             <label class="control-label" for="keywords">Keywords</label>
             <div class="inner-addon left-addon">
                 <i class="fa fa-search"></i>
@@ -41,7 +41,7 @@
               </div>
             </div>
         </div>
-        <div class="col-lg-2 col-md-12 col-xs-12 col-sm-12">
+        {{--  <div class="col-lg-2 col-md-12 col-xs-12 col-sm-12">
             <div class="multiselect">
               <div class="selectBox" onclick="showRadioboxes()">
                 <select>
@@ -71,7 +71,7 @@
                 
               </div>
             </div>
-        </div>
+        </div>  --}}
         <div class="col-lg-2 col-md-12 col-xs-12 col-sm-12">
             <div class="lastBtn" onclick="SearchIcon()">
               <img src="https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png" alt="">
@@ -140,6 +140,7 @@
         
         <div class="button-div">
             <button type="button" class="back prevBtn" step="3">Back</button>
+            <h2 class="MiddleproductName">{{ $mcode->name }}</h2>
             <button type="button" class="next disabled" disabled id="GenerateButton">Generate</button>
         </div>
       

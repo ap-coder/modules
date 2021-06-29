@@ -2839,8 +2839,19 @@
     /* category style */
     /* button div */
     
+    .MiddleproductName {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        width: 60%;
+        margin: auto;
+    }
+    
     .button-div {
         margin: 20px 0;
+        position: relative;
     }
     
     .button-div .back {

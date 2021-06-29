@@ -137,7 +137,7 @@
     var productID=$('#productID').val();
     var categoryIDs=$('#categoryIDs').val();
     var featureIDs=$('#featureIDs').val();
-    var url="{{ url('mcode/getPdf') }}?productID="+productID+"&categoryIDs="+categoryIDs+"&featureIDs="+featureIDs;
+    var url="{{ url('support/mcodes/getPdf') }}?productID="+productID+"&categoryIDs="+categoryIDs+"&featureIDs="+featureIDs;
     window.open(
       url,
   '_blank' // <- This is what makes it open in a new window.
@@ -148,7 +148,7 @@
     var productID=$('#productID').val();
     var categoryIDs=$('#categoryIDs').val();
     var featureIDs=$('#featureIDs').val();
-    var url="{{ url('mcode/getSinglePdf') }}?productID="+productID+"&categoryIDs="+categoryIDs+"&featureIDs="+featureIDs;
+    var url="{{ url('support/mcodes/getSinglePdf') }}?productID="+productID+"&categoryIDs="+categoryIDs+"&featureIDs="+featureIDs;
     window.open(
       url,
   '_blank' // <- This is what makes it open in a new window.
@@ -178,7 +178,7 @@
 
       var _token = $('input[name="_token"]').val();
           $.ajax({
-            url:"{{ url('mcode/getCategory') }}",
+            url:"{{ url('support/mcodes/getCategory') }}",
             dataType:'json',
             method:"POST",
             data:{productID:productID, _token:_token},
@@ -202,7 +202,7 @@
 
       var _token = $('input[name="_token"]').val();
           $.ajax({
-            url:"{{ url('mcode/getFeature') }}",
+            url:"{{ url('support/mcodes/getFeature') }}",
             dataType:'json',
             method:"POST",
             data:{ids:checkboxValues,productID:productID, _token:_token},
@@ -279,7 +279,7 @@
     var _token = $('input[name="_token"]').val();
     
           $.ajax({
-            url:"{{ url('mcode/getQrModalDetails') }}",
+            url:"{{ url('support/mcodes/getQrModalDetails') }}",
             dataType:'json',
             method:"POST",
             data:{id:id,productID:productID, _token:_token},
@@ -297,7 +297,7 @@
       $('#featureIDs').val(checkboxValues);
     var _token = $('input[name="_token"]').val();
           $.ajax({
-            url:"{{ url('mcode/getGenerateModalDetails') }}",
+            url:"{{ url('support/mcodes/getGenerateModalDetails') }}",
             dataType:'json',
             method:"POST",
             data:{ids:checkboxValues, _token:_token},
