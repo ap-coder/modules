@@ -49,13 +49,13 @@
       </div>
     </div>
 
-    <div class="row" id="saprater" style="display: none;">
+    <div class="row" id="saprater" style="display: none; text-align:center;">
       @foreach ($features as $key => $feature)
       <div class="col-md-6 saprater @if($key % 2 == 0) sapraterBorder @endif" style="text-align:center;">
             <h2>{{ $feature->mcode ?? '' }}</h2>
        
             @if(str_starts_with($feature->mcode, 'M2'))
-            <?php echo '<img width="100px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'QRCODE',10,10) . '" alt="barcode"   />'; ?>
+            <?php echo '<img width="100px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'QRCODE',10,10) . '" alt="barcode" />'; ?>
             @else
             <?php echo '<img width="100px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'DATAMATRIX',10,10) . '" alt="barcode"   />'; ?>
             @endif

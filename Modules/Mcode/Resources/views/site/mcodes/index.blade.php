@@ -10,6 +10,7 @@
 @endsection
 
 @section('styles') 
+  <link href="{{ asset('site/css/mcode-custom.css') }}" rel="stylesheet" />
  <style>
    section.section {background: white; border-top: none!important; }
   .thumb-info .thumb-info-title {bottom: 0; }
@@ -27,8 +28,8 @@
   input#source_string { font-family: CONSOLAS; font-size: 24px; }
   html.boxed .main { overflow: inherit !important;}
 
-.modal-body.qrmodal  .row .col-md-6:nth-child(1) {margin: 0 auto!important; flex: 0; }
-.modal-body.qrmodal  .row .col-md-6:nth-child(2) {margin: 0!important; flex: 1; }
+  .modal-body.qrmodal  .row .col-md-6:nth-child(1) {margin: 0 auto!important; flex: 0; }
+  .modal-body.qrmodal  .row .col-md-6:nth-child(2) {margin: 0!important; flex: 1; }
 
  
 
@@ -46,11 +47,11 @@
   
     <div id="step-1">
       <div class="container"> 
-      <ul class="nav nav-pills sort-source sort-source-style-3 justify-content-center" data-sort-id="mcodes" data-option-key="filter">
+    {{--   <ul class="nav nav-pills sort-source sort-source-style-3 justify-content-center" data-sort-id="mcodes" data-option-key="filter">
         <li class="nav-item active" data-option-value="*"><a class="nav-link text-1 text-uppercase active" href="#">Show All</a></li>
         <li class="nav-item" data-option-value=".current"><a class="nav-link text-1 text-uppercase" href="#">Current</a></li>
         <li class="nav-item" data-option-value=".discontinued"><a class="nav-link text-1 text-uppercase" href="#">Discontinued</a></li>
-      </ul>
+      </ul> --}}
     
       <div class=" mt-4 pt-2">
         <div class="row team-list " data-sort-id="mcodes">
