@@ -79,11 +79,11 @@ mpdf-->
 <div name="page-cover" class="coverpage" style="display:flex; flex:1;font-family: Helvetica;">
 	 
 <bookmark content="Configuration Guide" />
-	@if($product->photo)
+	{{-- @if($product->photo)
 	<div class="full-width">
         <img id="cover-image" src="{{ $product->photo->getUrl() }}" style="float: left;margin-left: -50px;margin-top: 30px;">
 	</div>
-	@endif
+	@endif --}}
  
 	<h1 id="cover-title" class="coverpage-title helvetica" style=" font-weight: bold;font-family: Helvetica; text-align:right;font-size: 48px;margin-top: 145px; color:ghostwhite;">
 		{{ $product->name ?? '' }}<tocentry level="0" content="{{ $product->name ?? '' }} Configuration Guide" />
@@ -192,6 +192,5 @@ mpdf-->
  
     @endforeach
    
-  </table>
 </body>
 </html>

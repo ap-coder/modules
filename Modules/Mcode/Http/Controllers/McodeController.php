@@ -40,15 +40,15 @@ class McodeController extends Controller
         
 	   // $features = McodeFeature::all();
 
-       $features = McodeFeature::m1()->get();
+    //    $features = McodeFeature::m1()->get();
         
         // dd(Format::combinedSource("YEA IT WORKED."));
 
 
-        dd($features);
+        // dd($features);
 
 
-        return view('mcode::site.mcodes.index', compact('mcodes', 'features', 'categories'));
+        return view('mcode::site.mcodes.index', compact('mcodes', 'categories'));
     }
 
     /**

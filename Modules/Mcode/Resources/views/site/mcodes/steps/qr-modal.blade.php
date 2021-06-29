@@ -25,9 +25,9 @@
           <li><span class="text-4">{!! $feature->description ?? '' !!}</span> </li>
           <li><span class="text-4">({!! $feature->mcode ?? '' !!})</span></li>
         </ul>
-         <div class="debug" style="word-wrap: break-word;">
+         {{-- <div class="debug" style="word-wrap: break-word;">
            {!! dump($feature->formatted_source_string) !!}
-         </div>
+         </div> --}}
       </div>
       
     </div>

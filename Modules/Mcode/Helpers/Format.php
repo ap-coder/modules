@@ -16,7 +16,8 @@ class Format
             Log::info("M1 CODE SCANNED: ". $string);
 
             do {
-                $string = str_replace("  ", " ", $this->source_string, $count);
+                // $string = str_replace("  ", " ", $this->source_string, $count);
+                $string = str_replace("  ", " ", $string, $count);
             } while (
                 $count > 0
             );
