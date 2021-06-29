@@ -17,6 +17,17 @@
       <div class="col-md-5">
         <h2>Includes</h2>
         <ul>
+{{--     @foreach($categories as $category)
+      <h2>{{ $category->name ?? '' }}</h2>
+      
+      <ul>
+         @foreach ($category->features as $feature)
+          <li>
+            <strong>{{ $feature->mcode ?? '' }}</strong> <small>{{ $feature->description ?? '' }}</small>  
+          </li>
+         @endforeach
+     </ul>
+    @endforeach --}}
           @foreach ($features as $feature)
             <li>{!! $feature->description ?? '' !!} <br> <span>{!! $feature->mcode ?? '' !!}</span></li>
           @endforeach
@@ -42,7 +53,7 @@
       @foreach ($features as $key => $feature)
       <div class="col-md-6 saprater @if($key % 2 == 0) sapraterBorder @endif" style="text-align:center;">
             <h2>{{ $feature->mcode ?? '' }}</h2>
-            {{-- {!! QrCode::size(150)->generate($feature->formatted_source_string) !!} --}}
+       
             @if(str_starts_with($feature->mcode, 'M2'))
             <?php echo '<img width="100px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'QRCODE',10,10) . '" alt="barcode"   />'; ?>
             @else
