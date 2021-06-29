@@ -40,10 +40,10 @@
 
             @if(str_starts_with($feature->mcode, 'M2'))
             {{-- CODE HERE: {!! dump($feature->formatted_source_string) !!}  --}}
-            {{-- <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'QRCODE',10,10) . '" alt="barcode"   />'; ?> --}}
+            <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'QRCODE',7,7) . '" alt="qrcode"   />'; ?>
             @else
             {{-- CODE HERE: {!!  dump($feature->formatted_source_string)  !!}  --}}
-            {{-- <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'DATAMATRIX',10,10) . '" alt="barcode"   />'; ?> --}}
+            <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'DATAMATRIX',7,7) . '" alt="barcode"   />'; ?>
             @endif
    
       </div>

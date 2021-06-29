@@ -134,7 +134,9 @@ class McodeController extends Controller
     {
         $ids=$request->ids;
         $features = McodeFeature::whereIn('id',$ids)->get();
-        $html = view('mcode::site.mcodes.steps.generate-modal', compact('features'))->render();
+        $source_strings = implode(' ', $features->pluck('source_string')->toArray());
+        $combined_string = Format::combinedSource($source_strings);
+        $html = view('mcode::site.mcodes.steps.generate-modal', compact('features','combined_string'))->render();
         $data['html']=$html;
         echo json_encode($data);
     }
