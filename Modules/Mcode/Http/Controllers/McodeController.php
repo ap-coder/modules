@@ -35,7 +35,7 @@ class McodeController extends Controller
 
 	    $productModels = McodeProductModel::all();
         $mcodes = Mcode::all();
-        $categories = McodeCategory::with('categoriesMcodeFeatures')->get();
+        $categories = McodeCategory::with('categoriesMcodeFeatures')->orderBy('order','ASC')->get();
 
         
 	   // $features = McodeFeature::all();
@@ -91,19 +91,20 @@ class McodeController extends Controller
         $mcode = Mcode::where('id',$productID)->first();
         $productModels=$mcode->models->pluck('id')->toArray();
 
-        $ids=$request->ids;
-        // $categories = McodeCategory::whereHas('categoriesMcodeFeatures', function($query) use ($productModels) {
-        //     if(count($productModels)>0){
-        //         $query->join('mcode_feature_mcode_product_model', 'mcode_features.id', '=', 'mcode_feature_mcode_product_model.mcode_feature_id')
-        //         ->whereIn('mcode_feature_mcode_product_model.mcode_product_model_id', $productModels);
-        //     }
-        //   })->whereIn('id',$ids)->orderBy('order','ASC')->get();
-
-        $categories = McodeCategory::with(['categoriesMcodeFeatures' => function($query) use ($productModels){
-
+        $ids=explode(',',$request->ids);
+        $keywords=$request->keywords;
+        
+        $categories = McodeCategory::with(['categoriesMcodeFeatures' => function($query) use ($productModels,$keywords){
+            
             $query->join('mcode_feature_mcode_product_model', 'mcode_features.id', '=', 'mcode_feature_mcode_product_model.mcode_feature_id')
             ->whereIn('mcode_feature_mcode_product_model.mcode_product_model_id', $productModels);
         
+            if($keywords){
+                $query->where('mcode_features.mcode', 'like', '%' . $keywords . '%');
+                $query->orWhere('mcode_features.description', 'like', '%' . $keywords . '%');
+            }
+            $query->groupBy('mcode_features.id');
+
         }])->whereIn('id',$ids)->orderBy('order','ASC')->get();
           
         $filterCategories = McodeCategory::orderBy('order','ASC')->get();
@@ -132,7 +133,7 @@ class McodeController extends Controller
 
     public function getGenerateModalDetails(Request $request)
     {
-        $ids=$request->ids;
+        $ids=explode(',',$request->ids);
         $features = McodeFeature::whereIn('id',$ids)->get();
         $source_strings = implode(' ', $features->pluck('source_string')->toArray());
         $combined_string = Format::combinedSource($source_strings);

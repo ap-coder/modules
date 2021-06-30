@@ -95,7 +95,19 @@
     </div>
 
     <div id="step-3" style="display: none;">
-      
+      <div class="container">
+        <div class="mcode_step_holder feature_holder">
+
+          @include('mcode::site.mcodes.steps.feature-filter')
+
+          <div id="filterContent">
+
+
+          </div>
+
+        </div>
+     </div>
+    
     </div>
 
     <input type="hidden" name="productID" id="productID">
@@ -199,6 +211,8 @@
           checkboxValues.push($(this).val());
       });
       $('#categoryIDs').val(checkboxValues);
+
+      var ids=$('#categoryIDs').val();
       var productID=$('#productID').val();
 
       var _token = $('input[name="_token"]').val();
@@ -206,9 +220,9 @@
             url:"{{ url('support/mcodes/getFeature') }}",
             dataType:'json',
             method:"POST",
-            data:{ids:checkboxValues,productID:productID, _token:_token},
+            data:{ids:ids,productID:productID, _token:_token},
             success:function(data){
-              $('#step-3').html(data.html);
+              $('#filterContent').html(data.html);
             }
           });
 
@@ -296,15 +310,34 @@
           checkboxValues.push($(this).val());
       });
       $('#featureIDs').val(checkboxValues);
+      var ids=$('#categoryIDs').val();
     var _token = $('input[name="_token"]').val();
           $.ajax({
             url:"{{ url('support/mcodes/getGenerateModalDetails') }}",
             dataType:'json',
             method:"POST",
-            data:{ids:checkboxValues, _token:_token},
+            data:{ids:ids, _token:_token},
             success:function(data){
               $('.generatemodal .modal-content').html(data.html);
               $('.generatemodal').modal('show');
+            }
+          });
+  });
+
+  $(document.body).on('keyup', '#keywords' ,function(){
+    var productID=$('#productID').val();
+    var keywords=$(this).val();
+
+    var checkboxValues=$('#categoryIDs').val();
+
+      var _token = $('input[name="_token"]').val();
+          $.ajax({
+            url:"{{ url('support/mcodes/getFeature') }}",
+            dataType:'json',
+            method:"POST",
+            data:{ids:checkboxValues,productID:productID,keywords:keywords, _token:_token},
+            success:function(data){
+              $('#filterContent').html(data.html);
             }
           });
   });
@@ -325,10 +358,30 @@ function showCheckboxes() {
   }
 }
 
-function FilterNext() {
-  var checkboxes = document.getElementById("categorybox");
-  checkboxes.style.display = "none";
-  expanded = false;
+function CategoryFilter() {
+  // var checkboxes = document.getElementById("categorybox");
+  // checkboxes.style.display = "none";
+  // expanded = false;
+  
+  var checkboxValues = [];
+      $('input[name=filtercategory]:checked').map(function() {
+          checkboxValues.push($(this).val());
+      });
+      $('#categoryIDs').val(checkboxValues);
+
+      var checkboxValues=$('#categoryIDs').val();
+      var productID=$('#productID').val();
+
+      var _token = $('input[name="_token"]').val();
+          $.ajax({
+            url:"{{ url('support/mcodes/getFeature') }}",
+            dataType:'json',
+            method:"POST",
+            data:{ids:checkboxValues,productID:productID, _token:_token},
+            success:function(data){
+              $('#filterContent').html(data.html);
+            }
+          });
 }
 
 
