@@ -41,7 +41,6 @@
 
 		<!-- Theme Custom CSS -->
 		<link rel="stylesheet" href="{{ asset('site/css/custom.css') }}">
-		<link rel="stylesheet" href="{{ asset('site/css/custom.css') }}">
 
 		<!-- New analytics for the new website / Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2202525-1"></script>

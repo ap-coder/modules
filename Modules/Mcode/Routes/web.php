@@ -49,7 +49,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Mcode', 'mi
 // Modules\Admin\Controllers\AdminController@index
 
 
-Route::prefix('mcode')->group(function() {
+Route::prefix('support/mcodes')->group(function() {
     Route::get('/', 'McodeController@index');
     Route::post('/getCategory', 'McodeController@getCategory');
     Route::post('/getFeature', 'McodeController@getFeature');

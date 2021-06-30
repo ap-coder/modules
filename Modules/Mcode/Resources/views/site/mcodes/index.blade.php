@@ -95,7 +95,19 @@
     </div>
 
     <div id="step-3" style="display: none;">
-      
+      <div class="container">
+        <div class="mcode_step_holder feature_holder">
+
+          @include('mcode::site.mcodes.steps.feature-filter')
+
+          <div id="filterContent">
+
+
+          </div>
+
+        </div>
+     </div>
+    
     </div>
 
     <input type="hidden" name="productID" id="productID">
@@ -138,7 +150,7 @@
     var productID=$('#productID').val();
     var categoryIDs=$('#categoryIDs').val();
     var featureIDs=$('#featureIDs').val();
-    var url="{{ url('mcode/getPdf') }}?productID="+productID+"&categoryIDs="+categoryIDs+"&featureIDs="+featureIDs;
+    var url="{{ url('support/mcodes/getPdf') }}?productID="+productID+"&categoryIDs="+categoryIDs+"&featureIDs="+featureIDs;
     window.open(
       url,
   '_blank' // <- This is what makes it open in a new window.
@@ -149,7 +161,7 @@
     var productID=$('#productID').val();
     var categoryIDs=$('#categoryIDs').val();
     var featureIDs=$('#featureIDs').val();
-    var url="{{ url('mcode/getSinglePdf') }}?productID="+productID+"&categoryIDs="+categoryIDs+"&featureIDs="+featureIDs;
+    var url="{{ url('support/mcodes/getSinglePdf') }}?productID="+productID+"&categoryIDs="+categoryIDs+"&featureIDs="+featureIDs;
     window.open(
       url,
   '_blank' // <- This is what makes it open in a new window.
@@ -179,7 +191,7 @@
 
       var _token = $('input[name="_token"]').val();
           $.ajax({
-            url:"{{ url('mcode/getCategory') }}",
+            url:"{{ url('support/mcodes/getCategory') }}",
             dataType:'json',
             method:"POST",
             data:{productID:productID, _token:_token},
@@ -199,16 +211,18 @@
           checkboxValues.push($(this).val());
       });
       $('#categoryIDs').val(checkboxValues);
+
+      var ids=$('#categoryIDs').val();
       var productID=$('#productID').val();
 
       var _token = $('input[name="_token"]').val();
           $.ajax({
-            url:"{{ url('mcode/getFeature') }}",
+            url:"{{ url('support/mcodes/getFeature') }}",
             dataType:'json',
             method:"POST",
-            data:{ids:checkboxValues,productID:productID, _token:_token},
+            data:{ids:ids,productID:productID, _token:_token},
             success:function(data){
-              $('#step-3').html(data.html);
+              $('#filterContent').html(data.html);
             }
           });
 
@@ -280,7 +294,7 @@
     var _token = $('input[name="_token"]').val();
     
           $.ajax({
-            url:"{{ url('mcode/getQrModalDetails') }}",
+            url:"{{ url('support/mcodes/getQrModalDetails') }}",
             dataType:'json',
             method:"POST",
             data:{id:id,productID:productID, _token:_token},
@@ -296,15 +310,34 @@
           checkboxValues.push($(this).val());
       });
       $('#featureIDs').val(checkboxValues);
+      var ids=$('#categoryIDs').val();
     var _token = $('input[name="_token"]').val();
           $.ajax({
-            url:"{{ url('mcode/getGenerateModalDetails') }}",
+            url:"{{ url('support/mcodes/getGenerateModalDetails') }}",
             dataType:'json',
             method:"POST",
-            data:{ids:checkboxValues, _token:_token},
+            data:{ids:ids, _token:_token},
             success:function(data){
               $('.generatemodal .modal-content').html(data.html);
               $('.generatemodal').modal('show');
+            }
+          });
+  });
+
+  $(document.body).on('keyup', '#keywords' ,function(){
+    var productID=$('#productID').val();
+    var keywords=$(this).val();
+
+    var checkboxValues=$('#categoryIDs').val();
+
+      var _token = $('input[name="_token"]').val();
+          $.ajax({
+            url:"{{ url('support/mcodes/getFeature') }}",
+            dataType:'json',
+            method:"POST",
+            data:{ids:checkboxValues,productID:productID,keywords:keywords, _token:_token},
+            success:function(data){
+              $('#filterContent').html(data.html);
             }
           });
   });
@@ -325,10 +358,30 @@ function showCheckboxes() {
   }
 }
 
-function FilterNext() {
-  var checkboxes = document.getElementById("categorybox");
-  checkboxes.style.display = "none";
-  expanded = false;
+function CategoryFilter() {
+  // var checkboxes = document.getElementById("categorybox");
+  // checkboxes.style.display = "none";
+  // expanded = false;
+  
+  var checkboxValues = [];
+      $('input[name=filtercategory]:checked').map(function() {
+          checkboxValues.push($(this).val());
+      });
+      $('#categoryIDs').val(checkboxValues);
+
+      var checkboxValues=$('#categoryIDs').val();
+      var productID=$('#productID').val();
+
+      var _token = $('input[name="_token"]').val();
+          $.ajax({
+            url:"{{ url('support/mcodes/getFeature') }}",
+            dataType:'json',
+            method:"POST",
+            data:{ids:checkboxValues,productID:productID, _token:_token},
+            success:function(data){
+              $('#filterContent').html(data.html);
+            }
+          });
 }
 
 
