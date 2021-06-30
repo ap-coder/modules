@@ -18,4 +18,10 @@ class CreateMcodesTable extends Migration
             $table->softDeletes();
         });
     }
+
+    
+    public function down()
+    {
+        Schema::drop('mcodes');
+    }
 }

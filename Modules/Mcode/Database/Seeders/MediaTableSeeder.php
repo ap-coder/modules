@@ -17,10 +17,7 @@ class MediaTableSeeder extends Seeder
         Model::unguard();
 
         // $this->call("OthersTableSeeder");
-    public function run()
-    {
-        
-
+    
          
         
         \DB::table('media')->insert(array (

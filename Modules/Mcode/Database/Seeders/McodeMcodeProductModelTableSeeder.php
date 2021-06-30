@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seeders;
+namespace Modules\Mcode\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
@@ -12,7 +12,7 @@ class McodeMcodeProductModelTableSeeder extends Seeder
      *
      * @return void
      */
-     public function run()
+    public function run()
     {
         
 

@@ -15,4 +15,9 @@ class CreateMcodeCategoryMcodeFeaturePivotTable extends Migration
             $table->foreign('mcode_category_id', 'mcode_category_id_fk_3953700')->references('id')->on('mcode_categories')->onDelete('cascade');
         });
     }
+
+    public function down()
+    {
+        Schema::drop('mcode_category_mcode_feature');
+    }
 }

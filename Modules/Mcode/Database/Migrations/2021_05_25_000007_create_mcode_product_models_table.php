@@ -18,4 +18,9 @@ class CreateMcodeProductModelsTable extends Migration
             $table->softDeletes();
         });
     }
+
+    public function down()
+    {
+        Schema::drop('mcode_product_models');
+    }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seeders;
+namespace Modules\Mcode\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
@@ -251,5 +251,4 @@ class McodeCategoriesTableSeeder extends Seeder
         
         
     }
-
 }

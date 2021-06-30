@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seeders;
+namespace Modules\Mcode\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
@@ -12,7 +12,6 @@ class McodeCategoryMcodeFeatureTableSeeder extends Seeder
      *
      * @return void
      */
- 
     public function run()
     {
         
@@ -3530,5 +3529,5 @@ class McodeCategoryMcodeFeatureTableSeeder extends Seeder
         ));
         
         
-    } 
+    }
 }

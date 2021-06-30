@@ -15,4 +15,10 @@ class CreateMcodeFeatureMcodeProductModelPivotTable extends Migration
             $table->foreign('mcode_product_model_id', 'mcode_product_model_id_fk_4001754')->references('id')->on('mcode_product_models')->onDelete('cascade');
         });
     }
+
+    
+    public function down()
+    {
+        Schema::drop('mcode_feature_mcode_product_model');
+    }
 }

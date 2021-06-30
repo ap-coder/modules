@@ -26,4 +26,9 @@ class CreateMcodeFeaturesTable extends Migration
             $table->softDeletes();
         });
     }
+    
+    public function down()
+    {
+        Schema::drop('mcode_features');
+    }
 }
