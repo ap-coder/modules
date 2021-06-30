@@ -211,8 +211,45 @@ class McodeCategoriesTableSeeder extends Seeder
                 'updated_at' => '2021-05-25 00:07:42',
                 'deleted_at' => NULL,
             ),
+            16 => 
+            array (
+                'id' => 17,
+                'published' => 1,
+                'name' => 'Obsolete',
+                'description' => NULL,
+                'slug' => 'obsolete',
+                'order' => NULL,
+                'created_at' => '2021-06-07 22:35:47',
+                'updated_at' => '2021-06-07 22:35:47',
+                'deleted_at' => NULL,
+            ),
+            17 => 
+            array (
+                'id' => 18,
+                'published' => 1,
+                'name' => 'Reader Feedback Settings',
+                'description' => NULL,
+                'slug' => NULL,
+                'order' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            18 => 
+            array (
+                'id' => 19,
+                'published' => 1,
+                'name' => 'Direct Part Mark Reading Mode Settings',
+                'description' => NULL,
+                'slug' => NULL,
+                'order' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
         ));
         
         
     }
+
 }

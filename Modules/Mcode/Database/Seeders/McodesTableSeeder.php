@@ -29,6 +29,7 @@ class McodesTableSeeder extends Seeder
                 'created_at' => '2021-05-26 17:43:16',
                 'updated_at' => '2021-05-26 17:43:16',
                 'deleted_at' => NULL,
+                'order' => NULL,
             ),
             1 => 
             array (
@@ -40,6 +41,7 @@ class McodesTableSeeder extends Seeder
                 'created_at' => '2021-05-26 18:07:16',
                 'updated_at' => '2021-05-26 18:07:16',
                 'deleted_at' => NULL,
+                'order' => NULL,
             ),
             2 => 
             array (
@@ -51,6 +53,7 @@ class McodesTableSeeder extends Seeder
                 'created_at' => '2021-05-26 18:11:09',
                 'updated_at' => '2021-05-26 18:11:09',
                 'deleted_at' => NULL,
+                'order' => NULL,
             ),
             3 => 
             array (
@@ -62,6 +65,7 @@ class McodesTableSeeder extends Seeder
                 'created_at' => '2021-05-26 18:12:52',
                 'updated_at' => '2021-05-26 18:12:52',
                 'deleted_at' => NULL,
+                'order' => NULL,
             ),
             4 => 
             array (
@@ -73,6 +77,7 @@ class McodesTableSeeder extends Seeder
                 'created_at' => '2021-05-26 18:13:11',
                 'updated_at' => '2021-05-26 18:13:11',
                 'deleted_at' => NULL,
+                'order' => NULL,
             ),
             5 => 
             array (
@@ -84,6 +89,7 @@ class McodesTableSeeder extends Seeder
                 'created_at' => '2021-05-26 18:13:43',
                 'updated_at' => '2021-05-26 18:13:43',
                 'deleted_at' => NULL,
+                'order' => NULL,
             ),
             6 => 
             array (
@@ -95,6 +101,7 @@ class McodesTableSeeder extends Seeder
                 'created_at' => '2021-05-26 18:14:39',
                 'updated_at' => '2021-05-26 18:14:39',
                 'deleted_at' => NULL,
+                'order' => NULL,
             ),
             7 => 
             array (
@@ -106,6 +113,7 @@ class McodesTableSeeder extends Seeder
                 'created_at' => '2021-05-26 18:15:28',
                 'updated_at' => '2021-05-26 18:15:28',
                 'deleted_at' => NULL,
+                'order' => NULL,
             ),
             8 => 
             array (
@@ -117,6 +125,7 @@ class McodesTableSeeder extends Seeder
                 'created_at' => '2021-05-26 18:27:53',
                 'updated_at' => '2021-05-26 18:27:53',
                 'deleted_at' => NULL,
+                'order' => NULL,
             ),
             9 => 
             array (
@@ -128,6 +137,7 @@ class McodesTableSeeder extends Seeder
                 'created_at' => '2021-05-26 18:28:45',
                 'updated_at' => '2021-05-26 18:30:17',
                 'deleted_at' => NULL,
+                'order' => NULL,
             ),
             10 => 
             array (
@@ -139,6 +149,7 @@ class McodesTableSeeder extends Seeder
                 'created_at' => '2021-05-26 18:29:11',
                 'updated_at' => '2021-05-26 18:30:46',
                 'deleted_at' => NULL,
+                'order' => NULL,
             ),
             11 => 
             array (
@@ -150,6 +161,7 @@ class McodesTableSeeder extends Seeder
                 'created_at' => '2021-05-26 18:29:52',
                 'updated_at' => '2021-05-26 18:29:52',
                 'deleted_at' => NULL,
+                'order' => NULL,
             ),
             12 => 
             array (
@@ -161,6 +173,7 @@ class McodesTableSeeder extends Seeder
                 'created_at' => '2021-05-26 18:31:37',
                 'updated_at' => '2021-05-26 18:31:37',
                 'deleted_at' => NULL,
+                'order' => NULL,
             ),
             13 => 
             array (
@@ -172,6 +185,7 @@ class McodesTableSeeder extends Seeder
                 'created_at' => '2021-05-26 18:32:37',
                 'updated_at' => '2021-05-26 18:32:37',
                 'deleted_at' => NULL,
+                'order' => NULL,
             ),
             14 => 
             array (
@@ -183,6 +197,7 @@ class McodesTableSeeder extends Seeder
                 'created_at' => '2021-05-26 18:33:37',
                 'updated_at' => '2021-05-26 18:33:37',
                 'deleted_at' => NULL,
+                'order' => NULL,
             ),
             15 => 
             array (
@@ -194,6 +209,7 @@ class McodesTableSeeder extends Seeder
                 'created_at' => '2021-05-26 18:34:30',
                 'updated_at' => '2021-05-26 18:34:30',
                 'deleted_at' => NULL,
+                'order' => NULL,
             ),
             16 => 
             array (
@@ -205,6 +221,7 @@ class McodesTableSeeder extends Seeder
                 'created_at' => '2021-05-26 18:36:11',
                 'updated_at' => '2021-05-26 18:36:11',
                 'deleted_at' => NULL,
+                'order' => NULL,
             ),
         ));
         
