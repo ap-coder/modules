@@ -20,7 +20,8 @@
         
         <div class="button-div">
             <button type="button" class="back prevBtn" step="2">Back</button>
-            <button type="button" class="next nextBtn disabled" disabled step="2" id="categoryButton">Update</button>
+            <h2 class="MiddleproductName">{{ $mcode->name }}</h2>
+            <button type="button" class="next nextBtn disabled" disabled step="2" id="categoryButton">Next</button>
         </div>
 			
  
