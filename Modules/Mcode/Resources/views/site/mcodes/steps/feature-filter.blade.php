@@ -1,6 +1,6 @@
 
           {{-- <div class="feature-filter row"> --}}
-          <div class="feature-filter-row">
+          <div class="feature-filter feature-filter-row">
             {{-- <div class="col-lg-7 col-md-12 col-xs-12 col-sm-12"> --}}
             <div class="keyword-filter-input">
                 <label class="control-label" for="keywords">Keywords</label>
@@ -73,7 +73,8 @@
                   </div>
                 </div>
             </div>  --}}
-            <div class="optionsDropdown col-lg-2 col-md-12 col-xs-12 col-sm-12">
+            {{-- <div class="optionsDropdown col-lg-2 col-md-12 col-xs-12 col-sm-12"> --}}
+            <div class="optionsDropdown">
                 <div class="lastBtn" onclick="SearchIcon()">
                   <img src="{{ url('site/img/modules/icon/br_down.png') }}" alt="">
                 </div>

@@ -53,7 +53,7 @@
         <li class="nav-item" data-option-value=".discontinued"><a class="nav-link text-1 text-uppercase" href="#">Discontinued</a></li>
       </ul> --}}
     
-      <div class=" mt-4 pt-2">
+{{--       <div class=" mt-4 pt-2">
         <div class="row team-list " data-sort-id="mcodes">
           @foreach($mcodes as $product)
           <div class="col-12 col-sm-6 col-lg-3 isotope-item leadership">
@@ -71,6 +71,36 @@
     
                   <span class="thumb-info-title">
                     <span class="thumb-info-inner">{{ $product->name ?? '' }}</span>
+                    <span class="thumb-info-type"></span>
+                  </span>
+                </a>
+              </span>
+               
+            </span>
+          </div>
+          @endforeach
+        </div>
+      </div> --}}
+
+      
+<div class=" mt-4 pt-2">
+        <div class="row team-list " data-sort-id="mcodes">
+          @foreach($mcodes as $product)
+          <div class="col-12 col-sm-6 col-lg-3 isotope-item leadership">
+            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4 nextBtn" step="1" productID="{{ $product->id }}">
+              <span class="thumb-info-wrapper">
+                <a href="javascript:void(0);">
+                  @if(\App::environment() === 'local')
+                    <img itemprop="url contentUrl" class="img-fluid" src="https://dummyimage.com/400x400/000/fff.jpg">
+                  @elseif($product->photo)
+                    {{-- <img itemprop="url contentUrl" class="img-fluid" src="https://dummyimage.com/400x400/000/fff.jpg"> --}}
+                    {{ $product->getFirstMediaUrl('photo') }}
+                  @else
+                    <img itemprop="url contentUrl" class="img-fluid" src="https://dummyimage.com/400x400/000/fff.jpg">
+                  @endif
+    
+                  <span class="thumb-info-title">
+                    <span class="thumb-info-inner">{{ $product->name ?? '' }}</span>
                     {{-- <span class="thumb-info-type"></span> --}}
                   </span>
                 </a>
@@ -81,9 +111,6 @@
           @endforeach
         </div>
       </div>
-
-      
-
         
 
 
