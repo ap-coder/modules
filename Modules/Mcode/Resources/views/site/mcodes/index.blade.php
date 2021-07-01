@@ -42,11 +42,11 @@
   
     <div id="step-1">
       <div class="container"> 
-      <ul class="nav nav-pills sort-source sort-source-style-3 justify-content-center" data-sort-id="mcodes" data-option-key="filter">
+  {{--     <ul class="nav nav-pills sort-source sort-source-style-3 justify-content-center" data-sort-id="mcodes" data-option-key="filter">
         <li class="nav-item active" data-option-value="*"><a class="nav-link text-1 text-uppercase active" href="#">Show All</a></li>
         <li class="nav-item" data-option-value=".current"><a class="nav-link text-1 text-uppercase" href="#">Current</a></li>
         <li class="nav-item" data-option-value=".discontinued"><a class="nav-link text-1 text-uppercase" href="#">Discontinued</a></li>
-      </ul>
+      </ul> --}}
     
       <div class=" mt-4 pt-2">
         <div class="row team-list " data-sort-id="mcodes">
