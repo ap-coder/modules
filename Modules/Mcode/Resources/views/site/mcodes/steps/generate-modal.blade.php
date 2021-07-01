@@ -38,7 +38,7 @@
  
             {{-- {!! dump($combined_string) !!} --}}
 
-            @if(str_starts_with($feature->mcode, 'M2'))
+            @if(str_starts_with($checktype, 'M2'))
             {{-- CODE HERE: {!! dump($feature->formatted_source_string) !!}  --}}
             <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'QRCODE',7,7) . '" alt="qrcode"   />'; ?>
             @else

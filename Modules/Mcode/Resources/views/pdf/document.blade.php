@@ -133,11 +133,11 @@ mpdf-->
 	<div style="text-align: center">
 		<div class="main-generated-qr" style="border:1px solid firebrick;width:60%;margin: 10em auto 1em;padding:2rem;min-height:30%;">
 			<tocentry content="Combined QR" level="2" /><bookmark content="Combined QR" />
-	       {{--  @if(str_starts_with($feature->mcode, 'M2'))
-	          <?php echo '<img width="100px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'QRCODE',10,10) . '" alt="barcode"   />'; ?>
+	       @if(str_starts_with($checktype, 'M2'))
+	          <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'QRCODE',10,10) . '" alt="barcode"   />'; ?>
 	        @else
-	          <?php echo '<img width="100px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'DATAMATRIX',10,10) . '" alt="barcode"   />'; ?>
-        	@endif --}}
+	          <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'DATAMATRIX',10,10) . '" alt="barcode"   />'; ?>
+        	@endif
 
 		</div>
  

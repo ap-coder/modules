@@ -135,9 +135,11 @@ class McodeController extends Controller
     {
         $ids=explode(',',$request->ids);
         $features = McodeFeature::whereIn('id',$ids)->get();
+        $checktype = $features->pluck('mcode')->toArray()[0];
+
         $source_strings = implode(' ', $features->pluck('source_string')->toArray());
         $combined_string = Format::combinedSource($source_strings);
-        $html = view('mcode::site.mcodes.steps.generate-modal', compact('features','combined_string'))->render();
+        $html = view('mcode::site.mcodes.steps.generate-modal', compact('features','combined_string','checktype'))->render();
         $data['html']=$html;
         echo json_encode($data);
     }
@@ -150,6 +152,8 @@ class McodeController extends Controller
 
         $product = Mcode::where('id',$productID)->first();
         $features = McodeFeature::whereIn('id',$featureIDs)->get();
+
+        $checktype = $features->pluck('mcode')->toArray()[0];
 
         $categories = McodeCategory::whereIn('id',$categoryIDs)->get();
 
@@ -186,7 +190,7 @@ class McodeController extends Controller
         //     'content' => 'Combined Configuration!'
         // ];
 
-        $pdf = PDF::loadView('mcode::pdf.document', compact('combined_string', 'product','features','categories'),[], $config);
+        $pdf = PDF::loadView('mcode::pdf.document', compact('combined_string','checktype' ,'product','features','categories'),[], $config);
         
         $formatted_name = str_replace(' ', '_', $product->name);
 

@@ -337,7 +337,9 @@
           checkboxValues.push($(this).val());
       });
       $('#featureIDs').val(checkboxValues);
-      var ids=$('#categoryIDs').val();
+
+      // console.log(checkboxValues);
+      var ids=$('#featureIDs').val();
     var _token = $('input[name="_token"]').val();
           $.ajax({
             url:"{{ url('support/mcodes/getGenerateModalDetails') }}",
