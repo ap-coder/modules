@@ -1,7 +1,7 @@
 <html>
 <head>
 
-	<link rel="stylesheet"  type="application/pdf" href="{{ public_path('combined-print.css') }}" />
+	{{-- <link rel="stylesheet"  type="application/pdf" href="{{ public_path('combined-print.css') }}" /> --}}
 	<style type="text/css">
 	.tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
 	.tg td{ overflow:hidden;padding:10px 10px;word-break:normal;}
@@ -17,23 +17,23 @@
 	span.mpdf_toc_t_level_0 {color: darkred; font-weight: bold; }
 	span.mpdf_toc_p_level_0 {}
 
-	div.mpdf_toc_level_1 {margin-left: 2em; text-indent: -2em; padding: 0 2em; }
+	div.mpdf_toc_level_1 {/*margin-left: 2em; text-indent: -2em;*/ padding: 0 2em; }
 	span.mpdf_toc_t_level_1 {color: darkred; font-weight: bold; }
 	span.mpdf_toc_p_level_1  {}
 
-	div.mpdf_toc_level_2 {margin-left: 4em; text-indent: -4em; padding: 0 2em; }
+	div.mpdf_toc_level_2 {/*margin-left: 4em; text-indent: -4em;*/ padding: 0 2em; }
 	span.mpdf_toc_t_level_2 {font-weight: bold; }
 	span.mpdf_toc_p_level_2  {}
 
-	div.mpdf_toc_level_3 {margin-left: 6em; text-indent: -6em; padding: 0 2em; }
+	div.mpdf_toc_level_3 {/*margin-left: 6em; text-indent: -6em;*/ padding: 0 2em; }
 	span.mpdf_toc_t_level_3 {font-style: italic;  }
 	span.mpdf_toc_p_level_3  {}
 
-	div.mpdf_toc_level_4 {margin-left: 8em; text-indent: -8em; padding: 0 2em; }
+	div.mpdf_toc_level_4 {/*margin-left: 8em; text-indent: -8em; */padding: 0 2em; }
 	span.mpdf_toc_t_level_4 {font-style: italic;  }
 	span.mpdf_toc_p_level_4  {}
 
-	div.mpdf_toc_level_5 {margin-left: 10em; text-indent: -10em; padding: 0 2em; }
+	div.mpdf_toc_level_5 {/*margin-left: 10em; text-indent: -10em;*/ padding: 0 2em; }
 	span.mpdf_toc_t_level_5 {font-style: italic; /*font-weight: bold;*/ color:deeppink ; }
 	span.mpdf_toc_p_level_5  {}
 
@@ -166,31 +166,35 @@ mpdf-->
  	 
 
 	<bookmark content="Individual QR's" />
- 	<h2 style="text-align:center;">List of QR's for Individual Features.<tocentry content="List of QR's for Individual Features." level="1" /></h2>
+ 	<h2 style="text-align:center;">List of QR's for Individual Features.
+ 		<tocentry content="List of QR's for Individual Features." level="1" /></h2>
+ 	<div style="clear:both"></div>
 
- 
+ <columns column-count="5" vAlign="J" column-gap="7">
+
    @foreach($categories as $category)
+   <div class="column">
 		<strong style="border-bottom:solid 1px gainsboro;">{{ $category->name ?? '' }}</strong>
     
-    <tocentry content="{{ $category->name ?? '' }}"  level="2"  /> 
-  	{{-- <columns column-count="5" vAlign="J" column-gap="7"> --}}
-      @foreach ($category->features as $feature)
-      
-      
-      	{{-- <tocentry content="3 {{ $feature->mcode ?? '' }}: {{ $feature->description ?? '' }}" level="3"  /> --}}
-      	
-      	<div class="qr-image" style="text-align:center;margin-bottom: 4mm;">
-          @if(str_starts_with($feature->mcode, 'M2'))
-            <?php echo '<img width="100px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'QRCODE',10,10) . '" alt="barcode"   />'; ?>
-          @else
-            <?php echo '<img width="100px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'DATAMATRIX',10,10) . '" alt="barcode"   />'; ?>
-          @endif
-        </div> <br>
-        <strong>{{ $feature->mcode ?? '' }}<tocentry content="2 MCODE: {{ $feature->mcode ?? '' }}" level="2" /></strong> <br>
-        <small>{{ $feature->description ?? '' }}<tocentry content="3 {{ $feature->description ?? '' }}" level="3" /></small>
- 
-    @endforeach
- 
+    	<tocentry content="{{ $category->name ?? '' }}"  level="2"  /> 
+  		
+	     @foreach ($category->features as $feature)
+	      
+	      
+	      	{{-- <tocentry content="3 {{ $feature->mcode ?? '' }}: {{ $feature->description ?? '' }}" level="3"  /> --}}
+	      	<strong>{{ $feature->mcode ?? '' }}<tocentry content="2 MCODE: {{ $feature->mcode ?? '' }}" level="2" /></strong> <br>
+	      	<div class="qr-image" style="text-align:center;margin-bottom: 4mm;">
+	          @if(str_starts_with($feature->mcode, 'M2'))
+	            <?php echo '<img width="100px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'QRCODE',10,10) . '" alt="barcode"   />'; ?>
+	          @else
+	            <?php echo '<img width="100px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'DATAMATRIX',10,10) . '" alt="barcode"   />'; ?>
+	          @endif
+	        </div> <br>
+	        
+	        <small>{{ $feature->description ?? '' }}<tocentry content="3 {{ $feature->description ?? '' }}" level="3" /></small>
+	 
+	    @endforeach
+ 	</div>
     @endforeach
    
 </body>
