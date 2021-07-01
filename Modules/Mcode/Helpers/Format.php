@@ -13,7 +13,7 @@ class Format
 
    		if (str_starts_with($string, '%01X')) {
 
-            Log::info("M1 CODE SCANNED: ". $string);
+            \Log::info("M1 CODE SCANNED: ". $string);
 
             do {
                 // $string = str_replace("  ", " ", $this->source_string, $count);
@@ -43,7 +43,7 @@ class Format
 
         }else{
 
-            Log::info("M1 CODE SCANNED");
+            \Log::info("M2 CODE SCANNED");
 
             /* M2 CODES */
             $header = chr(1).'Y'.chr(29).chr(2);
