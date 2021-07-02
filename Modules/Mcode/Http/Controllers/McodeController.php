@@ -155,13 +155,13 @@ class McodeController extends Controller
 
         $checktype = $features->pluck('mcode')->toArray()[0];
 
-        $categories = McodeCategory::whereIn('id',$categoryIDs)->get();
+        // $categories = McodeCategory::whereIn('id',$categoryIDs)->get();
 
-        // $categories = McodeCategory::with(['features' => function($query) use ($featureIDs){
+        $categories = McodeCategory::with(['features' => function($query) use ($featureIDs){
 
-        //     $query->whereIn('id', $featureIDs);
+            $query->whereIn('id', $featureIDs);
         
-        // }])->whereIn('id',$categoryIDs)->get();
+        }])->whereIn('id',$categoryIDs)->get();
 
     
             $source_strings = implode(' ', $features->pluck('source_string')->toArray());
