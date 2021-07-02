@@ -90,11 +90,11 @@
             <span class="thumb-info thumb-info-hide-wrapper-bg mb-4 nextBtn" step="1" productID="{{ $product->id }}">
               <span class="thumb-info-wrapper">
                 <a href="javascript:void(0);">
-                  @if(\App::environment() === 'local')
+                  @if(!\App::environment() === 'local')
                     <img itemprop="url contentUrl" class="img-fluid" src="https://dummyimage.com/400x400/000/fff.jpg">
                   @elseif($product->photo)
                     {{-- <img itemprop="url contentUrl" class="img-fluid" src="https://dummyimage.com/400x400/000/fff.jpg"> --}}
-                    {{ $product->getFirstMediaUrl('photo') }}
+                    <img src="{{ $product->getFirstMediaUrl('photo') }}" alt="">
                   @else
                     <img itemprop="url contentUrl" class="img-fluid" src="https://dummyimage.com/400x400/000/fff.jpg">
                   @endif
