@@ -172,18 +172,19 @@ class McodeController extends Controller
  
 
         $config = ['instanceConfigurator' => function($mpdf) {
+            
             $mpdf->SetDocTemplate(public_path('cover.pdf'), false);
 
-            ob_start();
+            //ob_start();
  
             // $mpdf->setAutoTopMargin = 'stretch';
             $mpdf->setAutoBottomMargin = 'stretch';
  
-            $mpdf->h2toc = array(
-                'H1' => 0,             
-            );
+            // $mpdf->h2toc = array(
+            //     'H1' => 0,             
+            // );
 
-            $mpdf->WriteHTML(ob_get_clean());
+            //$mpdf->WriteHTML(ob_get_clean());
         }];
        
         // $data = [
