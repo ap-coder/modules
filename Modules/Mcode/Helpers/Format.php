@@ -33,7 +33,9 @@ class Format
             $string = str_replace('%1D', chr(29), $string);
             $string = str_replace('%02', chr(2), $string);
             $string = str_replace('%0f0', chr(240), $string);
-            $string = str_replace('%04', chr(4), $string);
+            $string = str_replace('%04', chr(4), $string);	
+            $string = str_replace(',', chr(44), $string);
+            $string = str_replace(' ', '', $string);
 	           
             $source_string = $string;
 
