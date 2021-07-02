@@ -1,7 +1,6 @@
 
-          {{-- <div class="feature-filter row"> --}}
-          <div class="feature-filter feature-filter-row">
-            {{-- <div class="col-lg-7 col-md-12 col-xs-12 col-sm-12"> --}}
+          <div class="feature-filter feature-filter-row row">
+            <div class="col-lg-7 col-md-12 col-xs-12 col-sm-12">
             <div class="keyword-filter-input">
                 <label class="control-label" for="keywords">Keywords</label>
                 <div class="inner-addon left-addon">
@@ -10,7 +9,8 @@
                 </div>
                 <span class="notice">Add keywords that describe your settings to help make search results more accurate.</span>
             </div>
-            {{-- <div class="col-lg-2 col-md-12 col-xs-12 col-sm-12"> --}}
+            </div>
+            <div class="col-lg-2 col-md-12 col-xs-12 col-sm-12">
               <div class="category-filter-options">
                 <div class="multiselect">
                   <div class="selectBox" onclick="showCheckboxes()">
@@ -41,6 +41,7 @@
                     
                   </div>
                 </div>
+            </div>
             </div>
             {{--  <div class="col-lg-2 col-md-12 col-xs-12 col-sm-12">
                 <div class="multiselect">
@@ -73,10 +74,9 @@
                   </div>
                 </div>
             </div>  --}}
-            {{-- <div class="optionsDropdown col-lg-2 col-md-12 col-xs-12 col-sm-12"> --}}
-            <div class="optionsDropdown">
+            <div class="optionsDropdown col-lg-2 col-md-12 col-xs-12 col-sm-12">
                 <div class="lastBtn" onclick="SearchIcon()">
                   <img src="{{ url('site/img/modules/icon/br_down.png') }}" alt="">
                 </div>
             </div>
-        </div>
+            </div>
