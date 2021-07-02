@@ -129,14 +129,14 @@ mpdf-->
 	<tocentry content="Combined QR for installing all your features at once." level="1"  />
 
 	<p style="text-align:center;color:firebrick;">Scan this code to configure all the functions at once from what you selected in our generator.</p>
-
+	{{--  style="border:1px solid firebrick;width:60%;margin: 10em auto 1em;padding:2rem;min-height:30%;"  --}}
 	<div style="text-align: center">
-		<div class="main-generated-qr" style="border:1px solid firebrick;width:60%;margin: 10em auto 1em;padding:2rem;min-height:30%;">
+		<div class="main-generated-qr" style="border:1px solid firebrick;width:60%;padding:2rem;min-height:30%;margin: 1em auto;">
 			<tocentry content="Combined QR" level="2" /><bookmark content="Combined QR" />
 	       @if(str_starts_with($checktype, 'M2'))
-	          <?php echo '<img width="350px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'QRCODE',10,10) . '" alt="barcode"   />'; ?>
+	          <?php echo '<img width="150px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'QRCODE',10,10) . '" alt="barcode"   />'; ?>
 	        @else
-	          <?php echo '<img width="350px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'DATAMATRIX',10,10) . '" alt="barcode"   />'; ?>
+	          <?php echo '<img width="150px" src="data:image/png;base64,' . DNS2D::getBarcodePNG($combined_string, 'DATAMATRIX',10,10) . '" alt="barcode"   />'; ?>
         	@endif
 
 		</div>
