@@ -77,6 +77,24 @@
                             {!! $mcode->desc !!}
                         </td>
                     </tr>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.mcode.fields.chicklets') }}
+                        </th>
+                        <td>
+                            {{ App\Models\Mcode::CHICKLETS_SELECT[$mcode->chicklets] ?? '' }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.mcode.fields.order') }}
+                        </th>
+                        <td>
+                            {{ $mcode->order }}
+                        </td>
+                    </tr>
+
                 </tbody>
             </table>
             <div class="form-group">

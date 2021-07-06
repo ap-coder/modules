@@ -37,6 +37,9 @@
                         {{ trans('mcode::cruds.mcode.fields.models') }}
                     </th>
                     <th>
+                        {{ trans('mcode::cruds.mcode.fields.chicklets') }}
+                    </th>
+                    <th>
                         {{ trans('mcode::cruds.mcode.fields.order') }}
                     </th>
                     <th>
@@ -100,6 +103,7 @@
 { data: 'name', name: 'name' },
 { data: 'photo', name: 'photo', sortable: false, searchable: false },
 { data: 'models', name: 'models' },
+{ data: 'chicklets', name: 'chicklets' },
 { data: 'order', name: 'order' },
 { data: 'actions', name: '{{ trans('mcode::global.actions') }}' }
     ],

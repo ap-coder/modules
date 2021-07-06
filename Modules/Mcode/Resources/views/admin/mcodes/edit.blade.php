@@ -70,6 +70,21 @@
                 @endif
                 <span class="help-block">{{ trans('mcode::cruds.mcode.fields.desc_helper') }}</span>
             </div>
+
+            <div class="form-group">
+                <label>{{ trans('cruds.mcode.fields.chicklets') }}</label>
+                <select class="form-control {{ $errors->has('chicklets') ? 'is-invalid' : '' }}" name="chicklets" id="chicklets">
+                    <option value disabled {{ old('chicklets', null) === null ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}</option>
+                    @foreach(App\Models\Mcode::CHICKLETS_SELECT as $key => $label)
+                        <option value="{{ $key }}" {{ old('chicklets', $mcode->chicklets) === (string) $key ? 'selected' : '' }}>{{ $label }}</option>
+                    @endforeach
+                </select>
+                @if($errors->has('chicklets'))
+                    <span class="text-danger">{{ $errors->first('chicklets') }}</span>
+                @endif
+                <span class="help-block">{{ trans('cruds.mcode.fields.chicklets_helper') }}</span>
+            </div>
+
             <div class="form-group">
               <label for="order">{{ trans('mcode::cruds.mcode.fields.order') }}</label>
               <input class="form-control {{ $errors->has('order') ? 'is-invalid' : '' }}" type="number" name="order" id="order" value="{{ old('order', $mcode->order) }}" step="1">

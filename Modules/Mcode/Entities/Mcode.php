@@ -22,15 +22,15 @@ class Mcode extends Model implements HasMedia
         'cc-eol cc-product-chiclet'          => 'EOL',
     ];
 
-	public $table = 'mcodes';
+    public $table = 'mcodes';
 
 
-	protected $appends = [
+    protected $appends = [
         'photo',
     ];
 
 
-	protected $dates = [
+    protected $dates = [
         'created_at',
         'updated_at',
         'deleted_at',

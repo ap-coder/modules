@@ -87,6 +87,9 @@
         <div class="row team-list " data-sort-id="mcodes">
           @foreach($mcodes as $product)
           <div class="col-12 col-sm-6 col-lg-3 isotope-item leadership">
+            @if(isset($product->chicklet))
+            <span class="{{ $product->chicklet ?? 'bg-color-primary' }}">{{ App\Models\Product::CHICKLET_SELECT[$product->chicklet] ?? '' }}</span>
+            @endif
             <span class="thumb-info thumb-info-hide-wrapper-bg mb-4 nextBtn" step="1" productID="{{ $product->id }}">
               <span class="thumb-info-wrapper">
                 <a href="javascript:void(0);">

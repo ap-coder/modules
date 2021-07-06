@@ -109,8 +109,8 @@ return [
             'categories_helper'         => ' ',
             'models'                    => 'Models',
             'models_helper'             => ' ',
-            'order'              => 'Order',
-            'order_helper'       => ' ',
+            'slug'                      => 'Slug',
+            'slug_helper'               => ' ',
         ],
     ],
     'auditLog' => [
@@ -205,8 +205,10 @@ return [
             'slug_helper'       => ' ',
             'desc'              => 'Description',
             'desc_helper'       => ' ',
-            'order'              => 'Order',
-            'order_helper'       => ' ',
+            'chicklets'         => 'Chicklets',
+            'chicklets_helper'  => ' ',
+            'order'             => 'Order',
+            'order_helper'      => ' ',
         ],
     ],
     'mcodeProductModel' => [

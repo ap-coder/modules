@@ -24,8 +24,8 @@
               </li>
               @foreach($category->categoriesMcodeFeatures as $feature)
                 <li class="feature-list-item">
-                  <div class="mcode" data-label="Code">{{ $feature->mcode ?? '' }}</div>
-                  <div class="description feturedesc" data-label="Description">
+                  <div class="mcode text-4" data-label="Code">{{ $feature->mcode ?? '' }}</div>
+                  <div class="description feturedesc text-4" data-label="Description">
                     {{ $feature->description ?? '' }} <?php // dump($feature->formatted_source_string) ?>
                   </div>
                   <div class="barcode-icon openQrModal" data-label="Barcode">
