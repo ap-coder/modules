@@ -28,7 +28,7 @@
                   <div class="description feturedesc text-4" data-label="Description">
                     {{ $feature->description ?? '' }} <?php // dump($feature->formatted_source_string) ?>
                   </div>
-                  <div class="barcode-icon openQrModal" data-label="Barcode">
+                  <div class="barcode-icon openQrModal" data-label="Barcode" mid="{{ $feature->id }}">
                     <img class="img-fluid" src="{{  asset('site/img/modules/qr_click.png') }}" alt="qr click icon" title="Click To Open">
                     {{-- @if(str_starts_with($feature->mcode, 'M1'))
                     <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'DATAMATRIX',5,5) . '" alt="barcode"   />'; ?>
@@ -36,7 +36,7 @@
                     <?php echo '<img src="data:image/png;base64,' . DNS2D::getBarcodePNG($feature->formatted_source_string, 'QRCODE',5,5) . '" alt="barcode"   />'; ?>
                     @endif --}}
                   </div>
-                  <div class="selectfeature" data-label="select">
+                  <div class="selectfeture" data-label="select">
                     <label class="checkbox">
                       <input type="checkbox" name="feturecheckbox" class="feturecheckbox" value="{{ $feature->id }}" />
                       <span class="primary"></span>

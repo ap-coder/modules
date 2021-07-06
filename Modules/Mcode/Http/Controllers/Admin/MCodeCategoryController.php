@@ -101,7 +101,7 @@ class McodeCategoryController extends Controller
 
     public function edit(McodeCategory $mcodeCategory)
     {
-        abort_if(Gate::denies('mcode_category_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        // abort_if(Gate::denies('mcode_category_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         return view('mcode::admin.mcodeCategories.edit', compact('mcodeCategory'));
     }
@@ -126,7 +126,7 @@ class McodeCategoryController extends Controller
 
     public function show(McodeCategory $mcodeCategory)
     {
-        abort_if(Gate::denies('mcode_category_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        // abort_if(Gate::denies('mcode_category_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $mcodeCategory->load('categoriesMcodeFeatures');
 
