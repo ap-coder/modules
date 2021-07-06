@@ -250,6 +250,7 @@
             data:{ids:ids,productID:productID, _token:_token},
             success:function(data){
               $('#filterContent').html(data.html);
+              $('#selectedCategoriesOnFilter').html(data.htmlCategories);
             }
           });
 
@@ -340,7 +341,7 @@
 
       // console.log(checkboxValues);
       var ids=$('#featureIDs').val();
-    var _token = $('input[name="_token"]').val();
+      var _token = $('input[name="_token"]').val();
           $.ajax({
             url:"{{ url('support/mcodes/getGenerateModalDetails') }}",
             dataType:'json',

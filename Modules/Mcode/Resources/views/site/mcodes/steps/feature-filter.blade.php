@@ -25,15 +25,10 @@
                         <img src="{{ url('site/img/modules/icon/br_down.png') }}" alt="">
                       </label>
                     </div>
-                    @foreach ($categories as $category)
-                    <div class="checkboxlabel">
-                      {{ $category->name }} 
-                      <label class="checkbox">
-                        <input type="checkbox" name="filtercategory" value="{{ $category->id }}">
-                        <span class="primary"></span>
-                      </label>
+                    <div id="selectedCategoriesOnFilter">
+                      
                     </div>
-                    @endforeach
+                    
                     
                     <div class="checkboxbtn">
                       <button class="checkBtn" type="button" onclick="CategoryFilter();">Update</button>

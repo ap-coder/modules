@@ -4,7 +4,7 @@
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
             <a class="btn btn-success" href="{{ route('admin.mcodes.create') }}">
-                {{ trans('mcode::global.add') }} {{ trans('cruds.mcode.title_singular') }}
+                {{ trans('mcode::global.add') }} {{ trans('mcode::cruds.mcode.title_singular') }}
             </a>
         </div>
     </div>
