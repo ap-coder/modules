@@ -17,6 +17,10 @@ class Mcode extends Model implements HasMedia
     use InteractsWithMedia;
     use HasFactory;
 
+    public const CHICKLETS_SELECT = [
+        'cc-discontinued cc-product-chiclet' => 'Discontinued',
+        'cc-eol cc-product-chiclet'          => 'EOL',
+    ];
 
 	public $table = 'mcodes';
 
@@ -39,6 +43,7 @@ class Mcode extends Model implements HasMedia
         'slug',
         'desc',
         'order',
+        'chicklets',
         'created_at',
         'updated_at',
         'deleted_at',
