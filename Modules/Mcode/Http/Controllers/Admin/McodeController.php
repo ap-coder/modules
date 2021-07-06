@@ -80,10 +80,12 @@ class McodeController extends Controller
 
                 return implode(' ', $labels);
             });
-
-            $table->editColumn('order', function ($row) {
-                return $row->order ? $row->order : '';
-            });
+	        $table->editColumn('chicklets', function ($row) {
+		        return $row->chicklets ? Mcode::CHICKLETS_SELECT[$row->chicklets] : '';
+	        });
+	        $table->editColumn('order', function ($row) {
+		        return $row->order ? $row->order : '';
+	        });
 
             $table->rawColumns(['actions', 'placeholder', 'photo','models']);
 
