@@ -93,6 +93,8 @@ class McodeController extends Controller
 
         $ids=explode(',',$request->ids);
         $keywords=$request->keywords;
+
+        $allCategories = McodeCategory::with('categoriesMcodeFeatures')->orderBy('order','ASC')->get();
         
         $categories = McodeCategory::with(['categoriesMcodeFeatures' => function($query) use ($productModels,$keywords){
             
@@ -111,9 +113,12 @@ class McodeController extends Controller
         
         $html = view('mcode::site.mcodes.steps.feature',compact('categories','filterCategories','mcode'))->render();
 
+        $htmlCategories = view('mcode::site.mcodes.steps.filter-categories',compact('ids','allCategories'))->render();
+
         
         
         $data['html']=$html;
+        $data['htmlCategories']=$htmlCategories;
         
         echo json_encode($data);
     }
