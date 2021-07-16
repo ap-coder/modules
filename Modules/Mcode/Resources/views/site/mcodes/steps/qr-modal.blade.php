@@ -2,9 +2,9 @@
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal">&times;</button>
     <ul class="qr_icons">
-      <li><i class="fas fa-share-square"></i></li>
+      {{-- <li><i class="fas fa-share-square"></i></li> --}}
       <li class="downloadSingledPdf"><a href="javascript:void(0);"><img src="{{ url('site/img/modules/icon/download.png') }}"></a></li>
-      <li><img src="{{ url('site/img/modules/icon/printer.png') }}"></li>
+      <li class="printSingledPdf"><a href="javascript:void(0);"><img src="{{ url('site/img/modules/icon/printer.png') }}"></a></li>
     </ul>
   </div>
 

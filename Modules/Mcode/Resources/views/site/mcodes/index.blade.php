@@ -186,12 +186,34 @@
   '_blank' // <- This is what makes it open in a new window.
 );
   });
+  
+  $(document.body).on('click', '.printPdf' ,function(){
+    var productID=$('#productID').val();
+    var categoryIDs=$('#categoryIDs').val();
+    var featureIDs=$('#featureIDs').val();
+    var url="{{ url('support/mcodes/printPdf') }}?productID="+productID+"&categoryIDs="+categoryIDs+"&featureIDs="+featureIDs;
+    window.open(
+      url,
+  '_blank' // <- This is what makes it open in a new window.
+);
+  });
 
   $(document.body).on('click', '.downloadSingledPdf' ,function(){
     var productID=$('#productID').val();
     var categoryIDs=$('#categoryIDs').val();
     var featureIDs=$('#featureIDs').val();
     var url="{{ url('support/mcodes/getSinglePdf') }}?productID="+productID+"&categoryIDs="+categoryIDs+"&featureIDs="+featureIDs;
+    window.open(
+      url,
+  '_blank' // <- This is what makes it open in a new window.
+);
+  });
+
+  $(document.body).on('click', '.printSingledPdf' ,function(){
+    var productID=$('#productID').val();
+    var categoryIDs=$('#categoryIDs').val();
+    var featureIDs=$('#featureIDs').val();
+    var url="{{ url('support/mcodes/printSingledPdf') }}?productID="+productID+"&categoryIDs="+categoryIDs+"&featureIDs="+featureIDs;
     window.open(
       url,
   '_blank' // <- This is what makes it open in a new window.

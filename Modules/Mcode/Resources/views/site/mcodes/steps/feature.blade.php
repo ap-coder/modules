@@ -52,6 +52,7 @@
   </div>
   <div class="button-div">
     <button type="button" class="back prevBtn" step="3">Back</button>
+    <h2 class="MiddleproductName">{{ $mcode->name }}</h2>
     <button type="button" class="next disabled" disabled id="GenerateButton">Generate</button>
   </div>
 </div>

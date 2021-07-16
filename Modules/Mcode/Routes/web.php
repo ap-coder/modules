@@ -56,7 +56,9 @@ Route::prefix('support/mcodes')->group(function() {
     Route::post('/getQrModalDetails', 'McodeController@getQrModalDetails');
     Route::post('/getGenerateModalDetails', 'McodeController@getGenerateModalDetails');
     Route::get('/getPdf', 'McodeController@generatePdf');
+    Route::get('/printPdf', 'McodeController@printPdf');
     Route::get('/getSinglePdf', 'McodeController@getSinglePdf');
+    Route::get('/printSingledPdf', 'McodeController@printSingledPdf');
 });
 
 
