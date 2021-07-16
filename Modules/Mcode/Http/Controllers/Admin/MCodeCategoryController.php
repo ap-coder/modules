@@ -17,7 +17,7 @@ use Yajra\DataTables\Facades\DataTables;
 class McodeCategoryController extends Controller
 {
     use MediaUploadingTrait;
-
+    
     public function index(Request $request)
     {
         //abort_if(Gate::denies('mcode_category_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
@@ -160,4 +160,5 @@ class McodeCategoryController extends Controller
 
         return response()->json(['id' => $media->id, 'url' => $media->getUrl()], Response::HTTP_CREATED);
     }
+
 }
