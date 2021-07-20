@@ -23,7 +23,7 @@
                 <div class="selectfeature">Select</div>
               </li>
               @foreach($category->categoriesMcodeFeatures as $feature)
-                <li class="feature-list-item">
+                <li class="feature-list-item" id="feature-list-item-{{ $feature->id }}">
                   <div class="mcode text-4" data-label="Code">{{ $feature->mcode ?? '' }}</div>
                   <div class="description feturedesc text-4" data-label="Description">
                     {{ $feature->description ?? '' }} <?php // dump($feature->formatted_source_string) ?>
@@ -42,7 +42,7 @@
                       <span class="primary"></span>
                     </label>
                   </div>
-                </li>
+                </li> 
               @endforeach
             </ul>
           </div>

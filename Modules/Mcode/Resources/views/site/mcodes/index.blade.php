@@ -318,11 +318,18 @@
       $('#categoryButton').prop("disabled", true);
       $('#categoryButton').addClass('disabled');
     }
-      
+       
   });
-
+      
   $(document.body).on('change', '.selectfeture .feturecheckbox' ,function(){
     var feturecheckbox = [];
+
+    if ($(this).prop('checked')==true){ 
+      $('#feature-list-item-'+$(this).val()).addClass('active');
+    }else{
+      $('#feature-list-item-'+$(this).val()).removeClass('active');
+    }
+    
       $('input[name=feturecheckbox]:checked').map(function() {
         feturecheckbox.push($(this).val());
       });
