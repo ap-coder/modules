@@ -19,7 +19,10 @@ class McodeCategoryApiController extends Controller
 
     public function index()
     {
-        abort_if(Gate::denies('mcode_category_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        //abort_if(Gate::denies('mcode_category_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        if(!auth()->user()->tokenCan('mcode_api_access')){
+            abort(403, 'YOU DO NOT HAVE ACCESS.');
+        }
 
         return new McodeCategoryResource(McodeCategory::all());
     }
@@ -39,8 +42,11 @@ class McodeCategoryApiController extends Controller
 
     public function show(McodeCategory $mcodeCategory)
     {
-        abort_if(Gate::denies('mcode_category_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
+        //abort_if(Gate::denies('mcode_category_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        if(!auth()->user()->tokenCan('mcode_api_access')){
+            abort(403, 'YOU DO NOT HAVE ACCESS.');
+        }
+        
         return new McodeCategoryResource($mcodeCategory);
     }
 
@@ -66,8 +72,11 @@ class McodeCategoryApiController extends Controller
 
     public function destroy(McodeCategory $mcodeCategory)
     {
-        abort_if(Gate::denies('mcode_category_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
+        //abort_if(Gate::denies('mcode_category_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        if(!auth()->user()->tokenCan('mcode_api_access')){
+            abort(403, 'YOU DO NOT HAVE ACCESS.');
+        }
+        
         $mcodeCategory->delete();
 
         return response(null, Response::HTTP_NO_CONTENT);
